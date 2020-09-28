@@ -12,9 +12,9 @@ use_math: true
 ---
 
 Inline 수식
-This formula $f(x) = x^2$ is an example.
+This formula $f(x) = x^2$ is an example.  
 
-mid 수식
+outline 수식
 $$
 \log_2{2}
 $$
