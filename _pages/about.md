@@ -3,6 +3,7 @@ title: "About"
 permalink: /about/
 layout: single
 author_profile: true
+toc: true
 ---
 
 **양태양 (Taeyang Yang)**
@@ -24,4 +25,5 @@ tyami@naver.com
 	 - [Brain-Computer Interface labtoratory](http://bci.unist.ac.kr) (BCILAB)
 	 - Advisor : Sung-Phil Kim
  - **B.S., Human Factors Engineering & Engineering and System Design** (2011∼ 2015)  
-	 - [UNIST](https://www.unist.ac.kr/), South Korea  
+	 - [UNIST](https://www.unist.ac.kr/), South Korea 
+
