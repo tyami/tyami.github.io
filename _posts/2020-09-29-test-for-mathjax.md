@@ -27,7 +27,7 @@ This formula $f(x) = x^2$ is an example.
 
 
 ### outline 수식
-```
+```latex
 $$
 \log_2 2
 $$
@@ -40,7 +40,7 @@ $$
 $$
 Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i
 $$
-```
+```latex
 $$
 \log_2 2
 $$
