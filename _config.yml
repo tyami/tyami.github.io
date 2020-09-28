@@ -97,7 +97,7 @@ author:
   avatar           : "/assets/images/profile/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **TAEYANG YANG**."
   location         : "Ulsan, South Korea"
-  email            : tyami@naver.com
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
