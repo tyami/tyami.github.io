@@ -24,7 +24,7 @@ use_math: true
 ## 예제
 ### Inline 수식
 ```latex
-This formula \ (f(x) = x^2 \) is an example.
+This formula \( f(x) = x^2 \) is an example.
 
 ```
 This formula \( f(x) = x^2 \) is an example.
