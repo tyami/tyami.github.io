@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "TAEYANG YANG"
+title                    : "Taeyang Yang's Website"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Taeyang Yang"
-description              : "Blog"
+description              : "Taeyang Yang's Personal Website"
 url                      : "https://tyami.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -117,6 +117,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/taeyangyang/"
 
 # Site Footer
 footer:
@@ -139,7 +142,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
-
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/taeyangyang/"
 
 # Reading Files
 include:
