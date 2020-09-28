@@ -35,7 +35,7 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
 - Boosting Ensemble 예시 3: LightGBM
 - Boosting Ensemble 예시 4: CatBoost
  
- ## Decision Tree 의 기본 개념
+## Decision Tree 의 기본 개념
  
 Decision Tree는 **일련의 필터 과정** 또는 **스무고개**라고 생각하면 됩니다.
 
