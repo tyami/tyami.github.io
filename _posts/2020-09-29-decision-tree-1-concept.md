@@ -36,12 +36,12 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
 - Boosting Ensemble 예시 4: CatBoost
  
  ## Decision Tree 의 기본 개념
-
+ 
 Decision Tree는 **일련의 필터 과정** 또는 **스무고개**라고 생각하면 됩니다.
 
 
 아래와 같은 데이터가 있다고 생각해봅시다.  
-Outlook, Temperature, Humidity, Windy와 같은 기상조건에 따라 운동을 할지 말지 (Play) 결정하는 모델을 만들고자 합니다.
+Outlook, Temperature, Humidity, Windy와 같은 기상조건들(Attributes)에 따라 운동을 할지 말지 (Play) 결정하는 모델을 만들고자 합니다.
 
 | Outlook  | Temperature | Humidity | Windy | Play |
 |:--------:|:-----------:|:--------:|:-----:|:----:|
@@ -60,7 +60,34 @@ Outlook, Temperature, Humidity, Windy와 같은 기상조건에 따라 운동을
 | overcast | hot         | normal   | FALSE | Yes  |
 | rain     | mild        | high     | TRUE  | No   |
 
-예를 들면, 이러한 Decision Tree를 만들 수 있습니다.
-[decision-tree-example-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/decision-tree-example-1.png)
+어떤 attribute를 먼저 사용하느냐에 따라 여러 가지 Decision Tree를 만들 수 있을 겁니다. 아래와 같이 말이죠.
+![decision-tree-example-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/decision-tree-examples.png)
+여러 Decision tree 중 더 좋은 모델을 어떻게 정할 수 있을까요?
+답은 "**변별력이 좋은 질문부터** 먼저 정한다" 입니다.
+
+그렇다면, 변별력이 좋은 질문은 어떻게 정하는 것일까요?
 
 
+### 불순도 (Impurity)
+여기에서 **불순도 (Impurity)** 라는 개념이 등장합니다 !  
+![decision-tree-example-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/impurity.png)
+불순도는 **불순물이 포함된 정도**라고 생각하면 되는데, 위 그림이 잘 나타내주고 있습니다.  
+
+위 그림의 좌측과 우측 그림은 모든 샘플이 한 가지 라벨만을 나타내고 있기 때문에 불순도가 0인 상태입니다.  
+특정 지표를 기준으로 데이터셋을 나누었을 때 결과가 이와 같이 분류된다면, 이 지표는 변별력이 좋은 질문이라고 말할 수 있을 것입니다.
+
+반면 가운데 그림의 경우, 두 가지 라벨이 섞여있기 때문에 불순도가 0보다는 큰 값을 띄게 됩니다.  
+마찬가지로 이 지표는 변별력이 좋지 않은 질문이라고 할 수 있습니다.
+
+따라서 최고의 성능을 보이는 Decision Tree를 만들기 위해서는 불순도가 가장 낮은 지표를 찾아 나무를 구성해나가면 됩니다.
+
+이 불순도를 어떤 지표를 사용하냐에 따라 알고리즘의 방향이 갈리게 되는데, 크게는 아래와 같이 엔트로피 (Entropy)와 지니 계수 (Gini index) 기반의 알고리즘으로 나눌 수 있습니다.
+
+#### 엔트로피 (Entropy) 기반 알고리즘
+- ID3
+- C4.5
+- C5.0
+#### 지니 계수 (Gini index) 기반 알고리즘
+- CART (Classification And Regression Tree)
+
+이후 포스팅에서는 ID3, C4.5, CART 알고리즘에 대해서 하나씩 알아보도록 하겠습니다.
