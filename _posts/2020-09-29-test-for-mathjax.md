@@ -34,11 +34,11 @@ This formula $f(x) = x^2$ is an example.
 $$ \log_2 2 $$
 $$ probability=p(x) $$
 $$ information=I(x)=\log_2 \frac{1}{p(x)} $$
-$$ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i $$
+\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i $ \]
 ```
 $$ \log_2 2 $$
 $$ probability=p(x) $$
 $$ information=I(x)=\log_2 \frac{1}{p(x)} $$
-$$ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i $$
+\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i $ \]
 
 > 뭔가 문제가 있다. Outline 수식($$)만 인식을 못한다.
