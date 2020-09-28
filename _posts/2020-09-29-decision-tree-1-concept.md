@@ -91,6 +91,7 @@ Outlook, Temperature, Humidity, Windy와 같은 기상조건들(Attributes)에 �
 - ID3
 - C4.5
 - C5.0
+
 #### 지니 계수 (Gini index) 기반 알고리즘
 - CART (Classification And Regression Tree)
 
