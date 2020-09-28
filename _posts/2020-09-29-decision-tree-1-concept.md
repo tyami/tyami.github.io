@@ -9,6 +9,10 @@ tags:
 - Machine learning
 - Decision Tree
 - Algorithm
+
+toc: true
+toc_sticky: true
+toc_label: "Decision Tree 기본 설명"
 ---
 
 이 블로그에서의 첫 글이네요 !
