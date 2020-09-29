@@ -61,15 +61,9 @@ ID3 알고리즘에서는 Entropy 값의 변화량을 나타내기 위해 Inform
 Information Gain은 아래 수식과 같이 분기 전후 엔트로피의 차이값으로 계산됩니다. 이 때 분기 후 엔트로피는 양쪽 가지로 나뉘는 확률 \\( p(t_i) \\)를 가중치로 곱해 합쳐집니다.
 
 \begin{aligned}
-H(Play)&=-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
-&=-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
-&=0.94
-\end{aligned}
-
-\begin{aligned}
 Information Gain&=IG(S,A)=H(S)-H(S,A) \\\\\\
 &=H(S)-\sum p(t)H(t) \\\\\\
-&=H(7,3)-(\frac{6}{10}*0+\frac{4}{10}*0.8113) \\\\\\
+&=H(7,3)-(\frac{6}{10} \times 0+\frac{4}{10} \times 0.8113) \\\\\\
 &=0.5568
 \end{aligned}
 

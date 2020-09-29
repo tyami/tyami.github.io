@@ -83,10 +83,3 @@ H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
 &=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
 &=&0.94
 \end{eqnarray}
-
-\begin{aligned}
-Information Gain&=IG(S,A)=H(S)-H(S,A) \\\\\\
-&=H(S)-\sum p(t)H(t) \\\\\\
-&=H(7,3)-(\frac{6}{10}*0+\frac{4}{10}*0.8113) \\\\\\
-&=0.5568
-\end{aligned}
