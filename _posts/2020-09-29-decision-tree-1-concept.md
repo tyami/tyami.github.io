@@ -29,8 +29,8 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
 따라서 본 포스팅으로 시작되는 일련의 포스팅들에서는 Decision Tree의 기초 알고리즘부터 시작해서 XGBoost, LightBoost, CatBoost와 같은 GBDT 기반 모델들까지 정리해보고자 합니다.
 
 ## 목차
-- Decision Tree 의 기본 개념
-- Decision Tree 알고리즘 1: ID3
+- Decision Tree 의 기본 개념 (현재 글)
+- [Decision Tree 알고리즘 1: ID3](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)
 - Decision Tree 알고리즘 2: C4.5 
 - Decision Tree 알고리즘 3: CART (Classification And Regression Tree)
 - Ensemble의 기본 개념: Bagging과 Boosting
@@ -98,3 +98,5 @@ Outlook, Temperature, Humidity, Windy와 같은 기상조건들(Attributes)에 �
 - CART (Classification And Regression Tree)
 
 이후 포스팅에서는 ID3, C4.5, CART 알고리즘에 대해서 하나씩 알아보도록 하겠습니다.
+
+다음 글 보기: [의사결정 나무 (Decision Tree) ID3 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)
