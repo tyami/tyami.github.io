@@ -29,3 +29,8 @@ Department of Biomedical Engineering, UNIST
   - [UNIST](https://www.unist.ac.kr/), South Korea
 
 ### 💪 Skills
+- Time-series signal processing
+- Image processing
+- Python (Tensorflow, PyTorch, Keras, sklearn, nilearn...), MATLAB (EEGLAB, SPM12), R, SQL
+- Visualization tools
+  - Photoshop, Illustrator, Premier, Solidwors, Cura
