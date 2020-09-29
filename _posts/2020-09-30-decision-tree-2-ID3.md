@@ -101,7 +101,7 @@ H(Play) &= -\sum_{i=1}^c p_i\log_2 p_i \\\\\\
 - Outlook
 ![H(Play,Outlook)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-entropy-play-outlook.png)
 \begin{aligned}
-H(Play,Outlook) &= p(sunny)*H(3,2)+p(overcast)*H(4,0)+p(rain)*H(3,2) \\\\\\
+H(Play,Outlook) &= p(sunny) \times H(3,2)+p(overcast) \times H(4,0)+p(rain) \times H(3,2) \\\\\\
 &=\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5})+\frac{4}{14}(-\frac{4}{4}log_2\frac{4}{4}-\frac{0}{4}log_2\frac{0}{4})+\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5}) \\\\\\
 &=0.6935
 \end{aligned}
@@ -110,7 +110,7 @@ H(Play,Outlook) &= p(sunny)*H(3,2)+p(overcast)*H(4,0)+p(rain)*H(3,2) \\\\\\
 ![H(Play,Temperature)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-entropy-play-temperature.png)
 
 \begin{aligned}
-H(Play,Temperature) &= p(hot)*H(2,2)+p(mild)*H(4,2)+p(cool)*H(3,1) \\\\\\
+H(Play,Temperature) &= p(hot) \times H(2,2)+p(mild) \times H(4,2)+p(cool) \times H(3,1) \\\\\\
 &=\frac{4}{14}(-\frac{2}{4}log_2\frac{2}{4}-\frac{2}{4}log_2\frac{2}{4})+\frac{6}{14}(-\frac{4}{6}log_2\frac{4}{6}-\frac{2}{6}log_2\frac{2}{6})+\frac{4}{14}(-\frac{3}{4}log_2\frac{3}{4}-\frac{1}{4}log_2\frac{1}{4}) \\\\\\
 &=0.2857+0.3935+0.2317 \\\\\\
 &=0.911
@@ -120,7 +120,7 @@ H(Play,Temperature) &= p(hot)*H(2,2)+p(mild)*H(4,2)+p(cool)*H(3,1) \\\\\\
 ![H(Play,Humidity)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-entropy-play-humidity.png)
 
 \begin{aligned}
-H(Play,Humidity) &= p(High)*H(3,4)+p(Normal)*H(6,1) \\\\\\
+H(Play,Humidity) &= p(High) \times H(3,4)+p(Normal) \times H(6,1) \\\\\\
 &=\frac{7}{14}(-\frac{3}{7}log_2\frac{3}{7}-\frac{4}{7}log_2\frac{4}{7})+\frac{7}{14}(-\frac{6}{7}log_2\frac{6}{7}-\frac{1}{7}log_2\frac{1}{7}) \\\\\\
 &=0.7884
 \end{aligned}
@@ -129,7 +129,7 @@ H(Play,Humidity) &= p(High)*H(3,4)+p(Normal)*H(6,1) \\\\\\
 ![H(Play,Windy)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-entropy-play-windy.png)
 
 \begin{aligned}
-H(Play,Windy) &= p(True)*H(3,3)+p(False)*H(6,2) \\\\\\
+H(Play,Windy) &= p(True) \times H(3,3)+p(False) \times H(6,2) \\\\\\
 &=\frac{6}{14}(-\frac{3}{6}log_2\frac{3}{6}-\frac{3}{6}log_2\frac{3}{6})+\frac{8}{14}(-\frac{6}{8}log_2\frac{6}{8}-\frac{2}{8}log_2\frac{2}{8}) \\\\\\
 &=0.8921
 \end{aligned}
