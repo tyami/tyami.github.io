@@ -60,12 +60,12 @@ ID3 알고리즘에서는 Entropy 값의 변화량을 나타내기 위해 Inform
 
 Information Gain은 아래 수식과 같이 분기 전후 엔트로피의 차이값으로 계산됩니다. 이 때 분기 후 엔트로피는 양쪽 가지로 나뉘는 확률 \\( p(t_i) \\)을 가중치로 곱해 합쳐집니다.
 
-\begin{align*}
-Information Gain&=IG(S,A)=H(S)-H(S,A) \\
-&=H(S)-\sum p(t)H(t) \\
-&=H(7,3)-(\frac{6}{10}*0+\frac{4}{10}*0.8113) \\
+\begin{aligned}
+Information Gain&=IG(S,A)=H(S)-H(S,A) \\\\\\
+&=H(S)-\sum p(t)H(t) \\\\\\
+&=H(7,3)-(\frac{6}{10}*0+\frac{4}{10}*0.8113) \\\\\\
 &=0.5568
-\end{align*}
+\end{aligned}
 
 최적의 Decision Tree를 만들기 위해, 여러 지표 중 분기 후 엔트로피 \\(\sum p(t)H(t)\\)가 작아지는 지표를 선택해야 합니다. 분기 전 엔트로피 \\(H(S)\\)는 동일하니, 이 말은 **Information Gain이 가장 큰 지표를 선택하라**는 말과 동일합니다.
 
