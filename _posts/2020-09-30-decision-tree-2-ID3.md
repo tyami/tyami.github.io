@@ -54,11 +54,11 @@ ID3 알고리즘에서는 Entropy 값의 변화량을 나타내기 위해 Inform
 ![Information Gain의 개념]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-information-gain-example.png)
 위 그림에서 빨간 원은 Play=Yes를, 파란 공은 Play=No를 의미합니다. **Windy 지표 (True OR False)**를 이용해 데이터를 나눈다고 할 때, 분기 전후로 세 종류의 엔트로피를 계산할 수 있습니다.
 
-- 분기 전 엔트로피 (\\( H(S) \\))
-- 분기 후 True에 해당하는 그룹의 엔트로피 (\\( H(S, True) \\))
-- 분기 후 False에 해당하는 그룹의 엔트로피 (\\( H(S, False) \\))
+- 분기 전 엔트로피 \\( H(S) \\)
+- 분기 후 True에 해당하는 그룹의 엔트로피 \\( H(S, True) \\)
+- 분기 후 False에 해당하는 그룹의 엔트로피 \\( H(S, False) \\)
 
-Information Gain은 아래 수식과 같이 분기 전후 엔트로피의 차이값으로 계산됩니다. 이 때 분기 후 엔트로피는 양쪽 가지로 나뉘는 확률 (\\( p(t_i) \\))을 가중치로 곱해 합쳐집니다.
+Information Gain은 아래 수식과 같이 분기 전후 엔트로피의 차이값으로 계산됩니다. 이 때 분기 후 엔트로피는 양쪽 가지로 나뉘는 확률 \\( p(t_i) \\)을 가중치로 곱해 합쳐집니다.
 
 \begin{align*}
 Information Gain&=IG(S,A)=H(S)-H(S,A) \\
@@ -67,7 +67,7 @@ Information Gain&=IG(S,A)=H(S)-H(S,A) \\
 &=0.5568
 \end{align*}
 
-최적의 Decision Tree를 만들기 위해, 여러 지표 중 분기 후 엔트로피 (\\(\sum p(t)H(t)\\))가 작아지는 지표를 선택해야 합니다. 분기 전 엔트로피 (\\(H(S)\\))는 동일하니, 이 말은 **Information Gain이 가장 큰 지표를 선택하라**는 말과 동일합니다.
+최적의 Decision Tree를 만들기 위해, 여러 지표 중 분기 후 엔트로피 \\(\sum p(t)H(t)\\)가 작아지는 지표를 선택해야 합니다. 분기 전 엔트로피 \\(H(S)\\)는 동일하니, 이 말은 **Information Gain이 가장 큰 지표를 선택하라**는 말과 동일합니다.
 
 ---
 ### ID3 알고리즘 예시로 이해하기
@@ -136,17 +136,17 @@ H(Play,Windy) &= p(True)*H(3,3)+p(False)*H(6,2) \\
 
 각 지표 로 분기한 후 엔트로피를 계산했으니 각 경우의 Information Gain을 계산해봅시다.
 
-- **\[ H(Play) – H(Play, Outlook) = 0.25 \]
-- \[ H(Play) – H(Play, Temperature) = 0.02 \]
-- \[ H(Play) – H(Play, Humidity) = 0.1514 \]
-- \[ H(Play) – H(Play, Windy) = 0.047 \]
+- **\\( H(Play) – H(Play, Outlook) = 0.25 \\)**
+- \\( H(Play) – H(Play, Temperature) = 0.02 \\)
+- \\( H(Play) – H(Play, Humidity) = 0.1514 \\)
+- \\( H(Play) – H(Play, Windy) = 0.047 \\)
 
 Outlook으로 분기했을 때 Information Gain이 가장 크니 아래와 같이 첫 번째 level에서는 Outlook으로 분기합니다. 
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-choose-first-attribute.png)
 
 다음으로, 왼쪽의 **Sunny** 노드에 대해서 분기를 진행합니다. Sunny 노드의 데이터는 아래와 같습니다.
 | Outlook  | Temperature | Humidity | Windy | Play |
-|:--------:|:-----------:|:--------:|:-----:|:----:|
+|:-:|:-:|:-:|:-:|:-:|
 | sunny    | hot         | high     | FALSE | No   |
 | sunny    | hot         | high     | TRUE  | No   |
 | sunny    | mild        | high     | FALSE | No   |
@@ -154,19 +154,22 @@ Outlook으로 분기했을 때 Information Gain이 가장 크니 아래와 같�
 | sunny    | mild        | normal   | TRUE  | Yes  |
 
 위 과정과 동일하게 Information Gain을 계산하면 다음 분기는 Humidity로 진행하면 된다는 것을 알 수 있습니다.
-- \[ H(Play) – H(Play, Temperature) = 0.571 \]
-- **\[ H(Play) – H(Play, Humidity) = 0.971 \]**
-- \[ H(Play) – H(Play, Windy) = 0.02 \]
+- \\( H(Play) – H(Play, Temperature) = 0.571 \\)
+- **\\(  H(Play) – H(Play, Humidity) = 0.971 \\)**
+- \\(  H(Play) – H(Play, Windy) = 0.02 \\)
 
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-choose-second-attribute.png)
 
-이 때, Humidity에 따라 Play 데이터가 잘 나뉘는 것을 확인했으니 더 이상의 분기는 하지 않습니다.
+
+아래 표와 같이 Humidity에 따라 Play 데이터가 잘 나뉘는 것을 확인했으니 더 이상의 분기는 하지 않습니다.
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-choose-second-attribute-table.png)
 
 정리하면 아래와 같이 되겠네요.
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-choose-second-attribute-result.png)
 
 이 과정을 반복해서 수행해주면 아래와 같은 의사결정 나무가 완성됩니다.
+
+
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-result.png)
 
 ---
