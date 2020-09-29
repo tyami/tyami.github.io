@@ -9,7 +9,9 @@ MathJax.Hub.Config({
     inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
     displayMath: [ ['$$', '$$'], ['\[', '\]'] ],
     processEscapes: true,
-  }
+    },
+    jax: ["input/TeX", "output/HTML-CSS"],
+    displayAlign: "left"
 });
 MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
 	  alert("Math Processing Error: "+message[1]);
