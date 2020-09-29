@@ -72,6 +72,7 @@ Information Gain&=IG(S,A)=H(S)-H(S,A) \\\\\\
 ---
 ### ID3 알고리즘 예시로 이해하기
 이전 포스팅에서 사용했던 예시로 ID3 알고리즘의 분기과정을 살펴봅시다.
+
 | Outlook  | Temperature | Humidity | Windy | Play |
 |:--------:|:-----------:|:--------:|:-----:|:----:|
 | sunny    | hot         | high     | FALSE | No   |
@@ -88,6 +89,7 @@ Information Gain&=IG(S,A)=H(S)-H(S,A) \\\\\\
 | overcast | mild        | high     | TRUE  | Yes  |
 | overcast | hot         | normal   | FALSE | Yes  |
 | rain     | mild        | high     | TRUE  | No   |
+
 Play를 예측하기 위한 변수로 Outlook, Temperature, Humidity, Windy 가 있습니다.
 
 아무 분기가 일어나지 않은 상태의 엔트로피는 아래와 같이 계산됩니다.
@@ -145,6 +147,7 @@ Outlook으로 분기했을 때 Information Gain이 가장 크니 아래와 같�
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-choose-first-attribute.png)
 
 다음으로, 왼쪽의 **Sunny** 노드에 대해서 분기를 진행합니다. Sunny 노드의 데이터는 아래와 같습니다.
+
 | Outlook  | Temperature | Humidity | Windy | Play |
 |:-:|:-:|:-:|:-:|:-:|
 | sunny    | hot         | high     | FALSE | No   |
