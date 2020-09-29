@@ -10,7 +10,7 @@ toc_sticky: true
 
 ### **양태양 (Taeyang Yang)**  
 - **Ph'D candidate**, [Brain-Computer Interface laboratory](http://bci.unist.ac.kr)  
-- Department of Biomedical Engineering, UNIST  
+- Department of Biomedical Engineering, [UNIST](https://www.unist.ac.kr/)
 - [CV webpage](https://sites.google.com/view/tyang/profile)
 
 ### 💖 Research Interests
