@@ -51,16 +51,20 @@ $$ \log_2 2 $$
 
 ### Align으로 수식 강제 줄 바꾸기
 ```latex
+\[
 \shoveleft
 \begin{aligned}
 H(Play) &= -\sum_{i=1}^c p_i\log_2 p_i \\
 &=-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\
 &=0.94
 \end{aligned}
+\]
 ```
+\[
 \shoveleft
 \begin{aligned}
 H(Play) &= -\sum_{i=1}^c p_i\log_2 p_i \\
 &=-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\
 &=0.94
 \end{aligned}
+\]
