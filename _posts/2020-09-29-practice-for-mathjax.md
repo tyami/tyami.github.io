@@ -13,6 +13,7 @@ tags:
 toc: true
 toc_sticky: true
 toc_label: "Jekyll 블로그에 MathJax 수식 사용하기"
+
 use_math: true
 ---
 

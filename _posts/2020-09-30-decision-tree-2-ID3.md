@@ -13,6 +13,8 @@ tags:
 toc: true
 toc_sticky: true
 toc_label: "Decision Tree ID3 알고리즘"
+
+use_math: true
 ---
 
 이전 글 보기: [의사결정 나무 (Decision Tree) 기본 설명](https://tyami.github.io/machine%20learning/decision-tree-1-concept/)
