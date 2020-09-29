@@ -61,7 +61,7 @@ H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
 H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
 &=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
 &=&0.94
-\end{eqnarray
+\end{eqnarray}
 ```latex
 \begin{aligned}
 H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
