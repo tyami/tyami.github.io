@@ -8,11 +8,10 @@ toc_label: "About me"
 toc_sticky: true
 ---
 
-**양태양 (Taeyang Yang)**  
-**Ph'D candidate**, [Brain-Computer Interface laboratory](http://bci.unist.ac.kr)  
-Department of Biomedical Engineering, UNIST  
-  
-[CV webpage](https://sites.google.com/view/tyang/profile)
+### **양태양 (Taeyang Yang)**  
+- **Ph'D candidate**, [Brain-Computer Interface laboratory](http://bci.unist.ac.kr)  
+- Department of Biomedical Engineering, UNIST  
+- [CV webpage](https://sites.google.com/view/tyang/profile)
 
 ### 💖 Research Interests
 - Data science
@@ -27,10 +26,3 @@ Department of Biomedical Engineering, UNIST
   - Advisor : Sung-Phil Kim
 - **B.S., Human Factors Engineering & Engineering and System Design** (2011∼ 2015)  
   - [UNIST](https://www.unist.ac.kr/), South Korea
-
-### 💪 Skills
-- Time-series signal processing
-- Image processing
-- Python (Tensorflow, PyTorch, Keras, sklearn, nilearn...), MATLAB (EEGLAB, SPM12), R, SQL
-- Visualization tools
-  - Photoshop, Illustrator, Premier, Solidwors, Cura
