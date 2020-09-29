@@ -91,48 +91,48 @@ Information Gain&=IG(S,A)=H(S)-H(S,A) \\
 Play를 예측하기 위한 변수로 Outlook, Temperature, Humidity, Windy 가 있습니다.
 
 아무 분기가 일어나지 않은 상태의 엔트로피는 아래와 같이 계산됩니다.
-\begin{align*}
-H(Play) &= -\sum_{i=1}^c p_i\log_2 p_i \\
-&=-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\
+\begin{aligned}
+H(Play) &= -\sum_{i=1}^c p_i\log_2 p_i \\\\\\
+&=-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
 &=0.94
-\end{align*}
+\end{aligned}
 
 이제 각 지표별로 분기를 진행해봅시다.
 - Outlook
 ![H(Play,Outlook)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-entropy-play-outlook.png)
-\begin{align*}
-H(Play,Outlook) &= p(sunny)*H(3,2)+p(overcast)*H(4,0)+p(rain)*H(3,2) \\
-&=\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5})+\frac{4}{14}(-\frac{4}{4}log_2\frac{4}{4}-\frac{0}{4}log_2\frac{0}{4})+\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5}) \\
+\begin{aligned}
+H(Play,Outlook) &= p(sunny)*H(3,2)+p(overcast)*H(4,0)+p(rain)*H(3,2) \\\\\\
+&=\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5})+\frac{4}{14}(-\frac{4}{4}log_2\frac{4}{4}-\frac{0}{4}log_2\frac{0}{4})+\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5}) \\\\\\
 &=0.6935
-\end{align*}
+\end{aligned}
 
 - Temperature
 ![H(Play,Temperature)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-entropy-play-temperature.png)
 
-\begin{align*}
-H(Play,Temperature) &= p(hot)*H(2,2)+p(mild)*H(4,2)+p(cool)*H(3,1) \\
-&=\frac{4}{14}(-\frac{2}{4}log_2\frac{2}{4}-\frac{2}{4}log_2\frac{2}{4})+\frac{6}{14}(-\frac{4}{6}log_2\frac{4}{6}-\frac{2}{6}log_2\frac{2}{6})+\frac{4}{14}(-\frac{3}{4}log_2\frac{3}{4}-\frac{1}{4}log_2\frac{1}{4}) \\
-&=0.2857+0.3935+0.2317 \\
+\begin{aligned}
+H(Play,Temperature) &= p(hot)*H(2,2)+p(mild)*H(4,2)+p(cool)*H(3,1) \\\\\\
+&=\frac{4}{14}(-\frac{2}{4}log_2\frac{2}{4}-\frac{2}{4}log_2\frac{2}{4})+\frac{6}{14}(-\frac{4}{6}log_2\frac{4}{6}-\frac{2}{6}log_2\frac{2}{6})+\frac{4}{14}(-\frac{3}{4}log_2\frac{3}{4}-\frac{1}{4}log_2\frac{1}{4}) \\\\\\
+&=0.2857+0.3935+0.2317 \\\\\\
 &=0.911
-\end{align*}
+\end{aligned}
 
 - Humidity
 ![H(Play,Humidity)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-entropy-play-humidity.png)
 
-\begin{align*}
-H(Play,Humidity) &= p(High)*H(3,4)+p(Normal)*H(6,1) \\
-&=\frac{7}{14}(-\frac{3}{7}log_2\frac{3}{7}-\frac{4}{7}log_2\frac{4}{7})+\frac{7}{14}(-\frac{6}{7}log_2\frac{6}{7}-\frac{1}{7}log_2\frac{1}{7}) \\
+\begin{aligned}
+H(Play,Humidity) &= p(High)*H(3,4)+p(Normal)*H(6,1) \\\\\\
+&=\frac{7}{14}(-\frac{3}{7}log_2\frac{3}{7}-\frac{4}{7}log_2\frac{4}{7})+\frac{7}{14}(-\frac{6}{7}log_2\frac{6}{7}-\frac{1}{7}log_2\frac{1}{7}) \\\\\\
 &=0.7884
-\end{align*}
+\end{aligned}
 
 - Windy
 ![H(Play,Windy)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-entropy-play-windy.png)
 
-\begin{align*}
-H(Play,Windy) &= p(True)*H(3,3)+p(False)*H(6,2) \\
-&=\frac{6}{14}(-\frac{3}{6}log_2\frac{3}{6}-\frac{3}{6}log_2\frac{3}{6})+\frac{8}{14}(-\frac{6}{8}log_2\frac{6}{8}-\frac{2}{8}log_2\frac{2}{8}) \\
+\begin{aligned}
+H(Play,Windy) &= p(True)*H(3,3)+p(False)*H(6,2) \\\\\\
+&=\frac{6}{14}(-\frac{3}{6}log_2\frac{3}{6}-\frac{3}{6}log_2\frac{3}{6})+\frac{8}{14}(-\frac{6}{8}log_2\frac{6}{8}-\frac{2}{8}log_2\frac{2}{8}) \\\\\\
 &=0.8921
-\end{align*}
+\end{aligned}
 
 각 지표 로 분기한 후 엔트로피를 계산했으니 각 경우의 Information Gain을 계산해봅시다.
 

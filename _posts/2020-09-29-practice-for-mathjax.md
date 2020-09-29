@@ -49,32 +49,11 @@ $$ \log_2 2 $$
 > 구글링 했을 때 나오는 $$ 문법으로는 Outline 수식 표현이 되지 않는다.  
 > 따라서 \_includes\mathjax_support.html 파일 작성 시, 수식 시작과 끝을 인식하는 identifier들을 수정해주었다.
 
-### Align으로 수식 강제 줄 바꾸기
-```latex
-\begin{eqnarray}
-H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
-&=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
-&=&0.94
-\end{eqnarray}
-```
-\begin{eqnarray}
-H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
-&=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
-&=&0.94
-\end{eqnarray}
-
-```latex
-\begin{aligned}
-H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
-&=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
-&=&0.94
-\end{aligned}
-```
-\begin{aligned}
-H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
-&=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
-&=&0.94
-\end{aligned}
+### aligned으로 수식 강제 줄 바꾸기
+- begin/end로 수식 시작
+- backslash **6번** 쓰면 강제 줄 바꿈
+  - 보통 LaTex 문법은 2개인데 왜인지는 모르지만 안 됨
+- &로 align할 위치 지정
 
 ```latex
 \begin{aligned}
@@ -88,3 +67,19 @@ H(Play)&=-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
 &=-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
 &=0.94
 \end{aligned}
+
+### Equation number 넣기
+- aligned 대신 eqnarray를 사용한다
+
+```latex
+\begin{eqnarray}
+H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
+&=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
+&=&0.94
+\end{eqnarray}
+```
+\begin{eqnarray}
+H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
+&=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
+&=&0.94
+\end{eqnarray}
