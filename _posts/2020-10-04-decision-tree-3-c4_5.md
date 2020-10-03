@@ -42,7 +42,7 @@ ID3 알고리즘에서는 분기 전후의 엔트로피를 기반으로 Informat
 
 ![IG의 한계점 - 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example1.png)
 
-*Windy*라는 지표로 분기했을 때 데이터가 위와 같이 분기된다고 가정해봅시다. 이 경우의 Information Gain은 0.5568입니다.
+Windy라는 지표로 분기했을 때 데이터가 위와 같이 분기된다고 가정해봅시다. 이 경우의 Information Gain은 0.5568입니다.
 \begin{aligned}
 Information Gain&=H(7,3) - (\frac{6}{10}H(6,0)+\frac{4}{10}H(1,3)) \\\\\\
 &=0.8813-(\frac{6}{10} \times 0+\frac{4}{10} \times 0.8113) \\\\\\
@@ -51,14 +51,14 @@ Information Gain&=H(7,3) - (\frac{6}{10}H(6,0)+\frac{4}{10}H(1,3)) \\\\\\
 
 ![IG의 한계점 - 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example2.png)
 
-다른 지표인 *With whom*이라는 지표로 분기했을 때는 Information Gain이 **0.6813**이 나옵니다.
+다른 지표인 With whom이라는 지표로 분기했을 때는 Information Gain이 **0.6813**이 나옵니다.
 \begin{aligned}
 Information Gain&=H(7,3) - (\frac{1}{10}H(1,0)+\frac{1}{10}H(1,0)+...+\frac{1}{10}H(0,1)+\frac{2}{10}H(1,1)) \\\\\\
 &=0.8813-(\frac{1}{10} \times 0+...+\frac{2}{10} \times 1) \\\\\\
 &=0.6813
 \end{aligned}
 
-두 경우를 비교했을 때, With whom? 지표가 더 효과적인 지표라고 말할 수 있을까요? With whom 지표는 데이터를 너무 잘게 분해하기 때문에 좋은 지표라고 볼 수 없습니다.
+두 경우를 비교했을 때, With whom 지표가 더 효과적인 지표라고 말할 수 있을까요? With whom 지표는 데이터를 너무 잘게 분해하기 때문에 좋은 지표라고 볼 수 없습니다.
 
 #### Information Gain Ratio (GR)
 C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Information Gain Ratio**라는 지표를 사용하였습니다.
@@ -73,11 +73,11 @@ C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Inform
 
 ---
 
-앞서 예시로 든 두 가지 지표 *Windy*, *With whom*에 대한 Information Gain Ratio를 계산하여 차이점을 비교해봅시다.
+앞서 예시로 든 두 가지 지표 Windy, With whom에 대한 Information Gain Ratio를 계산하여 차이점을 비교해봅시다.
 
 ![IG의 한계점 - 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example1.png)
 
-*Windy* 지표에 대한 Information Gain Ratio를 계산해보면, 첫 번째 경우는 **0.5739**라는 값을 얻을 수 있습니다.
+Windy 지표에 대한 Information Gain Ratio를 계산해보면, 첫 번째 경우는 **0.5739**라는 값을 얻을 수 있습니다.
 \begin{aligned}
 Information Gain Ratio&=IG/IV \\\\\\
 &=\frac{0.5568}{-(\frac{6}{10}log_2 \frac{6}{10} + \frac{4}{10}log_2 \frac{4}{10})} \\\\\\
@@ -87,7 +87,7 @@ Information Gain Ratio&=IG/IV \\\\\\
 
 ![IG의 한계점 - 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example2.png)
 
-동일한 방법으로 *With whom*에 대한 GR을 계산하면 **0.2182**라는 값을 얻습니다.
+동일한 방법으로 With whom에 대한 GR을 계산하면 **0.2182**라는 값을 얻습니다.
 \begin{aligned}
 Information Gain Ratio&=IG/IV \\\\\\
 &=\frac{0.6813}{3.1219} \\\\\\
