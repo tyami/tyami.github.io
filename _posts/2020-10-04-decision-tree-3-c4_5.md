@@ -100,7 +100,7 @@ Information Gain Ratio&=IG/IV \\\\\\
 ---
 
 ### 개선점 2: 연속형 변수를 사용 가능
-C4.5 알고리즘에서의 두번째 개선점은 ***범주형 변수 (discrete variables)뿐 아니라 연속형 변수 (continuous variables)를 입력값으로 넣을 수 있다**는 점입니다.
+C4.5 알고리즘에서의 두번째 개선점은 **범주형 변수 (discrete variables)뿐 아니라 연속형 변수 (continuous variables)를 입력값으로 넣을 수 있다**는 점입니다.
 
 아래 테이블과 같은 데이터가 있다고 생각해봅시다. Temperature 변수는 연속형 변수입니다.
 
