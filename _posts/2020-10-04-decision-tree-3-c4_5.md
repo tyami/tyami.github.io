@@ -200,13 +200,13 @@ H(Play) &= -\sum_(i=1)^C p_i log_2 p_i 	\\\\\\
 \end{aligned}
 
 \begin{aligned}
-H(Play,Outlook) &= \sum p(t)H(t)
-&= \frac{1}{8}H(1,0)+\frac{4}{8}H(2,2)+\frac{3}{8}H(0,3)
+H(Play,Outlook) &= \sum p(t)H(t) \\\\\\
+&= \frac{1}{8}H(1,0)+\frac{4}{8}H(2,2)+\frac{3}{8}H(0,3) \\\\\\
 &= 0.5
 \end{aligned}
 
 \begin{aligned}
-IG(Play,Outlook) &= H(Play)-H(Play,Outlook)
+IG(Play,Outlook) &= H(Play)-H(Play,Outlook) \\\\\\
 &= 0.4544
 \end{aligned}
 
@@ -217,7 +217,7 @@ F=\frac{8}{14}
 \]
 
 \begin{aligned}
-Weighted Information Gain &= 8/14 \times 0.4544
+Weighted Information Gain &= 8/14 \times 0.4544 \\\\\\
 &=0.2597
 \end{aligned}
 
@@ -225,12 +225,12 @@ Weighted Information Gain &= 8/14 \times 0.4544
 총 4개의 클래스(sunny(n=1), rain(n=4), overcast(n=3), missing values(n=6))를 갖는 데이터셋으로 보고 Intrinsic Value를 계산합니다. 
 
 \begin{aligned}
-IV &= -( \frac{1}{14}log_2 \frac{1}{14} + \frac{4}{14}log_2 \frac{4}{14} + \frac{3}{14}log_2 \frac{3}{14} + \frac{6}{14}log_2 \frac{6}{14} )
+IV &= -( \frac{1}{14}log_2 \frac{1}{14} + \frac{4}{14}log_2 \frac{4}{14} + \frac{3}{14}log_2 \frac{3}{14} + \frac{6}{14}log_2 \frac{6}{14} ) \\\\\\
 &= 1.659
 \end{aligned}
 
 \begin{aligned}
-Information Gain Ratio&=\frac{0.2597}{1.659}
+Information Gain Ratio&=\frac{0.2597}{1.659} \\\\\\
 &=0.1565
 \end{aligned}
 
