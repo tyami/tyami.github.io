@@ -194,7 +194,7 @@ F=proportion of non-missing value
 - 1단계: Entropy는 Non-missing value로만 계산
 
 \begin{aligned}
-H(Play) &= -\sum_(i=1)^C p_i log_2 p_i 	\\\\\\
+H(Play) &= -\sum_{i=1}^C p_i log_2 p_i 	\\\\\\
 &=-(\frac{3}{8}log_2\frac{3}{8}+\frac{5}{8}log_2\frac{5}{8})
 &=0.9544
 \end{aligned}
