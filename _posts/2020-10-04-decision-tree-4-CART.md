@@ -117,8 +117,6 @@ Residual\; Sum\; of\; Squares\; (RSS)=\sum_{j=1}^J \sum_{i \in R_j} (y_i - \hat{
 J(k, t_k)=\frac{m_{left}}{m}MSE_{left}+\frac{m_{right}}{m}MSE_{right}
 \]
 
----
-
 ## Decision Tree의 단점: 과적합에 취약
 
 ID3, C4.5, CART에 걸쳐 의사결정 나무 생성을 위한 알고리즘을 정리해보았습니다. 의사결정 나무 알고리즘은 간단하면서 효과적인 알고리즘이지만, 과적합 (Overfitting)에 취약하다는 단점이 존재합니다.

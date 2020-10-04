@@ -77,8 +77,6 @@ C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Inform
 
 \[ Intrinsic\; Value=IV=-\sum_i^N p_i log_2 p_i \]
 
----
-
 앞서 예시로 든 두 가지 지표 Windy, With whom에 대한 Information Gain Ratio를 계산하여 차이점을 비교해봅시다.
 
 ![IG의 한계점 - 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example1.png)
