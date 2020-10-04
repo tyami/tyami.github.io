@@ -31,7 +31,7 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
 ## 목차
 - Decision Tree 의 기본 개념 (현재 글)
 - [Decision Tree 알고리즘 1: ID3](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)
-- Decision Tree 알고리즘 2: C4.5 
+- [Decision Tree 알고리즘 2: C4.5](https://tyami.github.io/machine%20learning/decision-tree-3-c4_5/)
 - Decision Tree 알고리즘 3: CART (Classification And Regression Tree)
 - Ensemble의 기본 개념: Bagging과 Boosting
 - Bagging Ensemble 예시 1: Random Forest

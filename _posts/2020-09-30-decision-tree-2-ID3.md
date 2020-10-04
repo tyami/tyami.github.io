@@ -61,7 +61,7 @@ ID3 알고리즘에서는 Entropy 값의 변화량을 나타내기 위해 Inform
 Information Gain은 아래 수식과 같이 분기 전후 엔트로피의 차이값으로 계산됩니다. 이 때 분기 후 엔트로피는 양쪽 가지로 나뉘는 확률 \\( p(t_i) \\)를 가중치로 곱해 합쳐집니다.
 
 \begin{aligned}
-Information Gain&=IG(S,A)=H(S)-H(S,A) \\\\\\
+Information\; Gain&=IG(S,A)=H(S)-H(S,A) \\\\\\
 &=H(S)-\sum p(t)H(t) \\\\\\
 &=H(7,3)-(\frac{6}{10} \times 0+\frac{4}{10} \times 0.8113) \\\\\\
 &=0.5568
@@ -138,7 +138,7 @@ H(Play,Windy) &= p(True) \times H(3,3)+p(False) \times H(6,2) \\\\\\
 
 각 지표 로 분기한 후 엔트로피를 계산했으니 각 경우의 Information Gain을 계산해봅시다.
 
-- **\\( H(Play) – H(Play, Outlook) = 0.25 \\)**
+- \\( H(Play) – H(Play, Outlook) = 0.25 \\)
 - \\( H(Play) – H(Play, Temperature) = 0.02 \\)
 - \\( H(Play) – H(Play, Humidity) = 0.1514 \\)
 - \\( H(Play) – H(Play, Windy) = 0.047 \\)
@@ -158,7 +158,7 @@ Outlook으로 분기했을 때 Information Gain이 가장 크니 아래와 같�
 
 위 과정과 동일하게 Information Gain을 계산하면 다음 분기는 Humidity로 진행하면 된다는 것을 알 수 있습니다.
 - \\( H(Play) – H(Play, Temperature) = 0.571 \\)
-- **\\(  H(Play) – H(Play, Humidity) = 0.971 \\)**
+- \\(  H(Play) – H(Play, Humidity) = 0.971 \\)
 - \\(  H(Play) – H(Play, Windy) = 0.02 \\)
 
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-choose-second-attribute.png)
