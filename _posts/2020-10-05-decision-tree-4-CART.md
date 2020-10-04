@@ -111,7 +111,7 @@ Residual\; Sum\; of\; Squares\; (RSS)=\sum_{j=1}^J \sum_{i \in R_j} (y_i - \hat{
 
 , where \\(\hat{y}_{R_j}\\) is the mean response for training observartions within \\(j\\)th box
 
-아래 수식과 같이 Binary tree의 좌우가지에 대한 오차값 \\(MSE_{left}, MSE_{right}\\)을 계산하고, 좌우 가지에 해당하는 샘플 수의 비율 \\frac{m_{left}}{m}, \frac{m_{right}}{m}\(\\)을 가중치로 곱해 전체 오차값 \\(J(k, t_k)\\)을 계산하여 지표간 비교를 통해 최적의 분기를 결정합니다.
+아래 수식과 같이 Binary tree의 좌우가지에 대한 오차값 \\(MSE_{left}, MSE_{right}\\)을 계산하고, 좌우 가지에 해당하는 샘플 수의 비율 \\(\frac{m_{left}}{m}, \frac{m_{right}}{m}\(\\)을 가중치로 곱해 전체 오차값 \\(J(k, t_k)\\)을 계산하여 지표간 비교를 통해 최적의 분기를 결정합니다.
 
 \[
 J(k, t_k)=\frac{m_{left}}{m}MSE_{left}+\frac{m_{right}}{m}MSE_{right}
