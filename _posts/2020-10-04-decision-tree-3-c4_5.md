@@ -47,7 +47,7 @@ ID3 알고리즘에서는 각 시점에서 모든 지표에 대한 분기 전후
 Windy라는 지표로 분기했을 때 데이터가 위와 같이 분기된다고 가정해봅시다. 이 경우의 Information Gain은 0.5568입니다.
 
 \begin{aligned}
-Information Gain&=H(7,3) - (\frac{6}{10}H(6,0)+\frac{4}{10}H(1,3)) \\\\\\
+Information\; Gain&=H(7,3) - (\frac{6}{10}H(6,0)+\frac{4}{10}H(1,3)) \\\\\\
 &=0.8813-(\frac{6}{10} \times 0+\frac{4}{10} \times 0.8113) \\\\\\
 &=0.5568
 \end{aligned}
@@ -57,7 +57,7 @@ Information Gain&=H(7,3) - (\frac{6}{10}H(6,0)+\frac{4}{10}H(1,3)) \\\\\\
 다른 지표인 With whom이라는 지표로 분기했을 때는 Information Gain이 **0.6813**이 나옵니다.
 
 \begin{aligned}
-Information Gain&=H(7,3) - (\frac{1}{10}H(1,0)+\frac{1}{10}H(1,0)+...+\frac{1}{10}H(0,1)+\frac{2}{10}H(1,1)) \\\\\\
+Information\; Gain&=H(7,3) - (\frac{1}{10}H(1,0)+\frac{1}{10}H(1,0)+...+\frac{1}{10}H(0,1)+\frac{2}{10}H(1,1)) \\\\\\
 &=0.8813-(\frac{1}{10} \times 0+...+\frac{2}{10} \times 1) \\\\\\
 &=0.6813
 \end{aligned}
@@ -67,7 +67,7 @@ Information Gain&=H(7,3) - (\frac{1}{10}H(1,0)+\frac{1}{10}H(1,0)+...+\frac{1}{1
 #### Information Gain Ratio (GR)
 C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Information Gain Ratio**라는 지표를 사용하였습니다.
 
-\[ Information Gain Ratio = \frac{IG}{IV} \]
+\[ Information\; Gain\; Ratio = \frac{IG}{IV} \]
 
 \\(IG\\)는 ID3 알고리즘에서의 Information Gain을 의미하며, \\(IV\\)는 **Intrinsic Value**를 의미합니다.
 
@@ -75,7 +75,7 @@ C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Inform
 
 특정 지표로 분기했을 때 생성되는 가지의 수를 \\(N\\)이라고 하고, \\(i\\)번째 가지에 해당하는 확률을 \\(p_i\\)라고할 때, Intrinsic Value는 아래와 같습니다.
 
-\[ Intrinsic Value=IV=-\sum_i^N p_i log_2 p_i \]
+\[ Intrinsic\; Value=IV=-\sum_i^N p_i log_2 p_i \]
 
 ---
 
@@ -86,7 +86,7 @@ C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Inform
 Windy 지표에 대한 Information Gain Ratio를 계산해보면, 첫 번째 경우는 **0.5739**라는 값을 얻을 수 있습니다.
 
 \begin{aligned}
-Information Gain Ratio&=IG/IV \\\\\\
+Information\; Gain\; Ratio&=IG/IV \\\\\\
 &=\frac{0.5568}{-(\frac{6}{10}log_2 \frac{6}{10} + \frac{4}{10}log_2 \frac{4}{10})} \\\\\\
 &=\frac{0.5568}{0.9701} \\\\\\
 &=0.5739
@@ -97,7 +97,7 @@ Information Gain Ratio&=IG/IV \\\\\\
 동일한 방법으로 With whom에 대한 GR을 계산하면 **0.2182**라는 값을 얻습니다.
 
 \begin{aligned}
-Information Gain Ratio&=IG/IV \\\\\\
+Information\; Gain\; Ratio&=IG/IV \\\\\\
 &=\frac{0.6813}{3.1219} \\\\\\
 &=0.2182
 \end{aligned}
