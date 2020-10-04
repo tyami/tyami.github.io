@@ -57,16 +57,16 @@ CART 알고리즘의 또 하나의 특징으로는 가지 분기 시, 여러 개
 
 좌측은 ID3 알고리즘, 우측은 CART 알고리즘의 분기를 나타냅니다. ID3 의 경우 모든 클래스 (e.g., Sunny, Overcast, Rain) 로 가지가 뻗어져나갑니다. 따라서 ID3 알고리즘의 경우 지표별 Information Gain을 한 번씩만 계산하면 됩니다.
 
-\begin{aligned}
+\[
 IG(Play,Outlook) \\\\\\
 IG(Play,Temeperature) \\\\\\
 IG(Play,Humidity) \\\\\\
 IG(Play,Windy)
-\end{aligned}
+\]
 
 반면, CART는 '하나의 클래스와 나머지'와 같이 가지가 생성됩니다. 따라서 아래 예시와 같이 모든 지표 X 모든 클래스 개수만큼 비교가 필요합니다.
 
-\begin{aligned}
+\[
 IG(Play,Outlook=sunny) \\\\\\
 IG(Play,Outlook=overcast) \\\\\\
 IG(Play,Outlook=rain) \\\\\\
@@ -77,7 +77,7 @@ IG(Play,Humidity=high) \\\\\\
 IG(Play,Humidity=normal) \\\\\\
 IG(Play,Windy=TRUE) \\\\\\
 IG(Play,Windy=FALSE) \\\\\\
-\end{aligned}
+\]
 
 ---
 
