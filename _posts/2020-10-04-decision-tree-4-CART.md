@@ -40,7 +40,7 @@ Gini index는 엔트로피와 같은 불순도 (Impurity) 지표입니다. \\(C\
 
 \[
 Gini\; index=G(S)=1-\sum_{i=1}^Cp_i^2
-]\
+\]
 
 ![Binary 문제에서 Probability에 따른 Gini index와 Entropy 변화]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-probability-entropy-gini.png)
 
