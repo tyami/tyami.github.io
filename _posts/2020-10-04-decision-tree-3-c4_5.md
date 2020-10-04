@@ -1,3 +1,4 @@
+
 ---
 title: "의사결정 나무 (Decision Tree) C4.5 알고리즘 설명"
 excerpt: "의사결정 나무의 기본 알고리즘 중 하나인 C4.5 를 공부해봅시다"
@@ -36,7 +37,8 @@ C4.5 알고리즘이 ID3알고리즘에 비해 개선된 점은 아래와 같이
 
 ### 개선점 1: 정교한 불순도 지표
 
-ID3 알고리즘에서는 분기 전후의 엔트로피를 기반으로 Information Gain (IG)을 계산하고, 이를 최대화하는 방향으로 지표를 정했습니다.
+ID3 알고리즘에서는 각 시점에서 모든 지표에 대한 분기 전후의 엔트로피를 기반으로 Information Gain (IG)을 계산하고, 이를 최대화하는 방향으로 지표를 결정했습니다.
+
 하지만 이 알고리즘에는 한계점이 존재합니다.
 
 #### Information Gain의 한계점
@@ -44,6 +46,7 @@ ID3 알고리즘에서는 분기 전후의 엔트로피를 기반으로 Informat
 ![IG의 한계점 - 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example1.png)
 
 Windy라는 지표로 분기했을 때 데이터가 위와 같이 분기된다고 가정해봅시다. 이 경우의 Information Gain은 0.5568입니다.
+
 \begin{aligned}
 Information Gain&=H(7,3) - (\frac{6}{10}H(6,0)+\frac{4}{10}H(1,3)) \\\\\\
 &=0.8813-(\frac{6}{10} \times 0+\frac{4}{10} \times 0.8113) \\\\\\
@@ -53,6 +56,7 @@ Information Gain&=H(7,3) - (\frac{6}{10}H(6,0)+\frac{4}{10}H(1,3)) \\\\\\
 ![IG의 한계점 - 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example2.png)
 
 다른 지표인 With whom이라는 지표로 분기했을 때는 Information Gain이 **0.6813**이 나옵니다.
+
 \begin{aligned}
 Information Gain&=H(7,3) - (\frac{1}{10}H(1,0)+\frac{1}{10}H(1,0)+...+\frac{1}{10}H(0,1)+\frac{2}{10}H(1,1)) \\\\\\
 &=0.8813-(\frac{1}{10} \times 0+...+\frac{2}{10} \times 1) \\\\\\
@@ -63,6 +67,7 @@ Information Gain&=H(7,3) - (\frac{1}{10}H(1,0)+\frac{1}{10}H(1,0)+...+\frac{1}{1
 
 #### Information Gain Ratio (GR)
 C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Information Gain Ratio**라는 지표를 사용하였습니다.
+
 \[ Information Gain Ratio = \frac{IG}{IV} \]
 
 \\(IG\\)는 ID3 알고리즘에서의 Information Gain을 의미하며, \\(IV\\)는 **Intrinsic Value**를 의미합니다.
@@ -70,6 +75,7 @@ C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Inform
 ![Information Gain Ratio overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IGR-overview.png)
 
 특정 지표로 분기했을 때 생성되는 가지의 수를 \\(N\\)이라고 하고, \\(i\\)번째 가지에 해당하는 확률을 \\(p_i\\)라고할 때, Intrinsic Value는 아래와 같습니다.
+
 \[ Intrinsic Value=IV=-\sum_i^N p_i log_2 p_i \]
 
 ---
@@ -79,6 +85,7 @@ C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Inform
 ![IG의 한계점 - 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example1.png)
 
 Windy 지표에 대한 Information Gain Ratio를 계산해보면, 첫 번째 경우는 **0.5739**라는 값을 얻을 수 있습니다.
+
 \begin{aligned}
 Information Gain Ratio&=IG/IV \\\\\\
 &=\frac{0.5568}{-(\frac{6}{10}log_2 \frac{6}{10} + \frac{4}{10}log_2 \frac{4}{10})} \\\\\\
@@ -89,6 +96,7 @@ Information Gain Ratio&=IG/IV \\\\\\
 ![IG의 한계점 - 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example2.png)
 
 동일한 방법으로 With whom에 대한 GR을 계산하면 **0.2182**라는 값을 얻습니다.
+
 \begin{aligned}
 Information Gain Ratio&=IG/IV \\\\\\
 &=\frac{0.6813}{3.1219} \\\\\\
@@ -149,6 +157,7 @@ IG(Play,Temperature(35.5))=0.2863
 \]
 
 이를 통해 Temperature 지표의 경우, 최적 threshold는 33도라는 것을 알 수 있습니다.
+
 **모든 지표 X 모든 breakpoints에 대해** Information Gain을 계산하여 비교한 뒤, **최적의 지표 X breakpoints 조합**을 찾아 분기를 진행하면 됩니다.
 
 ---
@@ -176,19 +185,23 @@ C4.5 알고리즘의 세번째 개선점은 **결측치가 포함된 데이터�
 |     Overcast    |     Yes    |
 |     Rain    |     No    |
 
-14개의 데이터 샘플 중 6개 샘플데 대해서는 Outlook 변수의 값이 결측치 (missing value)로 되어있는 상태입니다. 일반적으로는 이런 경우 분기 자체가 불가능하지만, C4.5 알고리즘에서는 이 문제를 Information Gain 을 계산하는 수식에 약간의 변화를 주어 해결했습니다.
+14개의 데이터 샘플 중 6개 샘플에 대해서는 Outlook 변수의 값이 결측치 (missing value)로 되어있는 상태입니다. 일반적으로는 이런 경우 분기 자체가 불가능하지만, C4.5 알고리즘에서는 이 문제를 Information Gain 을 계산하는 수식에 약간의 변화를 주어 해결했습니다.
 
 핵심적인 내용을 요약하면 아래와 같습니다.
 
 - 1단계: Entropy는 Non-missing value로만 계산
 - 2단계: Information Gain는 Weighted Information Gain로 변경
-\[
-Weighted IG=F∗IG(S,A)\\\\\\
-F=proportion of non-missing value
-\]
-- 3단계: Intrinsic Value는 missing value를 하나의 클래스로 보고 모든 데이터로 계산
 - 
-#### 개선점 3: 예시
+\[
+Weighted\; Information\; Gain=F \times IG(S,A)\\\\\\
+F=proportion\; of\; non\; missing\; value
+\]
+
+- 3단계: Intrinsic Value는 missing value를 하나의 클래스로 보고 모든 데이터로 계산
+
+---
+
+#### 예시
 위 예시에  차례차례 적용을 해봅시다 !
 
 - 1단계: Entropy는 Non-missing value로만 계산
@@ -217,7 +230,7 @@ F=\frac{8}{14}
 \]
 
 \begin{aligned}
-Weighted Information Gain &= 8/14 \times 0.4544 \\\\\\
+Weighted\; Information\; Gain &= \frac{8}{14} \times 0.4544 \\\\\\
 &=0.2597
 \end{aligned}
 
@@ -230,7 +243,7 @@ IV &= -( \frac{1}{14}log_2 \frac{1}{14} + \frac{4}{14}log_2 \frac{4}{14} + \frac
 \end{aligned}
 
 \begin{aligned}
-Information Gain Ratio&=\frac{0.2597}{1.659} \\\\\\
+Information\; Gain\; Ratio&=\frac{0.2597}{1.659} \\\\\\
 &=0.1565
 \end{aligned}
 
@@ -238,8 +251,42 @@ Information Gain Ratio&=\frac{0.2597}{1.659} \\\\\\
 
 ### 개선점 4: 과적합을 방지하기 위한 가지치기
 
-*작성 중입니다*
+의사결정 나무가 깊어질수록, training data에 대해서는 잘 분류하지만, 새로운 종류의 데이터 (test data)는 잘 분류하지 못하는 과적합 (overfitting) 문제가 발생하게 됩니다.
+
+#### 가지치기 (Pruning)
+따라서 의사결정 나무가 너무 깊어지지 않도록 중간에 노드를 잘라주는 가지치기 (pruning) 과정이 필요합니다. 가지치기에는 사전 가지치기(pre-pruning)와 사후 가지치기(post-pruning) 과정이 있습니다. 
+
+- 사전 가지치기: 의사결정 나무를 완성하기 전에 가지치기를 수행합니다
+- 사후 가지치기: 의사결정 나무를 완성한 후에 가지치기를 수행합니다.
+
+이 중, **C4.5 알고리즘에서는 사후 가지치기 알고리즘을 적용했습니다.**
+
+#### 사후 가지치기 (Post-pruning)
+- Step 1: Data segmentation
+사후 가지치기는 의사결정 나무가 완성된 후에 가지치기를 진행하는 방식입니다. 따라서 데이터를 training/test 데이터가 아니라 training/pruning/test 데이터로 나눕니다. 
+
+- Step 2: Complete decision tree with training data 
+Training data만으로 의사결정 나무를 만듭니다.
+
+- Step 3: Pruning with test data
+Pruning data로 가지치기를 수행합니다. 
+
+상위 노드부터 차례차례 \\(e\\)값을 계산합니다.
+
+\begin{aligned}
+e&=\frac{f+\frac{z^2}{2N}+z\sqrt{\frac{f}{N}-\frac{f^2}{N}+\frac{z^2}{4N^2}}}{1+\frac{z^2}{N}} \\\\\\
+N&=sample\; size \\\\\\
+f&=Error\; rate \\\\\\
+z&=z\; score \; (default\; z=0.69)
+\end{aligned}
+
+![C4.5 알고리즘의 사후가지치기 방법](https://octaviansima.files.wordpress.com/2011/03/c45-sample1.jpg)
+
+자식노드들의 \\(e\\)값의 weighted sum 값과 부모노드의 \\(e\\) 값을 비교합니다. 만약 부모노드의 \\(e\\)값이 더 작다면, 해당 분기는 진행하지 않고 가지치기를 수행합니다.
+
+- Step 4: Prediction with test data
+완성된 pruned decision tree를 이용해 Test data 에 대한 결과를 예측합니다.
 
 ---
-이번 포스팅에서는 ID3알고리즘에 비해 C4.5 알고리즘에서 개선된 점들을 알아보았습니다.  
-다음 포스팅에서는 엔트로피 기반 불순도가 아닌 지니 계수를 불순도를 사용하는 CART (Classification And Regression Tree) 알고리즘에 대해 알아보도록 하겠습니다.
+이번 포스팅에서는 C4.5 알고리즘의 특징들을 알아보았습니다.  
+다음 포스팅에서는 엔트로피 기반 불순도가 아닌 지니 계수를 불순도를 사용하는 **CART (Classification And Regression Tree) 알고리즘**에 대해 알아보도록 하겠습니다.
