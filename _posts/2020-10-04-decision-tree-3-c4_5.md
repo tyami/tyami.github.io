@@ -287,3 +287,5 @@ z&=z\; score \; (default\; z=0.69)
 ---
 이번 포스팅에서는 C4.5 알고리즘의 특징들을 알아보았습니다.  
 다음 포스팅에서는 엔트로피 기반 불순도가 아닌 지니 계수를 불순도를 사용하는 **CART (Classification And Regression Tree) 알고리즘**에 대해 알아보도록 하겠습니다.
+
+다음 글 보기: [의사결정 나무 (Decision Tree) CART 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-4-CART/)
