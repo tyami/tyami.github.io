@@ -19,9 +19,9 @@ use_math: true
 
 이전 글 보기: [의사결정 나무 (Decision Tree) C4.5 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-3-c4_5/)
 
-> 이전 포스팅에서는 의사결정 나무의 가장 기본적인 알고리즘인 ID3 알고리즘을 예시를 통해 정리했습니다.  
-> 이번 포스팅에서 소개할 C4.5 알고리즘은 ID3알고리즘과 동일하게 엔트로피를 불순도(Impurity)로 사용하는 알고리즘입니다.
- 
+> 이전 포스팅에서는 의사결정 나무에서 엔트로피를 불순도로 사용하는 ID3와 C4.5 알고리즘을 정리해보았습니다.
+> 이번 포스팅에서는 엔트로피 외에 다른 불순도 지표를 사용하는 CART 알고리즘에 대해 정리해보도록 하겠습니다. 
+
 ## CART 알고리즘
 CART는 ID3알고리즘과 비슷한 시기에, 별도로 개발된 알고리즘으로 Classification And Regression Tree의 약자입니다.  
 이름 그대로 Classification뿐 아니라 Regression도 가능한 알고리즘인데, 이 외에도 앞서 소개한 알고리즘들과 몇 가지 차이점이 존재합니다.
