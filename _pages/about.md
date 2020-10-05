@@ -15,9 +15,8 @@ toc_sticky: true
 
 ### 💖 Research Interests
 - Data science
-- Neuromarketing
-- Human brain data (EEG, fMRI)
-- Machine learning 
+- Machine learning and Deep learning
+- Human brain data (EEG, fMRI) analysis
 
 ### 🎓 Education
 - **M.S.-Ph.D. course, Biomedical Engineering** (2015∼ )  
