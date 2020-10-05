@@ -19,22 +19,22 @@ use_math: true
 
 이전 글 보기: [의사결정 나무 (Decision Tree) C4.5 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-3-c4_5/)
 
-이전 포스팅에서는 의사결정 나무의 가장 기본적인 알고리즘인 ID3 알고리즘을 예시를 통해 정리했습니다.
-이번 포스팅에서 소개할 C4.5 알고리즘은 ID3알고리즘과 동일하게 엔트로피를 불순도(Impurity)로 사용하는 알고리즘입니다.
+> 이전 포스팅에서는 의사결정 나무의 가장 기본적인 알고리즘인 ID3 알고리즘을 예시를 통해 정리했습니다.
+> 이번 포스팅에서 소개할 C4.5 알고리즘은 ID3알고리즘과 동일하게 엔트로피를 불순도(Impurity)로 사용하는 알고리즘입니다.
  
 ## CART 알고리즘
 CART는 ID3알고리즘과 비슷한 시기에, 별도로 개발된 알고리즘으로 Classification And Regression Tree의 약자입니다.  
 이름 그대로 Classification뿐 아니라 Regression도 가능한 알고리즘인데, 이 외에도 앞서 소개한 알고리즘들과 몇 가지 차이점이 존재합니다.
 
-- Gini index를 불순도로 사용
+- 불순도: Gini index
 - Binary tree
-- Regression 가능
+- Regression tree
 
 위 세가지 항목에 대해 하나씩 살펴보도록 하겠습니다.
 
 ---
 
-### Gini index를 불순도로 사용
+### 불순도: Gini index
 
 Gini index는 엔트로피와 같은 불순도 (Impurity) 지표입니다. \\(C\\)개 사건의 집합 \\(S\\)에 대한 Gini index 는 아래 수식으로 표현됩니다.
 
@@ -81,11 +81,11 @@ IG(Play,Windy=FALSE) \\\\\\
 
 ---
 
-### Regression 가능
+### Regression tree
 
-Classification And **Regression** Tree 라는 이름답게, CART 알고리즘은 Regression을 지원합니다. 쉽게 말해, 결과값이 성별, 등급과 같은 몇 개의 클래스값이 아니라, 온도, 가격 등 다양한 값이 존재하는 문제를 말합니다.
+Classification And **Regression Tree** 라는 이름답게, CART 알고리즘은 Regression(회귀)를 지원합니다. 회귀는 쉽게 말해, 결과값이 성별, 등급과 같은 몇 개의 클래스값이 아니라, 온도, 가격 등 다양한 값이 존재하는 문제를 말합니다.
 
-회귀 트리 (Regression Tree)의 방법은 간단합니다. **분기 지표를 선택할 때 사용하는 index가 불순도 (Entropy, Gini index)가 아닌, 실제값과 예측값의 오차를 사용합니다.** 
+회귀 트리 (Regression Tree)의 방법은 간단합니다. **분기 지표를 선택할 때 사용하는 index를 불순도 (Entropy, Gini index)가 아닌, 실제값과 예측값의 오차를 사용합니다.** 
 
 수식을 보기 전, 간단한 예시를 먼저 살펴봅시다. [tomaszgolan's blog](https://tomaszgolan.github.io/introduction_to_machine_learning/markdown/introduction_to_machine_learning_02_dt/introduction_to_machine_learning_02_dt/#regression)의 설명을 참고했습니다.
 
@@ -123,8 +123,7 @@ ID3, C4.5, CART에 걸쳐 의사결정 나무 생성을 위한 알고리즘을 �
 
 ![Regression Tree 예시 4: Overfitting]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-regression-tree-example4.png)
 
-만약 Regression의 예시에서 모든 Training data가 개별 구간을 갖도록 의사결정 나무가 생성된다면 이 모델이 좋은 모델일까요?  
-아니요, 이 모델은 과적합 상태로 볼 수 있습니다. 그리고 이러한 과적합을 막기 위해, 가지치기 (pruning) 과정을 수행합니다.
+만약 Regression의 예시에서 모든 Training data가 개별 구간을 갖도록 의사결정 나무가 생성된다면 이 모델은 과적합된 모델이라고 할 수 있습니다. 즉, Training data에 너무 과도하게 학습된 모델입니다. 따라서 이러한 과적합을 막기 위해, 가지치기 (pruning) 과정을 수행합니다.
 
 알고리즘에 따라 아래 예시와 같이 다양한 방법으로 사전 가지치기 (pre-pruning) 또는 사후 가지치기 (post-pruning)를 하기도 하지만, 단일 모델의 한계점은 여전히 존재합니다. 
 
@@ -134,4 +133,5 @@ ID3, C4.5, CART에 걸쳐 의사결정 나무 생성을 위한 알고리즘을 �
 - impurity/error 변화값의 최소값을 설정
 
 이 문제를 해결하기 위해 사람들은 의사결정 나무를 여러개 만들어, 예측 결과를 종합하는 앙상블 (Ensemble) 알고리즘을 고안하였습니다.  
-다음 포스팅부터는 배깅 (Bagging), 부스팅 (Boosting), 스태킹 (Stacking) 등 다양한 앙상블 모델을 정리해고자 합니다.
+
+> 다음 포스팅부터는 배깅 (Bagging), 부스팅 (Boosting), 스태킹 (Stacking) 등 다양한 앙상블 모델을 정리해고자 합니다.

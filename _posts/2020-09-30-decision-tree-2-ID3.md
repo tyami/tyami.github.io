@@ -19,7 +19,7 @@ use_math: true
 
 이전 글 보기: [의사결정 나무 (Decision Tree) 기본 설명](https://tyami.github.io/machine%20learning/decision-tree-1-concept/)
 
-이전 글에 이어 의사결정 나무 (Decision Tree) 알고리즘을 설명하도록 하겠습니다. 본 포스팅에서 다룰 알고리즘은 의사결정 나무의 기본 알고리즘이라고 할 수 있는 ID3 알고리즘입니다.
+> 이전 글에 이어 의사결정 나무 (Decision Tree) 알고리즘을 설명하도록 하겠습니다. 본 포스팅에서 다룰 알고리즘은 의사결정 나무의 기본 알고리즘이라고 할 수 있는 ID3 알고리즘입니다.
 
 ## ID3 알고리즘
 ID3 알고리즘은 Iterative Dichotomiser 3의 약자입니다. Dichotomiser는 "이분하다"라는 뜻의 프랑스어로, **반복적으로 이분하는** 알고리즘이라고 말할 수 있겠네요.
@@ -178,7 +178,8 @@ Outlook으로 분기했을 때 Information Gain이 가장 크니 아래와 같�
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3-result.png)
 
 ---
-이번 포스팅에서는 ID3 알고리즘이 작동하는 원리를 예시를 통해서 이해해보았습니다.
-다음 포스팅에서는 ID3보다 개선된 알고리즘인 C4.5 알고리즘을 공부해보도록 하겠습니다.
+
+> 이번 포스팅에서는 ID3 알고리즘이 작동하는 원리를 예시를 통해서 이해해보았습니다.
+> 다음 포스팅에서는 ID3보다 개선된 알고리즘인 C4.5 알고리즘을 공부해보도록 하겠습니다.
 
 다음 글 보기: [의사결정 나무 (Decision Tree) C4.5 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-3-c4_5/)

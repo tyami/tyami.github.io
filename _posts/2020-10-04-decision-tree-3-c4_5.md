@@ -19,8 +19,8 @@ use_math: true
 
 이전 글 보기: [의사결정 나무 (Decision Tree) ID3 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)
 
-이전 포스팅에서는 의사결정 나무의 가장 기본적인 알고리즘인 ID3 알고리즘을 예시를 통해 정리했습니다.
-이번 포스팅에서 소개할 C4.5 알고리즘은 ID3알고리즘과 동일하게 엔트로피를 불순도(Impurity)로 사용하는 알고리즘입니다.
+> 이전 포스팅에서는 의사결정 나무의 가장 기본적인 알고리즘인 ID3 알고리즘을 예시를 통해 정리했습니다.
+> 이번 포스팅에서 소개할 C4.5 알고리즘은 ID3알고리즘과 동일하게 엔트로피를 불순도(Impurity)로 사용하는 알고리즘입니다.
  
 ## C4.5 알고리즘
 C4.5 알고리즘이 ID3알고리즘에 비해 개선된 점은 아래와 같이 요약할 수 있습니다.
@@ -285,7 +285,8 @@ z&=z\; score \; (default\; z=0.69)
 완성된 pruned decision tree를 이용해 Test data 에 대한 결과를 예측합니다.
 
 ---
-이번 포스팅에서는 C4.5 알고리즘의 특징들을 알아보았습니다.  
-다음 포스팅에서는 엔트로피 기반 불순도가 아닌 지니 계수를 불순도를 사용하는 **CART (Classification And Regression Tree) 알고리즘**에 대해 알아보도록 하겠습니다.
+
+> 이번 포스팅에서는 C4.5 알고리즘의 특징들을 알아보았습니다.  
+> 다음 포스팅에서는 엔트로피 기반 불순도가 아닌 지니 계수를 불순도를 사용하는 **CART (Classification And Regression Tree) 알고리즘**에 대해 알아보도록 하겠습니다.
 
 다음 글 보기: [의사결정 나무 (Decision Tree) CART 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-4-CART/)

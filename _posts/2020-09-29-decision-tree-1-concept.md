@@ -18,7 +18,7 @@ toc_label: "Decision Tree 기본 설명"
 이 블로그에서의 첫 글이네요 !
 
 ## Motivation
-본 포스팅에서는 기계 학습 (Machine learning)의 대표적인 알고리즘 중 하나인 의사결정 나무 (Decision tree) 알고리즘에 대해서 다뤄보고자 합니다.
+> 본 포스팅에서는 기계 학습 (Machine learning)의 대표적인 알고리즘 중 하나인 의사결정 나무 (Decision tree) 알고리즘에 대해서 다뤄보고자 합니다.
 
 개념이 워낙 간단한 알고리즘이고, 최근 들어 워낙 심층 학습 (Deep learning)이 대세로 굳어지다보니 '이걸 굳이 자세히 공부해야하나?' 라는 생각을 갖고 있던 알고리즘이었는데, 최근 Kaggle과 같은 데이터 분석 대회에 관심을 갖게 되면서 공부할 필요성을 느끼게 되었습니다.
 
@@ -97,6 +97,6 @@ Outlook, Temperature, Humidity, Windy와 같은 기상조건들(Attributes)에 �
 #### 지니 계수 (Gini index) 기반 알고리즘
 - CART (Classification And Regression Tree)
 
-이후 포스팅에서는 ID3, C4.5, CART 알고리즘에 대해서 하나씩 알아보도록 하겠습니다.
+> 이후 포스팅에서는 ID3, C4.5, CART 알고리즘에 대해서 하나씩 알아보도록 하겠습니다.
 
 다음 글 보기: [의사결정 나무 (Decision Tree) ID3 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)
