@@ -15,12 +15,10 @@ toc_sticky: true
 toc_label: "Decision Tree 기본 설명"
 ---
 
-이 블로그에서의 첫 글이네요 !
-
-## Motivation
 > 본 포스팅에서는 기계 학습 (Machine learning)의 대표적인 알고리즘 중 하나인 의사결정 나무 (Decision tree) 알고리즘에 대해서 다뤄보고자 합니다.
 
-개념이 워낙 간단한 알고리즘이고, 최근 들어 워낙 심층 학습 (Deep learning)이 대세로 굳어지다보니 '이걸 굳이 자세히 공부해야하나?' 라는 생각을 갖고 있던 알고리즘이었는데, 최근 Kaggle과 같은 데이터 분석 대회에 관심을 갖게 되면서 공부할 필요성을 느끼게 되었습니다.
+## Motivation
+의사결정 나무는 개념이 워낙 간단한 알고리즘이고, 최근 들어 워낙 심층 학습 (Deep learning)이 대세로 굳어지다보니 '이걸 굳이 자세히 공부해야하나?' 라는 생각을 갖고 있던 알고리즘이었는데, 최근 Kaggle과 같은 데이터 분석 대회에 관심을 갖게 되면서 공부할 필요성을 느끼게 되었습니다.
 
 ![2019년 기준 Kaggle competition에서 많이 사용된 알고리즘 2, 3위가 Decision tree 기반 앙상블 기법입니다](https://pbs.twimg.com/media/D3Pb_Q3UIAAuSWU?format=jpg&name=medium)  
 2019년 4월, Keras library의 개발자 중 한 명인 François Chollet의 [tweet](https://twitter.com/fchollet/status/1113476428249464833?lang=en)에 올라온 내용입니다.

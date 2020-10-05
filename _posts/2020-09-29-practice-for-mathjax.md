@@ -17,6 +17,9 @@ toc_label: "Jekyll 블로그에 MathJax 수식 사용하기"
 use_math: true
 ---
 
+> Jekyll 블로그에 MathJax 수식을 사용할 수 있도록 셋팅 했습니다.  
+> 자주 사용하는 MathJax 수식 문법을 정리해봅니다.
+
 ## 참고
 - [수식 live test](https://www.mathjax.org/#demo)
 - [수식 작성방법](https://ghdic.github.io/math/default/mathjax-%EB%AC%B8%EB%B2%95/)
@@ -30,7 +33,6 @@ This formula \\( f(x) = x^2 \\) is an example.
 ```
 This formula $ f(x) = x^2 $ is an example.  
 This formula \\( f(x) = x^2 \\) is an example.
-
 
 ### outline 수식
 ```latex
@@ -73,13 +75,13 @@ H(Play)&=-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
 
 ```latex
 \begin{eqnarray}
-H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
-&=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
-&=&0.94
+H(Play)&=-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
+&=-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
+&=0.94
 \end{eqnarray}
 ```
 \begin{eqnarray}
-H(Play)&=&-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
-&=&-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
-&=&0.94
+H(Play)&=-\sum_{i=1}^c p_i\log_2 p_i \\\\\\
+&=-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
+&=0.94
 \end{eqnarray}
