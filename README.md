@@ -7,8 +7,8 @@
   
 - **Developed and maintained based on Jekyll**
   - Default theme: [Minimal-mistake](https://mmistakes.github.io/minimal-mistakes/)
-  - Added: MathJax, Disqus, Hits (in Footer)
-  - Enrolled: Google analytics, Google Search engine, Naver search engine
+  - Added: [MathJax](https://www.mathjax.org/), [Disqus](https://disqus.com/), [Hits](https://hits.seeyoufarm.com/) (in Footer)
+  - Enrolled: [Google analytics](https://analytics.google.com/analytics/web/#/), [Google Search Console](https://search.google.com/search-console/about), [Naver Search Advisor](https://searchadvisor.naver.com/)
 
 ---
 
