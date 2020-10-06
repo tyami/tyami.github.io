@@ -87,6 +87,8 @@ weak learner 개별의 예측값은 중요하지 않습니다. 예측 확률값�
 
 배깅 (Bagging)은 **B**ootstrap **Agg**regat**ing**의 약자입니다. 이름에서 알 수 있다시피 **부트스트랩 (Boostrap)**을 이용합니다.
 
+![Bootstrap]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-bootstrap.png) 
+
 부트스트랩이란 주어진 데이터셋에서 random sampling 하여 새로운 데이터셋을 만들어내는 것을 의미합니다. 부트스트랩을 통해 만들어진 여러 데이터셋을 바탕으로 weak learner를 훈련시킨 뒤, 결과를 voting 합니다.
 
 대표적인 예시로 Random Forest가 있습니다. 
