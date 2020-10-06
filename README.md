@@ -7,7 +7,8 @@
   
 - Developed and maintained based on Jekyll
   - Default theme: [Minimal-mistake](https://mmistakes.github.io/minimal-mistakes/)
-  - Modified: MathJax, Disqus, Google analytics, Google Search engine, Naver search engine
+  - Added: MathJax, Disqus, Hits (in Footer)
+  - Enrolled: Google analytics, Google Search engine, Naver search engine
 
 <div align=center>
   
