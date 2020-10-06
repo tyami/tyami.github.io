@@ -1,6 +1,3 @@
-
----
-
 ### 🌞 [tyami (Taeyang Yang)'s Blog website](https://tyami.github.io/)  
 
 - **Contents**
