@@ -125,3 +125,5 @@ Boosting은 다시 **Adaptive Boosting (AdaBoost)**와 **Gradient Boosting Model
 ---
 
 > 다음 포스팅에서는 배깅 (Bagging)의 대표적인 알고리즘인 Random Forest에 대해 정리해보도록 하겠습니다.
+
+다음 글 보기: [배깅 앙상블(Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-example-random-forest/)
