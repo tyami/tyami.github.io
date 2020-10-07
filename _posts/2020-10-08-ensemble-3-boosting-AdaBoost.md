@@ -45,17 +45,17 @@ use_math: true
 - AdaBoost에서 stump들은 **sequential**하게 만들어진다.
 
 ## AdaBoost 학습 순서
-### 1. Initialize sample weight
+### 1. Initial sample weight
 Initial sample weight는 모두 동일하게 해준다
 
 \[ 
 sample\; weight=\frac{1}{total\; number\; of\; samples}
 \]
 
-### 2. Complete first stump
+### 2. First stump
 Impurity를 바탕으로 best attribute로 분기하는 stump를 완성한다.
 
-### 3. Calculate amount of say
+### 3. Amount of say
 완성한 stump의 분류 결과에 따라 amount of say (stump의 weight)를 계산해준다.
 
 \\(total\; error\\)는 **오분류된 샘플의 sample weight 총합**으로 정의될 수 있다. 전체 Sample weights의 총합이 1이기 때문에 최고의 Stump (모두 맞춤)를 만든 경우 total error 는 0, 반대로 최악의 Stump를 만든 경우 total error는 1을 갖는다.
@@ -64,7 +64,7 @@ Impurity를 바탕으로 best attribute로 분기하는 stump를 완성한다.
 Amount\; of\; Say=\frac{1}{2}log(\frac{1-total\; error}{total\; error})
 \]
 
-### 4. Sample weight update
+### 4. Updated sample weight
 오분류된 샘플의 sample weight는 늘리고, 잘 분류된 샘플의 sample weight는 낮춘다.  
 
 #### 4.1. 오분류된 샘플
@@ -105,7 +105,7 @@ Weighted\; Gini\; index= \sum_{i=1}^C w_ip_i(1-p_i)
 이 방법을 사용할 경우, 새로 sampling한 데이터셋의 sample weight는 \\(\frac{1}{total\; number\; of\; samples\\})로 초기화해준다. sample weight는 일정하지만, 동일한 샘플이 더 많이 있기 때문에, 결과적으로 sample weight이 다른 것과 동일한 효과를 줄 수 있다.
 
 ### 6. Repetition
-정해진 iteration만큼 stump가 생성될 때까지 4~5 과정을 반복한다.
+정해진 iteration만큼 stump가 생성될 때까지 3~5 과정을 반복한다.
 
 ### 7. 최종 예측
 테스트 시, 모든 Stump 의 예측값에 amount of say를 가중치로 주고, Hard voting을 해서 최종 예측값을 얻어낸다.
