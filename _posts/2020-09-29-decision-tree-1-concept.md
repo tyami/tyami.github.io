@@ -41,9 +41,10 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
 - 부스팅 앙상블 (Boosting Ensemble) 6: NGBoost
  
 ## Decision Tree 의 기본 개념
- 
-Decision Tree는 **일련의 필터 과정** 또는 **스무고개**라고 생각하면 됩니다.
 
+![decision tree node 정의]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-29-decision-tree-define-nodes.png)
+
+Decision Tree는 **일련의 필터 과정** 또는 **스무고개**라고 생각하면 됩니다.
 
 아래와 같은 데이터가 있다고 생각해봅시다.  
 Outlook, Temperature, Humidity, Windy와 같은 기상조건들(Attributes)에 따라 운동을 할지 말지 (Play) 결정하는 모델을 만들고자 합니다.

@@ -83,7 +83,7 @@ Impurity (Gini index)를 바탕으로 best attribute로 분기하는 stump를 �
 
 ![AdaBoost Step 3-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-08-AdaBoost-step3-1.png)
 
-완성한 stump의 분류 결과에 따라 amount of say \\(\alpha_t\\)를 계산해준다. \\(\alpha_t\\)는 각 앙상블 시 각 모델의 예측값 \\(h_t\\)에 대한 가중치로 사용됩니다.
+완성한 stump의 분류 결과에 따라 amount of say \\(\alpha_t\\)를 계산해줍니다. \\(\alpha_t\\)는 각 앙상블 시 각 모델의 예측값 \\(h_t\\)에 대한 가중치로 사용됩니다.
 
 \[
 Amount\; of\; say=\alpha_t=\frac{1}{2}log(\frac{1-\epsilon_t}{\epsilon_t})
