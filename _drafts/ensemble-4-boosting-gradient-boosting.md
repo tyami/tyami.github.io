@@ -22,6 +22,8 @@ use_math: true
 
 > 이전 포스팅에서는 부스팅 앙상블의 초기 모델인 AdaBoost에 대해 설명했습니다.
 > 이번 포스팅에서는 AdaBoost보다 조금 더 진보된 부스팅 앙상블 모델인 Gradient Boosting 알고리즘에 대해 정리해보겠습니다.
+
+- 참고자료 (Youtube): [Gradient Boost Part 1: Regression Main Ideas](https://www.youtube.com/watch?v=3CC4N4z3GJc) by StatQuest 
  
 ## Gradient Boosting
 
