@@ -67,7 +67,7 @@ Bootstrap을 통해 생성된 각각의 데이터셋에 대한 Decision tree들�
 
 각 Decision tree의 예측 결과를 voting하여 최종 예측값을 얻습니다. 
 
-## Scikit-learn
+## Python code
 python `scikit-learn` 라이브러리의 `sklearn.ensemble.RandomForestClassifier` 또는 `sklearn.ensemble.RandomForestRegressor`를 이용해 Random Forest를 사용할 수 있습니다. 
 
 - [sklearn.ensemble.RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier)
