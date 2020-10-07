@@ -27,7 +27,7 @@ use_math: true
 
 ## AdaBoost의 3가지 Concepts
 1. Forest of stumps
-2. Different weights
+2. Different weights for each stump 
 3. Sequential
 
 ### 1. Forest of stumps

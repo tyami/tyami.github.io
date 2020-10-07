@@ -40,7 +40,7 @@ Gini index는 엔트로피와 같은 불순도 (Impurity) 지표입니다. \\(C\
 
 \begin{aligned}
 G(S) &= \sum_{i=1}^C p_i(1-p_i) \\\\\\
-&= \sum_{1=1}^C p_i - \sum_{1=1}^C p_i^2 \\\\\\
+&= \sum_{i=1}^C p_i - \sum_{i=1}^C p_i^2 \\\\\\
 &= 1 - \sum_{i=1}^Cp_i^2 \\\\\\
 \end{aligned}
 
