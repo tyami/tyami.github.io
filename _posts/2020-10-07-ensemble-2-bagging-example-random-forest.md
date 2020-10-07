@@ -31,7 +31,7 @@ use_math: true
 
 이 문장에서 숲을 Random Forest로, 나무를 Decision tree로 바꾸어봅시다.
 
-> **Random Forest*에는 많은 **Decision tree**들이 있고, 이 **Decision tree**들은 서로 다른 가지의 개수, 모양, 형태를 가집니다.
+> **Random Forest**에는 많은 **Decision tree**들이 있고, 이 **Decision tree**들은 서로 다른 가지의 개수, 모양, 형태를 가집니다.
 
 ![Random Forest overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest-overview.png)
 
