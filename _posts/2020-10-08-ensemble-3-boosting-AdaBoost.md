@@ -104,7 +104,7 @@ Amount\; of\; say=\alpha_t=\frac{1}{2}log(\frac{1-\epsilon_t}{\epsilon_t})
 
 ![AdaBoost Step 3-2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-08-AdaBoost-step3-2.png)
 
-또한 \\(\epsilon_t\\)에 따른 \\(\alpha_t\\)의 변화를 그림으로 그려보면, \\(\epsilon_t\\)가 낮을 때는 (<0.5)는 양의 \\(\alpha_t\\)를, \\(\epsilon_t\\)가 높을 때는 (>0.5)는 음의 \\(\alpha_t\\)를 갖습니다. 또한 \\(|\alpha_t|\\)는 \\(\epsilon_t\\)가 극단적인 값일 수록 (0 또는 1에 가까울수록) 더욱 더 커지는 것을 볼 수 있습니다.
+또한 \\(\epsilon_t\\)에 따른 \\(\alpha_t\\)의 변화를 그림으로 그려보면, \\(\epsilon_t\\)가 낮을 때는 (<0.5)는 양의 \\(\alpha_t\\)를, \\(\epsilon_t\\)가 높을 때는 (>0.5)는 음의 \\(\alpha_t\\)를 갖습니다. 또한 \\(\lvert \alpha_t \rvert\\)는 \\(\epsilon_t\\)가 극단적인 값일 수록 (0 또는 1에 가까울수록) 더욱 더 커지는 것을 볼 수 있습니다.
 
 위의 예시에서 계산한 amount of say \\(\alpha_t\\)는 0.97입니다.
 
