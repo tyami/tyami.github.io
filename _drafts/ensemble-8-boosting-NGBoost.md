@@ -24,6 +24,7 @@ use_math: true
 > 이번 포스팅에서는 NGBoost 알고리즘을 정리해보겠습니다.
  
 ## NGBoost
+NGBoost는 2019년 Machine learning의 대가 Andrew Ng 교수가 포함된 Stanford ML 그룹에서 [NGBoost: Natural Gradient Boosting for Probabilistic Prediction](https://arxiv.org/abs/1910.03225)라는 이름으로 발표했습니다
 
 ---
 
@@ -36,6 +37,11 @@ use_math: true
 ---
 
 ### Python code
+Python에서는 `ngboost` library로 사용 가능합니다.
+
+- [NGBoost Github](https://github.com/stanfordmlgroup/ngboost)
+- [NGBoost User Guide](https://stanfordmlgroup.github.io/ngboost/intro.html)
+
 ```python
 
 ```

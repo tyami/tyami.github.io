@@ -24,6 +24,8 @@ use_math: true
 > 이번 포스팅에서는 CatBoost 알고리즘을 정리해보겠습니다.
  
 ## CatBoost
+CatBoost는 러시아 검색엔진 사이트인 Yandex 연구자들에 의해 발표되었습니다.
+- [CatBoost: unbiased boosting with categorical features](https://arxiv.org/abs/1706.09516)
 
 ---
 
@@ -36,6 +38,10 @@ use_math: true
 ---
 
 ### Python code
+Python에서는 `catboost` library로 사용 가능합니다.
+
+- [CatBoost Docs](https://catboost.ai/docs/concepts/about.html)
+
 ```python
 
 ```

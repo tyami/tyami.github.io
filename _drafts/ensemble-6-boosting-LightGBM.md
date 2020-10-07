@@ -24,6 +24,8 @@ use_math: true
 > 이번 포스팅에서는 LightGBM 알고리즘을 정리해보겠습니다.
  
 ## LightGBM
+LightGBM은 NIPS 2017에서 Microsoft가 발표하였습니다.
+- [LightGBM: A Highly Efficient Gradient Boosting Decision Tree](https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree)
 
 ---
 
@@ -36,6 +38,10 @@ use_math: true
 ---
 
 ### Python code
+Python에서는 `lighgbm` library로 사용 가능합니다.
+
+- [LightGBM Docs](https://lightgbm.readthedocs.io/en/latest/)
+
 ```python
 
 ```

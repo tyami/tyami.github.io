@@ -24,8 +24,7 @@ use_math: true
 > 이번 포스팅에서는 최근 Kaggle에서 높은 점수를 기록하고 있는 XGBoost 알고리즘에 대해 정리해보겠습니다.
  
 ## XGBoost 
-
-
+XGBoost는 2016년 Tianqi Chen과 Carlos Guestrin 가 [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754) 라는 논문으로 발표한 이후 Kaggle에서 놀라운 성능을 보이며 알려졌습니다.
 
 ---
 
@@ -38,6 +37,10 @@ use_math: true
 ---
 
 ### Python code
+Python 에서는 `xgboost` library로 사용 가능합니다.
+
+- [XGBoost Docs](https://xgboost.readthedocs.io/en/latest/)
+
 ```python
 
 ```
