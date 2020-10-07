@@ -93,6 +93,8 @@ weak learner 개별의 예측값은 중요하지 않습니다. 예측 확률값�
 
 대표적인 예시로 Random Forest가 있습니다. 
 
+- [배깅 앙상블 (Bagging Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
+
 #### 부스팅 (Boosting)
 
 부스팅 (Boosting)은 반복적으로 모델을 업데이트해나갑니다. 이 때 이전 iteration의 결과에 따라 데이터셋 샘플에 대한 가중치를 부여합니다. 결과적으로, 반복할 때마다 각 샘플의 중요도에 따라 다른 분류기가 만들어지게 됩니다. 최종적으로는 모든 iteration에서 생성된 모델의 결과를 voting합니다.
@@ -108,10 +110,17 @@ Iteration 2에서는 Iteration 1의 분류기과 새로운 분류기를 함께 �
 
 동일한 방식으로 반복을 진행한 뒤, 만들어진 분류기들을 모두 결합하여 최종 모델을 만들어냅니다.
 
-Boosting은 다시 **Adaptive Boosting (AdaBoost)**와 **Gradient Boosting Model (GBM)**으로 나눌 수 있습니다. 두 모델의 차이는 아래 글을 참고하면 좋을 듯 합니다.
+Boosting은 다시 **Adaptive Boosting (AdaBoost)**와 **Gradient Boosting Model (GBM)** 계열로 나눌 수 있습니다.
 
-- [참고자료 1: AdaBoost](https://dailyheumsi.tistory.com/115)
-- [참고자료 2: Gradient Boost](https://dailyheumsi.tistory.com/116)
+- [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
+- 부스팅 앙상블 (Boosting Ensemble) 2: Gradient Boosting
+
+정확도와 속도를 개선한 최근 부스팅 알고리즘들은 Kaggle 등 데이터분석 대회에서 많이 사용되고 있습니다.
+
+- 부스팅 앙상블 (Boosting Ensemble) 3: XGBoost
+- 부스팅 앙상블 (Boosting Ensemble) 4: LightGBM
+- 부스팅 앙상블 (Boosting Ensemble) 5: CatBoost
+- 부스팅 앙상블 (Boosting Ensemble) 6: NGBoost
 
 #### 스태킹 (Stacking)
 > 개인적으로 스태킹은 이 곳보다는 보팅의 종류에 언급하는 게 더 어울리는 것 같긴 하지만, 대부분 배깅, 부스팅과 함께 비교하기에 넣었습니다.
