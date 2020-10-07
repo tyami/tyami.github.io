@@ -24,11 +24,10 @@ use_math: true
 > 이번 포스팅에서는 또 다른 앙상블 알고리즘인 부스팅 (Boosting)의 가장 첫번째 모델인 AdaBoost 알고리즘을 정리해보겠습니다. 그림은 나중에 추가하는거로 !
 
 ## AdaBoost
-AdaBoost는 Adaptive Boosting의 약자로, Boosting 알고리즘의 첫 모델이기도 합니다.
 
 이전 포스팅에서 정리한 Random forest는 decision trees의 숲이라고 할 수 있습니다. 다양한 decision tree가 조화롭게 모여 일반화된 예측 결과를 만듭니다.
 
-반면 AdaBoost는 **다양한 크기**의 **stump**로 이루어진 숲으로 볼 수 있습니다.
+반면 AdaBoost (Adaptive Boosting)는 **다양한 크기**의 **stump**로 이루어진 숲으로 볼 수 있습니다.
 
 ## AdaBoost의 3가지 Concepts
 1. Forest of stumps
