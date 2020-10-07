@@ -31,11 +31,13 @@ use_math: true
 
 이 문장에서 숲을 Random Forest로, 나무를 Decision tree로 바꾸어봅시다.
 
-> **Random Forest**는 많은 **Decision tree**의 집합입니다. 이 **Decision tree**들은 서로 다른 가지의 개수, 모양, 형태를 가집니다.
+> **Random Forest*에는 많은 **Decision tree**들이 있고, 이 **Decision tree**들은 서로 다른 가지의 개수, 모양, 형태를 가집니다.
 
 ![Random Forest overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest-overview.png)
 
-Random Forest는 배깅 앙상블 알고리즘의 대표적인 예시입니다. 세 개의 파트로 나누어 정리했는데, 앞의 포스팅들에서 다 설명한 내용들이라 간단히 설명하겠습니다.
+Random Forest는 배깅 (Bagging) 앙상블 알고리즘의 대표적인 예시입니다. Bagging이란 Bootstrap aggregating의 줄임말로, 이름 그대로 Bootstrap 기반의 앙상블 알고리즘입니다.
+
+Random forest의 생성 과정을 세 개의 파트로 나누어 정리했는데, 앞의 포스팅들에서 다 설명한 내용들이라 간단히 설명하겠습니다.
 
 - [Bootstrap](https://tyami.github.io/machine%20learning/ensemble-1-basics/#%EB%B0%B0%EA%B9%85-bagging)
 - [Decision tree](https://tyami.github.io/machine%20learning/decision-tree-1-concept/)
@@ -55,7 +57,7 @@ Random Forest는 배깅 앙상블 알고리즘의 대표적인 예시입니다. 
 
 ![Random Forest Decision tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest-decision-tree.png)
 
-Bootstrap을 통해 생성된 데이터셋으로부터 Decision tree를 구성합니다.
+Bootstrap을 통해 생성된 각각의 데이터셋에 대한 Decision tree들을 구성합니다.
 
 ---
 
@@ -63,7 +65,27 @@ Bootstrap을 통해 생성된 데이터셋으로부터 Decision tree를 구성�
 
 ![Random Forest Decision tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest-ensemble.png)
 
-Decision tree의 예측값들을 앙상블하여 최종 예측값을 얻습니다. 
+각 Decision tree의 예측 결과를 voting하여 최종 예측값을 얻습니다. 
+
+## Scikit-learn
+python `scikit-learn` 라이브러리의 `sklearn.ensemble.RandomForestClassifier` 또는 ``를 이용해 Random Forest를 사용할 수 있습니다. 
+
+- [sklearn.ensemble.RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier)
+- [sklearn.ensemble.RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor)
+
+```python
+# library load
+from sklearn.ensemble import RandomForestRegressor
+
+# build model
+mdl = RandomForestRegressor()
+
+# fit (training)
+mdl.fit(X, y)
+
+# predict (testing)
+mdl.predict(X, y)
+```
 
 ---
 
