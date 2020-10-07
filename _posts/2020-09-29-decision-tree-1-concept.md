@@ -27,17 +27,18 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
 따라서 본 포스팅으로 시작되는 일련의 포스팅들에서는 Decision Tree의 기초 알고리즘부터 시작해서 XGBoost, LightBoost, CatBoost와 같은 GBDT 기반 모델들까지 정리해보고자 합니다.
 
 ## 목차
-- Decision Tree 의 기본 개념 (현재 글)
-- [Decision Tree 알고리즘 1: ID3](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)
-- [Decision Tree 알고리즘 2: C4.5](https://tyami.github.io/machine%20learning/decision-tree-3-c4_5/)
-- [Decision Tree 알고리즘 3: CART (Classification And Regression Tree)](https://tyami.github.io/machine%20learning/decision-tree-4-CART/)
-- [Ensemble의 기본 개념](https://tyami.github.io/machine%20learning/ensemble-1-basics/)
-- [Bagging Ensemble 예시: Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
-- [Boosting Ensemble 예시 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
-- Boosting Ensemble 예시 2: GBM
-- Boosting Ensemble 예시 3: XGBoost
-- Boosting Ensemble 예시 4: LightGBM
-- Boosting Ensemble 예시 5: CatBoost
+- 의사결정 나무 (Decision Tree) 기본 설명 (현재 글)
+- [의사결정 나무 (Decision Tree) ID3 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)
+- [의사결정 나무 (Decision Tree) C4.5 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-3-c4_5/)
+- [의사결정 나무 (Decision Tree) CART 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-4-CART/)
+- [앙상블 (Ensemble)의 기본 개념](https://tyami.github.io/machine%20learning/ensemble-1-basics/)
+- [배깅 앙상블 (Bagging Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
+- [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
+- 부스팅 앙상블 (Boosting Ensemble) 2: Gradient Boosting
+- 부스팅 앙상블 (Boosting Ensemble) 3: XGBoost
+- 부스팅 앙상블 (Boosting Ensemble) 4: LightGBM
+- 부스팅 앙상블 (Boosting Ensemble) 5: CatBoost
+- 부스팅 앙상블 (Boosting Ensemble) 6: NGBoost
  
 ## Decision Tree 의 기본 개념
  

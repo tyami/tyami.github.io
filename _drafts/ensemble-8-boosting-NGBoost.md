@@ -1,5 +1,5 @@
 ---
-title: "부스팅 앙상블(Ensemble) 6: NGBoost"
+title: "부스팅 앙상블 (Boosting Ensemble) 6: NGBoost"
 excerpt: "Boosting 알고리즘 중 하나인 NGBoost을 정리해봅시다"
 
 categories:
@@ -18,7 +18,7 @@ toc_label: "NGBoost"
 use_math: true
 ---
 
-이전 글 보기: [부스팅 앙상블(Ensemble) 5: CatBoost](https://tyami.github.io/machine%20learning/ensemble-7-boosting-CatBoost/)
+이전 글 보기: [부스팅 앙상블 (Boosting Ensemble) 5: CatBoost](https://tyami.github.io/machine%20learning/ensemble-7-boosting-CatBoost/)
 
 > 이전 포스팅에서는 CatBoost 알고리즘을 정리했습니다.
 > 이번 포스팅에서는 NGBoost 알고리즘을 정리해보겠습니다.

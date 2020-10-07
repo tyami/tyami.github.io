@@ -1,5 +1,5 @@
 ---
-title: "부스팅 앙상블(Ensemble) 1: AdaBoost"
+title: "부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost"
 excerpt: "부스팅 앙상블의 예시인 AdaBoost를 정리해봅시다"
 
 categories:
@@ -18,7 +18,7 @@ toc_label: "AdaBoost"
 use_math: true
 ---
 
-이전 글 보기: [배깅 앙상블(Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
+이전 글 보기: [배깅 앙상블 (Bagging Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
 
 > 이전 포스팅에서는 배깅 (Bagging) 앙상블의 대표적인 예시인 Random Forest 알고리즘에 대해 정리했습니다.
 > 이번 포스팅에서는 또 다른 앙상블 알고리즘인 부스팅 알고리즘의 가장 첫번째 모델인 AdaBoost 알고리즘을 정리해보겠습니다. 그림은 나중에 추가하는거로 !
@@ -111,3 +111,7 @@ Weighted\; Gini\; index= \sum_{i=1}^C w_ip_i(1-p_i)
 
 ### 7. 최종 예측
 테스트 시, 모든 Stump 의 예측값에 amount of say를 가중치로 주고, Hard voting을 해서 최종 예측값을 얻어낸다.
+
+> 다음 포스팅에서는 또 다른 부스팅 (Boosting) 앙상블 알고리즘인 Gradient Boosting에 대해 정리해보겠습니다.
+
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2: Gradient Boosting](https://tyami.github.io/machine%20learning/ensemble-4-boosting-gradient-boosting/) - 작성 중

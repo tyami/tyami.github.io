@@ -1,5 +1,5 @@
 ---
-title: "배깅 앙상블(Ensemble): Random Forest"
+title: "배깅 앙상블 (Bagging Ensemble): Random Forest"
 excerpt: "배깅 앙상블의 예시인 Random Forest를 정리해봅시다"
 
 categories:
@@ -91,4 +91,4 @@ mdl.predict(X_tst, y_tst)
 
 > 다음 포스팅부터는 부스팅 (Boosting) 앙상블의 초기 모델인 AdaBoost 알고리즘에 대해 정리해보겠습니다.
 
-다음 글 보기: [부스팅 앙상블(Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
