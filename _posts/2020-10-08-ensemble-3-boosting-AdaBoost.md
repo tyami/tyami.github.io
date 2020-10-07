@@ -102,7 +102,7 @@ Weighted\; Gini\; index= \sum_{i=1}^C w_ip_i(1-p_i)
 - Sample weight를 바탕으로 0~1의 구간을 나눠준다. 
 - 0~1값을 원래 샘플 수만큼 random sampling 하고, 이 값에 따라 원 데이터에서 데이터를 다시 sampling한다. 
 - Sample weight가 큰 경우, 더 넓은 구간을 갖기 때문에, 이 샘플이 더 자주 뽑히게 된다.
-이 방법을 사용할 경우, 새로 sampling한 데이터셋의 sample weight는 \\(\frac{1}{total\; number\; of\; samples\\})로 초기화해준다. sample weight는 일정하지만, 동일한 샘플이 더 많이 있기 때문에, 결과적으로 sample weight이 다른 것과 동일한 효과를 줄 수 있다.
+이 방법을 사용할 경우, 새로 sampling한 데이터셋의 sample weight는 \\(\frac{1}{total\; number\; of\; samples}\\)로 초기화해준다. sample weight는 일정하지만, 동일한 샘플이 더 많이 있기 때문에, 결과적으로 sample weight이 다른 것과 동일한 효과를 줄 수 있다.
 
 ### 6. Repetition
 정해진 iteration만큼 stump가 생성될 때까지 3~5 과정을 반복한다.
