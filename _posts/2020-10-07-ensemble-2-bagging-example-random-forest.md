@@ -89,4 +89,6 @@ mdl.predict(X_tst, y_tst)
 
 ---
 
-> 다음 포스팅부터는 부스팅 (Boosting) 앙상블에 대해 정리해보겠습니다.
+> 다음 포스팅부터는 부스팅 (Boosting) 앙상블의 초기 모델인 AdaBoost 알고리즘에 대해 정리해보겠습니다.
+
+다음 글 보기: [부스팅 앙상블(Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
