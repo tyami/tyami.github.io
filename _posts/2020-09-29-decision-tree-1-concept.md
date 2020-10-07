@@ -32,7 +32,7 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
 - [Decision Tree 알고리즘 2: C4.5](https://tyami.github.io/machine%20learning/decision-tree-3-c4_5/)
 - [Decision Tree 알고리즘 3: CART (Classification And Regression Tree)](https://tyami.github.io/machine%20learning/decision-tree-4-CART/)
 - [Ensemble의 기본 개념](https://tyami.github.io/machine%20learning/ensemble-1-basics/)
-- [Bagging Ensemble 예시: Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-example-random-forest/)
+- [Bagging Ensemble 예시: Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
 - [Boosting Ensemble 예시 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
 - Boosting Ensemble 예시 2: GBM
 - Boosting Ensemble 예시 3: XGBoost

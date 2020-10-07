@@ -18,7 +18,7 @@ toc_label: "AdaBoost"
 use_math: true
 ---
 
-이전 글 보기: [배깅 앙상블(Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-example-random-forest/)
+이전 글 보기: [배깅 앙상블(Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
 
 > 이전 포스팅에서는 배깅 (Bagging) 앙상블의 대표적인 예시인 Random Forest 알고리즘에 대해 정리했습니다.
 > 이번 포스팅에서는 또 다른 앙상블 알고리즘인 부스팅 알고리즘의 가장 첫번째 모델인 AdaBoost 알고리즘을 정리해보겠습니다. 그림은 나중에 추가하는거로 !
