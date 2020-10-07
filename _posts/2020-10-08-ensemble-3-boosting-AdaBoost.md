@@ -61,8 +61,10 @@ Impurity를 바탕으로 best attribute로 분기하는 stump를 완성한다.
 \\(total\; error\\)는 **오분류된 샘플의 sample weight 총합**으로 정의될 수 있다. 전체 Sample weights의 총합이 1이기 때문에 최고의 Stump (모두 맞춤)를 만든 경우 total error 는 0, 반대로 최악의 Stump를 만든 경우 total error는 1을 갖는다.
 
 \[
-Amount\; of\; Say=\frac{1}{2}log(\frac{1-total\; error}{total\; error})
+Amount\; of\; say=\frac{1}{2}log(\frac{1-total\; error}{total\; error})
 \]
+
+total error에 따른 Amount of say의 변화를 그림으로 그려보면, total error가 낮을 때 (<0.5)는 양의 amount of say, total error가 높을 때 (>0.5)는 음의 amount of say를 갖는다. 또한 amount of say의 절대값은 total error가 극단적인 값일 수록 (0 또는 1에 가까울수록) 더욱 더 커진다.
 
 ### 4. Updated sample weight
 오분류된 샘플의 sample weight는 늘리고, 잘 분류된 샘플의 sample weight는 낮춘다.  
