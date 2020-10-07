@@ -94,7 +94,7 @@ Amount\; of\; say=\alpha_t=\frac{1}{2}log(\frac{1-\epsilon_t}{\epsilon_t})
 \[
 \epsilon_t=\sum_{
 \begin{matrix}
-  i=1 \\
+  i=1 \\\\\\
   h_t(x_i)\neq y_i
 \end{matrix}
 }^n w_{i,t}
