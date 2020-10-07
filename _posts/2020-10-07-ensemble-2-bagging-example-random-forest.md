@@ -81,10 +81,10 @@ from sklearn.ensemble import RandomForestRegressor
 mdl = RandomForestRegressor()
 
 # fit (training)
-mdl.fit(X, y)
+mdl.fit(X_trn, y_trn)
 
 # predict (testing)
-mdl.predict(X, y)
+mdl.predict(X_tst, y_tst)
 ```
 
 ---
