@@ -183,4 +183,4 @@ F(x)=\sum_{t=1}^N \alpha_t h_t(x)
 
 > 다음 포스팅에서는 또 다른 부스팅 (Boosting) 앙상블 알고리즘인 Gradient Boosting에 대해 정리해보겠습니다.
 
-다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2: Gradient Boosting](https://tyami.github.io/machine%20learning/ensemble-4-boosting-gradient-boosting/) - 작성 중
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Regression](https://tyami.github.io/machine%20learning/ensemble-4-boosting-gradient-boosting-regression/)
