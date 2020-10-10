@@ -142,7 +142,7 @@ Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 �
 
 ![GB step 3-2 result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step3-2-result.png)
 
-For \\(j=1...J_m\\) compute \\(\gamma_{jm}=\underset{\gamma}{argmin} \sum_{x_ \in R_{ij}} L(y_i, F_{m-1}(x_i) + \gamma)
+For \\(j=1...J_m\\) compute \\(\gamma_{jm}=\underset{\gamma}{argmin} \sum_{x_ \in R_{ij}} L(y_i, F_{m-1}(x_i) + \gamma)\\)
 
 > 이 부분 수식 푸는게 좀 복잡합니다만, 결과적으로 평균값으로 대치해주면 됩니다.
 
