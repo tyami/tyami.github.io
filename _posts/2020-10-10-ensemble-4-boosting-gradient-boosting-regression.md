@@ -43,7 +43,7 @@ Gradient Boosting의 특징은 아래 세 가지 정도로 정리할 수 있습�
 
 앙상블 모델의 기본이 되는 weak lerner가 다릅니다.
 
-![AdaBoost VS Gradient Boost 1: weak learner]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/파일명.png)
+![AdaBoost VS Gradient Boost 1: weak learner]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-comparison-adaboost-gradient-boost.png)
 
 AdaBoost에서는 weak learner로 stump (한 개 노드와 두 개의 가지를 갖는 매우 작은 decision tree) 를 사용합니다.
 
@@ -54,7 +54,7 @@ AdaBoost에서는 weak learner로 stump (한 개 노드와 두 개의 가지를 
 
 각 모델이 예측하는 정보가 다릅니다.
 
-![AdaBoost VS Gradient Boost 2: predicted value]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/파일명.png)
+![AdaBoost VS Gradient Boost 2: predicted value]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-test.png)
 
 AdaBoost에서는 각 stump들은 모두 실제 output 값을 예측하는 모델입니다. 따라서 이 값을 평균내거나 가중치를 곱한 평균을 통해, 실제 값에 가까운 예측값을 만들어냅니다.
 
@@ -67,7 +67,9 @@ AdaBoost에서는 각 stump들은 모두 실제 output 값을 예측하는 모�
 
 각 모델에 대해 가중치를 주는 방식이 다릅니다.
 
-![AdaBoost VS Gradient Boost 3: model weight]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/파일명.png)
+![AdaBoost VS Gradient Boost 3: model weight]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-comparison-adaboost-gradient-boost.png)
+
+다시 위 그림을 살펴보면, AdaBoost에서는 각 모델의 크기가 다른 반면, Gradient Boosting에서는 크기가 동일한 것을 알 수 있습니다.
 
 AdaBoosting에서는 amoung of say \\(\alpha_t\\)를 인풋 \\(x\\)에 대한 각 모델의 예측값 \\(h_t(x)\\)에 곱하여 최종 예측값을 계산했습니다. 이 때 \\(\alpha_t\\)는 이전 모델의 예측결과에 따라 계산되기 때문에, \\(t\\)에 따라 상이했습니다. 따라서 \\(M\\)개 모델로 구성된 AdaBoost의 최종 예측값은 아래 수식으로 표현될 수 있습니다.
 
@@ -87,7 +89,11 @@ F_{t}(x)=\bar{x_trn} + eta \sum_{t=2}^M \h_t(x)
 
 Gradient Boosting 은 Regression과 Classification이 모두 가능한데, 알고리즘이 조금 상이합니다.
 
-본 포스팅에서는 Gradient Boosting for Regression 알고리즘을 먼저 정리해보도록 하겠습니다. Gradient Boosting for Regression의 알고리즘 순서는 아래와 같습니다.
+본 포스팅에서는 Gradient Boosting for Regression 알고리즘을 먼저 정리해보도록 하겠습니다. Gradient Boosting for Regression의 알고즘은 아래와 같습니다.
+
+![Eqations]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-equations.png)
+
+[Gradient Boost Part 2: Regression Details](https://www.youtube.com/watch?v=2xudPOBz-vs) 의 설명에 사용된 수식입니다. 이대로는 보기가 좀 어려우니, 알아 듣기 쉽도록 자연어로 다시 써보면 아래와 같습니다.
 
 1. Create first leaf
 2. Calculate pseudo-residual
@@ -96,10 +102,9 @@ Gradient Boosting 은 Regression과 Classification이 모두 가능한데, 알�
 
 - (Test) Scale and add up the results of  each tree.
 
-
 ### 1. Create first leaf
 
-![GB step 1: create first leaf]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/파일명.png)
+![GB step 1: create first leaf]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step1.png)
 
 First model \\(F_0 (x)\\)로 leaf를 만듭니다. 이 Leaf가 갖는 값은 training data의 모든 output의 평균 \\(\bar{x_trn}\\)입니다.
 초기값으로 output의 평균값을 사용하는 이유는 아래 수식을 미분해서 풀면 됩니다.
@@ -111,7 +116,7 @@ F_0 (x) = \underset{\gamma}{argmin} \sum_{i=1}^n L(y_i, \gamma)
 
 ### 2. Calculate pseudo-residual
 
-![GB step 2:calculate psuedo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/파일명.png)
+![GB step 2:calculate psuedo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step2.png)
 
 Pseudo-residual (실제값 - 예측값)을 계산합니다. 
 
@@ -119,33 +124,48 @@ Compute \\(r_{im}=-[ \frac{\partial L(y_i, F(X_i))}{\partial F(X_i)} ]_{F(x)=F_{
 
 ### 3. Create next tree to predict pseudo-residual
 
-![GB step 3:create nex tree to predict pseudo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/파일명.png)
+![GB step 3:create nex tree to predict pseudo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step3-1.png)
 
 #### 3-1. Create tree
 
-주어진 데이터 (Height, Favorite color, Gender)를 바탕으로 Pseudo-residual을 예측하는 decision tree를 만듭니다.
+주어진 데이터 (Height, Favorite color, Gender)를 바탕으로 Pseudo-residual을 예측하는 decision tree를 만듭니다. 아래와 같은 tree가 만들어집니다.
+
+![GB step 3-1 result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step3-1-result.png)
 
 Fit a regression tree to the \\(r_{im}\\) values and create terminal regions \\(R_{jm}\\), for \\(j=1,...J_m\\)
 
-> \\(R_{jm}\\)은 decision tree의 각 terminal node 내 values로 이루어진 집합을 의미합니다 (Step 3-2를 위해 생성)
+> \\(R_{jm}\\)은 decision tree의 \\(j\\)번째 terminal node 내 values로 이루어진 집합을 의미합니다 (Step 3-2를 위해 생성). 위 예시에서 \\(R_{1m}\\)는 [-14.2, -15.2]가 되겠죠.
 
 #### 3-2. Average pesudo-residual by leaves
 
-Leaf마다 예측결과를 평균내줍니다. 결과적으로 수많은 데이터 값이, decision tree의 최종 leaf에 따라 몇 종류의 예측값으로 축약됩니다.
+Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 수많은 데이터 값이, decision tree의 최종 leaf에 따라 몇 종류의 예측값으로 축약됩니다.
+
+![GB step 3-2 result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step3-2-result.png)
 
 For \\(j=1...J_m\\) compute \\(\gamma_{jm}=\underset{\gamma}{argmin} \sum_{x_ \in R_{ij}} L(y_i, F_{m-1}(x_i) + \gamma)
 
+> 이 부분 수식 푸는게 좀 복잡합니다만, 결과적으로 평균값으로 대치해주면 됩니다.
+
 ### Repest 2-3
+
+![GB step 4: repeat 2-3]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step4.png)
+
 다시 각 샘플에 대해 pesudo-residual을 계산하고, 이를 바탕으로 decision tree를 만드는 과정을 반복합니다.
 
 ### (Test) Scale and add up the results of each tree.
+
+![GB step 5]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-test.png)
+
 각 모델에 동일한 Learning rate \\(\eta\\)를 가중치로 곱한 뒤 합계를 구합니다.
 
 Update \\(F_m (x)=F_{m-1} (x) + \nu \sum_{j=1}^{J_m} \gamma_{jm} I(x \in R_{jm})\\)
 
+\\(\nu\\)는 \\(\eta\\) 대신 쓰인 learning rate 입니다.
+
+Output: \\(F(x)\\)
 
 ---
 
 > 다음 포스팅에서는 GBM 모델의 단점을 개선해서 Kaggle 등 대회에서 많이 사용되는 XGBoost 모델에 대해 정리해보도록 하겠습니다.
 
-다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2-2: XGBoost](https://tyami.github.io/machine%20learning/ensemble-5-boosting-XGBoost/)
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Classification](https://tyami.github.io/machine%20learning/ensemble-5-boosting-gradient-boosting-classification)
