@@ -80,7 +80,7 @@ F_{t}(x)=\sum_{t=1}^M \alpha_t h_t(x)
 반면 Gradient Boosting에서는 model weight로 learning rate \\(\eta\\)를 사용합니다. 이 때 \\(\eta\\)는 \\(t\\)에 관계없이 모두 동일하게 scaling합니다. 따라서 \\(M\\)개 모델로 구성된 Gradient Boosting의 최종 예측값은 아래 수식으로 표현할 수 있습니다.
 
 \[
-F_{t}(x)=\bar{x_trn} + eta \sum_{t=2}^M \h_t(x)
+F_{t}(x)=\bar{y_{trn}} + eta \sum_{t=2}^M \h_t(x)
 \]
 
 ---
@@ -106,7 +106,7 @@ Gradient Boosting 은 Regression과 Classification이 모두 가능한데, 알�
 
 ![GB step 1: create first leaf]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step1.png)
 
-First model \\(F_0 (x)\\)로 leaf를 만듭니다. 이 Leaf가 갖는 값은 training data의 모든 output의 평균 \\(\bar{x_trn}\\)입니다.
+First model \\(F_0 (x)\\)로 leaf를 만듭니다. 이 Leaf가 갖는 값은 training data의 모든 output의 평균 \\(\bar{y_{trn}}\\)입니다.
 초기값으로 output의 평균값을 사용하는 이유는 아래 수식을 미분해서 풀면 됩니다.
 \[
 F_0 (x) = \underset{\gamma}{argmin} \sum_{i=1}^n L(y_i, \gamma)
