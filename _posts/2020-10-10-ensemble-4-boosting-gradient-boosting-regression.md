@@ -122,7 +122,7 @@ F_0 (x) = \underset{\gamma}{argmin} \sum_{i=1}^n L(y_i, \gamma)
 
 Pseudo-residual (실제값 - 예측값)을 계산합니다. 
 
-Compute \\(r_{im}=-[ \frac{\partial L(y_i, F(X_i))}{\partial F(X_i)} ]_{F(x)=F_{m-1}(x)}\\) for \\(i=1,...,n\\)
+Compute \\(r_{im}=-{[\frac{\partial L(y_i, F(X_i))}{\partial F(X_i)}]}_{F(x)=F_{m-1}(x)}\\) for \\(i=1,...,n\\)
 
 ### 3. Create a next tree to predict pseudo-residual
 
@@ -158,7 +158,7 @@ Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 �
 
 ![GB step 5]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-test.png)
 
-각 모델에 동일한 Learning rate \\(\eta\\)를 가중치로 곱한 뒤 합계를 구합니다.
+입력값 \\(x\\)에 대한 각 모델의 residual 예측값 \\(h_t(x)\\)에 동일한 Learning rate \\(\eta\\) (\\(\nu\\))를 가중치로 곱한 뒤 합계를 구합니다.
 
 > Update \\(F_m (x)=F_{m-1} (x) + \nu \sum_{j=1}^{J_m} \gamma_{jm} I(x \in R_{jm})\\)
 
