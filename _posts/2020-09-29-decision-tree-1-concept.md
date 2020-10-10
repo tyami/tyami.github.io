@@ -34,7 +34,8 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
 - [앙상블 (Ensemble)의 기본 개념](https://tyami.github.io/machine%20learning/ensemble-1-basics/)
 - [배깅 앙상블 (Bagging Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
 - [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
-- 부스팅 앙상블 (Boosting Ensemble) 2: Gradient Boosting
+- [부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Regression](https://tyami.github.io/machine%20learning/ensemble-4-boosting-gradient-boosting-regression/)
+- 부스팅 앙상블 (Boosting Ensemble) 2-2: Gradient Boosting for Classification
 - 부스팅 앙상블 (Boosting Ensemble) 3: XGBoost
 - 부스팅 앙상블 (Boosting Ensemble) 4: LightGBM
 - 부스팅 앙상블 (Boosting Ensemble) 5: CatBoost
