@@ -152,6 +152,8 @@ For \\(j=1...J_m\\) compute \\(\gamma_{jm}=\underset{\gamma}{argmin} \sum_{x_ \i
 
 다시 각 샘플에 대해 pesudo-residual을 계산하고, 이를 바탕으로 decision tree를 만드는 과정을 반복합니다.
 
+첫 번쨰 모델의 pseudo-residual보다 두 번째 모델의 pseudo-residual이 감소한 것을 확인할 수 있습니다 !
+
 ### (Test) Scale and add up the results of each tree.
 
 ![GB step 5]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-test.png)
