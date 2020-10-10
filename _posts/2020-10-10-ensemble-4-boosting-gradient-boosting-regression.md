@@ -166,6 +166,6 @@ Output: \\(F(x)\\)
 
 ---
 
-> 다음 포스팅에서는 GBM 모델의 단점을 개선해서 Kaggle 등 대회에서 많이 사용되는 XGBoost 모델에 대해 정리해보도록 하겠습니다.
+> 다음 포스팅에서는 Gradient Boosting for Classification 알고리즘에 대해 정리해보고자 합니다.
 
 다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Classification](https://tyami.github.io/machine%20learning/ensemble-5-boosting-gradient-boosting-classification)
