@@ -6,10 +6,12 @@ MathJax.Hub.Config({
       }
     },
     tex2jax: {
-    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-    displayMath: [ ['$$', '$$'], ['\[', '\]'] ],
-    processEscapes: true,
-    }
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      displayMath: [ ['$$', '$$'], ['\[', '\]'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS": {
+      linebreaks: { automatic: true } }
 });
 MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
 	  alert("Math Processing Error: "+message[1]);
