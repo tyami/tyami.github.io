@@ -20,7 +20,7 @@ use_math: true
 
 이전 글 보기: [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost)
 
-> 이전 포스팅에서는 부스팅 앙상블의 초기 모델인 AdaBoost에 대해 설명했습니다.
+> 이전 포스팅에서는 부스팅 앙상블의 초기 모델인 AdaBoost에 대해 설명했습니다.  
 > 이번 포스팅에서는 AdaBoost보다 조금 더 진보된 부스팅 앙상블 모델인 Gradient Boosting 알고리즘에 대해 정리해보겠습니다. 특히 Regression 알고리즘 위주로 정리했습니다.
 
 StatQuest라는 유투버의 [Gradient Boost Part 1: Regression Main Ideas](https://www.youtube.com/watch?v=3CC4N4z3GJc)과 [Gradient Boost Part 2: Regression Details](https://www.youtube.com/watch?v=2xudPOBz-vs)를 참고했습니다. Gradient Boosting에 대해 가장 정리가 잘 된 설명자료입니다 (영어이지만 시각자료도 많고, 화면에 자막도 있어서 알아듣기 쉽습니다)
