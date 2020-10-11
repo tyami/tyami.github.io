@@ -104,7 +104,7 @@ Gradient Boosting 은 Regression과 Classification이 모두 가능한데, 알�
 3. Create a next tree to predict pseudo-residuals 
 4. Repest 2-3
 
-- (Test) Scale and add up the results of each tree.
+- (Test) Scale and add up the results of each tree
 
 ### 1. Create a first leaf
 

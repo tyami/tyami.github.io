@@ -37,6 +37,8 @@ Gradient Boosting for Classification은 Gradient Boosting for Regression과 거�
 4. Calculate predicted probability
 4. Repest 2-3
 
+- (Test) Scale, add up the results of each tree, and convert to probability
+
 ![Gradient Boosting for Classification example data]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-dataset-example.png)
 
 위 데이터 예시를 바탕으로 Gradient Boosting for Classification 과정을 정리해봅시다. 몇 가지 지표를 바탕으로 Troll 2를 좋아할지 예측하는 데이터입니다.
@@ -132,7 +134,7 @@ Pseudo-residual의 식에 사용될 **샘플별** 예측값을 계산해봅시�
 
 **Step 3에서 대표값을 계산할 때, 처음과 달리 이전 모델의 predicted probability가 샘플마다 다르다는 것을 꼭 기억하세요 !**
 
-### Test
+### (Test) Scale, add up the results of each tree, and convert to probability
 
 ![Test 시에는 다시 probability로 변환]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-test.png)
 
