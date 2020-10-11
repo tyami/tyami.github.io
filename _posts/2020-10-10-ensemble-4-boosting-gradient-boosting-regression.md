@@ -100,8 +100,8 @@ Gradient Boosting 은 Regression과 Classification이 모두 가능한데, 알�
 ![Procedure overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-procedure-overview.png)
 
 1. Create a first leaf
-2. Calculate pseudo-residual
-3. Create a next tree to predict pseudo-residual
+2. Calculate pseudo-residuals
+3. Create a next tree to predict pseudo-residuals 
 4. Repest 2-3
 
 - (Test) Scale and add up the results of each tree.
@@ -118,7 +118,7 @@ F_0 (x) = \underset{\gamma}{argmin} \sum_{i=1}^n L(y_i, \gamma)
 
 , where Loss function \\(L(y_i, F(x))=\frac{1}{2}(Observerd-Predicted)^2\\) is a differentiable
 
-### 2. Calculate pseudo-residual
+### 2. Calculate pseudo-residuals
 
 ![GB step 2:calculate psuedo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step2.png)
 
@@ -140,7 +140,7 @@ Compute \\r_{im}=-\frac{\partial L(y_i, F(X_i))}{\partial F(X_i)}\\), where \\(F
 
 \\(R_{jm}\\)은 decision tree의 \\(j\\)번째 terminal node 내 values로 이루어진 집합을 의미합니다 (Step 3-2를 위해 생성). 위 예시에서 \\(R_{1m}\\)는 {-14.2, -15.2}가 되겠죠.
 
-#### 3-2. Average pesudo-residual by leaves
+#### 3-2. Calculate representative value by leaves
 
 Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 수많은 데이터 값이, decision tree의 최종 leaf에 따라 몇 종류의 예측값으로 축약됩니다.
 
