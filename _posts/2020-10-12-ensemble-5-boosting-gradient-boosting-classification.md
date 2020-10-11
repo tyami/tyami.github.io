@@ -27,7 +27,7 @@ Gradient Boosting for Regression과 마찬가지로, StatQuest라는 유투버�
  
 ## Gradient Boosting for Classification
 
-Gradient Boosting for Classification은 Gradient Boosting for Regression과 거의 비슷하지만 세부적인 부분이 다릅니다. 실제 overall procedure에서 **Calculate predicted probability**만 추가된 것을 확인할 수 있습니다 (하지만 다른 부분도 바뀐 내용이 많습니다)
+Gradient Boosting for Classification은 Gradient Boosting for Regression과 거의 비슷하지만 세부적인 부분이 다릅니다.
 
 ![Gradient Boosting for Classification overall procedure]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-procedure-overview.png)
 
@@ -39,11 +39,11 @@ Gradient Boosting for Classification은 Gradient Boosting for Regression과 거�
 
 ![Gradient Boosting for Classification example data]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-dataset-example.png)
 
-이 데이터 예시를 바탕으로 Gradient Boosting for Classification 과정을 정리해봅시다. 몇 가지 지표를 바탕으로 Troll 2를 좋아할지 예측하는 데이터입니다.
+위 데이터 예시를 바탕으로 Gradient Boosting for Classification 과정을 정리해봅시다. 몇 가지 지표를 바탕으로 Troll 2를 좋아할지 예측하는 데이터입니다.
 
 ### 1. Create a first leaf
 
-> 기억하세요, fist leaf의 초기 prediction 값은 logit \\(log(odds)\\)를 사용합니다.
+> 기억하세요, fist leaf의 초기 prediction 값은 \\(log(odds)\\)를 사용합니다.
 
 Odds는 **임의의 사건 A가 발생하지 않을 확률 대비 일어날 확률의 비율**입니다.
 
@@ -53,11 +53,9 @@ Odds는 **임의의 사건 A가 발생하지 않을 확률 대비 일어날 확�
 odds=\frac{P(A)}{P(A^C)}=\frac{P(A)}{1-P(A)}
 \]
 
-Loves Troll 2 데이터를 보면 Yes가 4개, No가 2개 있습니다. 따라서 초기 leaf 값은 \\(log(odds)=log(4/2)=0.6931=0.7\\)이 됩니다.
+Loves Troll 2 데이터를 보면 Yes가 4개, No가 2개 있습니다. 따라서 초기 leaf 값은 \\(log(odds)=log\frac{4}{2}=0.6931=0.7\\)이 됩니다.
 
-Logit 값을 사용하는 가장 쉬운 방법은 이를 확률 값으로 변환하는 것입니다.
-
-\\(P(Loves\; Troll\; 2=Yes)\\)는 아래와 같이 계산됩니다.
+Log(Odds) 값을 사용하는 가장 쉬운 방법은 확률 값으로 변환하는 것입니다. Leaf 모델의 predicted probability는 아래와 같이 계산됩니다.
 
 \[
 P(Loves\; Troll\; 2=Yes)=\frac{e^{log(odds)}}{1+e^{log(odds)}}=\frac{0.7}{1+0.7}=0.6667=0.7
@@ -67,15 +65,16 @@ P(Loves\; Troll\; 2=Yes)=\frac{e^{log(odds)}}{1+e^{log(odds)}}=\frac{0.7}{1+0.7}
 
 ### 2. Calculate Pseudo-residuals
 
-Pseudo-residual (실제값 - 예측값)을 계산합니다.
+**Pseudo-residual (실제값 - 예측값)**을 계산합니다.
 
 ![실제값]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-pseudo-residual-observed.png)
 
-여기서 실제값은 Probability로 처음에는 Yes/No에 따라 1 또는 0의 값을 갖습니다 그리고 다음 번 부터는 probability 값을 사용합니다.
+여기서 **실제값은 Output의 Yes/No 값에 따라 1 또는 0의 값**을 갖습니다. 
 
 ![예측값]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-pseudo-residual-prediction.png)
 
-예측값은 이전 모델 (first leaf)의 prediction 값인 0.7을 사용합니다.
+**예측값으로는 이전 모델의 predicted probability**을 사용합니다.  
+즉, **첫번째 트리를 만들 때는 first leaf의 predicted probability를 사용하므로 샘플마다 동일한 값을 사용하지만, 두 번째 트리부터는 샘플마다 다른 Predicted probability를 사용하게 된다**는 것을 기억해야 합니다. 
 
 ![pseudo residual result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-pseudo-residual-result.png)
 
@@ -95,25 +94,33 @@ Gradient Boosting for Regression과 같이 한 leaf 는 동일한 prediction 값
 
 이는 First leaf 에서의 prediction 과 이후 tree model에서의 output 타입이 다르기 때문입니다.
 
-First leaf의 prediction 값은 log(odds)입니다. 반면, decision tree에서의 pseudo-residual은 probability (실제값-예측값)으로 계산된 값입니다. 따라서 Gradient Boosting for Regression에서와 같이 두 종류의 값을 곧장 합치는 것이 불가능하고, 별도의 Transformation 과정이 필요합니다.
+First leaf의 prediction 값은 log(odds)입니다. 반면, decision tree에서의 pseudo-residual은 probability (실제값-예측값)으로 계산된 값입니다. 따라서 Gradient Boosting for Regression에서와 같이 두 종류의 값을 그대로 합치는 것이 불가능하고, 별도의 Transformation 과정이 필요합니다.
 
-Gradient Boosting for Classification에서 주로 사용되는 변환 식은 아래와 같습니다. 아래 변환을 통해 나온 값으로 각 leaf의 대표값을 지정해주면 됩니다.
+Gradient Boosting for Classification에서 주로 사용되는 방법 트리의 예측 probability 결과를 log(odds)로 변환하는 것입니다. 변환 식은 아래와 같습니다.
 
 \[
-\frac{\sum Residual_i}{\sum (Previous Probability_i \times (1-Previous Probability_i))}
+\frac{\sum Residual_i}{\sum (Previous\; Probability_i \times (1-Previous\; Probability_i))}
 \]
+
+위 변환을 통해 나온 값으로 각 leaf의 대표값을 지정해주면 됩니다.
 
 ![Representative value]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-representative-value.png)
 
-위와 같이 각 leaf의 representative value를 계산할 수 있습니다. 여기서 주의할 점은, log(odds) 값이 아니라, 이전 모델의 predicted probability를 사용해야 한다는 점입니다.
+위와 같이 각 leaf의 representative value를 계산할 수 있습니다.
 
-4. Calculate predicted probability
+#### 4. Calculate predicted probability
 
-Pseudo-residual의 식에서 예측값 predicted probability을 계산해봅시다.
+Pseudo-residual의 식에 사용될 **샘플별** 예측값을 계산해봅시다.
 
 먼저 log(odds) 를 계산합니다. first leaf의 예측값과 tree의 예측값을 더해주면 됩니다. 이 때 tree의 예측값에 learning rate \\(\eta\\)를 곱해줍니다.
 
 ![Predicted probability]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-predicted-probability.png)
+
+첫번째 샘플의 경우, 위와 같이 log(Odds)의 합으로 1.8을 얻었으며, 이를 확률로 변환하면 0.9의 값을 얻게 됩니다.
+
+![Predicted probability result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-predicted-probability-result.png)
+
+같은 방식으로 모든 샘플의 Predicted probability를 계산합니다.
 
 ### 5. Repeat 2-4
 
@@ -123,13 +130,13 @@ Pseudo-residual의 식에서 예측값 predicted probability을 계산해봅시�
 
 ![Repeat 2-4 주의점]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-repeat2.png)
 
-이 때 주의할 점은, **Step 3에서 대표값을 계산할 때 각 샘플에 대한 이전 모델의 predicted probability가 다르다는 점입니다.**
+**Step 3에서 대표값을 계산할 때, 처음과 달리 이전 모델의 predicted probability가 샘플마다 다르다는 것을 꼭 기억하세요 !**
 
 ### Test
 
 ![Test 시에는 다시 probability로 변환]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-test.png)
 
-최종적으로 first leaf와 tree들의 예측값을 합해준 뒤, probability를 계산합니다.
+최종적으로 first leaf와 tree들의 log(Odds)를 합해준 뒤, probability로 변환합니다.
 
 이 확률값과 threshold (Binary classification 시 보통 0.5)와 비교하여 분류를 수행합니다.
 
