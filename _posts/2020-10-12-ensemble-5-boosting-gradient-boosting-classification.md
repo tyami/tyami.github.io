@@ -110,7 +110,7 @@ Gradient Boosting for Classification에서 주로 사용되는 방법 트리의 
 
 위와 같이 각 leaf의 representative value를 계산할 수 있습니다.
 
-#### 4. Calculate predicted probability
+### 4. Calculate predicted probability
 
 Pseudo-residual의 식에 사용될 **샘플별** 예측값을 계산해봅시다.
 
