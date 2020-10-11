@@ -45,7 +45,7 @@ Gradient Boosting for Classification은 Gradient Boosting for Regression과 거�
 
 ### 1. Create a first leaf
 
-> 기억하세요, fist leaf의 초기 prediction 값은 \\(log(odds)\\)를 사용합니다.
+> 기억하세요, first leaf의 초기 prediction 값은 \\(log(odds)\\)를 사용합니다.
 
 Odds는 **임의의 사건 A가 발생하지 않을 확률 대비 일어날 확률의 비율**입니다.
 
