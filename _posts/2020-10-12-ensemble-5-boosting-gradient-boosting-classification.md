@@ -1,5 +1,5 @@
 ---
-title: "부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Classification"
+title: "부스팅 앙상블 (Boosting Ensemble) 2-2: Gradient Boosting for Classification"
 excerpt: "Boosting 알고리즘 중 하나인 Gradient Boosting for Classification을 정리해봅시다"
 
 categories:
