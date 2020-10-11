@@ -13,7 +13,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "Gradient Boosting"
+toc_label: "Gradient Boosting for Regression"
 
 use_math: true
 ---
