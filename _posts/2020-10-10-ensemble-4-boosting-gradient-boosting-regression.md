@@ -95,7 +95,9 @@ Gradient Boosting 은 Regression과 Classification이 모두 가능한데, 알�
 
 ![Eqations]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-equations.png)
 
-[Gradient Boost Part 2: Regression Details](https://www.youtube.com/watch?v=2xudPOBz-vs) 의 설명에 사용된 수식입니다. 이대로는 보기가 좀 어려우니, 알아 듣기 쉽도록 자연어로 다시 써보면 아래와 같습니다.
+[Gradient Boost Part 2: Regression Details](https://www.youtube.com/watch?v=2xudPOBz-vs) 의 설명에 사용된 수식입니다. 이대로는 보기가 좀 어려우니, 알아 듣기 쉽도록 자연어로 다시 쓰고, 그림으로 표현해 보면 아래와 같습니다.
+
+![Procedure overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-procedure-overview.png)
 
 1. Create a first leaf
 2. Calculate pseudo-residual
