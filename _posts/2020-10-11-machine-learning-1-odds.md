@@ -18,7 +18,7 @@ use_math: true
 
 > Odds와 Log(odds)의 개념을 정리해봅시다.
 
-StatQuest의 [StatQuest: Odds and Log(Odds), Clearly Explained!!!](https://www.youtube.com/watch?app=desktop&v=ARfXDSkQf1Y) 강의를 참고했습니다.
+StatQuest의 [StatQuest: Odds and Log(Odds), Clearly Explained!!!](https://www.youtube.com/watch?app=desktop&v=ARfXDSkQf1Y) 강의를 참고했습니다. 
 
 ## Odds
 
@@ -58,7 +58,7 @@ odds는 **사건 A가 일어날 확률 / 일어나지 않을 확률**인 반면,
 동일한 예시 2에서 odds는 1.7, probability는 0.625의 값을 갖는 것을 확인할 수 있습니다.
 
 ## Log(Odds)
-Odds는 그대로 사용하기보다 오즈비 \\(Odds ratio\\) 또는 로짓 \\(Log(odds)\\)으로 사용하는 경우가 많습니다.
+Odds는 그대로 사용하기보다 오즈비 \\(Odds\; ratio\\) 또는 로짓 \\(Log(odds)\\)으로 사용하는 경우가 많습니다.
 
 ### Asymmetric odds
 
@@ -81,11 +81,11 @@ Odds의 단점은 **Asymmetric**하다는 점입니다.
 > 우리 팀이 정말 천상계 그 자체라, 100번 이기고 1번 지는 경우, \\(odds=\frac{100}{1}=100\\)입니다.
 
 문제점을 발견했습니다.
-1WIN 5LOSE의 odss는 0.2인 반면, 5WIN LOSE의 odds는 5입니다. 두 값을 직관적으로 이해하기 어렵습니다.
+1WIN, 5LOSE의 odds는 0.2인 반면, 5WIN, LOSE의 odds는 5입니다. 두 값을 통해 결과를 직관적으로 이해하기 어렵습니다.
 
 ![Odds 분포]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-11-odds-distribution.png)
 
-Odds는 P(A)가 0에 가까울수록 0 값을 가지며, 1에 가까울수록 커지면서 무한대로 발산합니다.  
+확률에 따른 Odds의 분포를 그려보았습니다. Odds는 P(A)가 0에 가까울수록 0 값을 가지며, 1에 가까울수록 커지면서 무한대로 발산합니다.  
 
 ![Odds 분포: asymmetric]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-11-odds-distribution-asymmetric.png)
 
@@ -95,11 +95,11 @@ P(A)가 0.5보다 작을 때의 odds는 0~1에 분포되는 반면, 0.5보다 �
 
 ![Log Odds 분포]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-11-log-odds-distribution.png)
 
-반면, 여기에 log 변환 (자연 로그)을 해준 logit은 0.5를 대칭으로 -무한대에서 무한대로 발산합니다.
+반면, Odds에 log 변환 (자연 로그)을 해준 logit은 0.5를 대칭으로 -무한대에서 무한대로 발산합니다.
 
 ![Log Odds 분포: symmetric]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-11-log-odds-distribution-symmetric.png)
 
-이제 분포가 symmetric해진 것을 확인할 수 있습니다 ! 이제 회귀문제뿐 아니라, 여러 곳에 log odds를 적용 가능합니다.
+분포가 symmetric해진 것을 확인할 수 있습니다 ! 이제 회귀문제뿐 아니라, 여러 곳에 log odds를 적용 가능합니다.
 
 위의 예시 중 몇 개만 뽑아보면,
-1WIN 5LOSE의 경우, \\(odds=log\frac{1}{5}=-1.61\\)인 반면, 5WIN LOSE의 \\(odds=log\frac{5}{1}=1.61\\)입니다. 두 값이 0을 중심으로 대칭을 이루기 때문에 직관적으로 이해할 수 있습니다.
+1WIN, 5LOSE의 경우, \\(odds=log\frac{1}{5}=-1.61\\)인 반면, 5WIN, LOSE의 \\(odds=log\frac{5}{1}=1.61\\)입니다. 두 값이 0을 중심으로 대칭을 이루기 때문에 직관적으로 이해할 수 있습니다.
