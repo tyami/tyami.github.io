@@ -122,7 +122,7 @@ F_0 (x) = \underset{\gamma}{argmin} \sum_{i=1}^n L(y_i, \gamma)
 
 Pseudo-residual (실제값 - 예측값)을 계산합니다. 
 
-Compute \\(r_{im}=-(\frac{\partial L(y_i, F(X_i))}{\partial F(X_i)})_{F(x)=F_{m-1}(x)}\\) for \\(i=1,...,n\\)
+Compute \\r_{im}=-\frac{\partial L(y_i, F(X_i))}{\partial F(X_i)}, where F(x)=F_{m-1}(x)\\) for \\(i=1,...,n\\)
 
 ### 3. Create a next tree to predict pseudo-residual
 
