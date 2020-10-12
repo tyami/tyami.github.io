@@ -155,7 +155,7 @@ Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 �
 
 이 부분 수식 푸는게 좀 복잡합니다만, 결과적으로 평균값으로 대치해주면 됩니다.
 
-### Repest 2-3
+### 4. Repeat 2-3
 
 ![GB step 4: repeat 2-3]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step4.png)
 

@@ -128,7 +128,7 @@ Pseudo-residual 계산에 사용될 **샘플별** 예측값을 계산해봅시�
 
 같은 방식으로 모든 샘플의 Predicted probability를 계산합니다.
 
-### 4. Repeat 2-4
+### 5. Repeat 2-4
 
 ![Repeat 2-4]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-repeat1.png)
 
