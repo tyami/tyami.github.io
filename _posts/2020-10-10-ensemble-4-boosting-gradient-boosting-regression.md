@@ -80,10 +80,10 @@ F_{t}(x)=\sum_{t=1}^M \alpha_t h_t(x)
 반면 Gradient Boosting에서는 model weight로 learning rate \\(\eta\\)를 사용합니다. 이 때 \\(\eta\\)는 \\(t\\)에 관계없이 모두 동일하게 scaling합니다. 따라서 \\(M\\)개 모델로 구성된 Gradient Boosting의 최종 예측값은 아래 수식으로 표현할 수 있습니다.
 
 \[
-F_{t}(x)=F_1(x) + \eta \sum_{t=2}^M h_t(x)
+F_{t}(x)=F_0(x) + \eta \sum_{t=1}^M h_t(x)
 \]
 
-\\(F_1(x)\\)는 첫 번째 모델 (a leaf)의 값을 의미합니다.
+\\(F_0(x)\\)는 첫 번째 모델 (a leaf)의 값을 의미합니다.
 
 ---
 
@@ -116,6 +116,7 @@ Gradient Boosting은 회귀 (Regression)와 분류 (Classification) 문제에 �
 
 First model로 leaf를 만듭니다. 이 Leaf가 갖는 값 \\(F_0 (x)\\)은 training data의 모든 output의 평균입니다.  
 초기값으로 output의 평균값을 사용하는 이유는 아래 수식을 미분해서 풀면 됩니다.
+
 \[
 F_0 (x) = \underset{\gamma}{argmin} \sum_{i=1}^n L(y_i, \gamma)
 \]
@@ -128,7 +129,7 @@ F_0 (x) = \underset{\gamma}{argmin} \sum_{i=1}^n L(y_i, \gamma)
 
 Pseudo-residual (실제값 - 예측값)을 계산합니다. 
 
-Compute \\(r_{im}=-\frac{\partial L(y_i, F(X_i))}{\partial F(X_i)}\\), where \\(F(x)=F_{m-1}(x)\\) for \\(i=1,...,n\\)
+> Compute \\(r_{im}=-\frac{\partial L(y_i, F(X_i))}{\partial F(X_i)}\\), where \\(F(x)=F_{m-1}(x)\\) for \\(i=1,...,n\\)
 
 ### 3. Create a next tree to predict pseudo-residual
 

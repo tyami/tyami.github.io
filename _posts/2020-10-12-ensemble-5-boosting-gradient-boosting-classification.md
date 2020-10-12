@@ -27,7 +27,7 @@ Gradient Boosting for Regression과 마찬가지로, StatQuest라는 유투버�
  
 ## Gradient Boosting for Classification
 
-Gradient Boosting for Classification은 Gradient Boosting for Regression과 거의 비슷하지만 세부적인 부분이 다릅니다.
+Gradient Boosting for Classification은 Gradient Boosting for Regression과 전체적인 흐름 (pseudo-residual을 계산하고 이를 예측하는 decision tree를 만들어나가는 과정)은 비슷하지만, 계산법, 확률 변환 등 세부적인 내용에서 차이가 있습니다.
 
 ![Gradient Boosting for Classification overall procedure]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-procedure-overview.png)
 
@@ -35,7 +35,7 @@ Gradient Boosting for Classification은 Gradient Boosting for Regression과 거�
 2. Calculate pseudo-residuals
 3. Create a next tree to predict pseudo-residuals
 4. Calculate predicted probability
-4. Repest 2-3
+5. Repest 2-4
 
 - (Test) Scale, add up the results of each tree, and convert to probability
 
@@ -67,16 +67,20 @@ P(Loves\; Troll\; 2=Yes)=\frac{e^{log(odds)}}{1+e^{log(odds)}}=\frac{0.7}{1+0.7}
 
 ### 2. Calculate Pseudo-residuals
 
-**Pseudo-residual (실제값 - 예측값)**을 계산합니다.
+**Probability의 Pseudo-residual (실제값 - 예측값)**을 계산합니다.
+
+#### 2.1 Observed probability
 
 ![실제값]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-pseudo-residual-observed.png)
 
-여기서 **실제값은 Output의 Yes/No 값에 따라 1 또는 0의 값**을 갖습니다. 
+여기서 **실제값 Observed probability는 Output의 Yes/No 값에 따라 1 또는 0의 값**을 갖습니다. 
+
+#### 2.2 Predicted probability
 
 ![예측값]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-pseudo-residual-prediction.png)
 
 **예측값으로는 이전 모델의 predicted probability**을 사용합니다.  
-즉, **첫번째 트리를 만들 때는 first leaf의 predicted probability를 사용하므로 샘플마다 동일한 값을 사용하지만, 두 번째 트리부터는 샘플마다 다른 Predicted probability를 사용하게 된다**는 것을 기억해야 합니다. 
+즉, **첫번째 트리**를 만들 때는 first leaf의 predicted probability를 사용하므로 **샘플마다 동일한 값**을 사용하지만, **두 번째 트리**부터는 **샘플마다 다른 Predicted probability (Step 4에서 계산)**를 사용하게 된다는 것을 기억해야 합니다.
 
 ![pseudo residual result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-pseudo-residual-result.png)
 
@@ -112,7 +116,7 @@ Gradient Boosting for Classification에서 주로 사용되는 방법 트리의 
 
 ### 4. Calculate predicted probability
 
-Pseudo-residual의 식에 사용될 **샘플별** 예측값을 계산해봅시다.
+Pseudo-residual 계산에 사용될 **샘플별** 예측값을 계산해봅시다.
 
 먼저 log(odds) 를 계산합니다. first leaf의 예측값과 tree의 예측값을 더해주면 됩니다. 이 때 tree의 예측값에 learning rate \\(\eta\\)를 곱해줍니다.
 
@@ -124,7 +128,7 @@ Pseudo-residual의 식에 사용될 **샘플별** 예측값을 계산해봅시�
 
 같은 방식으로 모든 샘플의 Predicted probability를 계산합니다.
 
-### 5. Repeat 2-4
+### 4. Repeat 2-4
 
 ![Repeat 2-4]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-repeat1.png)
 
@@ -132,7 +136,7 @@ Pseudo-residual의 식에 사용될 **샘플별** 예측값을 계산해봅시�
 
 ![Repeat 2-4 주의점]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification-repeat2.png)
 
-**Step 3에서 대표값을 계산할 때, 처음과 달리 이전 모델의 predicted probability가 샘플마다 다르다는 것을 꼭 기억하세요 !**
+**첫 번째 트리를 만들 때를 제외하고는 previous predicted probability가 샘플마다 다르다는 것을 꼭 기억하세요 !**
 
 ### (Test) Scale, add up the results of each tree, and convert to probability
 
