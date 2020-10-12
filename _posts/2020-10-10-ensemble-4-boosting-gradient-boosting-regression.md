@@ -80,10 +80,10 @@ F_{t}(x)=\sum_{t=1}^M \alpha_t h_t(x)
 반면 Gradient Boosting에서는 model weight로 learning rate \\(\eta\\)를 사용합니다. 이 때 \\(\eta\\)는 \\(t\\)에 관계없이 모두 동일하게 scaling합니다. 따라서 \\(M\\)개 모델로 구성된 Gradient Boosting의 최종 예측값은 아래 수식으로 표현할 수 있습니다.
 
 \[
-F_{t}(x)=F_1(x) + \eta \sum_{t=2}^M h_t(x)
+F_{t}(x)=F_0(x) + \eta \sum_{t=1}^M h_t(x)
 \]
 
-\\(F_1(x)\\)는 첫 번째 모델 (a leaf)의 값을 의미합니다.
+\\(F_0(x)\\)는 첫 번째 모델 (a leaf)의 값을 의미합니다.
 
 ---
 
