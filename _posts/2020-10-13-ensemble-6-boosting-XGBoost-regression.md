@@ -26,7 +26,7 @@ use_math: true
 ## XGBoost 
 XGBoost (eXtreme Gradient Boost)는 2016년 Tianqi Chen과 Carlos Guestrin 가 [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754) 라는 논문으로 발표했으며, 그 전부터 Kaggle에서 놀라운 성능을 보이며 사람들에게 알려졌습니다.
 
-![XGBoost 자랑]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-13-XGBoost-regression/2020-10-13-xgboost-introduction-kaggle-winners.png)
+![XGBoost 자랑]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-13-XGBoost-regression/2020-10-13-xgboost-introduction-kaggle-winners.PNG)
 
 XGBoost의 특징을 요약하면 아래와 같습니다.
 
