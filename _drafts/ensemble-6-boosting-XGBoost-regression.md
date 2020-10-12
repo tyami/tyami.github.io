@@ -24,13 +24,23 @@ use_math: true
 > 이번 포스팅에서는 최근 Kaggle에서 높은 점수를 기록하고 있는 XGBoost 알고리즘에 대해 정리해보겠습니다. Regression과 Classification 중 Regression 알고리즘을 먼저 다뤄봅니다.
  
 ## XGBoost 
-XGBoost는 2016년 Tianqi Chen과 Carlos Guestrin 가 [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754) 라는 논문으로 발표한 이후 Kaggle에서 놀라운 성능을 보이며 알려졌습니다.
+XGBoost는 2016년 Tianqi Chen과 Carlos Guestrin 가 [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754) 라는 논문으로 발표했으며, 그 전부터 Kaggle에서 놀라운 성능을 보이며 알려졌습니다.
+
+![XGBoost 자랑]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-13-xgboost-introduction-kaggle-winners.png)
 
 XGBoost의 특징을 요약하면 아래와 같습니다.
 
-1. 
-2. Regularization term
-3. 
+1. Gradient Boost
+2. Regularization (\\(\lambda)\\)
+3. An unique regression tree (\\(\gamma)\\)
+4. Approximate Greedy Algorithm
+5. Parallel learning
+6. Weighted Quantile Sketch
+7. Sparsity-Aware Split Finiding
+8. Cache-Aware Access
+9. Blocks for Out-of-Core Computation
+
+이 중 앞의 세 항목은 XGBoost의 핵심 컨셉을 나타내고, 4-9번 항목은 알고리즘 효율성을 위한 최적화 방법을 나타내는 특징입니다. 4-9 번 항목은 [XGBoost Part 4: Crazy Cool Optimizations](https://www.youtube.com/watch?v=oRrKeUCEbq8)를 참고합시다 (추후 업로드 예정)
 
 ## XGBoost for Regression
 
