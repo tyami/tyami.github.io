@@ -1,51 +1,27 @@
 ---
-title: "부스팅 앙상블 (Boosting Ensemble) 6: NGBoost"
-excerpt: "Boosting 모델 중 하나인 NGBoost을 정리해봅시다"
+title: "Machine learning: Bias(편향)과 Variance(분산)"
+excerpt: "Machine learning의 기본적인 개념 중 하나인 Bias(편향)과 Variance(분산)에 대해 정리해봅시다"
 
 categories:
 - Machine learning
 
 tags:
 - Machine learning
-- Ensemble
 - Algorithm
-- Boosting
 
 toc: true
 toc_sticky: true
-toc_label: "NGBoost"
+toc_label: "Bias(편향)과 Variance(분산)"
 
 use_math: true
 ---
 
-이전 글 보기: [부스팅 앙상블 (Boosting Ensemble) 5: CatBoost](https://tyami.github.io/machine%20learning/ensemble-9-boosting-CatBoost/)
-
-> 이전 포스팅에서는 CatBoost 알고리즘을 정리했습니다.
-> 이번 포스팅에서는 NGBoost 알고리즘을 정리해보겠습니다.
+> 이번 포스팅에서는Bias(편향)과 Variance(분산)을 정리해보겠습니다.
  
-## NGBoost
+## Bias(편향)과 Variance(분산)
 NGBoost는 2019년 Machine learning의 대가 Andrew Ng 교수가 포함된 Stanford ML 그룹에서 [NGBoost: Natural Gradient Boosting for Probabilistic Prediction](https://arxiv.org/abs/1910.03225)라는 이름으로 발표했습니다
 
-## NGBoost 학습 순서
-1.
-2.
-3.
-
-### 1.
-
-### 2.
-
-### 3.
-
-## Python code
-Python에서는 `ngboost` library로 사용 가능합니다.
-
-- [NGBoost Github](https://github.com/stanfordmlgroup/ngboost)
-- [NGBoost User Guide](https://stanfordmlgroup.github.io/ngboost/intro.html)
-
-```python
-
-```
+## Underfitting과 Overfitting
 
 ---
 
