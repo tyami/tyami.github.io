@@ -11,7 +11,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "Gradient Boosting for Classification"
+toc_label: "Odds와 Log(Odds)"
 
 use_math: true
 ---
