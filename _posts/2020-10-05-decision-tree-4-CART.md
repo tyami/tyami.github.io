@@ -44,7 +44,7 @@ G(S) &= \sum_{i=1}^C p_i(1-p_i) \\\\\\
 &= 1 - \sum_{i=1}^Cp_i^2 \\\\\\
 \end{aligned}
 
-![Binary 문제에서 Probability에 따른 Gini index와 Entropy 변화]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-probability-entropy-gini.png)
+![Binary 문제에서 Probability에 따른 Gini index와 Entropy 변화]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-CART/2020-10-05-probability-entropy-gini.png)
 
 Gini index는 엔트로피와 같이 분류가 잘 될 때 낮은 값을 갖습니다. 따라서 CART 알고리즘에서는 모든 조합에 대해 Gini index를 계산한 후, Gini index가 가장 낮은 지표를 찾아 분기합니다.  
 [ID3 알고리즘](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)에서 Information Gain을 이용하는 것과 동일하기 때문에, 본 포스팅에서는 계산 과정은 생략하도록 하겠습니다.
@@ -55,7 +55,7 @@ Gini index는 엔트로피와 같이 분류가 잘 될 때 낮은 값을 갖습�
 
 CART 알고리즘의 또 하나의 특징으로는 가지 분기 시, 여러 개의 자식 노드가 아닌 단 두 개의 노드로 분기한다는 것 입니다 (Binary tree).
 
-![CART의 특징: Binary tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-cart-binary-tree.png)
+![CART의 특징: Binary tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-CART/2020-10-05-cart-binary-tree.png)
 
 좌측은 ID3 알고리즘, 우측은 CART 알고리즘의 분기를 나타냅니다. ID3 의 경우 모든 클래스 (e.g., Sunny, Overcast, Rain) 로 가지가 뻗어져나갑니다. 따라서 ID3 알고리즘의 경우 지표별 Information Gain을 한 번씩만 계산하면 됩니다.
 
@@ -91,15 +91,15 @@ Classification And **Regression Tree** 라는 이름답게, CART 알고리즘은
 
 수식을 보기 전, 간단한 예시를 먼저 살펴봅시다. [tomaszgolan's blog](https://tomaszgolan.github.io/introduction_to_machine_learning/markdown/introduction_to_machine_learning_02_dt/introduction_to_machine_learning_02_dt/#regression)의 설명을 참고했습니다.
 
-![Regression Tree 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-regression-tree-example1.png)
+![Regression Tree 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-CART/2020-10-05-regression-tree-example1.png)
 
 위와 같은 트렌드를 갖는 데이터를 기반으로, x에 따라 y를 예측하는 의사결정 나무를 만들고자 합니다.
 
-![Regression Tree 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-regression-tree-example2.png)
+![Regression Tree 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-CART/2020-10-05-regression-tree-example2.png)
 
 예를 들어 이렇게 \\(x<0.3\\)과 \\(x<0.6\\)을 지표로 하는 나무는 두 개의 초록 점선으로 데이터를 나눌 것입니다.
 
-![Regression Tree 예시 3]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-regression-tree-example3.png)
+![Regression Tree 예시 3]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-CART/2020-10-05-regression-tree-example3.png)
 
 그리고는 각 구간의 x값이 들어올 경우, training data (파란 점)의 평균값 (빨간 실선)을 예측값으로 내놓습니다.  
 **나무의 깊이가 깊어질 수록**, 다시 말하면 **데이터를 나누는 초록 점선이 촘촘하게 생길 수록** 예측값과 실제값의 오차는 줄어들 것입니다.
@@ -123,7 +123,7 @@ J(k, t_k)=\frac{m_{left}}{m}MSE_{left}+\frac{m_{right}}{m}MSE_{right}
 
 ID3, C4.5, CART에 걸쳐 의사결정 나무 생성을 위한 알고리즘을 정리해보았습니다. 의사결정 나무 알고리즘은 간단하면서 효과적인 알고리즘이지만, 과적합 (Overfitting)에 취약하다는 단점이 존재합니다.
 
-![Regression Tree 예시 4: Overfitting]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-regression-tree-example4.png)
+![Regression Tree 예시 4: Overfitting]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-CART/2020-10-05-regression-tree-example4.png)
 
 만약 Regression의 예시에서 모든 Training data가 개별 구간을 갖도록 의사결정 나무가 생성된다면 이 모델은 과적합된 모델이라고 할 수 있습니다. 즉, Training data에 너무 과도하게 학습된 모델입니다. 따라서 이러한 과적합을 막기 위해, 가지치기 (pruning) 과정을 수행합니다.
 

@@ -43,7 +43,7 @@ AdaBoost에 비교되는 Gradient Boosting의 대표적인 차이점은 세 가�
 
 앙상블 모델의 기본이 되는 weak lerner가 다릅니다.
 
-![AdaBoost VS Gradient Boost 1: weak learner]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-comparison-adaboost-gradient-boost.png)
+![AdaBoost VS Gradient Boost 1: weak learner]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-comparison-adaboost-gradient-boost.png)
 
 AdaBoost에서는 weak learner로 stump (한 개 노드와 두 개의 가지를 갖는 매우 작은 decision tree) 를 사용합니다.
 
@@ -56,7 +56,7 @@ AdaBoost에서는 weak learner로 stump (한 개 노드와 두 개의 가지를 
 
 AdaBoost에서는 각 stump들은 모두 실제 output 값을 예측하는 모델입니다. 따라서 이 값을 평균내거나 가중치를 곱한 평균을 통해, 실제 값에 가까운 예측값을 만들어냅니다.
 
-![AdaBoost VS Gradient Boost 2: predicted value]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-test.png)
+![AdaBoost VS Gradient Boost 2: predicted value]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-test.png)
 
 반면 Gradient Boosting에서 각 restricted tree들이 예측하는 값은 실제 output과 이전 모델의 예측치 사이의 오차 (pseudo-residual) 입니다.  
 최종 예측 시에는 각 모델의 오차를 scaling 후, 합하는 과정을 통해 실제 값에 가까운 예측값을 만들어냅니다.
@@ -67,7 +67,7 @@ AdaBoost에서는 각 stump들은 모두 실제 output 값을 예측하는 모�
 
 각 모델에 대해 가중치를 주는 방식이 다릅니다.
 
-![AdaBoost VS Gradient Boost 3: model weight]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-comparison-adaboost-gradient-boost.png)
+![AdaBoost VS Gradient Boost 3: model weight]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-comparison-adaboost-gradient-boost.png)
 
 다시 위 그림을 살펴보면, AdaBoost에서는 각 모델의 크기가 다른 반면, Gradient Boosting에서는 크기가 동일한 것을 알 수 있습니다.
 
@@ -97,11 +97,11 @@ Gradient Boosting은 회귀 (Regression)와 분류 (Classification) 문제에 �
 
 본 포스팅에서는 상대적으로 쉬운 Gradient Boosting for Regression 알고리즘을 먼저 정리해보도록 하겠습니다.
 
-![Eqations]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-equations.png)
+![Eqations]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-equations.png)
 
 [Gradient Boost Part 2: Regression Details](https://www.youtube.com/watch?v=2xudPOBz-vs) 의 설명에 사용된 수식입니다. 이대로는 보기가 좀 어려우니, 알아 듣기 쉽도록 자연어로 다시 쓰고, 그림으로 표현해 보면 아래와 같습니다.
 
-![Procedure overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-procedure-overview.png)
+![Procedure overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-procedure-overview.png)
 
 1. Create a first leaf
 2. Calculate pseudo-residuals
@@ -112,7 +112,7 @@ Gradient Boosting은 회귀 (Regression)와 분류 (Classification) 문제에 �
 
 ### 1. Create a first leaf
 
-![GB step 1: create first leaf]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step1.png)
+![GB step 1: create first leaf]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-step1.png)
 
 First model로 leaf를 만듭니다. 이 Leaf가 갖는 값 \\(F_0 (x)\\)은 training data의 모든 output의 평균입니다.  
 초기값으로 output의 평균값을 사용하는 이유는 아래 수식을 미분해서 풀면 됩니다.
@@ -125,7 +125,7 @@ F_0 (x) = \underset{\gamma}{argmin} \sum_{i=1}^n L(y_i, \gamma)
 
 ### 2. Calculate pseudo-residuals
 
-![GB step 2:calculate psuedo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step2.png)
+![GB step 2:calculate psuedo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-step2.png)
 
 Pseudo-residual (실제값 - 예측값)을 계산합니다. 
 
@@ -133,13 +133,13 @@ Pseudo-residual (실제값 - 예측값)을 계산합니다.
 
 ### 3. Create a next tree to predict pseudo-residual
 
-![GB step 3:create nex tree to predict pseudo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step3-1.png)
+![GB step 3:create nex tree to predict pseudo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-step3-1.png)
 
 #### 3-1. Create a tree
 
 주어진 데이터 (Height, Favorite color, Gender)를 바탕으로 Pseudo-residual을 예측하는 decision tree를 만듭니다. 아래와 같은 tree가 만들어집니다.
 
-![GB step 3-1 result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step3-1-result.png)
+![GB step 3-1 result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-step3-1-result.png)
 
 > Fit a regression tree to the \\(r_{im}\\) values and create terminal regions \\(R_{jm}\\), for \\(j=1,...J_m\\)
 
@@ -149,7 +149,7 @@ Pseudo-residual (실제값 - 예측값)을 계산합니다.
 
 Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 수많은 데이터 값이, decision tree의 최종 leaf에 따라 몇 종류의 예측값으로 축약됩니다.
 
-![GB step 3-2 result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step3-2-result.png)
+![GB step 3-2 result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-step3-2-result.png)
 
 > For \\(j=1...J_m\\) compute \\(\gamma_{jm}=\underset{\gamma}{argmin} \sum_{x_ \in R_{ij}} L(y_i, F_{m-1}(x_i) + \gamma)\\)  
 
@@ -157,13 +157,13 @@ Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 �
 
 ### 4. Repeat 2-3
 
-![GB step 4: repeat 2-3]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-step4.png)
+![GB step 4: repeat 2-3]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-step4.png)
 
 다시 각 샘플에 대해 pesudo-residual을 계산하고, 이를 바탕으로 decision tree를 만드는 과정을 반복합니다.  이 때 주목할 점으로, 첫 번째 모델의 pseudo-residual보다 두 번째 모델의 pseudo-residual이 감소한 것을 확인할 수 있습니다 !
 
 ### (Test) Scale and add up the results of each tree.
 
-![GB step 5]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-test.png)
+![GB step 5]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression//2020-10-10-gradient-boosting-regression-test.png)
 
 입력값 \\(x\\)에 대한 각 모델의 residual 예측값 \\(h_t(x)\\)에 동일한 Learning rate \\(\eta\\) (\\(\nu\\))를 가중치로 곱한 뒤 합계를 구합니다.
 

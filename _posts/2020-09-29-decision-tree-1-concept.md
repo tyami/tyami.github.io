@@ -43,7 +43,7 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
  
 ## Decision Tree 의 기본 개념
 
-![decision tree node 정의]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-29-decision-tree-define-nodes.png)
+![decision tree node 정의]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-29-decision-tree/2020-09-29-decision-tree-define-nodes.png)
 
 Decision Tree는 **일련의 필터 과정** 또는 **스무고개**라고 생각하면 됩니다.
 
@@ -69,7 +69,7 @@ Outlook, Temperature, Humidity, Windy와 같은 기상조건들(Attributes)에 �
 
 어떤 attribute를 먼저 사용하느냐에 따라 여러 가지 Decision Tree를 만들 수 있을 겁니다. 아래와 같이 말이죠.
 
-![decision-tree-example-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-29-decision-tree-examples.png)
+![decision-tree-example-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-29-decision-tree/2020-09-29-decision-tree-examples.png)
 여러 Decision tree 중 더 좋은 모델을 어떻게 정할 수 있을까요?
 답은 "**변별력이 좋은 질문부터** 먼저 정한다" 입니다.
 
@@ -79,7 +79,7 @@ Outlook, Temperature, Humidity, Windy와 같은 기상조건들(Attributes)에 �
 ### 불순도 (Impurity)
 여기에서 **불순도 (Impurity)** 라는 개념이 등장합니다 !
 
-![decision-tree-example-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-29-impurity.png)
+![decision-tree-example-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-29-decision-tree/2020-09-29-impurity.png)
 불순도는 **불순물이 포함된 정도**라고 생각하면 되는데, 위 그림이 잘 나타내주고 있습니다.  
 
 위 그림의 좌측과 우측 그림은 모든 샘플이 한 가지 라벨만을 나타내고 있기 때문에 불순도가 0인 상태입니다.  

@@ -42,7 +42,7 @@ ID3 알고리즘에서는 각 시점에서 모든 지표에 대한 분기 전후
 
 #### Information Gain의 한계점
 
-![IG의 한계점 - 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example1.png)
+![IG의 한계점 - 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-c4_5/2020-10-04-IG-limitation-example1.png)
 
 Windy라는 지표로 분기했을 때 데이터가 위와 같이 분기된다고 가정해봅시다. 이 경우의 Information Gain은 0.5568입니다.
 
@@ -52,7 +52,7 @@ Information\; Gain&=H(7,3) - (\frac{6}{10}H(6,0)+\frac{4}{10}H(1,3)) \\\\\\
 &=0.5568
 \end{aligned}
 
-![IG의 한계점 - 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example2.png)
+![IG의 한계점 - 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-c4_5/2020-10-04-IG-limitation-example2.png)
 
 다른 지표인 With whom이라는 지표로 분기했을 때는 Information Gain이 **0.6813**이 나옵니다.
 
@@ -71,7 +71,7 @@ C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Inform
 
 \\(IG\\)는 ID3 알고리즘에서의 Information Gain을 의미하며, \\(IV\\)는 **Intrinsic Value**를 의미합니다.
 
-![Information Gain Ratio overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IGR-overview.png)
+![Information Gain Ratio overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-c4_5/2020-10-04-IGR-overview.png)
 
 특정 지표로 분기했을 때 생성되는 가지의 수를 \\(N\\)이라고 하고, \\(i\\)번째 가지에 해당하는 확률을 \\(p_i\\)라고할 때, Intrinsic Value는 아래와 같습니다.
 
@@ -79,7 +79,7 @@ C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Inform
 
 앞서 예시로 든 두 가지 지표 Windy, With whom에 대한 Information Gain Ratio를 계산하여 차이점을 비교해봅시다.
 
-![IG의 한계점 - 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example1.png)
+![IG의 한계점 - 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-c4_5/2020-10-04-IG-limitation-example1.png)
 
 Windy 지표에 대한 Information Gain Ratio를 계산해보면, 첫 번째 경우는 **0.5739**라는 값을 얻을 수 있습니다.
 
@@ -90,7 +90,7 @@ Information\; Gain\; Ratio&=IG/IV \\\\\\
 &=0.5739
 \end{aligned}
 
-![IG의 한계점 - 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-IG-limitation-example2.png)
+![IG의 한계점 - 예시 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-c4_5/2020-10-04-IG-limitation-example2.png)
 
 동일한 방법으로 With whom에 대한 GR을 계산하면 **0.2182**라는 값을 얻습니다.
 
@@ -130,7 +130,7 @@ C4.5 알고리즘에서의 두번째 개선점은 **범주형 변수 (discrete v
 
 그러면 여기서 breakpoints는 어떻게 정하게 될까요? 여기에는 아래 그림과 같이 크게 세가지 방법이 있습니다.
 
-![C4.5 알고리즘에서 breakpoints를 정하는 방법들]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-C4_5-continuous-variables-breakpoints.png)
+![C4.5 알고리즘에서 breakpoints를 정하는 방법들]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-04-c4_5/2020-10-04-C4_5-continuous-variables-breakpoints.png)
 
 1. 값이 바뀌는 모든 지점을 breakpoints 로 설정
 2. Output 클래스가 바뀔 때만 breakpoints로 설정
