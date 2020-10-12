@@ -29,7 +29,7 @@ Gradient Boosting for Regression과 마찬가지로, StatQuest라는 유투버�
 
 Gradient Boosting for Classification은 Gradient Boosting for Regression과 전체적인 흐름 (pseudo-residual을 계산하고 이를 예측하는 decision tree를 만들어나가는 과정)은 비슷하지만, 계산법, 확률 변환 등 세부적인 내용에서 차이가 있습니다.
 
-![Gradient Boosting for Classification overall procedure]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-procedure-overview.png)
+![Gradient Boosting for Classification overall procedure]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-procedure-overview.png)
 
 1. Create a first leaf
 2. Calculate pseudo-residuals
@@ -39,7 +39,7 @@ Gradient Boosting for Classification은 Gradient Boosting for Regression과 전�
 
 - (Test) Scale, add up the results of each tree, and convert to probability
 
-![Gradient Boosting for Classification example data]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-dataset-example.png)
+![Gradient Boosting for Classification example data]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-dataset-example.png)
 
 위 데이터 예시를 바탕으로 Gradient Boosting for Classification 과정을 정리해봅시다. 몇 가지 지표를 바탕으로 Troll 2를 좋아할지 예측하는 데이터입니다.
 
@@ -71,18 +71,18 @@ P(Loves\; Troll\; 2=Yes)=\frac{e^{log(odds)}}{1+e^{log(odds)}}=\frac{0.7}{1+0.7}
 
 #### 2.1 Observed probability
 
-![실제값]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-pseudo-residual-observed.png)
+![실제값]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-pseudo-residual-observed.png)
 
 여기서 **실제값 Observed probability는 Output의 Yes/No 값에 따라 1 또는 0의 값**을 갖습니다. 
 
 #### 2.2 Predicted probability
 
-![예측값]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-pseudo-residual-prediction.png)
+![예측값]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-pseudo-residual-prediction.png)
 
 **예측값으로는 이전 모델의 predicted probability**을 사용합니다.  
 즉, **첫번째 트리**를 만들 때는 first leaf의 predicted probability를 사용하므로 **샘플마다 동일한 값**을 사용하지만, **두 번째 트리**부터는 **샘플마다 다른 Predicted probability (Step 4에서 계산)**를 사용하게 된다는 것을 기억해야 합니다.
 
-![pseudo residual result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-pseudo-residual-result.png)
+![pseudo residual result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-pseudo-residual-result.png)
 
 위와 같이 Pseudo residual 을 계산했습니다.
 
@@ -92,7 +92,7 @@ P(Loves\; Troll\; 2=Yes)=\frac{e^{log(odds)}}{1+e^{log(odds)}}=\frac{0.7}{1+0.7}
 
 이제 Pseudo-residual을 예측하는 decision tree를 만듭니다. 이 때 Gradient Boosting for Regression과 마찬가지로 **maximum number of leaves**로 제한을 줍니다. 예시에서는 3개로 제한을 주었지만, 실제로는 8~32값을 많이 사용한다고 합니다.
 
-![First tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-first-tree.png)
+![First tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-first-tree.png)
 
 #### 3-2. Calculate representative value by leaves
 
@@ -110,7 +110,7 @@ Gradient Boosting for Classification에서 주로 사용되는 방법 트리의 
 
 위 변환을 통해 나온 값으로 각 leaf의 대표값을 지정해주면 됩니다.
 
-![Representative value]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-representative-value.png)
+![Representative value]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-representative-value.png)
 
 위와 같이 각 leaf의 representative value를 계산할 수 있습니다.
 
@@ -120,27 +120,27 @@ Pseudo-residual 계산에 사용될 **샘플별** 예측값을 계산해봅시�
 
 먼저 log(odds) 를 계산합니다. first leaf의 예측값과 tree의 예측값을 더해주면 됩니다. 이 때 tree의 예측값에 learning rate \\(\eta\\)를 곱해줍니다.
 
-![Predicted probability]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-predicted-probability.png)
+![Predicted probability]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-predicted-probability.png)
 
 첫번째 샘플의 경우, 위와 같이 log(Odds)의 합으로 1.8을 얻었으며, 이를 확률로 변환하면 0.9의 값을 얻게 됩니다.
 
-![Predicted probability result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-predicted-probability-result.png)
+![Predicted probability result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-predicted-probability-result.png)
 
 같은 방식으로 모든 샘플의 Predicted probability를 계산합니다.
 
 ### 5. Repeat 2-4
 
-![Repeat 2-4]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-repeat1.png)
+![Repeat 2-4]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-repeat1.png)
 
 이제 Pseudo-residual을 계산할 준비가 끝났으니, Step 2부터 4를 반복해주면서 계속해서 새로운 트리를 만듭니다.
 
-![Repeat 2-4 주의점]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-repeat2.png)
+![Repeat 2-4 주의점]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-repeat2.png)
 
 **첫 번째 트리를 만들 때를 제외하고는 previous predicted probability가 샘플마다 다르다는 것을 꼭 기억하세요 !**
 
 ### (Test) Scale, add up the results of each tree, and convert to probability
 
-![Test 시에는 다시 probability로 변환]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification//2020-10-12-gradient-boosting-classification-test.png)
+![Test 시에는 다시 probability로 변환]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-test.png)
 
 최종적으로 first leaf와 tree들의 log(Odds)를 합해준 뒤, probability로 변환합니다.
 

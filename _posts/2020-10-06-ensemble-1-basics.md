@@ -46,7 +46,7 @@ use_math: true
 
 하드 보팅은 **각 weak learner들의 예측 결과값을 바탕으로 다수결 투표**하는 방식입니다. 
 
-![Hard voting]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble//2020-10-06-ensemble-hard-voting.png)
+![Hard voting]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble/2020-10-06-ensemble-hard-voting.png)
 
 빨간공인지 파란공인지 예측하는 Binary classification 문제에서 동일한 데이터에 대해 각 분류기는 클래스별 예측 확률을 제시합니다. 이 확률값에 따라 최종 예측값이 계산되는데, 하드 보팅은 이 예측값의 다수결 투표로 최종 예측값을 결정합니다.
 
@@ -58,7 +58,7 @@ use_math: true
 
 - **평균 (average)**
 
-![Soft voting average]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble//2020-10-06-ensemble-soft-voting-average.png)
+![Soft voting average]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble/2020-10-06-ensemble-soft-voting-average.png)
 
 weak learner 개별의 예측값은 중요하지 않습니다. 예측 확률값을 단순 평균내어 확률이 더 높은 클래스를 최종 예측값으로 결정합니다.
 
@@ -66,7 +66,7 @@ weak learner 개별의 예측값은 중요하지 않습니다. 예측 확률값�
 
 - **가중치 합 (weighted sum)**
 
-![Soft voting weighted sum]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble//2020-10-06-ensemble-soft-voting-weighted-sum.png)
+![Soft voting weighted sum]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble/2020-10-06-ensemble-soft-voting-weighted-sum.png)
 
 만약 어떠한 이유 (단일 모델에 사용되는 feature engineering 방법 등) 로 weak learner들에 대한 신뢰도가 다를 경우, 가중치를 부여하여 확률값의 평균이 아닌 가중치 합을 사용할 수도 있습니다.
 
@@ -78,7 +78,7 @@ weak learner 개별의 예측값은 중요하지 않습니다. 예측 확률값�
 
 ### 앙상블의 종류
 
-![Bagging과 Boosting]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble//2020-10-06-ensemble-bagging-boosting.png)  
+![Bagging과 Boosting]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble/2020-10-06-ensemble-bagging-boosting.png)  
 [출처](https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/)
 
 앙상블 알고리즘은 학습 방식에 따라 크게 **배깅 (Bagging)**, **부스팅 (Boosting)**, 그리고 **스태킹 (Stacking)**으로 나눌 수 있습니다. 본 포스팅에서는 개념만 간단히 정리하고, 추후 포스팅을 통해 예시를 추가로 정리하도록 하겠습니다.
@@ -87,7 +87,7 @@ weak learner 개별의 예측값은 중요하지 않습니다. 예측 확률값�
 
 배깅 (Bagging)은 **B**ootstrap **Agg**regat**ing**의 약자입니다. 이름에서 알 수 있다시피 **부트스트랩 (Boostrap)**을 이용합니다.
 
-![Bootstrap]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble//2020-10-06-bootstrap.png) 
+![Bootstrap]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble/2020-10-06-bootstrap.png) 
 
 부트스트랩이란 주어진 데이터셋에서 random sampling 하여 새로운 데이터셋을 만들어내는 것을 의미합니다. 부트스트랩을 통해 만들어진 여러 데이터셋을 바탕으로 weak learner를 훈련시킨 뒤, 결과를 voting 합니다.
 
@@ -101,7 +101,7 @@ weak learner 개별의 예측값은 중요하지 않습니다. 예측 확률값�
 
 아래는 Boosting 과정을 대략적으로 나타낸 그림입니다.
 
-![Boosting 과정]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble//2020-10-06-ensemble-boosting.png)  
+![Boosting 과정]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble/2020-10-06-ensemble-boosting.png)  
 [출처](https://pubmed.ncbi.nlm.nih.gov/30006563/)
 
 Iteration 1에서 빨간 원은 잘못 분류된 샘플입니다. 이 샘플에 대한 가중치를 높여 분류기를 다시 만듭니다.

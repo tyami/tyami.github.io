@@ -33,7 +33,7 @@ use_math: true
 
 > **Random Forest**에는 많은 **Decision tree**들이 있고, 이 **Decision tree**들은 서로 다른 가지의 개수, 모양, 형태를 가집니다.
 
-![Random Forest overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest//2020-10-07-random-forest-overview.png)
+![Random Forest overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest/2020-10-07-random-forest-overview.png)
 
 Random Forest는 배깅 (Bagging) 앙상블 알고리즘의 대표적인 예시입니다. Bagging이란 Bootstrap aggregating의 줄임말로, 이름 그대로 Bootstrap 기반의 앙상블 알고리즘입니다.
 
@@ -47,7 +47,7 @@ Random forest의 생성 과정을 세 개의 파트로 나누어 정리했는데
 
 ### Bootstrap
 
-![Random Forest Bootstrap]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest//2020-10-07-random-forest-bootstrap.png)
+![Random Forest Bootstrap]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest/2020-10-07-random-forest-bootstrap.png)
 
 주어진 데이터셋으로부터 Random sampling을 통해 각 decision tree를 만들기 위한 subset을 생성합니다. 이 때, sampling되는 데이터는 중복을 허용합니다.
 
@@ -55,7 +55,7 @@ Random forest의 생성 과정을 세 개의 파트로 나누어 정리했는데
 
 ### Decision tree
 
-![Random Forest Decision tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest//2020-10-07-random-forest-decision-tree.png)
+![Random Forest Decision tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest/2020-10-07-random-forest-decision-tree.png)
 
 Bootstrap을 통해 생성된 각각의 데이터셋에 대한 Decision tree들을 구성합니다.
 
@@ -63,7 +63,7 @@ Bootstrap을 통해 생성된 각각의 데이터셋에 대한 Decision tree들�
 
 ### Ensemble
 
-![Random Forest Decision tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest//2020-10-07-random-forest-ensemble.png)
+![Random Forest Decision tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest/2020-10-07-random-forest-ensemble.png)
 
 각 Decision tree의 예측 결과를 voting하여 최종 예측값을 얻습니다. 
 
