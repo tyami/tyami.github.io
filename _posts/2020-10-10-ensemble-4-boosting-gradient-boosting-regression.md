@@ -29,17 +29,17 @@ use_math: true
 
 Gradient Boosting은 앞서 정리한 AdaBoost보다 조금 복잡합니다. 따라서 이해와 관계없이 일단 포스팅을 처음부터 끝까지 쭉 읽어서 전체적인 흐름을 이해하고, 그 다음 세부내용을 공부하는게 좋을 것 같습니다. 가능하다면 위에 링크해둔 유투브 영상도 보시는 것을 추천드립니다.
 
-### AdaBoost VS Gradient Boosting
+## AdaBoost VS Gradient Boosting
 AdaBoost와 Gradient Boosting 두 모델의 공통점은 부스팅 앙상블 기반의 알고리즘이라는 것입니다. 부스팅 앙상블의 대표적인 특징은 모델 학습이 **sequential**합니다. 즉, 먼저 생성된 모델의 예측값이 다음 모델 생성에 영향을 줍니다.  
 하지만 이 외에 두 모델은 상당한 차이점이 있습니다.
 
 AdaBoost에 비교되는 Gradient Boosting의 대표적인 차이점은 세 가지 정도로 정리할 수 있습니다.
 
-- **Weak learner**: Stumps VS A leaf & Restricted trees
-- **Predicted value**: Output VS Pseudo-residual
-- **Model weight**: Different model weights (amount of say) VS Equal model weight (learning rate)
+1. **Weak learner**: Stumps VS A leaf & Restricted trees
+2. **Predicted value**: Output VS Pseudo-residual
+3. **Model weight**: Different model weights (amount of say) VS Equal model weight (learning rate)
 
-#### Weak learner
+### 1. Weak learner
 
 앙상블 모델의 기본이 되는 weak lerner가 다릅니다.
 
@@ -50,7 +50,7 @@ AdaBoost에서는 weak learner로 stump (한 개 노드와 두 개의 가지를 
 반면 Gradient Boosting에서는 restricted tree를 사용합니다. restricted tree란, maximum number of leaves로 성장에 제한을 둔 decision tree입니다.  
 또한 Gradient Boosting의 첫 번째 weak learner는 모든 샘플의 output 평균을 값으로 갖는 하나의 leaf입니다.
 
-#### Predicted value
+### 2. Predicted value
 
 각 모델이 예측하는 정보가 다릅니다.
 
@@ -63,7 +63,7 @@ AdaBoost에서는 각 stump들은 모두 실제 output 값을 예측하는 모�
 
 > Pseudo-residual에서 **Pseudo**라는 단어가 붙은 이유는 linear regression 에서의 residaul과 구별하기 위해서입니다. Gradient Boosting에서 어떤 Loss function을 사용하느냐에 따라 residual과 동일할 수도, 비슷할 수도 있기에 이런 이름을 붙였다고 합니다. ([참고](https://www.youtube.com/watch?v=2xudPOBz-vs))
 
-#### Model weight
+### 3. Model weight
 
 각 모델에 대해 가중치를 주는 방식이 다릅니다.
 
@@ -89,9 +89,13 @@ F_{t}(x)=F_1(x) + \eta \sum_{t=2}^M h_t(x)
 
 ## Gradiend Boosting for Regression
 
-Gradient Boosting 은 Regression과 Classification이 모두 가능한데, 알고리즘이 다릅니다.
+Gradient Boosting은 회귀 (Regression)와 분류 (Classification) 문제에 모두 사용 모두 가능합니다. 두 알고리즘은 전체적으로는 비슷하지만, 디테일 면에서 다릅니다. 알고리즘의 공통점을 요약하면 아래와 같습니다.
 
-본 포스팅에서는 Gradient Boosting for Regression 알고리즘을 먼저 정리해보도록 하겠습니다.
+> Create decision trees to predict residual (observed value – predicted value) of **______**, with limitation of maximum number of leaves.
+
+두 알고리즘은 진한 부분의 블랭크 (_____)에 무엇이 들어가느냐가 다릅니다.
+
+본 포스팅에서는 상대적으로 쉬운 Gradient Boosting for Regression 알고리즘을 먼저 정리해보도록 하겠습니다.
 
 ![Eqations]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression-equations.png)
 

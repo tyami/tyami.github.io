@@ -29,7 +29,7 @@ use_math: true
 
 반면 AdaBoost (Adaptive Boosting)는 **다양한 크기**의 **stump**로 이루어진 숲으로 볼 수 있습니다.
 
-## AdaBoost의 3가지 Concepts
+## 3 Concepts of AdaBoost
 1. Forest of stumps
 2. Different weights for each stump 
 3. Sequential

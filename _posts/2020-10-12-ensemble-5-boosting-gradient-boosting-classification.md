@@ -144,6 +144,12 @@ Pseudo-residual의 식에 사용될 **샘플별** 예측값을 계산해봅시�
 
 ---
 
+이전 포스팅에서 Gradient Boosting의 Regression과 Classification 알고리즘의 공통되는 부분은 아래 내용으로 요약된다고 정리했습니다.
+
+> Create decision trees to predict residual (observed value – predicted value) of **______**, with limitation of maximum number of leaves.
+
+빈 칸에, Regression에서는 Output value 그 자체, Classification은 Output class의 probability가 들어가면 말이 되겠네요.
+
 > Next: "Part 4 보고 관련 수식 이해하기"  
 > 다음 포스팅에서는 **드디어** Kaggle에서 많이 사용되고 있는 대표적인 부스팅 앙상블 알고리즘인 XGBoost를 정리해보고자 합니다.
 
