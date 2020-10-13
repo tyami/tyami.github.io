@@ -44,11 +44,11 @@ XGBoost의 특징을 요약하면 아래와 같습니다.
 
 다시 돌아와서, 1번 Gradient Boost와 2번 Regularization은 이전 포스팅을 통해 정리했습니다.
 
-따라서 본 포스팅에서는 3번 unique regression tree의 과정을 정리해보고자 합니다.
+따라서 본 포스팅에서는 3번 unique regression tree의 과정을 정리해보고자 합니다. [XGBoost Part 1: Regression](https://www.youtube.com/watch?v=OtD8wVaFm6E)를 참고했습니다.
 
 ## XGBoost for Regression
 
-![Gradient Boosting for Regression overall procedure]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression/2020-10-10-gradient-boosting-regression-procedure-overview.png)
+![XGBoost for Regression overall procedure]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression/2020-10-10-gradient-boosting-regression-procedure-overview.png)
 
 XGBoost for Regression은 Gradient Boosting for Regression과 전체적인 순서는 동일합니다. 샘플에 대한 residual을 계산하고, 이를 예측하는 decision tree를 만드는 과정을 반복한 뒤, learning rate \\(\eta\\)를 곱해 합칩니다.
 
@@ -59,10 +59,12 @@ XGBoost for Regression은 Gradient Boosting for Regression과 전체적인 순�
 3. Create next tree
    1. Similarity score of root node
    2. Separation based on Gain
-   3. Complete decision tree with limitation of limitation of depth
+   3. Complete decision tree with limitation of depth
    4. Prune the tree according to \\(\gamma\\)
    5. Calculate Output value (Representative value)
 4. Repeat step 2-3
+
+- (Test) Scale and add up the results of each tree
 
 하나씩 차근차근 정리해봅시다.
 
@@ -108,7 +110,7 @@ Gain=Similarity_{Left} + Similarity_{Right} - Similarity_{Parent}
 
 위 예시에서는 1번 분기점이 가장 큰 Gain 값 (120.33)을 가지므로, Dosage < 15 조건으로 분기합니다.
 
-#### 3-3. Complete decision tree with limitation of limitation of depth
+#### 3-3. Complete decision tree with limitation of depth
 
 ![Step 3-3 - Complete tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-13-XGBoost-regression/2020-10-13-xgboost-regression-step3-3-complete-tree.png)
 

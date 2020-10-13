@@ -27,21 +27,21 @@ Gradient Boosting for Regression과 마찬가지로, StatQuest라는 유투버�
  
 ## Gradient Boosting for Classification
 
-Gradient Boosting for Classification은 Gradient Boosting for Regression과 전체적인 흐름 (pseudo-residual을 계산하고 이를 예측하는 decision tree를 만들어나가는 과정)은 비슷하지만, 계산법, 확률 변환 등 세부적인 내용에서 차이가 있습니다.
+Gradient Boosting for Classification은 Gradient Boosting for Regression과 전체적인 흐름 (pseudo-residual을 계산하고 이를 예측하는 decision tree를 만들어나가는 과정)은 비슷하지만, 확률-log(Odds) 변환 같이 세부적인 내용에서 차이가 있습니다.
 
 ![Gradient Boosting for Classification overall procedure]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-procedure-overview.png)
 
 1. Create a first leaf
-2. Calculate pseudo-residuals
+2. Calculate pseudo-residuals of probability
 3. Create a next tree to predict pseudo-residuals
 4. Calculate predicted probability
-5. Repest 2-4
+5. Repeat 2-4
 
 - (Test) Scale, add up the results of each tree, and convert to probability
 
 ![Gradient Boosting for Classification example data]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-dataset-example.png)
 
-위 데이터 예시를 바탕으로 Gradient Boosting for Classification 과정을 정리해봅시다. 몇 가지 지표를 바탕으로 Troll 2를 좋아할지 예측하는 데이터입니다.
+위 예시 데이터를 바탕으로 Gradient Boosting for Classification 과정을 정리해봅시다. 몇 가지 지표를 바탕으로 Troll 2를 좋아할지 예측하는 데이터입니다.
 
 ### 1. Create a first leaf
 
@@ -65,7 +65,7 @@ P(Loves\; Troll\; 2=Yes)=\frac{e^{log(odds)}}{1+e^{log(odds)}}=\frac{0.7}{1+0.7}
 
 이 후 계산에서는 편의를 위해 소수점 한 자리로 반올림합니다.
 
-### 2. Calculate Pseudo-residuals
+### 2. Calculate Pseudo-residuals of probability
 
 **Probability의 Pseudo-residual (실제값 - 예측값)**을 계산합니다.
 

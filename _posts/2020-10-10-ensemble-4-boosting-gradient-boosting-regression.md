@@ -106,7 +106,7 @@ Gradient Boosting은 회귀 (Regression)와 분류 (Classification) 문제에 �
 1. Create a first leaf
 2. Calculate pseudo-residuals
 3. Create a next tree to predict pseudo-residuals 
-4. Repest 2-3
+4. Repeat 2-3
 
 - (Test) Scale and add up the results of each tree
 
