@@ -98,7 +98,7 @@ Depth 외에도 다른 조건을 걸 수 있습니다. 바로 `min_child_weight`
 
 Cover는 similarity score에서 분모 중 \\(\lambda\\)를 제외한 term을 의미합니다. 이 값이 \\(Cover\\) parameter 값보다 작을 경우, 해당 leaf는 가지치기를 수행합니다.
 
-XGBoost for Regression에서는 \\(#Residuals\\)가 크기 때문에 \\(Cover\\) 값이 커도 어느 정도 괜찮지만, Classification에서는 확률의 곱이다보니 \\(Cover\\) 에 따라 많은 leaf가 가지치기당하게 됩니다. 따라서 Classification에서는 \\(Cover=0\\) 으로 셋팅하는 것이 좋다고 합니다.
+XGBoost for Regression에서는 \\(Number\; of\; residuals\\)이 크기 때문에 \\(Cover\\) 값이 커도 어느 정도 괜찮지만, Classification에서는 확률의 곱이다보니 \\(Cover\\) 에 따라 많은 leaf가 가지치기당하게 됩니다. 따라서 Classification에서는 \\(Cover=0\\) 으로 셋팅하는 것이 좋다고 합니다.
 
 #### 3-4. Prune the tree according to \\(\gamma\\)
 
