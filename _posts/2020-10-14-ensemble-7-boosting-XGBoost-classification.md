@@ -94,7 +94,7 @@ Depth 외에도 다른 조건을 걸 수 있습니다. 바로 `min_child_weight`
 
 #### Cover 의 개념
 
-!{Cover의 개념과 가이드]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-14-XGBoost-Classification/2020-10-14-XGBoost-Classification-step3-3-cover.png)
+![Cover의 개념과 가이드]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-14-XGBoost-Classification/2020-10-14-XGBoost-Classification-step3-3-cover.png)
 
 Cover는 similarity score에서 분모 중 \\(\lambda\\)를 제외한 term을 의미합니다. 이 값이 \\(Cover\\) parameter 값보다 작을 경우, 해당 leaf는 가지치기를 수행합니다.
 
