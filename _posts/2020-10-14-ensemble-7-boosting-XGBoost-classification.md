@@ -38,11 +38,11 @@ XGBoost for Classification의 학습 과정은 XGBoost for Regression과 유사�
 1. Create a first leaf
 2. Calculate pseudo-residuals of probability
 3. Create a next tree to predict pseudo-residuals
-  1. Similarity score of root node
-  2. Separation based on Gain
-  3. Complete decision tree with limitation of limitation of depth
-  4. Prune the tree according to \\(\gamma\\)
-  5. Calculate Output value (Representative value)
+   1. Similarity score of root node
+   2. Separation based on Gain
+   3. Complete decision tree with limitation of limitation of depth
+   4. Prune the tree according to \\(\gamma\\)
+   5. Calculate Output value (Representative value)
 4. Calculate predicted probability
 5. Repeat step 2-4
 
