@@ -127,6 +127,12 @@ Ridge에서 제약범위와 RSS 등고선이 만나는 지점의 slope 값들은
 
 반면, Lasso에서는 제약범위와 RSS 등고선이 만나는 지점이 마름모의 모서리가 될 확률이 높습니다 (확률이라고 하는 것은 \\(\lambda\\)에 따라 모서리에서 만나는 것이 아닐 수도 있기 때문입니다. 사각형을 키워보면 직관적으로 이해할 수 있습니다). \\(\lambda\\)가 커질 때 (\\(s\\)가 작아질 때)도 아예 0 값을 갖는 slope가 나올 확률이 높아집니다.
 
+## Selection of \lambda
+
+최적의 \\(\lambda\\) 값은 Cross validation을 통해 정합니다.
+
+여러 조건의 \\(\lambda\\) (e.g., 0.1, 0.2, 0.3 ...)로 Ridge/Lasso regression을 Cross validation을 통해 수행합니다. 이후 최소 error 값을 갖는 \\(\lambda\\)를 사용합니다.
+
 ## Usage example of Ridge (Regularization)
 
 Regularization이 필요한 이유를 되짚으면서 포스팅을 마무리합니다.
