@@ -27,3 +27,11 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+# documents
+*.xlsx
+*.xls
+*.pdf
+*.docs
+*.ppt
+*.pptx
