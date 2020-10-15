@@ -42,7 +42,7 @@ XGBoost의 특징을 요약하면 아래와 같습니다.
 
 이 중 4-9번 항목은 알고리즘 효율성을 위한 최적화 방법을 나타내는 특징입니다. 지금은 개념을 익히는 중이니 일단 건너 뜁니다. 나중에 [XGBoost Part 4: Crazy Cool Optimizations](https://www.youtube.com/watch?v=oRrKeUCEbq8)를 공부해서 정리해봅시다.
 
-다시 돌아와서, 1번 Gradient Boost와 2번 Regularization은 이전 포스팅을 통해 정리했습니다.
+다시 돌아와서, [1번 Gradient Boost](https://tyami.github.io/machine%20learning/ensemble-4-boosting-gradient-boosting-regression/)와 [2번 Regularization](https://tyami.github.io/machine%20learning/regularization-Ridge-Lasso-ElasticNet/)은 별도의 포스팅을 통해 정리했습니다.
 
 따라서 본 포스팅에서는 3번 unique regression tree의 과정을 정리해보고자 합니다. [XGBoost Part 1: Regression](https://www.youtube.com/watch?v=OtD8wVaFm6E)를 참고했습니다.
 
