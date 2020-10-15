@@ -1,6 +1,6 @@
 ---
-title: "Regularization 1: Ridge (L2) and Lasso (L1)"
-excerpt: "Regularization의 Ridge와 Lasso regression 모델을 정리해봅시다"
+title: "Regularization: Ridge (L2), Lasso (L1), and Elastic Net regression"
+excerpt: "Regularization의 Ridge, Lasso, 그리고 Elastic Net regression 모델을 정리해봅시다"
 
 categories:
 - Machine learning
@@ -12,12 +12,12 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "Ridge and Lasso regression"
+toc_label: "Regression"
 
 use_math: true
 ---
 
-> 이번 포스팅에서는 Regularization의 필요성과 대표적인 두 모델, Ridge (L2)와 Lasso (L1) regression을 정리합니다.
+> 이번 포스팅에서는 Regularization의 필요성과 대표적인 모델, Ridge (L2), Lasso (L1) 그리고 Elastic Net regression을 정리합니다.
 
 ![Regularization overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-15-ridge-and-lasso/2020-10-15-ridge-and-lasso-1-overview.png)
 
@@ -71,7 +71,7 @@ Ridge는 penalty의 종류로 weight의 제곱합을 사용합니다. 여기에 
 
 즉, penalty term의 추가로 인해 최적해가 바뀌는 것을 확인할 수 있습니다.
 
-### higher \labmda on Ridge regression
+### higher \lambda on Ridge regression
 
 ![higher lambda on ridge]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-15-ridge-and-lasso/2020-10-15-ridge-and-lasso-10-ridge-high-lambda.png)
 
@@ -127,11 +127,33 @@ Ridge에서 제약범위와 RSS 등고선이 만나는 지점의 slope 값들은
 
 반면, Lasso에서는 제약범위와 RSS 등고선이 만나는 지점이 마름모의 모서리가 될 확률이 높습니다 (확률이라고 하는 것은 \\(\lambda\\)에 따라 모서리에서 만나는 것이 아닐 수도 있기 때문입니다. 사각형을 키워보면 직관적으로 이해할 수 있습니다). \\(\lambda\\)가 커질 때 (\\(s\\)가 작아질 때)도 아예 0 값을 갖는 slope가 나올 확률이 높아집니다.
 
-## Selection of \lambda
+### Feature selection via Lasso
 
-최적의 \\(\lambda\\) 값은 Cross validation을 통해 정합니다.
+Lasso의 이 특징은 Feature selection에 활용될 수 있습니다. 변수의 가중치를 0으로 만들어 결과 추정에 필요 없는 변수를 제거해버리는 효과입니다.
 
-여러 조건의 \\(\lambda\\) (e.g., 0.1, 0.2, 0.3 ...)로 Ridge/Lasso regression을 Cross validation을 통해 수행합니다. 이후 최소 error 값을 갖는 \\(\lambda\\)를 사용합니다.
+## Elastic Net Regression
+
+앞서 Ridge와 Lasso를 비교해보았습니다. 두 모델은 매우 비슷한 Regularization 모델이지만, Penalty term이 다릅니다. 두 모델 중 어떤 모델을 사용해야할 지 모르겠을 때는 두 종류의 Penalty term이 합쳐진 Elastic Net을 써보는 것도 방법이 될 수 있습니다.
+
+![Elastic Net]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-15-ridge-and-lasso/2020-10-15-ridge-and-lasso-17-elastic-net-overview.png)
+
+Elastic Net은 Ridge와 Lasso 각각의 Penalty 가중치로 \\(\lambda_2\\)과 \\(\lambda_1\\)를 사용합니다.
+
+![Elastic Net의 기하학적 해석]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-15-ridge-and-lasso/2020-10-15-ridge-and-lasso-18-elastic-net-geometry.png)
+
+기하학적으로 생각해보면 이런 모양의 제약범위를 갖는 모델로 생각할 수 있습니다.
+
+![Elastic Net의 기하학적 해석]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-15-ridge-and-lasso/2020-10-15-ridge-and-lasso-19-summary-geometry.png)
+
+Ridge와 Lasso를 합쳤더니 마름모와 원 중간의 무언가가 된 모습. 직관적이네요.
+
+## Selection of \\(\lambda\\)
+
+Ridge, Lasso, Elastic Net 모두 최적의 \\(\lambda\\) 값은 Cross validation을 통해 정합니다.
+
+여러 조건의 \\(\lambda\\) (e.g., 0.1, 0.2, 0.3 ...)로 Ridge/Lasso regression을 Cross validation을 통해 수행합니다. Elastic Net의 경우, \\(\lambda_1 \times \lambda_2\\)의 조합을 다 계산해봅니다.
+
+이후 최소 error 값을 갖는 \\(\lambda\\)를 사용합니다.
 
 ## Usage example of Ridge (Regularization)
 
@@ -149,10 +171,5 @@ Regularization이 필요한 이유를 되짚으면서 포스팅을 마무리합�
 **Reference**
 
 > [Regularization Part 1: Ridge (L2) Regression](https://www.youtube.com/watch?v=Q81RR3yKn30)  
-> [Regularization Part 2: Lasso (L1) Regression](https://www.youtube.com/watch?v=NGf0voTMlcs)
-
----
-
-> 다음 포스팅에서는 Ridge와 Lasso 를 결합한 Elastic Net 모델을 정리해봅시다.
-
-다음 글 보기: [Regularization 2: Elastic Net](https://tyami.github.io/machine%20learning/regularization-2-elastic-net/)
+> [Regularization Part 2: Lasso (L1) Regression](https://www.youtube.com/watch?v=NGf0voTMlcs)  
+> [Regularization Part 3: Elastic Net Regression](https://www.youtube.com/watch?v=1dKRdX9bfIo)
