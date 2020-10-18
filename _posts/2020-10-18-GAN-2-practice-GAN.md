@@ -293,8 +293,7 @@ for idx_epoch in range(num_epochs):
         optimizer_G.zero_grad()
         
         # Random sample noise
-#         z = random_sample_z_space(imgs.size(0))
-        z = Variable(Tensor(np.random.normal(0, 1, (imgs.shape[0], dim_noise))))
+        z = random_sample_z_space(imgs.size(0))
                 
         # Generate image
         gen_imgs = generator(z)
