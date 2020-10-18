@@ -36,7 +36,6 @@ use_math: true
 ## 1. Libraries
 
 GAN 구현에 사용될 라이브러리들을 불러옵니다.
-
 ```python
 import numpy as np
 import pandas as pd
@@ -56,7 +55,6 @@ import torchvision.transforms as transforms
 ```
 
 본 구현에 사용된 라이브러리 환경은 아래와 같습니다 (python=3.5)
-
 ```python
 print('numpy: ' + np.__version__)
 print('pandas: ' + pd.__version__)
@@ -71,7 +69,6 @@ print('torchvision: ' + torchvision.__version__)
 > torchvision: 0.6.1
 
 GPU를 사용할지 선택합니다. 사용 가능한 GPU가 있다면 `device` 변수에 *cuda*가, 없다면 *cpu*가 표시됩니다.
-
 ```python
 is_cuda = torch.cuda.is_available()
 device = torch.device('cuda' if is_cuda else 'cpu')
@@ -83,13 +80,11 @@ print(device)
 ## 2. Dataloader
 
 하이퍼파라미터 `batch_size` 를 설정합니다.
-
 ```python
 batch_size = 64
 ```
 
 MNIST 전처리를 위한 `standardize`를 설정합니다.
-
 ```python
 # standardizer
 standardizer = transforms.Compose([
@@ -123,6 +118,7 @@ for i in range(16):
     plt.title(mini_batch_lbl[i].numpy())
     plt.axis('off')
 ```
+> ![GAN dataloader test[({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-1-dataloader-example.png)
 
 ## 3. Generative model \\(G\\)
 
