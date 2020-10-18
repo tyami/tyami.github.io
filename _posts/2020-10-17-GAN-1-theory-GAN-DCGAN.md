@@ -202,4 +202,4 @@ Interpolation과 vector arithmetic을 좀더 활용하면, 이런 표현도 가�
 
 > 다음 포스팅에서는 GAN과 DCGAN을 직접 구현해보고자 합니다.
 
-다음 글 보기: 작성 중
+다음 글 보기: [Generative Adversarial Nets (GAN) 2: GAN을 PyTorch로 구현해보기](https://tyami.github.io/deep%20learning/GAN-2-practice-GAN/)
