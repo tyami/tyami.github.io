@@ -139,11 +139,11 @@ DCGAN은 2015년에 Unsupervised Representative Learning With Deep Convolutional
 
 ![DCGAN G 모델 자세히]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-17-GAN-DCGAN-theory/2020-10-17-GAN-DCGAN-theory-11-DCGAN-G-model.png)
 
-가이드라인에 따라 그림을 뜯어보면 위와 같습니다. [[이미지 출처]](https://laonple.blog.me/221201915691)
+가이드라인에 따라 그림을 뜯어보면 위와 같습니다. [(이미지 출처)](https://laonple.blog.me/221201915691)
 
 ![DCGAN D 모델 자세히]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-17-GAN-DCGAN-theory/2020-10-17-GAN-DCGAN-theory-12-DCGAN-D-model.png)
 
-논문에는 나와있지 않지만, \\(D\\)모델은 이렇게 되겠지요. [[이미지 출처]](https://laonple.blog.me/221201915691)
+논문에는 나와있지 않지만, \\(D\\)모델은 이렇게 되겠지요. [(이미지 출처)](https://laonple.blog.me/221201915691)
 
 ### Results
 
