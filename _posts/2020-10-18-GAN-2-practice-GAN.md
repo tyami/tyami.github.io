@@ -147,7 +147,7 @@ def random_sample_z_space(batch_size=1, dim_noise=100):
 # Random sampling
 z = random_sample_z_space(batch_size)
 
-print("z\t: []".format(z.shape))
+print("z\t: {}".format(z.shape))
 print(z)
 ```
 test 1: [ dd ]
