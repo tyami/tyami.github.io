@@ -142,24 +142,6 @@ def random_sample_z_space(batch_size=1, dim_noise=100):
     return torch.randn(batch_size, dim_noise, device=device)
 ```
 
-제대로 sampling되는지 확인해봅니다.
-```python
-# Random sampling
-z = random_sample_z_space(batch_size)
-
-print("z\t: {}".format(z.shape))
-print(z)
-```
-> z	:torch.Size([64, 100])  
-> tensor([[-0.3182, -1.7208,  0.5103,  ..., -0.8757, -0.3125,  0.3312],  
->         [ 0.4950, -1.2124, -0.9291,  ..., -0.4321, -0.5056,  1.8559],  
->         [-1.7881, -0.2417,  1.8614,  ..., -0.1981,  0.4994, -0.4451],  
->         ...,  
->         [ 1.2351,  0.0241, -0.8569,  ...,  0.5661, -0.6482,  0.6429],  
->         [-0.2499, -0.9189, -1.5429,  ...,  0.3856, -1.7420, -0.6433],  
->         [ 1.6969,  0.4347, -1.6991,  ..., -0.5768,  1.0312, -1.1297]],  
->        device='cuda:0')
-
 ## 4. Generative model \\(G\\)
 
 하이퍼파라미터 `dim_hidden`, `sz_output`, `num_channels`를 정의합니다.
@@ -203,16 +185,6 @@ class Generator(nn.Module):
         return img
 ```
 
-Generator가 제대로 작동하는지 확인해봅시다.
-```python
-G = Generator().to(device)
-
-print("z\t:{}".format(z.shape))
-print("G(z)\t:{}".format(G(z).size()))
-```
-> z	:torch.Size([64, 100])  
-> G(z)	:torch.Size([64, 1, 28, 28])
-
 \\(G(z)\\)의 이미지를 그려봅니다. 아직 generator \\(G\\)가 학습되지 않은 상태이기 때문에, nosiy한 이미지만 출력됩니다.
 ```python
 plt.imshow(G(z)[0].squeeze().cpu().detach(), cmap='gray');
@@ -245,18 +217,6 @@ class Discriminator(nn.Module):
         return check_validity
 ```
 
-Discriminative model이 제대로 작동하는지 확인해봅니다.
-```python
-D = Discriminator().to(device)
-
-print("z\t:{}".format(z.shape))
-print("G(z)\t:{}".format(G(z).size()))
-print("D(G(z))\t:{}".format(D(G(z)).size()))
-```
-> z	:torch.Size([64, 100])  
-> G(z)	:torch.Size([64, 1, 28, 28])  
-> D(G(z))	:torch.Size([64, 1])
-
 ## 6. Train model \\(G\\) and \\(D\\)
 6.1 Initialize model \\(G\\) and \\(D\\)
 
@@ -270,6 +230,7 @@ discriminator = Discriminator().to(device)
 
 하이퍼파라미터 `learning_rate`를 정의합니다.
 - `learning_rate`: optimizer에 사용되는 learning rate입니다.
+
 ```python
 learning_rate = 0.0002
 ```
@@ -290,6 +251,7 @@ optimizer_D = optim.Adam(discriminator.parameters(), lr=learning_rate)
 하이퍼파라미터 `num_epochs`와 `interval_save_img`를 정의합니다.
 - `num_epochs`: 최대 Epoch 수를 의미합니다.
 - `interval_save_img`: 이미지 생성 결과를 저장할 인터벌을 정의합니다. 일정 batch size마다 이미지가 저장되어 생성모델의 학습과정을 확인할 수 있습니다.
+
 ```python
 num_epochs = 200
 interval_save_img = 400
