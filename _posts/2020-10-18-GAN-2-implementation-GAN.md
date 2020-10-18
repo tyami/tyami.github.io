@@ -126,7 +126,7 @@ for i in range(16):
     plt.title(mini_batch_lbl[i].numpy())
     plt.axis('off')
 ```
-> ![GAN dataloader test]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-1-dataloader-example.png)
+> ![GAN dataloader test]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-1-dataloader-example.png)
 
 ## 3. Random sample \\(z\\) from normal distribution
 
@@ -189,7 +189,7 @@ class Generator(nn.Module):
 ```python
 plt.imshow(G(z)[0].squeeze().cpu().detach(), cmap='gray');
 ```
-> ![GAN G(z) test]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-2-G(z).png)
+> ![GAN G(z) test]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-2-G(z).png)
 
 ## 5. Disciminative model \\(D\\)
 
@@ -331,12 +331,12 @@ for idx_epoch in range(num_epochs):
 ```
 
 > Generative model이 점차 학습되어 가는 것을 확인할 수 있습니다.  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-4-0.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-4-800.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-4-3200.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-4-14400.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-4-78400.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-4-144400.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-0.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-800.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-3200.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-14400.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-78400.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-144400.png)  
 
 6.4 Save model weights
 
@@ -365,7 +365,7 @@ plt.subplot(122); plt.imshow(fake_img[1].squeeze().cpu().detach(), cmap='gray')
 plt.savefig('../result/GAN/1-GAN/5-side-images.png', dpi=300)
 ```
 > 1(7?)과 0이 생성된 것을 확인할 수 있습니다.  
-> ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-5-side-images.png)  
+> ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-5-side-images.png)  
 
 두 이미지를 사이드 이미지로 두고, 그 사이의 latent space를 interpolation해봅니다.
 ```python
@@ -383,7 +383,7 @@ for i in range(num_interpolation):
 plt.savefig('../result/GAN/1-GAN/6-interpolation.png', dpi=300)
 ```
 > interpolation이 잘 되는 것을 확인했습니다. 숫자가 부드럽게 변하네요.  
-> ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-6-interpolation.png)  
+> ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-6-interpolation.png)  
 
 ---
 
