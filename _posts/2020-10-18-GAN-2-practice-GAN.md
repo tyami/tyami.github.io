@@ -147,13 +147,9 @@ def random_sample_z_space(batch_size=1, dim_noise=100):
 # Random sampling
 z = random_sample_z_space(batch_size)
 
-print("z: {}".format(z.shape))
+print("z\t: {}".format(z.shape))
 print(z)
 ```
-test 1: [ dd ]
-test 2: [[ dd ]]
-test 3: \[ dd \]
-
 > z	:torch.Size([64, 100])  
 > tensor([[-0.3182, -1.7208,  0.5103,  ..., -0.8757, -0.3125,  0.3312],  
 >         [ 0.4950, -1.2124, -0.9291,  ..., -0.4321, -0.5056,  1.8559],  
