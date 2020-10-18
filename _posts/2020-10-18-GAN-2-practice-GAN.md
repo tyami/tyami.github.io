@@ -118,7 +118,7 @@ for i in range(16):
     plt.title(mini_batch_lbl[i].numpy())
     plt.axis('off')
 ```
-> ![GAN dataloader test[({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-1-dataloader-example.png)
+> ![GAN dataloader test]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-practice/2020-10-18-GAN-practice-1-dataloader-example.png)
 
 ## 3. Generative model \\(G\\)
 
