@@ -8,6 +8,7 @@ categories:
 tags:
 - Deep learning
 - GAN
+- Theory
 
 toc: true
 toc_sticky: true

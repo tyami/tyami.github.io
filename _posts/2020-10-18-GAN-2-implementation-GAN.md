@@ -8,6 +8,7 @@ categories:
 tags:
 - Deep learning
 - GAN
+- Implementation
 
 toc: true
 toc_sticky: true
