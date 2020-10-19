@@ -379,7 +379,6 @@ for idx_epoch in range(num_epochs):
 ```python
 # Random sample noise
 z = random_sample_z_space(batch_size)
-> ![GAN G(z) final result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-fake-images.png)  
 
 # Generate image
 gen_imgs = generator(z)
@@ -387,6 +386,7 @@ gen_imgs = generator(z)
 # visualize
 utils.save_image(gen_imgs.data[:25].cpu().detach(), "../result/GAN/1-GAN/4-fake-images.png", nrow=5, normalize=True)
 ```
+> ![GAN G(z) final result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-fake-images.png)  
 
 6.4 Save model weights
 
