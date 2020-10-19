@@ -563,5 +563,5 @@ plt.savefig('../result/GAN/2-DCGAN/6-interpolation.png', dpi=300)
 
 ## 이해 못한 부분들 (답을 아시는 분들은 답변 부탁드립니다)
 
-> 의문 1: PyTorch Tutorial 을 참고하여 작성한 코드인데, 왜 BatchNorm layer들은 평균 1.0으로 초기화 시켰을까요?
-> 의문 2: ConvTranspose layer 들의 `kernel_size`, `padding` 옵션은 어떻게 정해진 건지가 궁금합니다. `stride` 같은 경우에는 그림에 표시되어있어서 확인할 수 있는데, `kernel_size`나 `padding` 옵션은 정보를 찾을 수가 없었습니다.
+1. 왜 BatchNorm layer들은 평균 0.0이 아닌 1.0으로 초기화 시켰을까요?
+2. ConvTranspose layer 들의 `kernel_size`, `padding` 옵션은 어떻게 정해진 건지가 궁금합니다. `stride` 같은 경우에는 그림에 표시되어있어서 확인할 수 있는데, `kernel_size`나 `padding` 옵션은 정보를 찾을 수가 없었습니다.
