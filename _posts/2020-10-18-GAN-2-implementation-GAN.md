@@ -368,18 +368,17 @@ for idx_epoch in range(num_epochs):
             utils.save_image(gen_imgs.data[:25], "../result/GAN/1-GAN/3-{}.png".format(batches_done), nrow=5, normalize=True)
 ```
 
-> Generative model이 점차 학습되어 가는 것을 확인할 수 있습니다.  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-0.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-800.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-3200.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-14400.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-78400.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-144400.png)  
+> 0 → 1000 → 10000 → 100000번째 batch 학습 결과입니다 (`batch_size=64`). Generative model이 점차 학습되어 가는 것을 확인할 수 있습니다.  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-3-0.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-3-1000.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-3-10000.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-3-100000.png)  
 
-이미지 생성 결과를 시각화해봅니다.
+200 epoch에 대한 이미지 생성 결과를 시각화해봅니다.
 ```python
 # Random sample noise
 z = random_sample_z_space(batch_size)
+> ![GAN G(z) final result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-fake-images.png)  
 
 # Generate image
 gen_imgs = generator(z)
