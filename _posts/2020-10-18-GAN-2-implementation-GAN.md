@@ -42,7 +42,8 @@ use_math: true
 
 전체 코드는 [Github](https://github.com/tyami/dl-study/blob/master/code/1-GAN-PyTorch.ipynb)에서 볼 수 있습니다.
 
-## 1. Load libraries
+## 구현
+### 1. Load libraries
 
 GAN 구현에 사용될 라이브러리들을 불러옵니다.
 ```python
@@ -98,7 +99,7 @@ print(device)
 ```
 > cuda
 
-## 2. MNIST dataset download
+### 2. MNIST dataset download
 
 하이퍼파라미터 `batch_size` 를 설정합니다.
 ```python
@@ -154,7 +155,7 @@ plt.savefig('../result/GAN/1-GAN/1-dataloader-example.png', dpi=300)
 ```
 > ![GAN dataloader test]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-1-dataloader-example.png)
 
-## 3. Random sample \\(z\\) from normal distribution
+### 3. Random sample \\(z\\) from normal distribution
 
 하이퍼파라미터 `dim_noise`를 정의합니다. `dim_noise`는 latent space \\(z\\)의 차원을 의미합니다.
 ```python
@@ -169,7 +170,7 @@ def random_sample_z_space(batch_size=1, dim_noise=100):
     return torch.randn(batch_size, dim_noise, device=device)
 ```
 
-## 4. Generative model \\(G\\)
+### 4. Generative model \\(G\\)
 
 하이퍼파라미터 `dim_hidden`, `sz_output`, `num_channels`를 정의합니다.
 - `dim_hidden`: 네트워크의 hidden layer 채널 수
@@ -221,7 +222,7 @@ utils.save_image(G(z)[:25].cpu().detach(), "../result/GAN/1-GAN/2-G(z).png", nro
 ```
 > ![GAN G(z) test]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-2-G(z).png)
 
-## 5. Disciminative model \\(D\\)
+### 5. Disciminative model \\(D\\)
 
 Discriminative model \\(D\\)의 형태는 \\(G\\)를 거꾸로 뒤집은 형태입니다. \\(G\\)의 MLP 구조를 거꾸로 구성해줍니다. \\(D\\)의 출력 레이어는 입력으로 받은 이미지가 진짜인지 가짜인지 판단하는 sigmoid function을 이용합니다.
 ```python
@@ -247,8 +248,8 @@ class Discriminator(nn.Module):
         return check_validity
 ```
 
-## 6. Train model \\(G\\) and \\(D\\)
-6.1 Initialize model \\(G\\) and \\(D\\)
+### 6. Train model \\(G\\) and \\(D\\)
+#### 6.1 Initialize model \\(G\\) and \\(D\\)
 
 Generative model과 Discriminative model을 선언합니다.
 ```python
@@ -256,7 +257,7 @@ generator = Generator().to(device)
 discriminator = Discriminator().to(device)
 ```
 
-6.2 Loss functions & Optimizers
+#### 6.2 Loss functions & Optimizers
 
 하이퍼파라미터 `learning_rate`를 정의합니다.
 - `learning_rate`: optimizer에 사용되는 learning rate입니다.
@@ -279,7 +280,7 @@ optimizer_G = optim.Adam(generator.parameters(), lr=learning_rate, betas=(beta1,
 optimizer_D = optim.Adam(discriminator.parameters(), lr=learning_rate, betas=(beta1, 0.999))
 ```
 
-6.3 Train models
+#### 6.3 Train models
 
 하이퍼파라미터 `num_epochs`와 `interval_save_img`를 정의합니다.
 - `num_epochs`: 최대 Epoch 수를 의미합니다.
@@ -388,7 +389,7 @@ utils.save_image(gen_imgs.data[:25].cpu().detach(), "../result/GAN/1-GAN/4-fake-
 ```
 > ![GAN G(z) final result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-fake-images.png)  
 
-6.4 Save model weights
+#### 6.4 Save model weights
 
 학습된 가중치를 저장해둡니다.
 ```python
@@ -401,7 +402,7 @@ torch.save({
 }, '../result/GAN/1-GAN/model_weights.pth')
 ```
 
-## 7. Visualization (Interpolation)
+### 7. Visualization (Interpolation)
 
 Interpolation 그림을 그려봅시다.
 
@@ -442,4 +443,4 @@ plt.savefig('../result/GAN/1-GAN/6-interpolation.png', dpi=300)
 
 > 다음 포스팅에서는 DCGAN을 구현해보고자 합니다.
 
-다음 글 보기: 작성 중
+다음 글 보기: [Generative Adversarial Nets (GAN) 3: DCGAN을 PyTorch로 구현해보기](https://tyami.github.io/deep%20learning/GAN-3-implementation-DCGAN/)
