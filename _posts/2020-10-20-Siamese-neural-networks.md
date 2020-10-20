@@ -37,7 +37,8 @@ Siamese Neural Networks (샴 네트워크)는 샴 쌍둥이에서 착안된 네�
 
 ![샴 네트워크 paper]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-20-siamese-neural-networks/2020-10-20-siamese-neural-networks-4-paper.png)
 
-샴 네트워크는 2015년, [Siamese Neural Networks for One-shot Image Recognition](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)라는 이름으로 발표되었습니다. 논문 제목에서 느껴지듯 One-shot learning 분야의 논문입니다.
+샴 뉴럴 네트워크의 **샴 네트워크** 구조 자체는 2005년 [Learning a Similarity Metric Discriminatively, with Application to Face
+Verification](http://yann.lecun.com/exdb/publis/pdf/chopra-05.pdf)라는 논문으로 Yann LeCun 교수 연구팀에 의해 발표되었습니다. 그러다 2015년, [Siamese Neural Networks for One-shot Image Recognition](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)라는 이름으로 Neural network를 접목시킨 **샴 뉴럴 네트워크**가 발표되었습니다. 논문 제목에서 느껴지듯 One-shot learning 분야의 논문입니다.
 
 하지만 오늘 포스팅에서는 Siamese neural network의 이해에 집중하기 위해, 논문 내용과 One-shot learning에 대해서는 나중에 별로 포스팅으로 따로 정리하겠습니다. 
 
