@@ -415,7 +415,7 @@ plt.subplot(122); plt.imshow(fake_img[1].squeeze().cpu().detach(), cmap='gray')
 
 plt.savefig('../result/GAN/1-GAN/5-side-images.png', dpi=300)
 ```
-> 1(7?)과 0이 생성된 것을 확인할 수 있습니다.  
+> 7과 3이 생성된 것을 확인할 수 있습니다.  
 > ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-5-side-images.png)  
 
 두 이미지를 사이드 이미지로 두고, 그 사이의 latent space를 interpolation해봅니다.
@@ -433,7 +433,7 @@ for i in range(num_interpolation):
     
 plt.savefig('../result/GAN/1-GAN/6-interpolation.png', dpi=300)
 ```
-> interpolation이 잘 되는 것을 확인했습니다. 숫자가 부드럽게 변하네요.  
+> interpolation이 잘 되는 것을 확인했습니다. 숫자가 부드럽게 (?) 변하네요.  
 > ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-6-interpolation.png)  
 
 ---
