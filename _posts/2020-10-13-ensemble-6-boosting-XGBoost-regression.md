@@ -187,4 +187,4 @@ Python 에서는 `xgboost` library로 사용 가능합니다.
 
 > 다음 포스팅에서는 XGBoost 모델의 Classification 알고리즘을 정리해보도록 하겠습니다.
 
-다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3: XGBoost for Classification](https://tyami.github.io/machine%20learning/ensemble-7-boosting-XGBoost-classification/)
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3-2: XGBoost for Classification](https://tyami.github.io/machine%20learning/ensemble-7-boosting-XGBoost-classification/)

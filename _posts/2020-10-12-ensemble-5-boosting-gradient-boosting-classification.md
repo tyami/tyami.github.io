@@ -157,4 +157,4 @@ Pseudo-residual 계산에 사용될 **샘플별** 예측값을 계산해봅시�
 > Next: "Part 4 보고 관련 수식 이해하기"  
 > 다음 포스팅에서는 **드디어** Kaggle에서 많이 사용되고 있는 대표적인 부스팅 앙상블 알고리즘인 XGBoost를 정리해보고자 합니다.
 
-다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3-1: XGBoost for Regression](https://tyami.github.io/machine%20learning/ensemble-6-boosting-gradient-boosting-classification-regression)
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3-1: XGBoost for Regression](https://tyami.github.io/machine%20learning/ensemble-6-boosting-XGBoost-regression/)
