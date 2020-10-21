@@ -1,6 +1,6 @@
 ---
-title: "Medical Imaging Analysis (MEDIA) 1: Introduction to MEDIA"
-excerpt: "Medical Imaging Analysis (MEDIA) 1: Introduction to MEDIA"
+title: "Medical Imaging Analysis 1: Introduction to MEDIA"
+excerpt: "Medical Imaging Analysis 1: Introduction to MEDIA"
 
 categories:
 - Medical Imaging Analysis
@@ -22,7 +22,7 @@ Medical Imaging Analysis (MEDIA) 에 대해 공부하면서, 관련 내용을 �
 
 Classification, Segmentation, Enhancement, Registration을 세부 주제로 구성됩니다.
 
-1. Introduction to MEDIA [본 글]
+1. Introduction to MEDIA (본 글)
 2. Medical image acquisition methods
 3. Medical image classification(1)
 4. Medical image classification(2)
@@ -106,13 +106,6 @@ MEDIA의 연구 분야를 크게 네 부분으로 나눠볼 수 있습니다.
 ### Algorithms by subcategories
 
 ![2020-10-21-introduction-to-MEDIA-10-contents]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-21-introduction-to-MEDIA/2020-10-21-introduction-to-MEDIA-10-contents.png)
-
-| Sub-category | Conventional methods    | Deep learning methods    |
-|-|-|-|
-| Classification    | Logistic regression<br>Neural network<br>Support vector machine<br>Random forest | Deep neural network<br>Convolutional neural network |
-| Segmentation    | Thresholding<br>Region growing<br>Graph cut<br>Active contour model<br>Active shape model | FCN<br>U-Net<br>DeepLab |
-| Enhancement    | Normalization<br>Histogram equalization<br>Filtering<br>Dictionary learning | SRCNN<br>GAN<br>SRGAN |
-| Registration    | Transformation matrix<br>Iterative closest point (ICP)<br>Non rigid ICP<br>Deformable models | FlowNet<br>CNN for Registration |
 
 각각 sub-category에서 다룰 알고리즘들입니다.
 
