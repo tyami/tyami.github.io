@@ -67,7 +67,7 @@ Information\; Gain&=H(7,3) - (\frac{1}{10}H(1,0)+\frac{1}{10}H(1,0)+...+\frac{1}
 #### Information Gain Ratio (GR)
 C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Information Gain Ratio**라는 지표를 사용하였습니다.
 
-\[ Information\; Gain\; Ratio = \frac{IG}{IV} \]
+\\[ Information\; Gain\; Ratio = \frac{IG}{IV} \\]
 
 \\(IG\\)는 ID3 알고리즘에서의 Information Gain을 의미하며, \\(IV\\)는 **Intrinsic Value**를 의미합니다.
 
@@ -75,7 +75,7 @@ C4.5 알고리즘에서는 이와 같은 문제를 해결하기 위해, **Inform
 
 특정 지표로 분기했을 때 생성되는 가지의 수를 \\(N\\)이라고 하고, \\(i\\)번째 가지에 해당하는 확률을 \\(p_i\\)라고할 때, Intrinsic Value는 아래와 같습니다.
 
-\[ Intrinsic\; Value=IV=-\sum_i^N p_i log_2 p_i \]
+\\[ Intrinsic\; Value=IV=-\sum_i^N p_i log_2 p_i \\]
 
 앞서 예시로 든 두 가지 지표 Windy, With whom에 대한 Information Gain Ratio를 계산하여 차이점을 비교해봅시다.
 
@@ -139,7 +139,7 @@ C4.5 알고리즘에서의 두번째 개선점은 **범주형 변수 (discrete v
 
 이 중 방법 1을 예시로 Information Gain을 계산해보면 아래와 같습니다.
 
-\[
+\\[
 IG(Play,Temperature(21))=0.04742 \\\\\\
 IG(Play,Temperature(23))=0.1001 \\\\\\
 IG(Play,Temperature(24.5))=0.1590 \\\\\\
@@ -151,7 +151,7 @@ IG(Play,Temperature(29.5))=0.3586 \\\\\\
 IG(Play,Temperature(30.5))=0.1925 \\\\\\
 IG(Play,Temperature(33))=0.4009 \\\\\\
 IG(Play,Temperature(35.5))=0.2863
-\]
+\\]
 
 이를 통해 Temperature 지표의 경우, 최적 threshold는 33도라는 것을 알 수 있습니다.
 
@@ -189,10 +189,10 @@ C4.5 알고리즘의 세번째 개선점은 **결측치가 포함된 데이터�
 - 1단계: Entropy는 Non-missing value로만 계산
 - 2단계: Information Gain는 Weighted Information Gain로 변경
 - 
-\[
+\\[
 Weighted\; Information\; Gain=F \times IG(S,A)\\\\\\
 F=proportion\; of\; non\; missing\; value
-\]
+\\]
 
 - 3단계: Intrinsic Value는 missing value를 하나의 클래스로 보고 모든 데이터로 계산
 
@@ -222,9 +222,9 @@ IG(Play,Outlook) &= H(Play)-H(Play,Outlook) \\\\\\
 
 - 2단계: Information Gain는 Weighted Information Gain로 변경
 
-\[
+\\[
 F=\frac{8}{14}
-\]
+\\]
 
 \begin{aligned}
 Weighted\; Information\; Gain &= \frac{8}{14} \times 0.4544 \\\\\\

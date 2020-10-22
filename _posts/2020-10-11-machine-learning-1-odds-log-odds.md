@@ -24,18 +24,18 @@ StatQuest의 [StatQuest: Odds and Log(Odds), Clearly Explained!!!](https://www.y
 
 Odds는 **임의의 사건 A가 발생하지 않을 확률 대비 일어날 확률의 비율**입니다. 확률과 비슷하지만 조금 다릅니다 (후술)
 
-\[
+\\[
 odds=\frac{P(A)}{P(A^c)}=\frac{P(A)}{1-P(A)}
-\]
+\\]
 
 ### Odds example 1
 ![Odds 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-11-odds-log-odds/2020-10-11-odds-example1.png)
 
 5번의 경기 중, 우리 팀이 1번을 이겼다고 할 때 Odds는 아래와 같이 0.25로 계산됩니다.
 
-\[
+\\[
 odds=\frac{P(A)}{1-P(A)}=\frac{1}{4}
-\]
+\\]
 
 ### Odds example 2
 
@@ -43,9 +43,9 @@ odds=\frac{P(A)}{1-P(A)}=\frac{1}{4}
 
 이번에는 8번의 경기 중, 우리 팀이 5번을 이겼다고 할 때 Odds는 아래와 같이 1.7로 계산됩니다.
 
-\[
+\\[
 odds=\frac{P(A)}{1-P(A)}=\frac{1}{4}
-\]
+\\]
 
 
 ### Odds VS Probability

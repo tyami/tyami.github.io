@@ -51,17 +51,17 @@ Odds는 **임의의 사건 A가 발생하지 않을 확률 대비 일어날 확�
 
 - 참고: [Machine learning: Odds와 Log(Odds)](https://tyami.github.io/machine%20learning/machine-learning-1-odds/)
 
-\[
+\\[
 odds=\frac{P(A)}{P(A^C)}=\frac{P(A)}{1-P(A)}
-\]
+\\]
 
 Loves Troll 2 데이터를 보면 Yes가 4개, No가 2개 있습니다. 따라서 초기 leaf 값은 \\(log(odds)=log\frac{4}{2}=0.6931=0.7\\)이 됩니다.
 
 Log(Odds) 값을 사용하는 가장 쉬운 방법은 확률 값으로 변환하는 것입니다. Leaf 모델의 predicted probability는 아래와 같이 계산됩니다.
 
-\[
+\\[
 P(Loves\; Troll\; 2=Yes)=\frac{e^{log(odds)}}{1+e^{log(odds)}}=\frac{0.7}{1+0.7}=0.6667=0.7
-\]
+\\]
 
 이 후 계산에서는 편의를 위해 소수점 한 자리로 반올림합니다.
 
@@ -104,9 +104,9 @@ First leaf의 prediction 값은 log(odds)입니다. 반면, decision tree에서�
 
 Gradient Boosting for Classification에서 주로 사용되는 방법 트리의 예측 probability 결과를 log(odds)로 변환하는 것입니다. 변환 식은 아래와 같습니다.
 
-\[
+\\[
 \frac{\sum Residual_i}{\sum (Previous\; Probability_i \times (1-Previous\; Probability_i))}
-\]
+\\]
 
 위 변환을 통해 나온 값으로 각 leaf의 대표값을 지정해주면 됩니다.
 

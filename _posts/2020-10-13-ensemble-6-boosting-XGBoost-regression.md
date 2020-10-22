@@ -92,9 +92,9 @@ XGBoost for Regression은 Gradient Boosting for Regression과 전체적인 순�
 
 root node의 similarity score를 계산합니다. Similarity score는 아래와 같이 정의됩니다.
 
-\[
+\\[
 Similarity\; score=\frac{sum\; of\; residuals^2}{the\; number\; of\; residuals+\lambda}
-\]
+\\]
 
 \\(\lambda\\)는 regularization score로, 0 이상의 값을 가집니다. \\(\lambda\\)가 XGBoost에 주는 영향은 후술하도록 하고, 일단 넘어갑니다.
 
@@ -104,9 +104,9 @@ Similarity\; score=\frac{sum\; of\; residuals^2}{the\; number\; of\; residuals+\
 
 XGBoost에서 decision tree의 분기는 가장 큰 Gain 값을 갖는 지표로 이루어집니다. Gain은 아래와 같이 **부모 노드와 자식노드의 Similarity score의 차**로 계산됩니다.
 
-\[
+\\[
 Gain=Similarity_{Left} + Similarity_{Right} - Similarity_{Parent}
-\]
+\\]
 
 위 예시에서는 1번 분기점이 가장 큰 Gain 값 (120.33)을 가지므로, Dosage < 15 조건으로 분기합니다.
 
@@ -134,9 +134,9 @@ Gain=Similarity_{Left} + Similarity_{Right} - Similarity_{Parent}
 
 가지치기까지 끝난 decision tree의 각 leaf에 대한 output value (representative value)를 계산합니다. Output value 수식은 Similarity score와 비슷합니다 (분자가 square가 아닌 차이)
 
-\[
+\\[
 Output\; value=\frac{sum\; of\; residuals}{the\; number\; of\; residuals+\lambda}
-\]
+\\]
 
 **각 샘플에 대해** 새로운 예측값도 계산합니다.
 

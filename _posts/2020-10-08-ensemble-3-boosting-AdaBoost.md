@@ -68,9 +68,9 @@ AdaBoost의 학습순서는 위와 같이 나타낼 수 있습니다. 예시를 
 
 Initial sample weight는 모두 동일하게 해줍니다.
 
-\[ 
+\\[ 
 Initial\; sample\; weight=w_{i,1}=\frac{1}{total\; number\; of\; samples}
-\]
+\\]
 
 ### 2. First stump
 
@@ -84,20 +84,20 @@ Impurity (Gini index)를 바탕으로 best attribute로 분기하는 stump를 �
 
 완성한 stump의 분류 결과에 따라 amount of say \\(\alpha_t\\)를 계산해줍니다. \\(\alpha_t\\)는 각 앙상블 시 각 모델의 예측값 \\(h_t\\)에 대한 가중치로 사용됩니다.
 
-\[
+\\[
 Amount\; of\; say=\alpha_t=\frac{1}{2}log(\frac{1-\epsilon_t}{\epsilon_t})
-\]
+\\]
 
 여기서 \\(\epsilon_t\\)는 Total error로 **오분류된 샘플의 sample weight 총합**으로 정의됩니다. 즉, 위 이미지에서는 한 개 샘플만 틀렸으니 1/8이 됩니다.
 
-\[
+\\[
 \epsilon_t=\sum_{
 \begin{matrix}
   i=1 \\\\\\
   h_t(x_i)\neq y_i
 \end{matrix}
 }^n w_{i,t}
-\]
+\\]
 
 전체 Sample weights의 총합이 1이기 때문에 최고의 Stump (모두 맞춤)를 만든 경우 \\(\epsilon_t\\)는 0, 반대로 최악의 Stump (모두 틀림)를 만든 경우 \\(\epsilon_t\\)는 1을 갖습니다.
 
@@ -114,23 +114,23 @@ Amount\; of\; say=\alpha_t=\frac{1}{2}log(\frac{1-\epsilon_t}{\epsilon_t})
 #### 4.1. 오분류된 샘플
 > 참고: 샘플마다 업데이트되는 가중치 양에는 차이가 없습니다.
 
-\[
+\\[
 New\; sample\; weight=w_{i,t+1}=w_{i,t} \times e^{\alpha_t}
-\]
+\\]
 
 #### 4.2. 정분류된 샘플
 > 마찬가지로 샘플마다 업데이트되는 가중치 양에는 차이가 없습니다.
 
-\[
+\\[
 New\; sample\; weight=w_{i,t+1}=w_{i,t} \times e^{-\alpha_t}
-\]
+\\]
 
 #### 4.3 총합=1로 정규화
 Sample weight의 총합이 1이 되도록 normalize해줍니다.
 
-\[
+\\[
 Normalized\; sample\; weight=\frac{New\; sample\; weight}{\sum New\; sample\; weight}
-\]
+\\]
 
 따라서 아래와 같이 새로운 \\(w_{i,t+1}\\)를 얻습니다.
 
@@ -146,9 +146,9 @@ Sample weight를 각 샘플에 적용하여 Gini index를 계산합니다.
 
 > 아래 수식이 맞는지는 확인이 필요합니다.
 
-\[
+\\[
 Weighted\; Gini\; index= \sum_{i=1}^C w_{i,t}p_i(1-p_i)
-\]
+\\]
 
 #### 5.2. Resampling
 중복을 허용하여 Dataset을 resampling 후 Gini index를 계산합니다.
@@ -175,9 +175,9 @@ Weighted\; Gini\; index= \sum_{i=1}^C w_{i,t}p_i(1-p_i)
 
 \\(N\\)번의 iteration을 진행 후, 모든 Stump 의 예측값 \\(h_t(x)\\)에 amount of say \\(\alpha_t\\)를 가중치로 곱하는 Hard voting을 통해 최종 예측값을 얻어냅니다.
 
-\[
+\\[
 F(x)=\sum_{t=1}^N \alpha_t h_t(x)
-\]
+\\]
 
 ---
 

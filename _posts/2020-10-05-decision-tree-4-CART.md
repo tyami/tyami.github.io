@@ -59,16 +59,16 @@ CART 알고리즘의 또 하나의 특징으로는 가지 분기 시, 여러 개
 
 좌측은 ID3 알고리즘, 우측은 CART 알고리즘의 분기를 나타냅니다. ID3 의 경우 모든 클래스 (e.g., Sunny, Overcast, Rain) 로 가지가 뻗어져나갑니다. 따라서 ID3 알고리즘의 경우 지표별 Information Gain을 한 번씩만 계산하면 됩니다.
 
-\[
+\\[
 IG(Play,Outlook) \\\\\\
 IG(Play,Temeperature) \\\\\\
 IG(Play,Humidity) \\\\\\
 IG(Play,Windy)
-\]
+\\]
 
 반면, CART는 '하나의 클래스와 나머지'와 같이 가지가 생성됩니다. 따라서 아래 예시와 같이 모든 지표 X 모든 클래스 개수만큼 비교가 필요합니다.
 
-\[
+\\[
 IG(Play,Outlook=sunny) \\\\\\
 IG(Play,Outlook=overcast) \\\\\\
 IG(Play,Outlook=rain) \\\\\\
@@ -79,7 +79,7 @@ IG(Play,Humidity=high) \\\\\\
 IG(Play,Humidity=normal) \\\\\\
 IG(Play,Windy=TRUE) \\\\\\
 IG(Play,Windy=FALSE) \\\\\\
-\]
+\\]
 
 ---
 
@@ -107,17 +107,17 @@ Classification And **Regression Tree** 라는 이름답게, CART 알고리즘은
 이제 수식을 살펴봅시다.  
 실제값과 예측값의 오차는 \\(RSS\\)나 \\(MSE\\)와 같은 값으로 나타낼 수 있습니다.
 
-\[
+\\[
 Residual\; Sum\; of\; Squares\; (RSS)=\sum_{j=1}^J \sum_{i \in R_j} (y_i - \hat{y}_{R_j})^2
-\]
+\\]
 
 , where \\(\hat{y}_{R_j}\\) is the mean response for training observartions within \\(j\\)th box
 
 아래 수식과 같이 Binary tree의 좌우가지에 대한 오차값 \\(MSE_{left}, MSE_{right}\\)을 계산하고, 좌우 가지에 해당하는 샘플 수의 비율 \\(\frac{m_{left}}{m}, \frac{m_{right}}{m}\(\\)을 가중치로 곱해 전체 오차값 \\(J(k, t_k)\\)을 계산하여 지표간 비교를 통해 최적의 분기를 결정합니다.
 
-\[
+\\[
 J(k, t_k)=\frac{m_{left}}{m}MSE_{left}+\frac{m_{right}}{m}MSE_{right}
-\]
+\\]
 
 ## Decision Tree의 단점: 과적합에 취약
 

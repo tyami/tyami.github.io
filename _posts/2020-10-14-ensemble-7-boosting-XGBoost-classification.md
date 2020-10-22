@@ -74,9 +74,9 @@ XGBoost for Classification에서도 여느 Gradient Boosting처럼 leaf로 시�
 
 Similarity score가 다르게 정의됩니다. 복잡하게 생겼지만 XGBoost for Regression의 similarity score에서 분모부분만 바뀐 것을 확인할 수 있습니다. 바뀐 부분 또한 Gradient Boosting for Classification에서 본 log(odds) -> 확률 변환 수식과 비슷하게 생겼습니다. 
 
-\[
+\\[
 Similarity\; score=\frac{(\sum Residual_i)^2}{\sum[Previous\; probability_i \times (1-Previous\; probability_i)]+\lambda}
-\]
+\\]
 
 #### 3-2. Separation based on Gain
 
@@ -112,9 +112,9 @@ XGBoost for Regression에서는 \\(Number\; of\; residuals\\)이 크기 때문�
 
 각 leaf에 대해 Output value (Representative value)를 계산합니다. Similarity score와 비슷하게 생긴 이 값은 log(odds)값으로 생각할 수 있습니다. 또한 Gradient Boosting의 output value 변환 식에서 \\(\lambda\\)만 추가된 식이기도 합니다.
 
-\[
+\\[
 Output\; value=\frac{\sum Residual_i}{\sum[Previous\; probability_i \times (1-Previous\; probability_i)]+\lambda}
-\]
+\\]
 
 ### 4. Calculate predicted probability
 
