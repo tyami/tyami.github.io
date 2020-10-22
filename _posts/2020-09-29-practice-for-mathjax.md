@@ -37,16 +37,16 @@ This formula \\( f(x) = x^2 \\) is an example.
 ### outline 수식
 ```latex
 $$ \log_2 2 $$  
-\[ \log_2 2 \]  
-\[ probability=p(x) \]  
-\[ information=I(x)=\log_2 \frac{1}{p(x)} \] 
-\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i \]
+\\[ \log_2 2 \\]  
+\\[ probability=p(x) \\]  
+\\[ information=I(x)=\log_2 \frac{1}{p(x)} \\] 
+\\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i \\]
 ```
 $$ \log_2 2 $$  
-\[ \log_2 2 \]  
-\[ probability=p(x) \]  
-\[ information=I(x)=\log_2 \frac{1}{p(x)} \]  
-\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i \]
+\\[ \log_2 2 \\]  
+\\[ probability=p(x) \\]  
+\\[ information=I(x)=\log_2 \frac{1}{p(x)} \\]  
+\\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i \\]
 
 > 구글링 했을 때 나오는 $$ 문법으로는 Outline 수식 표현이 되지 않는다.  
 > 따라서 \_includes\mathjax_support.html 파일 작성 시, 수식 시작과 끝을 인식하는 identifier들을 수정해주었다.
