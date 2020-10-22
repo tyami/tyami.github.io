@@ -1,6 +1,6 @@
 ---
 title: "Medical Imaging Analysis 2: Medical Image acquisition methods"
-excerpt: "CT, PET< MRI와 같은 의료영상 측정방법의 원리를 정리해봅시다"
+excerpt: "X-ray, CT, PET, MRI와 같은 의료영상 측정방법의 원리를 정리해봅시다"
 
 categories:
 - Medical Imaging Analysis
@@ -178,3 +178,5 @@ MRI의 작동 원리입니다. RF pulse를 쏘는 Radio Frequency coils과 자�
 - MRI는 방사선 걱정이 없고, soft tissue의 측정에 용이합니다. 다만 긴 측정 시간과, 자기장에 의한 큰 소음이 발생하며, 가격이 비싼 편입니다.
 
 ---
+
+다음 포스팅: [Medical Imaging Analysis 3: Classification for MEDIA (1)](https://tyami.github.io/medical%20imaging%20analysis/MEDIA-3-classification-for-medical-image-1/)
