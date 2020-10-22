@@ -1,12 +1,12 @@
 ---
-title: "Medical Imaging Analysis 2: Medical Image acquisition methods"
+title: "Medical Image Analysis 2: Medical Image acquisition methods"
 excerpt: "X-ray, CT, PET, MRI와 같은 의료영상 측정방법의 원리를 정리해봅시다"
 
 categories:
-- Medical Imaging Analysis
+- Medical Image Analysis
 
 tags:
-- Medical Imaging Analysis
+- Medical Image Analysis
 - Lecture
 
 toc: true
@@ -16,10 +16,10 @@ toc_label: "Medical Image acquisition methods"
 use_math: true
 ---
 
-이전 포스팅: [Medical Imaging Analysis 1: Introduction to MEDIA](https://tyami.github.io/medical%20imaging%20analysis/MEDIA-1-introduction-to-MEDIA/)
+이전 포스팅: [Medical Image Analysis 1: Introduction to MEDIA](https://tyami.github.io/medical%20image%20analysis/MEDIA-1-introduction-to-MEDIA/)
 
-> 이전 포스팅에서는 Medical Imaging Analysis 시리즈에서 다룰 내용을 정리했습니다.  
-> 이번 포스팅에서는 Medical Imaging 측정에 사용되는 여러 장비들의 원리를 간단히 정리해봅니다.
+> 이전 포스팅에서는 Medical Image Analysis 시리즈에서 다룰 내용을 정리했습니다.  
+> 이번 포스팅에서는 Medical Image 측정에 사용되는 여러 장비들의 원리를 간단히 정리해봅니다.
 
 ## PACS
 
@@ -49,7 +49,7 @@ DICOM 이미지를 시각화하는 툴은 여러가지가 있는데, ITK-SNAP, 3
 
 ## Medical Imaging methods
 
-Medical Imaging은 다양한 장비로 측정됩니다. 아래와 같이 Endoscopy, Microscopy 부터 X-ray, CT, PET, MRI까지 다양한 측정 장비가 존재합니다.
+Medical Image는 다양한 장비로 측정됩니다. 아래와 같이 Endoscopy, Microscopy 부터 X-ray, CT, PET, MRI까지 다양한 측정 장비가 존재합니다.
 
 - Endoscopy (내시경)
 - Microscopy
@@ -179,4 +179,4 @@ MRI의 작동 원리입니다. RF pulse를 쏘는 Radio Frequency coils과 자�
 
 ---
 
-다음 포스팅: [Medical Imaging Analysis 3: Classification for MEDIA (1)](https://tyami.github.io/medical%20imaging%20analysis/MEDIA-3-classification-for-medical-image-1/)
+다음 포스팅: [Medical Image Analysis 3: Classification for MEDIA (1)](https://tyami.github.io/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)

@@ -1,12 +1,12 @@
 ---
-title: "Medical Imaging Analysis 3: Classification for MEDIA (1)"
+title: "Medical Image Analysis 3: Classification for MEDIA (1)"
 excerpt: "의료영상을 위한 Classification 방법을 정리해봅시다 (1)"
 
 categories:
-- Medical Imaging Analysis
+- Medical Image Analysis
 
 tags:
-- Medical Imaging Analysis
+- Medical Image Analysis
 - Lecture
 
 toc: true
@@ -16,10 +16,10 @@ toc_label: "Classification for MEDIA (1)"
 use_math: true
 ---
 
-이전 포스팅: [Medical Imaging Analysis 2: Medical Image acquisition methods](https://tyami.github.io/medical%20imaging%20analysis/MEDIA-2-medical-image-acquisition/)
+이전 포스팅: [Medical Image Analysis 2: Medical Image acquisition methods](https://tyami.github.io/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
 
 > 이전 포스팅에서는 여러 종류의 의료영상 측정 방식에 대한 원리를 정리했습니다.  
-> 이번 포스팅에서는 Medical Imaging Analysis 중 Classification에 대해 정리해보도록 하겠습니다.
+> 이번 포스팅에서는 Medical Image Analysis 중 Classification에 대해 정리해보도록 하겠습니다.
 
 ## Difficulty of Medical image classification
 
@@ -49,7 +49,7 @@ use_math: true
 
 ![2020-10-23-medical-image-classification-1-4-what-to-learn-today]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classification-1/2020-10-23-medical-image-classification-1-4-what-to-learn-today.png)
 
-오늘 포스팅에서 다룰 Classification 알고리즘들입니다. 위 알고리즘들을 대략적으로 정리하고, Medical imaging classification에 사용되는 전반적인 pipeline에 대해 정리하고자 합니다.
+오늘 포스팅에서 다룰 Classification 알고리즘들입니다. 위 알고리즘들을 대략적으로 정리하고, Medical image classification에 사용되는 전반적인 pipeline에 대해 정리하고자 합니다.
 
 ### Linear regression
 

@@ -1,12 +1,12 @@
 ---
-title: "Medical Imaging Analysis 1: Introduction to MEDIA"
-excerpt: "Medical Imaging Analysis 1: Introduction to MEDIA"
+title: "Medical Image Analysis 1: Introduction to MEDIA"
+excerpt: "Medical Image Analysis 1: Introduction to MEDIA"
 
 categories:
-- Medical Imaging Analysis
+- Medical Image Analysis
 
 tags:
-- Medical Imaging Analysis
+- Medical Image Analysis
 - Lecture
 
 toc: true
@@ -16,15 +16,15 @@ toc_label: "Introduction to MEDIA"
 use_math: true
 ---
 
-Medical Imaging Analysis (MEDIA) 에 대해 공부하면서, 관련 내용을 정리하고자 카테고리를 추가했습니다.
+Medical Image Analysis (MEDIA) 에 대해 공부하면서, 관련 내용을 정리하고자 카테고리를 추가했습니다.
 
 정리된 자료는 edwith에서 제공하는 DGIST 박상현교수님의 [컴퓨터비전, 머신러닝, 딥러닝을 이용한 의료영상분석](https://www.edwith.org/medical-20200327/home) 강의를 토대로 작성하였습니다.
 
 Classification, Segmentation, Enhancement, Registration을 세부 주제로 구성됩니다.
 
 1. Introduction to MEDIA (본 글)
-2. [Medical image acquisition methods](https://tyami.github.io/medical%20imaging%20analysis/MEDIA-2-medical-image-acquisition/)
-3. [Classification for MEDIA (1)](https://tyami.github.io/medical%20imaging%20analysis/MEDIA-3-classification-for-medical-image-1/)
+2. [Medical image acquisition methods](https://tyami.github.io/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
+3. [Classification for MEDIA (1)](https://tyami.github.io/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
 4. Classification for MEDIA (2)
 5. Classification for MEDIA (3)
 6. Classification for MEDIA (4)
@@ -54,7 +54,7 @@ MEDIA는 Computer vision과 Machine learning 분야와 접점이 있습니다. C
 MEDIA에서 Artificial intelligence (AI)는 다양한 부분에서 활용될 수 있습니다.
 
 1. 가장 먼저 의료영상 취득 시 Reconstruction 기법에 활용될 수 있습니다. 주로 CT (Computed Tomography)나 Positron Emission Tomography (PET)에서 활용될 수 있습니다.
-2. Imaging labelling에 사용될 수 있습니다.
+2. Image labelling에 사용될 수 있습니다.
 3. 수집 및 라벨링된 데이터의 분석에 사용될 수 있습니다.
 4. 설명을 위한 자료로 사용될 수 있습니다.
 
@@ -111,4 +111,4 @@ MEDIA의 연구 분야를 크게 네 부분으로 나눠볼 수 있습니다.
 
 ---
 
-다음 포스팅: [Medical Imaging Analysis 2: Medical Image acquisition methods](https://tyami.github.io/medical%20imaging%20analysis/MEDIA-2-medical-image-acquisition/)
+다음 포스팅: [Medical Image Analysis 2: Medical Image acquisition methods](https://tyami.github.io/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
