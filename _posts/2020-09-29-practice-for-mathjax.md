@@ -49,7 +49,10 @@ $$ \log_2 2 $$
 \\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i \\]
 
 > 구글링 했을 때 나오는 $$ 문법으로는 Outline 수식 표현이 되지 않는다.  
-> 따라서 \_includes\mathjax_support.html 파일 작성 시, 수식 시작과 끝을 인식하는 identifier들을 수정해주었다.
+> 따라서 \_includes\mathjax_support.html 파일 작성 시, 수식 시작과 끝을 인식하는 identifier들을 수정해주었다 (`\[`, `\]`)
+
+> [2020.10.22 업데이트]  
+> 일반 [, ]를 수식 시작과 끝으로 인식하는 버그가 있었다. 포스트 작성에 너무 방해가 되어 어쩔 수 없이 수식 identifier를 변경했다 (`\\[`, `\\]`) LaTex 기본 문법과는 다르지만 어쩔 수 없다.
 
 ### aligned으로 수식 강제 줄 바꾸기
 - begin{aligned}, end{aliend}로 수식 시작
