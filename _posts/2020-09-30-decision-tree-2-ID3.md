@@ -34,18 +34,18 @@ ID3 알고리즘은 Iterative Dichotomiser 3의 약자입니다. Dichotomiser는
 
 #### 확률 (Probability)
 사건 \\( X_i \\) 가 발생할 확률을 \\( p(X_i) \\) 로 정의합니다.
-\[ probability=p(x) \]  
+\\[ probability=p(x) \\]  
 
 #### 정보량 (Information)
 이 때 이 사건  \\( X_i \\) 가 갖는 정보량 (Information)은 아래와 같이 계산됩니다. 
-\[ information=I(x)=\log_2 \frac{1}{p(x)} \]  
+\\[ information=I(x)=\log_2 \frac{1}{p(x)} \\]  
 
 ![Probability 와 Information의 관계]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-probability-information.png)
 정보량은 **놀람의 정도**라고 이해하면 쉬운데, 드물게 발생할 수록 더 많이 놀라는 경우 (예: 로또)를 생각하면 됩니다. 확률에 따른 정보량의 관계는 위 그림을 통해 확인할 수 있습니다.
 
 #### 엔트로피 (Entropy)
 이어서 엔트로피는 아래 수식을 통해 계산할 수 있습니다.
-\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i \]
+\\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i \\]
 
 ![Probability 와 Entropy의 관계]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-probability-entropy.png)
 이진 분류 (Binary classification) 문제에서 한 사건의 확률이 p(x)라고 할 때, 엔트로피는 위 그림과 같습니다. 
