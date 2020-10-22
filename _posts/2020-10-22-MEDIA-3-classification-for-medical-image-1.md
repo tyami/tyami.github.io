@@ -211,7 +211,9 @@ Test 시,
 2. 학습된 Feature normalizer로부터 test data에 대한 feature를 normalize합니다.
 3. 학습된 classifier로부터 test data의 normalized feature에 대한 label을 얻습니다.
 
-간단하군요. 위 파이프라인은 어디까지나 하나의 예시입니다. 예시에서는 demographic score를 feature normalization에 사용했지만, 또 다른 예시에서는 feature 자체로 사용할 수도 있습니다.
+간단하군요 😎 !
+
+위 파이프라인은 어디까지나 하나의 예시입니다. 예시에서는 demographic score를 feature normalization에 사용했지만, 또 다른 예시에서는 feature 자체로 사용할 수도 있습니다.
 
 ![2020-10-23-medical-image-classifcation-1-20-example2-training]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classifcation-1/2020-10-23-medical-image-classifcation-1-20-example2-training.png)
 
