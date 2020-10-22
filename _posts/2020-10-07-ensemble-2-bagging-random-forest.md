@@ -18,7 +18,7 @@ toc_label: "Random Forest"
 use_math: true
 ---
 
-이전 글 보기: [앙상블 (Ensemble)의 기본 개념](https://tyami.github.io/machine%20learning/ensemble-1-basics/)
+이전 글 보기: [앙상블 (Ensemble)의 기본 개념]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-1-basics/)
 
 > 이전 포스팅에서는 앙상블 (Ensemble)의 기본적인 개념과 그 종류들에 대해 정리했습니다.  
 > 이번 포스팅에서는 그 중 배깅 (Bagging) 앙상블의 대표적인 예시인 Random Forest 알고리즘에 대해 정리하겠습니다. 정말 간단합니다.
@@ -39,9 +39,9 @@ Random Forest는 배깅 (Bagging) 앙상블 알고리즘의 대표적인 예시�
 
 Random forest의 생성 과정을 세 개의 파트로 나누어 정리했는데, 앞의 포스팅들에서 다 설명한 내용들이라 간단히 설명하겠습니다.
 
-- [Bootstrap](https://tyami.github.io/machine%20learning/ensemble-1-basics/#%EB%B0%B0%EA%B9%85-bagging)
-- [Decision tree](https://tyami.github.io/machine%20learning/decision-tree-1-concept/)
-- [Ensemble](https://tyami.github.io/machine%20learning/ensemble-1-basics/)
+- [Bootstrap]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-1-basics/#%EB%B0%B0%EA%B9%85-bagging)
+- [Decision tree]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-1-concept/)
+- [Ensemble]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-1-basics/)
 
 ---
 
@@ -91,4 +91,4 @@ mdl.predict(X_tst, y_tst)
 
 > 다음 포스팅부터는 부스팅 (Boosting) 앙상블의 초기 모델인 AdaBoost 알고리즘에 대해 정리해보겠습니다.
 
-다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-3-boosting-AdaBoost/)

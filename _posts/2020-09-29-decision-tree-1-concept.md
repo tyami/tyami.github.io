@@ -28,16 +28,16 @@ Kaggle competition 상위권 팀들의 알고리즘을 종합해본 결과, 2, 3
 
 ## 목차
 - 의사결정 나무 (Decision Tree) 기본 설명 (현재 글)
-- [의사결정 나무 (Decision Tree) ID3 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)
-- [의사결정 나무 (Decision Tree) C4.5 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-3-c4_5/)
-- [의사결정 나무 (Decision Tree) CART 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-4-CART/)
-- [앙상블 (Ensemble)의 기본 개념](https://tyami.github.io/machine%20learning/ensemble-1-basics/)
-- [배깅 앙상블 (Bagging Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
-- [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
-- [부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Regression](https://tyami.github.io/machine%20learning/ensemble-4-boosting-gradient-boosting-regression/)
-- [부스팅 앙상블 (Boosting Ensemble) 2-2: Gradient Boosting for Classification](https://tyami.github.io/machine%20learning/ensemble-5-boosting-gradient-boosting-classification/)
-- [부스팅 앙상블 (Boosting Ensemble) 3-1: XGBoost for Regression](https://tyami.github.io/machine%20learning/ensemble-6-boosting-XGBoost-regression/)
-- [부스팅 앙상블 (Boosting Ensemble) 3-2: XGBoost for Classification](https://tyami.github.io/machine%20learning/ensemble-7-boosting-XGBoost-classification/)
+- [의사결정 나무 (Decision Tree) ID3 알고리즘 설명]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-2-ID3/)
+- [의사결정 나무 (Decision Tree) C4.5 알고리즘 설명]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-3-c4_5/)
+- [의사결정 나무 (Decision Tree) CART 알고리즘 설명]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-4-CART/)
+- [앙상블 (Ensemble)의 기본 개념]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-1-basics/)
+- [배깅 앙상블 (Bagging Ensemble): Random Forest]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-2-bagging-random-forest/)
+- [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-3-boosting-AdaBoost/)
+- [부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Regression]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-4-boosting-gradient-boosting-regression/)
+- [부스팅 앙상블 (Boosting Ensemble) 2-2: Gradient Boosting for Classification]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-5-boosting-gradient-boosting-classification/)
+- [부스팅 앙상블 (Boosting Ensemble) 3-1: XGBoost for Regression]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-6-boosting-XGBoost-regression/)
+- [부스팅 앙상블 (Boosting Ensemble) 3-2: XGBoost for Classification]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-7-boosting-XGBoost-classification/)
 - 부스팅 앙상블 (Boosting Ensemble) 4: LightGBM
 - 부스팅 앙상블 (Boosting Ensemble) 5: CatBoost
 - 부스팅 앙상블 (Boosting Ensemble) 6: NGBoost
@@ -103,4 +103,4 @@ Outlook, Temperature, Humidity, Windy와 같은 기상조건들(Attributes)에 �
 
 > 이후 포스팅에서는 ID3, C4.5, CART 알고리즘에 대해서 하나씩 알아보도록 하겠습니다.
 
-다음 글 보기: [의사결정 나무 (Decision Tree) ID3 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)
+다음 글 보기: [의사결정 나무 (Decision Tree) ID3 알고리즘 설명]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-2-ID3/)

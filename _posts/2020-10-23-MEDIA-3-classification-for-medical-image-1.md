@@ -16,7 +16,7 @@ toc_label: "Classification for MEDIA (1)"
 use_math: true
 ---
 
-이전 포스팅: [Medical Image Analysis 2: Medical Image acquisition methods](https://tyami.github.io/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
+이전 포스팅: [Medical Image Analysis 2: Medical Image acquisition methods]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
 
 > 이전 포스팅에서는 여러 종류의 의료영상 측정 방식에 대한 원리를 정리했습니다.  
 > 이번 포스팅에서는 Medical Image Analysis 중 Classification에 대해 정리해보도록 하겠습니다.
@@ -103,11 +103,11 @@ Support vector machine은 추후 별도 포스팅으로 정리할 예정입니�
 
 Random Forest는 이전 포스팅을 참고해주세요.
 
-- [배깅 앙상블 (Bagging Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
+- [배깅 앙상블 (Bagging Ensemble): Random Forest]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-2-bagging-random-forest/)
 
 의사결정 나무 (Decision tree)부터 차근차근 공부하는 것도 좋습니다.
 
-- [의사결정 나무 (Decision Tree) 기본 설명](https://tyami.github.io/machine%20learning/decision-tree-1-concept/)
+- [의사결정 나무 (Decision Tree) 기본 설명]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-1-concept/)
 
 ### Neural network
 

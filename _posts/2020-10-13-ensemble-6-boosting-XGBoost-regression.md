@@ -18,7 +18,7 @@ toc_label: "XGBoost for Regression"
 use_math: true
 ---
 
-이전 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2-2: Gradient Boosting for Classification](https://tyami.github.io/machine%20learning/ensemble-5-boosting-gradient-boosting-classification/)
+이전 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2-2: Gradient Boosting for Classification]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-5-boosting-gradient-boosting-classification/)
 
 > 이전 두 개의 포스팅에서 부스팅 앙상블의 초기 모델인 Gradient Boosting의 두 알고리즘 (Regression, Classification)에 대해 정리했습니다.  
 > 이번 포스팅에서는 최근 Kaggle에서 높은 점수를 기록하고 있는 XGBoost 알고리즘에 대해 정리해보겠습니다. Regression과 Classification 중 Regression 알고리즘을 먼저 다뤄봅니다.
@@ -42,7 +42,7 @@ XGBoost의 특징을 요약하면 아래와 같습니다.
 
 이 중 4-9번 항목은 알고리즘 효율성을 위한 최적화 방법을 나타내는 특징입니다. 지금은 개념을 익히는 중이니 일단 건너 뜁니다. 나중에 [XGBoost Part 4: Crazy Cool Optimizations](https://www.youtube.com/watch?v=oRrKeUCEbq8)를 공부해서 정리해봅시다.
 
-다시 돌아와서, [1번 Gradient Boost](https://tyami.github.io/machine%20learning/ensemble-4-boosting-gradient-boosting-regression/)와 [2번 Regularization](https://tyami.github.io/machine%20learning/regularization-Ridge-Lasso-ElasticNet/)은 별도의 포스팅을 통해 정리했습니다.
+다시 돌아와서, [1번 Gradient Boost]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-4-boosting-gradient-boosting-regression/)와 [2번 Regularization]({{ site.url }}{{ site.baseurl }}/machine%20learning/regularization-Ridge-Lasso-ElasticNet/)은 별도의 포스팅을 통해 정리했습니다.
 
 따라서 본 포스팅에서는 3번 unique regression tree의 과정을 정리해보고자 합니다. [XGBoost Part 1: Regression](https://www.youtube.com/watch?v=OtD8wVaFm6E)를 참고했습니다.
 
@@ -187,4 +187,4 @@ Python 에서는 `xgboost` library로 사용 가능합니다.
 
 > 다음 포스팅에서는 XGBoost 모델의 Classification 알고리즘을 정리해보도록 하겠습니다.
 
-다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3-2: XGBoost for Classification](https://tyami.github.io/machine%20learning/ensemble-7-boosting-XGBoost-classification/)
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3-2: XGBoost for Classification]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-7-boosting-XGBoost-classification/)

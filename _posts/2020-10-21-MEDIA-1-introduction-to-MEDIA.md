@@ -22,9 +22,9 @@ Medical Image Analysis (MEDIA) 에 대해 공부하면서, 관련 내용을 정�
 
 Classification, Segmentation, Enhancement, Registration을 세부 주제로 구성됩니다.
 
-1. Introduction to MEDIA (본 글)
-2. [Medical image acquisition methods]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
-3. [Classification for MEDIA (1)](https://tyami.github.io/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
+1. Medical Image Analysis 1: Introduction to MEDIA (본 글)
+2. [Medical Image Analysis 2: Medical Image acquisition methods]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
+3. [Medical Image Analysis 3: Classification for MEDIA (1)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
 4. Classification for MEDIA (2)
 5. Classification for MEDIA (3)
 6. Classification for MEDIA (4)
@@ -111,4 +111,4 @@ MEDIA의 연구 분야를 크게 네 부분으로 나눠볼 수 있습니다.
 
 ---
 
-다음 포스팅: [Medical Image Analysis 2: Medical Image acquisition methods](https://tyami.github.io/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
+다음 포스팅: [Medical Image Analysis 2: Medical Image acquisition methods]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)

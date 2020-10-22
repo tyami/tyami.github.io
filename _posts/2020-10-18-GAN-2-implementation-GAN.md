@@ -17,7 +17,7 @@ toc_label: "GAN 구현 (PyTorch)"
 use_math: true
 ---
 
-이전 글 보기: [Generative Adversarial Nets (GAN) 1: GAN과 DCGAN 설명](https://tyami.github.io/deep%20learning/GAN-1-theory-GAN-DCGAN/)
+이전 글 보기: [Generative Adversarial Nets (GAN) 1: GAN과 DCGAN 설명]({{ site.url }}{{ site.baseurl }}/deep%20learning/GAN-1-theory-GAN-DCGAN/)
 
 > 이전 포스팅에서는 Generative Adversarial Network의 기본 알고리즘인 GAN과 DCGAN을 정리했습니다.  
 > 이번 포스팅에서는 PyTorch를 이용해 GAN 모델을 직접 구현해보도록 하겠습니다.
@@ -443,4 +443,4 @@ plt.savefig('../result/GAN/1-GAN/6-interpolation.png', dpi=300)
 
 > 다음 포스팅에서는 DCGAN을 구현해보고자 합니다.
 
-다음 글 보기: [Generative Adversarial Nets (GAN) 3: DCGAN을 PyTorch로 구현해보기](https://tyami.github.io/deep%20learning/GAN-3-implementation-DCGAN/)
+다음 글 보기: [Generative Adversarial Nets (GAN) 3: DCGAN을 PyTorch로 구현해보기]({{ site.url }}{{ site.baseurl }}/deep%20learning/GAN-3-implementation-DCGAN/)

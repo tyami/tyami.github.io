@@ -21,7 +21,7 @@ toc_label: "앙상블의 기본 개념"
 use_math: true
 ---
 
-이전 글 보기: [의사결정 나무 (Decision Tree) CART 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-4-CART/)
+이전 글 보기: [의사결정 나무 (Decision Tree) CART 알고리즘 설명]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-4-CART/)
 
 > 이전 포스팅들에서는 의사결정 나무의 여러 알고리즘과 단점에 대해 정리해보았습니다. 바로 **과적합에 취약**하다는 점입니다.  
 > 이번 포스팅에서는 과적합 문제를 해결하기 위한 방법으로 앙상블 (Ensemble) 알고리즘을 설명하고, 그 종류를 알아보도록 하겠습니다.
@@ -93,7 +93,7 @@ weak learner 개별의 예측값은 중요하지 않습니다. 예측 확률값�
 
 대표적인 예시로 Random Forest가 있습니다. 
 
-- [배깅 앙상블 (Bagging Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
+- [배깅 앙상블 (Bagging Ensemble): Random Forest]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-2-bagging-random-forest/)
 
 #### 부스팅 (Boosting)
 
@@ -112,7 +112,7 @@ Iteration 2에서는 Iteration 1의 분류기과 새로운 분류기를 함께 �
 
 Boosting은 다시 **Adaptive Boosting (AdaBoost)**와 **Gradient Boosting Model (GBM)** 계열로 나눌 수 있습니다.
 
-- [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost](https://tyami.github.io/machine%20learning/ensemble-3-boosting-AdaBoost/)
+- [부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-3-boosting-AdaBoost/)
 - 부스팅 앙상블 (Boosting Ensemble) 2: Gradient Boosting
 
 정확도와 속도를 개선한 최근 부스팅 알고리즘들은 Kaggle 등 데이터분석 대회에서 많이 사용되고 있습니다.
@@ -135,4 +135,4 @@ Boosting은 다시 **Adaptive Boosting (AdaBoost)**와 **Gradient Boosting Model
 
 > 다음 포스팅에서는 배깅 (Bagging)의 대표적인 알고리즘인 Random Forest에 대해 정리해보도록 하겠습니다.
 
-다음 글 보기: [배깅 앙상블(Ensemble): Random Forest](https://tyami.github.io/machine%20learning/ensemble-2-bagging-random-forest/)
+다음 글 보기: [배깅 앙상블(Ensemble): Random Forest]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-2-bagging-random-forest/)

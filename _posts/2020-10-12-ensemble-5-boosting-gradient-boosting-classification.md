@@ -18,7 +18,7 @@ toc_label: "Gradient Boosting for Classification"
 use_math: true
 ---
 
-이전 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Regression](https://tyami.github.io/machine%20learning/ensemble-4-boosting-gradient-boosting-regression/)
+이전 글 보기: [부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Regression]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-4-boosting-gradient-boosting-regression/)
 
 > 이전 포스팅에서는 Gradient Boosting 알고리즘 중 Regression 알고리즘을 정리했습니다.  
 > 이번 포스팅에서는 Gradient Boosting for Classfication 알고리즘을 정리해보고자 합니다.
@@ -49,7 +49,7 @@ Gradient Boosting for Classification은 Gradient Boosting for Regression과 전�
 
 Odds는 **임의의 사건 A가 발생하지 않을 확률 대비 일어날 확률의 비율**입니다.
 
-- 참고: [Machine learning: Odds와 Log(Odds)](https://tyami.github.io/machine%20learning/machine-learning-1-odds/)
+- 참고: [Machine learning: Odds와 Log(Odds)]({{ site.url }}{{ site.baseurl }}/machine%20learning/machine-learning-1-odds/)
 
 \\[
 odds=\frac{P(A)}{P(A^C)}=\frac{P(A)}{1-P(A)}
@@ -157,4 +157,4 @@ Pseudo-residual 계산에 사용될 **샘플별** 예측값을 계산해봅시�
 > Next: "Part 4 보고 관련 수식 이해하기"  
 > 다음 포스팅에서는 **드디어** Kaggle에서 많이 사용되고 있는 대표적인 부스팅 앙상블 알고리즘인 XGBoost를 정리해보고자 합니다.
 
-다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3-1: XGBoost for Regression](https://tyami.github.io/machine%20learning/ensemble-6-boosting-XGBoost-regression/)
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3-1: XGBoost for Regression]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-6-boosting-XGBoost-regression/)

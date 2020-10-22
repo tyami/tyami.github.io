@@ -17,7 +17,7 @@ toc_label: "DCGAN 구현 (PyTorch)"
 use_math: true
 ---
 
-이전 글 보기: [Generative Adversarial Nets (GAN) 2: GAN을 PyTorch로 구현해보기](https://tyami.github.io/deep%20learning/GAN-2-implementation-GAN/)
+이전 글 보기: [Generative Adversarial Nets (GAN) 2: GAN을 PyTorch로 구현해보기]({{ site.url }}{{ site.baseurl }}/deep%20learning/GAN-2-implementation-GAN/)
 
 > 이전 포스팅에서는 PyTorch를 이용해 GAN 모델을 직접 구현해보았습니다.
 > 이번 포스팅에서는 DCGAN 모델을 구현해봅시다 !  
@@ -27,7 +27,7 @@ use_math: true
 
 ## DCGAN
 
-DCGAN는 네트워크를 Convolutional layer로 구성한 GAN입니다. 자세한 설명은 [이전 포스팅](https://tyami.github.io/deep%20learning/GAN-1-theory-GAN-DCGAN/)에 있습니다.
+DCGAN는 네트워크를 Convolutional layer로 구성한 GAN입니다. 자세한 설명은 [이전 포스팅]({{ site.url }}{{ site.baseurl }}/deep%20learning/GAN-1-theory-GAN-DCGAN/)에 있습니다.
 
 ## 구성
 

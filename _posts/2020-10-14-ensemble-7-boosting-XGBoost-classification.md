@@ -18,16 +18,16 @@ toc_label: "XGBoost for Classification"
 use_math: true
 ---
 
-이전 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3-1: XGBoost for Regression](https://tyami.github.io/machine%20learning/ensemble-6-boosting-XGBoost-regression/)
+이전 글 보기: [부스팅 앙상블 (Boosting Ensemble) 3-1: XGBoost for Regression]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-6-boosting-XGBoost-regression/)
 
 > 이전 포스팅에서는 XGBoost for Regression 알고리즘을 정리했습니다.  
 > 이번 포스팅에서는 XGBoost for Classification 알고리즘을 정리해보도록 하겠습니다.
 
 ## XGBoost for Classification
 
-XGBoost for Classification은 [Gradient Boosting for Classification](https://tyami.github.io/machine%20learning/ensemble-5-boosting-gradient-boosting-classification/)과 [XGBoost for Regression](https://tyami.github.io/machine%20learning/ensemble-6-boosting-XGBoost-regression/)에 대한 이해가 기본으로 깔려있어야 합니다. 두 내용을 모두 이해하고 있다면, 이번 포스팅은 이해하기 쉽습니다 😀
+XGBoost for Classification은 [Gradient Boosting for Classification]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-5-boosting-gradient-boosting-classification/)과 [XGBoost for Regression]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-6-boosting-XGBoost-regression/)에 대한 이해가 기본으로 깔려있어야 합니다. 두 내용을 모두 이해하고 있다면, 이번 포스팅은 이해하기 쉽습니다 😀
 
-추가로 [Odds와 Log(Odds)](https://tyami.github.io/machine%20learning/machine-learning-1-odds-log-odds/)에 대한 이해도 필요합니다.
+추가로 [Odds와 Log(Odds)]({{ site.url }}{{ site.baseurl }}/machine%20learning/machine-learning-1-odds-log-odds/)에 대한 이해도 필요합니다.
 
 > 위의 알고리즘과 개념이 낯설다면 이전 포스팅들을 참고해주세요 !
 
@@ -153,4 +153,4 @@ Python 에서는 `xgboost` library로 사용 가능합니다.
 
 > 다음 포스팅에서는 빠른 속도와 준수한 성능을 자랑하는 Microsoft의 LightGBM 모델에 대해 정리해보겠습니다.
 
-다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 4: LightGBM](https://tyami.github.io/machine%20learning/ensemble-8-boosting-LightGBM/)
+다음 글 보기: [부스팅 앙상블 (Boosting Ensemble) 4: LightGBM]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-8-boosting-LightGBM/)

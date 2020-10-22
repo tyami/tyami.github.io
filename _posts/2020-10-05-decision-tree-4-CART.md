@@ -17,7 +17,7 @@ toc_label: "Decision Tree CART 알고리즘"
 use_math: true
 ---
 
-이전 글 보기: [의사결정 나무 (Decision Tree) C4.5 알고리즘 설명](https://tyami.github.io/machine%20learning/decision-tree-3-c4_5/)
+이전 글 보기: [의사결정 나무 (Decision Tree) C4.5 알고리즘 설명]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-3-c4_5/)
 
 > 이전 포스팅에서는 의사결정 나무에서 엔트로피를 불순도로 사용하는 ID3와 C4.5 알고리즘을 정리해보았습니다.
 > 이번 포스팅에서는 엔트로피 외에 다른 불순도 지표를 사용하는 CART 알고리즘에 대해 정리해보도록 하겠습니다. 
@@ -47,7 +47,7 @@ G(S) &= \sum_{i=1}^C p_i(1-p_i) \\\\\\
 ![Binary 문제에서 Probability에 따른 Gini index와 Entropy 변화]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-CART/2020-10-05-probability-entropy-gini.png)
 
 Gini index는 엔트로피와 같이 분류가 잘 될 때 낮은 값을 갖습니다. 따라서 CART 알고리즘에서는 모든 조합에 대해 Gini index를 계산한 후, Gini index가 가장 낮은 지표를 찾아 분기합니다.  
-[ID3 알고리즘](https://tyami.github.io/machine%20learning/decision-tree-2-ID3/)에서 Information Gain을 이용하는 것과 동일하기 때문에, 본 포스팅에서는 계산 과정은 생략하도록 하겠습니다.
+[ID3 알고리즘]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-2-ID3/)에서 Information Gain을 이용하는 것과 동일하기 때문에, 본 포스팅에서는 계산 과정은 생략하도록 하겠습니다.
 
 ---
 
@@ -138,4 +138,4 @@ ID3, C4.5, CART에 걸쳐 의사결정 나무 생성을 위한 알고리즘을 �
 
 > 다음 포스팅부터는 배깅 (Bagging), 부스팅 (Boosting), 스태킹 (Stacking) 등 다양한 앙상블 모델을 정리해고자 합니다.
 
-다음 글 보기: [앙상블 (Ensemble)의 기본 개념](https://tyami.github.io/machine%20learning/ensemble-1-basics/)
+다음 글 보기: [앙상블 (Ensemble)의 기본 개념]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-1-basics/)
