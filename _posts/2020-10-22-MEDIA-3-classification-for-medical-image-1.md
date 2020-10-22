@@ -21,31 +21,23 @@ use_math: true
 > 이전 포스팅에서는 여러 종류의 의료영상 측정 방식에 대한 원리를 정리했습니다.  
 > 이번 포스팅에서는 Medical Imaging Analysis 중 Classification에 대해 정리해보도록 하겠습니다.
 
-Classification for MEDIA
-
 ## Difficulty of Medical image classification
-
-![2020-10-23-medical-image-classifcation-1-1-medical-image-properties]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classifcation-1/2020-10-23-medical-image-classifcation-1-1-medical-image-properties.png)
 
 의료영상 이미지는 분석하기 까다롭습니다. 몇 가지 특징 때문입니다. 예를 들어보면,
 
-- 데이터 수집이 쉽지 않습니다.
+- **데이터 수집이 쉽지 않습니다.** 기본적으로 환자의 개인정보라 공유하기 어렵고, 병원간 교류도 잘 되지 않습니다. 그나마 [ADNI](http://adni.loni.usc.edu/data-samples)나 [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga)와 같은 곳에서 데이터를 모아 연구를 진행합니다.
 
-기본적으로 환자의 개인정보라 공유하기 어렵고, 병원간 교류도 잘 되지 않습니다. 그나마 [ADNI](http://adni.loni.usc.edu/data-samples)나 [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga)와 같은 곳에서 데이터를 모아 연구를 진행합니다.
+![2020-10-23-medical-image-classifcation-1-1-medical-image-properties]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classifcation-1/2020-10-23-medical-image-classifcation-1-1-medical-image-properties.png)
 
 - White matter (WM)/Gray matter (GM)/Cerebrospinal fluid (CSF) 의 분포에 따라 **이미지가 잘 보이지 않는 경우가 있습니다.**
 
 ![2020-10-23-medical-image-classifcation-1-3-large-size]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classifcation-1/2020-10-23-medical-image-classifcation-1-3-large-size.png)
 
-- **이미지가 큽니다 (기본 3D)**. 
-
-특히 pathology 데이터의 경우 이미지가 굉장히 큽니다. 그에 비해 문제가 있는 (e.g., 암세포가 있는) 영역은 매우 적은 비율을 차지합니다. 따라서 좌측의 저배율에서부터, 우측의 고배율까지 확대하면서 정상과 암세포를 구별해내야 하는데, 이 작업은 manually할 경우 상당한 노동과 시간이 소모됩니다.
+- **이미지가 큽니다 (기본 3D)**. 특히 pathology 데이터의 경우 이미지가 굉장히 큽니다. 그에 비해 문제가 있는 (e.g., 암세포가 있는) 영역은 매우 적은 비율을 차지합니다. 따라서 좌측의 저배율에서부터, 우측의 고배율까지 확대하면서 정상과 암세포를 구별해내야 하는데, 이 작업은 manually할 경우 상당한 노동과 시간이 소모됩니다.
 
 ![2020-10-23-medical-image-classifcation-1-2-demographic-score]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classifcation-1/2020-10-23-medical-image-classifcation-1-2-demographic-score.png)
 
-- 나이만 줄어도 Gray matter 영역이 줄어든다던지, Ventricle 영역이 커진다던지 하는 confounding한 변화가 존재한다. 
-
-다시 말해, "나이"와 같은 환자의 정보가 중요한 역할을 하는 경우가 많습니다. 따라서 **환자의 정보 (Demographic score)를 영상과 함께 분석할 필요가 있습니다**
+- 나이만 줄어도 Gray matter 영역이 줄어든다던지, Ventricle 영역이 커진다던지 하는 confounding한 변화가 존재합니다. 다시 말해, "나이"와 같은 환자의 정보가 중요한 역할을 하는 경우가 많습니다. 따라서 **환자의 정보 (Demographic score)를 영상과 함께 분석할 필요가 있습니다**
 
 - 또한 상대적으로 클래스간 변화량에 큰 차이가 없습니다. 총과 칼을 구별하는 것보다 소총과 저격총을 구별하는게 좀 더 어려운 것을 떠올리면 될 것 같습니다.
 
