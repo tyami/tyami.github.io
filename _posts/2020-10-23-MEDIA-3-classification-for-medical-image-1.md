@@ -121,7 +121,9 @@ Random Forest는 이전 포스팅을 참고해주세요.
 
 심층신경망 (Deep neural network)은 깊어진 형태의 신경망 구조를 띕니다. 
 
-추후 별도 포스팅으로 정리할 예정입니다.
+다음 포스팅에서 정리합니다.
+
+- [Medical Image Analysis 3: Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-dnn/)
 
 #### Activation functions
 
@@ -221,4 +223,6 @@ Test 시,
 
 ---
 
-> 다음 포스팅에서는 다양한 Convolutional neural network (CNN) 모델에 대해 정리해봅니다. 
+> 다음 포스팅에서는 deep neural network 알고리즘을 조금 더 정리하고자 합니다.
+
+다음 포스팅: [Medical Image Analysis 3: Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-dnn/)
