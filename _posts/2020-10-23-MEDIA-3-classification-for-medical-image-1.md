@@ -8,6 +8,8 @@ categories:
 tags:
 - Medical Image Analysis
 - Lecture
+- Machine learning
+- Deep learning
 
 toc: true
 toc_sticky: true
