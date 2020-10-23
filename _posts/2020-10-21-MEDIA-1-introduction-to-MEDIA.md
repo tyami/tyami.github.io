@@ -25,7 +25,7 @@ Classification, Segmentation, Enhancement, Registration을 세부 주제로 구�
 1. Medical Image Analysis 1: Introduction to MEDIA (본 글)
 2. [Medical Image Analysis 2: Medical Image acquisition methods]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
 3. [Medical Image Analysis 3: Classification for MEDIA (1)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
-[Medical Image Analysis 3: Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-dnn/)
+4. [Medical Image Analysis 4: Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-dnn/)
 
 ## MEDIA Overview
 

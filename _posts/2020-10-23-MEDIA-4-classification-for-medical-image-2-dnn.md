@@ -1,5 +1,5 @@
 ---
-title: "Medical Image Analysis 3: Classification for MEDIA (2) Deep neural network"
+title: "Medical Image Analysis 4: Classification for MEDIA (2) Deep neural network"
 excerpt: "Deep neural network (DNN)에 대해 정리해봅니다"
 
 categories:
