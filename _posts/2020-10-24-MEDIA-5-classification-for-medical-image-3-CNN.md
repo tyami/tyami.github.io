@@ -32,7 +32,7 @@ Convolutional neural network는 Convolution 기법을 활용한, 이미지에서
 
 Convolution을 먼저 정리해봅시다.
 
-!2020-10-25-medical-image-classification-3-cnn-1-data-filter]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-25-medical-image-classification-3-CNN/2020-10-25-medical-image-classification-3-cnn-1-data-filter.png)
+![2020-10-25-medical-image-classification-3-cnn-1-data-filter]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-25-medical-image-classification-3-CNN/2020-10-25-medical-image-classification-3-cnn-1-data-filter.png)
 
 Convolution은 주어진 인풋을 Convolution filter가 훑고 지나가면서 1:1 연산을 수행합니다. 이 때 Filter의 면적(?)를 receptive field라고도 합니다.
 
