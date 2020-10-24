@@ -227,4 +227,4 @@ Test 시,
 
 > 다음 포스팅에서는 deep neural network 알고리즘을 조금 더 정리하고자 합니다.
 
-다음 포스팅: [Medical Image Analysis 4: Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-dnn/)
+다음 포스팅: [Medical Image Analysis 4: Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-DNN/)

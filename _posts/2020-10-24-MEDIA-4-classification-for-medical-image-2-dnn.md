@@ -95,3 +95,5 @@ DNN에서 각 레이어가 하는 일은 무엇일까요?
 Deep neural network의 기본적인 구조와 레이어 위치에 따른 특징을 정리해보았습니다. 본문에 언급한 바와 같이, 이미지 형태의 데이터를 DNN에 사용하게 되면, 학습이 필요한 파라미터 수가 너무 많아집니다. 이를 해결하기 위해 Convolution을 적용한 Convolutional neural network가 많이 사용되고 있습니다.
 
 > 다음 포스팅에서는 Convolutional neural network (CNN) 모델의 기초에 대해 정리해봅니다. 
+
+다음 포스팅: [Medical Image Analysis 4: Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)
