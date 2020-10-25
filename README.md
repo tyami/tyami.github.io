@@ -1,10 +1,11 @@
 ### 🌞 [tyami (Taeyang Yang)'s Blog website](https://tyami.github.io/)  
 
 🗂 **Contents**
-  - Data science
-  - Machine learning
-  - Deep learning
-  
+  - Data science (DS)
+  - Machine learning (ML)
+  - Deep learning (DL)
+  - Medical Image Analysis (MEDIA)
+
 ⚙ **Developed and maintained based on Jekyll**
   - Default theme: [Minimal-mistake](https://mmistakes.github.io/minimal-mistakes/)
   - Added: [MathJax](https://www.mathjax.org/), [Disqus](https://disqus.com/), [Hits](https://hits.seeyoufarm.com/) (in Footer)
