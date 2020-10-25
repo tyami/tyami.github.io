@@ -40,7 +40,7 @@ use_math: true
    4. Save model weights
 7. Visualization (Interpolation)
 
-전체 코드는 [Github](https://github.com/tyami/dl-study/blob/master/code/1-GAN-PyTorch.ipynb)에서 볼 수 있습니다.
+전체 코드는 [Github](https://github.com/tyami/implementation-deep-learning/blob/master/code/1-GAN-PyTorch.ipynb)에서 볼 수 있습니다.
 
 ## 구현
 ### 1. Load libraries

@@ -47,7 +47,7 @@ DCGAN는 네트워크를 Convolutional layer로 구성한 GAN입니다. 자세�
    4. Save model weights
 7. Visualization (Interpolation)
 
-전체 코드는 [Github](https://github.com/tyami/dl-study/blob/master/code/2-DCGAN-PyTorch.ipynb)에서 볼 수 있습니다.
+전체 코드는 [Github](https://github.com/tyami/implementation-deep-learning/blob/master/code/2-DCGAN-PyTorch.ipynb)에서 볼 수 있습니다.
 
 ## 구현
 
