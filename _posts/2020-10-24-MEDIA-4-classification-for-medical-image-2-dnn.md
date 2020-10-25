@@ -96,4 +96,4 @@ Deep neural network의 기본적인 구조와 레이어 위치에 따른 특징�
 
 > 다음 포스팅에서는 Convolutional neural network (CNN) 모델의 기초에 대해 정리해봅니다. 
 
-다음 포스팅: [Medical Image Analysis 4: Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)
+다음 포스팅: [Medical Image Analysis 5: Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)
