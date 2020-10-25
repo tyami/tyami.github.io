@@ -162,4 +162,4 @@ Convolutional Neural Network의 기초적인 구성에 대해 정리해보았습
 
 > 다음 포스팅에서는 주요 CNN 모델들에 대해 정리해보도록 하겠습니다.
 
-다음 포스팅: [Medical Image Analysis 6: Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/2020-10-26-MEDIA-6-classification-for-medical-image-4-advanced-CNN/)
+다음 포스팅: [Medical Image Analysis 6: Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-6-classification-for-medical-image-4-advanced-CNN/)
