@@ -1,6 +1,6 @@
 ---
-title: "Medical Image Analysis 4: Classification for MEDIA (3) Convolutional neural network"
-excerpt: "Convolutional neural network (CNN)에 대해 정리해봅니다"
+title: "Medical Image Analysis 6: Classification for MEDIA (4) Advanced CNN models"
+excerpt: "주요 CNN 모델 (LeNet-5, AlexNet, Inception (GoogLeNet), VGGNet, ResNet, DenseNet)들에 대해 정리해봅니다"
 
 categories:
 - Medical Image Analysis
@@ -12,7 +12,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "Classification for MEDIA (3) CNN"
+toc_label: "Classification for MEDIA (4) Advanced CNN models"
 
 use_math: true
 ---
