@@ -39,7 +39,7 @@ CNN의 기본적인 구조를 띄는 LeNet-5입니다. 뒤로 갈수록 이미�
 
 ## AlexNet (2012)
 
-![2020-10-26-medical-image-classification-4-advanced-cnn-2-alexnet-result]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-26-medical-image-classification-4-advanced-CNN/2020-10-26-medical-image-classification-4-advanced-cnn-2-alexnet-result.png)
+![2020-10-26-medical-image-classification-4-advanced-cnn-2-alexnet-result]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-26-medical-image-classification-4-advanced-CNN/2020-10-26-medical-image-classification-4-advanced-cnn-2-alexnet-result.PNG)
 
 2012년 ImageNet이미지를 기반으로 한 분류 대회인 [ImageNet Large-Scale Visual Recognition Challenge 2012](http://www.image-net.org/challenges/LSVRC/2014/)에서 캐나다 토론토 대학이 우승합니다. Alex Khrizevsky, Ilya Sutskever, Geoffrey Hinton으로 구성된 이 팀의 메인 저자인 Alex Khrizevsky의 이름을 딴 AlexNet은 압도적인 성능으로 1위를 하게 됩니다.
 
@@ -69,13 +69,13 @@ Inception Module을 정리하기에 앞서, Network in Network라는 구조에 �
 
 싱가포르 국립대학의 Min Lin은 2013년 [Network In Network](https://arxiv.org/abs/1312.4400)라는 논문을 발표합니다.
 
-![2020-10-26-medical-image-classification-4-advanced-cnn-3-nin]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-26-medical-image-classification-4-advanced-CNN/2020-10-26-medical-image-classification-4-advanced-cnn-3-nin.png)
+![2020-10-26-medical-image-classification-4-advanced-cnn-3-nin]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-26-medical-image-classification-4-advanced-CNN/2020-10-26-medical-image-classification-4-advanced-cnn-3-nin.PNG)
 
 일반적인 CNN의 Convolutional layer는 local한 receptive field 내에서 feature를 추출해내는 능력은 우수한 반면, filter의 연산이 linear하게 일어나기 때문에 non-linear feature를 추출하는데는 어려움이 있을 것이라고 생각했습니다.
 
 이를 해결하기 위해서는 filter의 개수를 늘려 연산량을 늘리는 방법밖에 없었는데, NIN에서는 우측의 그림과 같이 Convolution 대신 MLP를 이용하여 feature를 추출하는 방법을 사용했습니다.
 
-![2020-10-26-medical-image-classification-4-advanced-cnn-3-nin]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-26-medical-image-classification-4-advanced-CNN/2020-10-26-medical-image-classification-4-advanced-cnn-3-nin-naming.png)
+![2020-10-26-medical-image-classification-4-advanced-cnn-3-nin]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-26-medical-image-classification-4-advanced-CNN/2020-10-26-medical-image-classification-4-advanced-cnn-3-nin-naming.PNG)
 
 네트워크 안에 다른 네트워크 (MLP)를 쌓아올린 형태 때문에 Network In Network 라는 이름이 붙었습니다.
 
