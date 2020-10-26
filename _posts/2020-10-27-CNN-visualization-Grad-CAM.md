@@ -125,7 +125,7 @@ CAM의 결과이미지입니다. 학습이 잘 일어난 경우 label을 잘 설
 
 CAM은 간단히 계산할 수 있는 유용한 툴이지만, Global Average Pooling layer를 사용해야만 한다는 한계점을 갖습니다. GAP으로 대치하게되면 뒷부분을 다시 또 fine tuning 해야하며, 마지막 Convolutional layer에 대해서만 CAM을 추출할 수 있다는 점도 한계점이라고 말할 수 있습니다.
 
-## Gradient CAM (Grad-CAM)
+## Gradient-weighted CAM (Grad-CAM)
 
 ### Paper (2017)
 
