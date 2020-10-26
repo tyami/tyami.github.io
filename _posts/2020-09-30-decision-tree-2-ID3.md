@@ -7,7 +7,7 @@ categories:
 
 tags:
 - Machine learning
-- Decision Tree
+- Decision tree
 - Algorithm
 
 toc: true

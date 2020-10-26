@@ -7,7 +7,7 @@ categories:
 
 tags:
 - Deep learning
-- GAN
+- Generative adversarial network
 - Implementation
 
 toc: true

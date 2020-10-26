@@ -7,8 +7,10 @@ categories:
 
 tags:
 - Machine learning
-- Decision Tree
+- Decision tree
 - Algorithm
+- Bagging
+- Boosting
 
 toc: true
 toc_sticky: true

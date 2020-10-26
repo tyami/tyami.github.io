@@ -10,6 +10,13 @@ tags:
 - Lecture
 - Machine learning
 - Deep learning
+- Logistic regression
+- Gradient descent algorithm
+- Support vector machine
+- Random forest
+- Neural network
+- Deep neural network
+- Demographic score
 
 toc: true
 toc_sticky: true

@@ -8,6 +8,8 @@ categories:
 tags:
 - Machine learning
 - Algorithm
+- Bias
+- Variance
 
 toc: true
 toc_sticky: true

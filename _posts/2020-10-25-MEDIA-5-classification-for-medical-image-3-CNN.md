@@ -9,6 +9,7 @@ tags:
 - Medical Image Analysis
 - Lecture
 - Deep learning
+- Convolutional neural network
 
 toc: true
 toc_sticky: true

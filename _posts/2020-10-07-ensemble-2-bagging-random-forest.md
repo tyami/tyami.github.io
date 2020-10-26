@@ -10,6 +10,7 @@ tags:
 - Ensemble
 - Algorithm
 - Bagging
+- Random forest
 
 toc: true
 toc_sticky: true
