@@ -26,7 +26,7 @@ use_math: true
 
 ## Convolutional neural network (CNN)
 
-CNN에 대한 설명은 [이전 포스팅]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/DL-5-classification-for-medical-image-3-CNN/)을 참고해주세요 !
+CNN에 대한 설명은 [이전 포스팅]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)을 참고해주세요 !
 
 ## Weakly Supervised learning
 
