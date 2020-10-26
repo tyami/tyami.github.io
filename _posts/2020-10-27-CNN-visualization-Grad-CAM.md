@@ -127,6 +127,8 @@ CAM은 간단히 계산할 수 있는 유용한 툴이지만, Global Average Poo
 
 ## Gradient CAM (Grad-CAM)
 
+### Paper (2017)
+
 ![2020-10-27-cnn-visualization-grad-cam-15-grad-cam-paper]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-27-CNN-visualization-Grad-CAM/2020-10-27-cnn-visualization-grad-cam-15-grad-cam-paper.png)
 
 바로 다음 해 2017년 ICCV에서 Grad-CAM의 저자들은 이 문제를 Gradient를 이용해 해결했습니다.
