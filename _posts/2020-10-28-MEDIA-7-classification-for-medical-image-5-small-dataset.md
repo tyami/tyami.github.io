@@ -37,11 +37,9 @@ use_math: true
 
 지금까지 배워온 내용을 간단히 정리해봅시다.
 
-2D 또는 3D 의료영상 이미지를 입력으로 받게되면, 가장 먼저 **전처리 (Preprocessing)** 과정이 진행됩니다. 이 때 voxel spacing, registration, intensity normalization, denoising 등이 사용될 수 있습니다.
+2D 또는 3D 의료영상 이미지를 입력으로 받게되면, 가장 먼저 **전처리 (Preprocessing)** 과정이 진행됩니다. 이 때 voxel spacing, registration, intensity normalization, denoising 등이 사용될 수 있습니다. 이후는 크게 두 갈래로 나뉩니다.
 
-이후는 크게 두 가지 갈래로 나뉩니다.
-
-1. Feature extractor + Classifier
+**1. Feature extractor + Classifier**
 
 **Feature extractor**와 **Classifier**가 별개로 이루어진 모델입니다.
 
@@ -49,7 +47,7 @@ Feature로는 intensity (raw 값), texture (Haar feature) 등이 사용될 수 �
 
 Classifier에 feature를 바로 사용할 수도 있지만, demographic score를 이용한 feature normalization이나 feature selection 등의 방법을 사용하여 feature를 정제해 사용할 수도 있습니다.
 
-2. End-to-end learning
+**2. End-to-end learning**
 
 End-to-end learning에서는 deep learning과 같이 feature extractor와 classifier가 합쳐진 모델을 말합니다. 물론 End-to-end learning에서도 위에서 언급한 feature normalization이나 feature selection을 적용하는 것이 가능합니다.
 
@@ -60,7 +58,9 @@ End-to-end learning에서는 deep learning과 같이 feature extractor와 classi
 - Transfer learning
 - Data augmentation
 
-## Validation
+## Solutions for small dataset
+
+### 1. Validation
 
 Validation data는 학습에 필요한 적절한 하이퍼파라미터를 찾거나 학습 종료시점을 찾을 때 활용하는 데이터입니다.
 
@@ -72,17 +72,17 @@ Validation data는 학습에 필요한 적절한 하이퍼파라미터를 찾거
 
 매 Epoch마다 모델 학습 이후, validation 데이터에 대해 loss를 계산합니다. 일반적으로 validation loss가 training loss보다 높습니다. 또한 일정 시점이 지나면 training loss는 계속해서 감소하지만, validation loss는 감소하지 않고 (때때로) 오히려 증가하는 지점이 생깁니다. 이 때를 기점으로 과적합 (overfitting)이 일어난 것으로 생각할 수 있으며, 학습을 종료시키는 지점으로 사용할 수 있습니다.
 
-### Cross validation
+#### Cross validation
 
 cross validation은 데이터가 적을 때 사용하는 방법입니다.
 
-#### k-fold cross validation
+**k-fold cross validation**
 
 ![2020-10-28-medical-image-classification-5-small-dataset-4-kfold-cv]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-28-medical-image-classification-5-small-dataset/2020-10-28-medical-image-classification-5-small-dataset-4-kfold-cv.png)
 
 Train data를 k개의 블럭을 나눈 후, 각 블럭을 validation data로 하는 학습을 k번 시행합니다. 학습 종료 후, test data에 대해서도 분류를 수행하며, 최종 결과는 k개의 클래스별 예측확률 평균을 이용해 분류합니다.
 
-#### Leave-one-out cross (LOO) validation
+**Leave-one-out cross (LOO) validation**
 
 데이터가 정말 극단적으로 없는 경우에는 Leave-one-out (LOO) cross validation을 사용해볼 수도 있습니다.
 
@@ -90,7 +90,7 @@ Train data를 k개의 블럭을 나눈 후, 각 블럭을 validation data로 하
 
 Leave-one-out CV는 말 그대로 한 샘플만을 validation data로 사용하는 과정을 n번 (train data 수) 진행합니다. 학습할 데이터 수가 적기 때문에 validation의 비중을 최소한으로 줄인 cross validaiton이라고 볼 수 있습니다.
 
-#### Leave-one-subject-out (LOSO) cross validation
+**Leave-one-subject-out (LOSO) cross validation**
 
 특정한 경우 (모델의 피험자에 따른 일반화 성능 검증 등)에는 Leave-one-subject-out (LOSO) CV도 사용합니다.
 
@@ -98,7 +98,7 @@ Leave-one-out CV는 말 그대로 한 샘플만을 validation data로 사용하�
 
 말 그대로 한 subject의 데이터만을 validation으로 사용하는 방법입니다. 앞의 두 방법과 다르게, subject별 데이터 개수에 따라 validation data의 크기가 달라질 수 있습니다. Subject는 목적에 따라 피험자가 될 수도 있고, 특정 조건이 될 수도 있습니다.
 
-## Regularization
+### 2. Regularization
 
 ![2020-10-15-ridge-and-lasso-1-overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-15-ridge-and-lasso/2020-10-15-ridge-and-lasso-1-overview.png)
 
@@ -110,19 +110,19 @@ Regularization이 익숙하지 않다면 아래 포스팅을 참고하세요.
 
 - [Regularization: Ridge (L2), Lasso (L1), and Elastic Net regression]({{ site.url }}{{ site.baseurl }}/machine%20learning/regularization-Ridge-Lasso-ElasticNet/)
 
-## Transfer learning
+### 3. Transfer learning
 
 세번째 방법은 **Transfer learning (전이 학습)** 입니다.
 
 ![2020-10-28-medical-image-classification-5-small-dataset-7-large-dataset-imagenet]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-28-medical-image-classification-5-small-dataset/2020-10-28-medical-image-classification-5-small-dataset-7-large-dataset-imagenet.png)
 
-[이전 포스팅]({{ site.url }}{{ site.baseurl }}/_posts/MEDIA-6-classification-for-medical-image-4-advanced-CNN/)에서 다룬 좋은 성능을 내는 주요 classification 모델들은 정말 많은 데이터를 기반으로 학습되었습니다. 예를 들어 ImageNet의 경우 1,400만개에 달하는 이미지를 가진 데이터셋입니다.
+[이전 포스팅]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-6-classification-for-medical-image-4-advanced-CNN/)에서 다룬 좋은 성능을 내는 주요 classification 모델들은 정말 많은 데이터를 기반으로 학습되었습니다. 예를 들어 ImageNet의 경우 1,400만개에 달하는 이미지를 가진 데이터셋입니다.
 
 ![2020-10-28-medical-image-classification-5-small-dataset-8-small-dataset]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-28-medical-image-classification-5-small-dataset/2020-10-28-medical-image-classification-5-small-dataset-8-small-dataset.png)
 
 하지만 앞서 언급했듯, 의료영상데이터는 이에 비해 확연히 적은 수의 데이터를 가집니다. 이런 경우 Transfer learning이 효과적인 방법이 될 수 있습니다.
 
-### Procedure
+#### Procedure
 
 Transfer learning 한 가지 가정이 있습니다.
 
@@ -142,7 +142,7 @@ Transfer learning 한 가지 가정이 있습니다.
 - Output class 개수: Pre-trained model들과 출력 class의 개수가 다를 수 있습니다. 이를 수정해주어야 합니다. 
 - Fine tuning: 학습 이미지와 타겟 이미지가 동일하지 않다보니 추가적인 모델 학습이 필요합니다. Feature를 추출하는 모델의 앞단 weight는 고정시키고 (freeze), 뒷단의 classifier 역할을 하는 레이어들만 추가로 학습시킵니다.
 
-### Four types of fine-tuning
+#### Four types of fine-tuning
 
 Fine tuning은 **데이터 유사도**와 **타겟 데이터 사이즈**몇 가지 종류로 나눌 수 있습니다.
 
@@ -155,7 +155,7 @@ Fine tuning은 **데이터 유사도**와 **타겟 데이터 사이즈**몇 가�
 
 실제로 많은 경우, 직접 구성하고 학습시킨 모델보다 Pre-trained model의 성능이 좋은 경우가 많습니다.
 
-## Data augmentation
+### 4. Data augmentation
 
 마지막 방법은 Data augmentation (데이터 증강)입니다. 데이터 수를 강제로 늘려주는 방법입니다.
 
