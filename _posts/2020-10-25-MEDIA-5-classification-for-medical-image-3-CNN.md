@@ -1,5 +1,5 @@
 ---
-title: "Medical Image Analysis 5: Classification for MEDIA (3) Convolutional neural network"
+title: "Classification for MEDIA (3) Convolutional neural network"
 excerpt: "Convolutional neural network (CNN)에 대해 정리해봅니다"
 
 categories:
@@ -18,7 +18,7 @@ toc_label: "Classification for MEDIA (3) CNN"
 use_math: true
 ---
 
-이전 포스팅: [Medical Image Analysis 4: Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-DNN/)
+이전 포스팅: [Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-DNN/)
 
 > 이전 포스팅에서는 Medical Image Analysis 에 사용되는 Deep neural network (DNN)에 대해 간단하게 정리해보았습니다.  
 > 이번 포스팅에서는 이미지 데이터에 많이 활용되는 Convolutional neural network (CNN)의 기초에 대해 정리해보고자 합니다.
@@ -163,4 +163,4 @@ Convolutional Neural Network의 기초적인 구성에 대해 정리해보았습
 
 > 다음 포스팅에서는 주요 CNN 모델들에 대해 정리해보도록 하겠습니다.
 
-다음 포스팅: [Medical Image Analysis 6: Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-6-classification-for-medical-image-4-advanced-CNN/)
+다음 포스팅: [Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-6-classification-for-medical-image-4-advanced-CNN/)

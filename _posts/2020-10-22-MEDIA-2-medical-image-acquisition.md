@@ -1,5 +1,5 @@
 ---
-title: "Medical Image Analysis 2: Medical Image acquisition methods"
+title: "Medical Image acquisition methods"
 excerpt: "X-ray, CT, PET, MRI와 같은 의료영상 측정방법의 원리를 정리해봅시다"
 
 categories:
@@ -16,7 +16,7 @@ toc_label: "Medical Image acquisition methods"
 use_math: true
 ---
 
-이전 포스팅: [Medical Image Analysis 1: Introduction to MEDIA]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-1-introduction-to-MEDIA/)
+이전 포스팅: [Introduction to MEDIA]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-1-introduction-to-MEDIA/)
 
 > 이전 포스팅에서는 Medical Image Analysis 시리즈에서 다룰 내용을 정리했습니다.  
 > 이번 포스팅에서는 Medical Image 측정에 사용되는 여러 장비들의 원리를 간단히 정리해봅니다.
@@ -179,4 +179,4 @@ MRI의 작동 원리입니다. RF pulse를 쏘는 Radio Frequency coils과 자�
 
 ---
 
-다음 포스팅: [Medical Image Analysis 3: Classification for MEDIA (1)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
+다음 포스팅: [Classification for MEDIA (1)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)

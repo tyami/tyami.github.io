@@ -1,5 +1,5 @@
 ---
-title: "Medical Image Analysis 6: Classification for MEDIA (4) Advanced CNN models"
+title: "Classification for MEDIA (4) Advanced CNN models"
 excerpt: "주요 CNN 모델 (LeNet-5, AlexNet, Inception (GoogLeNet), VGGNet, ResNet, DenseNet)들에 대해 정리해봅니다"
 
 categories:
@@ -18,7 +18,7 @@ toc_label: "Classification for MEDIA (4) Advanced CNN models"
 use_math: true
 ---
 
-이전 포스팅: [Medical Image Analysis 5: Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/2020-10-25-MEDIA-5-classification-for-medical-image-3-CNN/)
+이전 포스팅: [Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/2020-10-25-MEDIA-5-classification-for-medical-image-3-CNN/)
 
 > 이전 포스팅에서는 이미지 데이터에 많이 활용되는 Convolutional neural network (CNN)의 기초에 대해 정리해보았습니다.  
 > 이번 포스팅에서는 주요 CNN 모델들에 대해 정리해보고자 합니다. 굉장히 빠르게 연구가 진행되는 분야인만큼, 몇 년 되지 않았지만 고전 모델 (...)로 불리는 모델들이라 곳곳에 더 좋은 정보가 이미 많아 (예: [라온피플 블로그](https://laonple.blog.me/220643128255), 본 포스팅에서는 최대한 핵심만 정리하도록 합니다.
@@ -178,4 +178,4 @@ ResNet에서는 Skip connection이 띄엄띄엄 일어났지만, Dense Net에서
 
 ---
 
-> 
+> 다음 포스팅: [Classification for MEDIA (5) Overcome small dataset]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-7-classification-for-medical-image-5-small-dataset/)

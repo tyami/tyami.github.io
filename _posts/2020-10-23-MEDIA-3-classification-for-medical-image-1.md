@@ -1,5 +1,5 @@
 ---
-title: "Medical Image Analysis 3: Classification for MEDIA (1)"
+title: "Classification for MEDIA (1)"
 excerpt: "의료영상을 위한 Classification 방법을 정리해봅시다 (1)"
 
 categories:
@@ -25,7 +25,7 @@ toc_label: "Classification for MEDIA (1)"
 use_math: true
 ---
 
-이전 포스팅: [Medical Image Analysis 2: Medical Image acquisition methods]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
+이전 포스팅: [Medical Image acquisition methods]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
 
 > 이전 포스팅에서는 여러 종류의 의료영상 측정 방식에 대한 원리를 정리했습니다.  
 > 이번 포스팅에서는 Medical Image Analysis 중 Classification에 대해 정리해보도록 하겠습니다.
@@ -234,4 +234,4 @@ Test 시,
 
 > 다음 포스팅에서는 deep neural network 알고리즘을 조금 더 정리하고자 합니다.
 
-다음 포스팅: [Medical Image Analysis 4: Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-DNN/)
+다음 포스팅: [Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-DNN/)

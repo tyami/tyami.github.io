@@ -1,5 +1,5 @@
 ---
-title: "Medical Image Analysis 7: Classification for MEDIA (5) Overcome small dataset"
+title: "Classification for MEDIA (5) Overcome small dataset"
 excerpt: "적은 데이터셋을 극복하기 위한 여러 방법들을 정리해봅니다"
 
 categories:
@@ -22,7 +22,7 @@ toc_label: "Classification for MEDIA (5) Overcome small dataset"
 use_math: true
 ---
 
-이전 포스팅: [Medical Image Analysis 6: Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/2020-10-25-MEDIA-6-classification-for-medical-image-4-advanced-CNN/)
+이전 포스팅: [Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/2020-10-25-MEDIA-6-classification-for-medical-image-4-advanced-CNN/)
 
 > 이전 포스팅에서는 주요 CNN 모델들에 대해 정리했습니다.  
 > 이번 포스팅에서는 Medical image dataset의 특징인 적은 샘플 수를 극복하기 위한 여러 방법들을 정리해보고자 합니다.
@@ -39,7 +39,7 @@ use_math: true
 
 2D 또는 3D 의료영상 이미지를 입력으로 받게되면, 가장 먼저 **전처리 (Preprocessing)** 과정이 진행됩니다. 이 때 voxel spacing, registration, intensity normalization, denoising 등이 사용될 수 있습니다. 이후는 크게 두 갈래로 나뉩니다.
 
-**1. Feature extractor + Classifier**
+1. **Feature extractor + Classifier**
 
 **Feature extractor**와 **Classifier**가 별개로 이루어진 모델입니다.
 
@@ -47,7 +47,7 @@ Feature로는 intensity (raw 값), texture (Haar feature) 등이 사용될 수 �
 
 Classifier에 feature를 바로 사용할 수도 있지만, demographic score를 이용한 feature normalization이나 feature selection 등의 방법을 사용하여 feature를 정제해 사용할 수도 있습니다.
 
-**2. End-to-end learning**
+2. **End-to-end learning**
 
 End-to-end learning에서는 deep learning과 같이 feature extractor와 classifier가 합쳐진 모델을 말합니다. 물론 End-to-end learning에서도 위에서 언급한 feature normalization이나 feature selection을 적용하는 것이 가능합니다.
 
@@ -174,4 +174,4 @@ Fine tuning은 **데이터 유사도**와 **타겟 데이터 사이즈**몇 가�
 이번 포스팅에서는 데이터 수가 적은 의료영상 분류 문제를 개선하는 몇가지 방법을 정리했습니다.  
 다음 포스팅에서는 분류 모델의 평가 방법에 대해 정리하고자 합니다.
 
-> 
+> 다음 포스팅: [Classification for MEDIA (6) Evaluation metrics for classification (분류모델 평가 지표)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-8-classification-for-medical-image-6-evaluation-metrics/)

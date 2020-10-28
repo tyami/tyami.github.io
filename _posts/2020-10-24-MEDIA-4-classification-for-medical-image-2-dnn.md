@@ -1,5 +1,5 @@
 ---
-title: "Medical Image Analysis 4: Classification for MEDIA (2) Deep neural network"
+title: "Classification for MEDIA (2) Deep neural network"
 excerpt: "Deep neural network (DNN)에 대해 정리해봅니다"
 
 categories:
@@ -18,7 +18,7 @@ toc_label: "Classification for MEDIA (2) DNN"
 use_math: true
 ---
 
-이전 포스팅: [Medical Image Analysis 3: Classification for MEDIA (1)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
+이전 포스팅: [Classification for MEDIA (1)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
 
 > 이전 포스팅에서는 Medical Image Analysis 에 사용되는 Classification 방법들을 간단하게 정리해보았습니다.  
 > 이번 포스팅에서는 그 중 Deep neural network (DNN)에 대해 좀 더 정리해보도록 하겠습니다.
@@ -97,4 +97,4 @@ Deep neural network의 기본적인 구조와 레이어 위치에 따른 특징�
 
 > 다음 포스팅에서는 Convolutional neural network (CNN) 모델의 기초에 대해 정리해봅니다. 
 
-다음 포스팅: [Medical Image Analysis 5: Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)
+다음 포스팅: [Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)
