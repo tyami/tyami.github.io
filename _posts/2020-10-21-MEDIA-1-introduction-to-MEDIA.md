@@ -28,7 +28,8 @@ Classification, Segmentation, Enhancement, Registration을 세부 주제로 구�
 4. [Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-DNN/)
 5. [Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)
 6. [Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/2020-10-26-MEDIA-6-classification-for-medical-image-4-advanced-CNN/)
-
+7. [Classification for MEDIA (5) Overcome small dataset]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-7-classification-for-medical-image-5-small-dataset/)
+8. [Classification for MEDIA (6) Evaluation metrics for classification (분류모델 평가 지표)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-8-classification-for-medical-image-6-evaluation-metrics/)
 
 ## MEDIA Overview
 
