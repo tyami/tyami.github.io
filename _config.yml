@@ -121,7 +121,7 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/taeyangyang/"
     - label: "Posts list"
-      icon:"fas fa-fw fa-list":
+      icon:"fas fa-fw fa-list"
       url: "https://www.notion.so/tyami/4478d4180afc427c94f059994150eea0?v=d480798327d7432695dd57a175baf152"
 
 # Site Footer
