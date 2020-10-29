@@ -17,6 +17,7 @@ toc_sticky: true
 - Data science
 - Machine learning and Deep learning
 - Human brain data (EEG, fMRI) analysis
+- Medical image analysis
 
 ### 🎓 Education
 - **M.S.-Ph.D. course, Biomedical Engineering** (2015∼ )  
