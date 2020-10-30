@@ -23,8 +23,8 @@ use_math: true
 - Medical image analysis
 
 ### 🎓 Education
-- **M.S.-Ph.D. course, Biomedical Engineering** \\(_{2015-2021_{scheduled}}\\)
-  - [UNIST](https://www.unist.ac.kr/), South Korea  
+- **M.S.-Ph.D. course, Biomedical Engineering** \\(_{2015-{2021}_{scheduled}}\\)
+  - [UNIST](https://www.unist.ac.kr/), South Korea
   - [Brain-Computer Interface labtoratory](http://bci.unist.ac.kr) (BCILAB)
   - Advisor : Sung-Phil Kim
 - **B.S., Human Factors Engineering & Engineering and System Design** \\(_{2011-2015}\\)
