@@ -115,4 +115,4 @@ Partitional clustering의 예로는 K-means clustering이 있으며, Hiearchical
 
 > 다음 포스팅에서는 대표적인 Clustering 방법이자 Hard clustering, Partitional clustering의 예시인 **K-means clustering**을 정리해보고자 합니다
 
-다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/Machine%20learninig/ 작성중 /)
+다음 포스팅: [K-means clustering]({{ site.url }}{{ site.baseurl }}/Machine%20learninig/k-means-clustering/)
