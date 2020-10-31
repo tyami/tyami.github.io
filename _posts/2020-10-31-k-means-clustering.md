@@ -19,7 +19,7 @@ toc_label: "K-means clustering"
 use_math: true
 ---
 
-이전 포스팅: [Clustering (군집화)]({{ site.url }}{{ site.baseurl }}/Machine%20learninig/clustering/)
+이전 포스팅: [Clustering (군집화)]({{ site.url }}{{ site.baseurl }}/machine%20learninig/clustering/)
 
 > 이전 포스팅에서는 군집화 (Clustering)의 기본 개념에 대해 정리했습니다.
 > 이번 포스팅에서는 **Hard, Partitional 특징을 갖는 K-means clustering**을 정리해보고자 합니다.
