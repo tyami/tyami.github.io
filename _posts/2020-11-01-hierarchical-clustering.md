@@ -17,12 +17,12 @@ use_math: true
 
 이전 포스팅: [K-means clustering]({{ site.url }}{{ site.baseurl }}/machine%20learninig/k-means-clustering/)
 
-> 이전 포스팅에서는 **Hard, Partitional 특징을 갖는 K-means clustering**을 정리했습니다
+> 이전 포스팅에서는 **Hard, Partitional 특징을 갖는 K-means clustering**을 정리했습니다.  
 > 이번 포스팅에서는 **Hierarchical clustering**을 정리해보고자 합니다.
 
 Hierarchicl clustering은 거리가 가까운 데이터들을 그룹으로 묶어 주는 방법으로 계층적으로 진행된다 해서 붙은 이름입니다. 주로 뇌 데이터의 연결성 (Connectivity) 분석이나 유전체 데이터 분석에 많이 사용되는 방법입니다.
 
-K-means와의 가장 큰 차이점은 partitional/hierarchical 특성이 있을 수 있으며, 군집의 개수 (k)를 설정할 필요의 유무입니다.
+K-means와의 가장 큰 차이점은 partitional/hierarchical 특성이 있을 수 있으며, 군집의 개수 (k)의 사전 설정 유무입니다.
 
 ---
 
@@ -36,7 +36,7 @@ Hiearchical clustering의 결과 예시입니다. Height를 바탕으로 몇 개
 
 ![2020-11-01-hierarchical-clustering-02-dendrogram.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-11-01-hierarchical-clustering/2020-11-01-hierarchical-clustering-02-dendrogram.png)
 
-Hierarchical clustering 결과는 Nested cluster와 Dendrogram 두 가지 방법으로 시각화할 수 있습니다. 다만, Nested clusterin는 데이터가 2D일 때만 효과적이기 때문에 주로 dendrogram을 이용합니다.
+Hierarchical clustering 결과는 Nested cluster와 Dendrogram 두 가지 방법으로 시각화할 수 있습니다. 다만, Nested clustering는 데이터가 2D일 때만 효과적이기 때문에 주로 dendrogram을 이용합니다.
 
 ### Overall procedure
 
@@ -52,13 +52,15 @@ Distance라는 것은 데이터와 데이터 간 유사도의 역수 정도로 �
 
 ![2020-11-01-hierarchical-clustering-04-distance-metrics.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-11-01-hierarchical-clustering/2020-11-01-hierarchical-clustering-04-distance-metrics.png)
 
-Distance를 측정하는 방법으로는 Euclidean distance (L2 distance), Manhattan distance (L1 distance), Pearson's correlation distance 등이 있습니다. distance마다 수식이 다르지만, 결과적으로 두 데이터간의 차이를 수식화하고 있다는 것을 알 수 있습니다.
+Distance를 측정하는 방법으로는 Euclidean distance (L2 distance), Manhattan distance (L1 distance), Pearson's correlation distance 등이 있습니다.
+
+Distance마다 수식이 다르지만, 결과적으로 두 데이터간의 차이를 수식화하고 있다는 것을 알 수 있습니다.
 
 ### Distance matrix
 
 ![2020-11-01-hierarchical-clustering-05-distance-matrix.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-11-01-hierarchical-clustering/2020-11-01-hierarchical-clustering-05-distance-matrix.png)
 
-Data matrix에 \\(n\\)개 데이터가 \\(p\\)차원에 걸쳐 있다고 할 때 \\(\frac{n \times (n-1)}{2}\\)개의 (\\(i, j\\)) 쌍이 나올 수 있습니다. 모든 쌍에 대해 distance를 계산합니다. 이 결과를 테이블로 정리한 것을 Distance matrix라고 합니다. 모든 \\(i, j\\)에 대해 distance를 계산하기 때문에, matrix는 정사각형 모양을 띕니다. 또한 diagonal 항은 0 값을 가지며, diagonal에 대해 symmetric합니다.
+Data matrix에 \\(n\\)개 데이터가 \\(p\\)차원에 걸쳐 있다고 할 때 \\(\frac{n(n-1)}{2}\\)개의 (\\(i, j\\)) 쌍이 나올 수 있습니다. 모든 쌍에 대해 distance를 계산합니다. 이 결과를 테이블로 정리한 것을 Distance matrix라고 합니다. 모든 \\(i, j\\)에 대해 distance를 계산하기 때문에, matrix는 정사각형 모양을 띕니다. 또한 diagonal 항은 0 값을 가지며, diagonal에 대해 symmetric합니다.
 
 ![2020-11-01-hierarchical-clustering-06-distance-matrix-example.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-11-01-hierarchical-clustering/2020-11-01-hierarchical-clustering-06-distance-matrix-example.png)
 
@@ -127,7 +129,7 @@ AB-C의 거리가 가장 가깝습니다. 이를 한 군집으로 묶어줍니�
 
 ![2020-11-01-hierarchical-clustering-21-procedure-5.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-11-01-hierarchical-clustering/2020-11-01-hierarchical-clustering-17-cutting.png)
 
-Hierarchical clustering에서는 K-means와 달리 군집의 개수를 사전에 설정하지 않습니다. 그 대신 최종 dendrogram에 가상의 선을 그어 몇 개의 군집으로 나눕니다. 그리고 이렇게 Clustering을 했을 때의 Dunn index, silhouette index 등의 metric [(참고)]({{ site.url }}{{ site.baseurl }}/machine%20learninig/clustering/)을 통해 군집의 개수를 결정합니다.
+Hierarchical clustering에서는 K-means와 달리 군집의 개수를 사전에 설정하지 않습니다. 그 대신 최종 dendrogram에 가상의 선을 그어 몇 개의 군집으로 나눕니다. 그리고 이렇게 Clustering을 했을 때의 Dunn index, silhouette index 등의 metric [(참고)]({{ site.url }}{{ site.baseurl }}/machine%20learninig/clustering/#evaluation-metrics)을 통해 군집의 개수를 결정합니다.
 
 ---
 
