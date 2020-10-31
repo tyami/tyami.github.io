@@ -76,7 +76,7 @@ Silhouette은 Dunn index보다 살짝 복잡합니다.
 
 ![2020-10-30-clustering-9-silhouette-2-equation.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-30-clustering/2020-10-30-clustering-9-silhouette-2-equation.png)
 
-Silhouette 지표는 \\(\frac{b(i)-a(i)}{max{a(i), b(i)}}\\)으로 나타냅니다.
+Silhouette 지표는 \\(\frac{b(i)-a(i)}{max{(a(i), b(i))}}\\)으로 나타냅니다.
 
 - \\(a(i)\\): 클러스터 내 거리의 평균값
 - \\(b(i)\\): 클러스터 간 거리의 평균값 중 최소값
@@ -115,4 +115,4 @@ Partitional clustering의 예로는 K-means clustering이 있으며, Hiearchical
 
 > 다음 포스팅에서는 대표적인 Clustering 방법이자 Hard clustering, Partitional clustering의 예시인 **K-means clustering**을 정리해보고자 합니다
 
-다음 포스팅: [K-means clustering]({{ site.url }}{{ site.baseurl }}/Machine%20learninig/k-means-clustering/)
+다음 포스팅: [K-means clustering]({{ site.url }}{{ site.baseurl }}/machine%20learninig/k-means-clustering/)

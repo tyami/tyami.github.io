@@ -4,13 +4,13 @@ excerpt: "Clustering의 대표적인 예시인 K-means clustering을 정리해�
 
 categories:
 - Machine learninig
+
+tags:
+- Machine learninig
 - Algorithm
 - Clustering
 - Unsupervised learning
 - K-means
-
-tags:
-- Machine learninig
 
 toc: true
 toc_sticky: true
