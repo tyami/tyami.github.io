@@ -82,4 +82,4 @@ K-means clustering은 몇 가지 단점이 있습니다.
 
 > 다음 포스팅에서는 **Hierarchical clustering**을 정리해보고자 합니다
 
-다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/Machine%20learninig/ 작성중 /)
+다음 포스팅: [Hierarchical clustering (계층적 군집화)]({{ site.url }}{{ site.baseurl }}/machine%20learninig/hierarchical-clustering/)
