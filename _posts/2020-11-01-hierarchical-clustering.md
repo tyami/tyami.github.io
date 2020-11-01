@@ -7,6 +7,10 @@ categories:
 
 tags:
 - Machine learninig
+- Algorithm
+- Clustering
+- Unsupervised learning
+- Hierarchical clustering
 
 toc: true
 toc_sticky: true
