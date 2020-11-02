@@ -1,6 +1,6 @@
 ---
 title: "Classification for MEDIA (7) Feature selection and extraction"
-excerpt: " 부제 "
+excerpt: "Feature selection and extraction methods "
 
 categories:
 - Medical image analysis

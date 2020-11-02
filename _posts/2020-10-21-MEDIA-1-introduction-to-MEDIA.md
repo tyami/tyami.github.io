@@ -30,6 +30,7 @@ Classification, Segmentation, Enhancement, Registration을 세부 주제로 구�
 6. [Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/2020-10-26-MEDIA-6-classification-for-medical-image-4-advanced-CNN/)
 7. [Classification for MEDIA (5) Overcome small dataset]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-7-classification-for-medical-image-5-small-dataset/)
 8. [Classification for MEDIA (6) Evaluation metrics for classification (분류모델 평가 지표)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-8-classification-for-medical-image-6-evaluation-metrics/)
+9. [Classification for MEDIA (7) Feature selection and extraction]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/classification-for-medical-image-7-feature-selection-extraction/)
 
 ## MEDIA Overview
 

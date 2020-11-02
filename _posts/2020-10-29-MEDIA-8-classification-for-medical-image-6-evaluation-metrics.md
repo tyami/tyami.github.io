@@ -124,4 +124,4 @@ F1 score는 주로 Imbalanced dataset을 평가하는데 사용되는 지표입�
 
 > 다음 포스팅에서는 **Feature selection 방법들**을 정리해보고자 합니다
 
-다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/Medical%20image%20analysis/ 작성중 /)
+다음 포스팅: [Classification for MEDIA (7) Feature selection and extraction]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/classification-for-medical-image-7-feature-selection-extraction/)
