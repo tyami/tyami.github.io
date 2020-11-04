@@ -3,10 +3,10 @@ title: "Classification for MEDIA (1)"
 excerpt: "의료영상을 위한 Classification 방법을 정리해봅시다 (1)"
 
 categories:
-- Medical Image Analysis
+- Medical image analysis
 
 tags:
-- Medical Image Analysis
+- Medical image analysis
 - Lecture
 - Classification
 - Machine learning

@@ -3,10 +3,10 @@ title: "Introduction to MEDIA"
 excerpt: "Medical Image Analysis 1: Introduction to MEDIA"
 
 categories:
-- Medical Image Analysis
+- Medical image analysis
 
 tags:
-- Medical Image Analysis
+- Medical image analysis
 - Lecture
 - Classification
 

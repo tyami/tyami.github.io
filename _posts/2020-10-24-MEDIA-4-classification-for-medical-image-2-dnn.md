@@ -3,10 +3,10 @@ title: "Classification for MEDIA (2) Deep neural network"
 excerpt: "Deep neural network (DNN)에 대해 정리해봅니다"
 
 categories:
-- Medical Image Analysis
+- Medical image analysis
 
 tags:
-- Medical Image Analysis
+- Medical image analysis
 - Lecture
 - Classification
 - Deep learning

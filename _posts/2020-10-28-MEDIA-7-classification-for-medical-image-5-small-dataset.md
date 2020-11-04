@@ -3,10 +3,10 @@ title: "Classification for MEDIA (5) Overcome small dataset"
 excerpt: "적은 데이터셋을 극복하기 위한 여러 방법들을 정리해봅니다"
 
 categories:
-- Medical Image Analysis
+- Medical image analysis
 
 tags:
-- Medical Image Analysis
+- Medical image analysis
 - Lecture
 - Classification
 - Deep learning

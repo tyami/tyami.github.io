@@ -3,10 +3,10 @@ title: "Classification for MEDIA (4) Advanced CNN models"
 excerpt: "주요 CNN 모델 (LeNet-5, AlexNet, Inception (GoogLeNet), VGGNet, ResNet, DenseNet)들에 대해 정리해봅니다"
 
 categories:
-- Medical Image Analysis
+- Medical image analysis
 
 tags:
-- Medical Image Analysis
+- Medical image analysis
 - Lecture
 - Classification
 - Deep learning

@@ -6,7 +6,7 @@ categories:
 - Medical image analysis
 
 tags:
-- Medical Image Analysis
+- Medical image analysis
 - Lecture
 - Classification
 - Deep learning

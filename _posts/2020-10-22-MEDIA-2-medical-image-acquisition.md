@@ -3,10 +3,10 @@ title: "Medical Image acquisition methods"
 excerpt: "X-ray, CT, PET, MRI와 같은 의료영상 측정방법의 원리를 정리해봅시다"
 
 categories:
-- Medical Image Analysis
+- Medical image analysis
 
 tags:
-- Medical Image Analysis
+- Medical image analysis
 - Lecture
 - Classification
 

@@ -3,10 +3,10 @@ title: "Classification for MEDIA (3) Convolutional neural network"
 excerpt: "Convolutional neural network (CNN)에 대해 정리해봅니다"
 
 categories:
-- Medical Image Analysis
+- Medical image analysis
 
 tags:
-- Medical Image Analysis
+- Medical image analysis
 - Lecture
 - Classification
 - Deep learning
