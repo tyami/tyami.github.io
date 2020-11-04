@@ -8,6 +8,7 @@ categories:
 tags:
 - Medical Image Analysis
 - Lecture
+- Classification
 
 toc: true
 toc_sticky: true

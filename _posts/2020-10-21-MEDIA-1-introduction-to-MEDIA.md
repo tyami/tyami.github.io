@@ -8,6 +8,7 @@ categories:
 tags:
 - Medical Image Analysis
 - Lecture
+- Classification
 
 toc: true
 toc_sticky: true
@@ -31,6 +32,8 @@ Classification, Segmentation, Enhancement, Registration을 세부 주제로 구�
 7. [Classification for MEDIA (5) Overcome small dataset]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-7-classification-for-medical-image-5-small-dataset/)
 8. [Classification for MEDIA (6) Evaluation metrics for classification (분류모델 평가 지표)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-8-classification-for-medical-image-6-evaluation-metrics/)
 9. [Classification for MEDIA (7) Feature selection and extraction]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/classification-for-medical-image-7-feature-selection-extraction/)
+10. [Segmentation for MEDIA (1) Otsu threshold]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-1-otsu-threshold/)
+11. [Segmentation for MEDIA (2) Morphological processing]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-2-morphological-processing/)
 
 ## MEDIA Overview
 

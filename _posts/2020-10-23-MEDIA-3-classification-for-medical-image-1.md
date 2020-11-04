@@ -8,6 +8,7 @@ categories:
 tags:
 - Medical Image Analysis
 - Lecture
+- Classification
 - Machine learning
 - Deep learning
 - Logistic regression

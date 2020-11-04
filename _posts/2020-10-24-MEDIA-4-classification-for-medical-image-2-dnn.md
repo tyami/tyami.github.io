@@ -8,6 +8,7 @@ categories:
 tags:
 - Medical Image Analysis
 - Lecture
+- Classification
 - Deep learning
 - Deep neural network
 

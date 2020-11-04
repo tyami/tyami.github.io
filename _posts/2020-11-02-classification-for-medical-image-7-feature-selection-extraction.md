@@ -8,6 +8,7 @@ categories:
 tags:
 - Medical image analysis
 - Lecture
+- Classification
 - Deep learning
 - Feature selection
 - Feature extraction
@@ -158,4 +159,4 @@ Wakly supervised learning 에 대한 솔루션으로 Multiple instance learning�
 
 > 다음 포스팅부터는 **Segmentation에 대해** 정리해보고자 합니다
 
-다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/ 작성중 /)
+다음 포스팅: [Segmentation for MEDIA (1) Otsu threshold]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-1-otsu-threshold/)
