@@ -124,6 +124,6 @@ Thresholding과 Morphological processing을 거쳐 좌측의 이미지를 얻었
 
 ---
 
-> 다음 포스팅에서는 사용자의 도움을 받아 ROI영역만을 분리하는 **Region growing**을 정리해보고자 합니다
+> 다음 포스팅에서는 사용자의 도움을 받아 ROI영역만을 분리하는 **Region growin과 Wathershed 알고리즘**을 정리해보고자 합니다
 
-다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/ 작성중 /)
+다음 포스팅: [Segmentation for MEDIA (3) Region growing & Wathershed algorithm]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-3-region-growing/)
