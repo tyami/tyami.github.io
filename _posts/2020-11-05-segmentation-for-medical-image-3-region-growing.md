@@ -40,13 +40,13 @@ Region growing에서는 특정 ROI만 추출할 수 있도록, 사용자의 도�
 
 사용자가 특정 영역을 선택하면, 해당 영역을 시작으로 주변부를 스캔하면서 반복적으로 intensity를 비교하여 Foregrond 영역을 골라내면, 인접하지 않은 foreground (noise)들은 자동으로 탈락하게 됩니다.
 
-## Region growing in brain image
+### Region growing in brain image
 
 ![2020-11-05-segmentation-for-medical-image-3-region-growing-3.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-11-05-segmentation-for-medical-image-3-region-growing/2020-11-05-segmentation-for-medical-image-3-region-growing-3.png)
 
 뇌 이미지에서는 이렇게 된다고 합니다.
 
-## Region growing in RGB image
+### Region growing in RGB image
 
 ![2020-11-05-segmentation-for-medical-image-3-region-growing-4-rgb.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-11-05-segmentation-for-medical-image-3-region-growing/2020-11-05-segmentation-for-medical-image-3-region-growing-4-rgb.png)
 
