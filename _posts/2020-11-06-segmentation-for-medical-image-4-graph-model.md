@@ -41,10 +41,10 @@ Graph model에서는 주어진 \\(Z\\) 벡터에 대해 \\(P(x_1,x_2,...x_N|z_1,
 
 ![2020-11-06-segmentation-for-medical-image-4-graph-model-03-bayes.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-11-06-segmentation-for-medical-image-4-graph-model/2020-11-06-segmentation-for-medical-image-4-graph-model-03-bayes.png)
 
-Posterior probability 수식을 Bayes rule로 풀어보면 아래와 같이 Likelihood \\(P(z_1,...z_N|x_1,...z_N)P(x_1,...x_N)\\)와 Prior probability \\(P(x_1,...x_N)\\)의 식으로 변형됩니다.
+Posterior probability 수식을 Bayes rule로 풀어보면 아래와 같이 Likelihood \\(P(z_1,...z_N \vert x_1,...z_N)P(x_1,...x_N)\\)와 Prior probability \\(P(x_1,...x_N)\\)의 식으로 변형됩니다.
 
 \\[
-P(x_1,x_2,...x_N|z_1,z_2,...z_N)=\frac{P(z_1,...z_N|x_1,...z_N)P(x_1,...x_N)}{P(z_1,...z_N)}
+P(x_1,x_2,...x_N \vert z_1,z_2,...z_N)=\frac{P(z_1,...z_N \vert x_1,...z_N)P(x_1,...x_N)}{P(z_1,...z_N)}
 \\]
 
 여기에 문제를 단순화하기 위해, 두 가지 Assumption을 갖습니다. 
@@ -54,7 +54,7 @@ P(x_1,x_2,...x_N|z_1,z_2,...z_N)=\frac{P(z_1,...z_N|x_1,...z_N)P(x_1,...x_N)}{P(
 Posterior probability는 아래와 같이 표현됩니다.
 
 \\[
-P(x_1,x_2,...x_N|z_1,z_2,...z_N) \propto \prod_i^N P(z_i|x_i) \prod_{i,j}P(x_i, x_j)
+P(x_1,x_2,...x_N \vert z_1,z_2,...z_N) \propto \prod_i^N P(z_i \vert x_i) \prod_{i,j}P(x_i, x_j)
 \\]
 
 ![2020-11-06-segmentation-for-medical-image-4-graph-model-04-markov.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-11-06-segmentation-for-medical-image-4-graph-model/2020-11-06-segmentation-for-medical-image-4-graph-model-04-markov.png)
@@ -68,11 +68,11 @@ Posterior probability 를 최대화시키는 문제는 Negative logarithm을 적
 따라서 아래와 같이 식이 변형됩니다.
 
 \begin{aligned}
-E(x_1,x_2,...x_N|z_1,z_2,...z_N) &= log( \prod_i^N P(z_i|x_i) \prod_{i,j}P(x_i, x_j) ) \\\\\\
-&=\sum_i^N \theta_i(z_i|x_i) + \sum_{i,j} \theta_{i,j}(x_i,x_j)
+E(x_1,x_2,...x_N \vert z_1,z_2,...z_N) &= log( \prod_i^N P(z_i \vert x_i) \prod_{i,j}P(x_i, x_j) ) \\\\\\
+&=\sum_i^N \theta_i(z_i \vert x_i) + \sum_{i,j} \theta_{i,j}(x_i,x_j)
 \end{aligned}
 
-위 식에서 \\(\sum_i^N \theta_i(z_i|x_i)\\)은 Likelihood term으로, \\(\sum_{i,j} \theta_{i,j}(x_i,x_j)\\)은 Prior term으로 생각할 수 있습니다.
+위 식에서 \\(\sum_i^N \theta_i(z_i \vert x_i)\\)은 Likelihood term으로, \\(\sum_{i,j} \theta_{i,j}(x_i,x_j)\\)은 Prior term으로 생각할 수 있습니다.
 
 위 식을 해석해보면, Assumption 1 (다른 픽셀값을 고려하지 않는다)에 따라 \\(z_i\\)와 \\(x_i\\) 사이의 관계만 보되 (Likelihood), Assumption 2 (주변부 픽셀의 label 값은 고려한다)에 따라 \\(x_j\\)는 고려하는 것으로 볼 수 있습니다 (Prior)
 
