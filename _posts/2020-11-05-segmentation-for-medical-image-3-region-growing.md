@@ -78,4 +78,4 @@ Watershed 알고리즘이 이 때 사용될 수 있습니다. Watershed 알고�
 
 > 다음 포스팅에서는 **Graph 모델을 이용한 segmentation 방법**을 정리해보고자 합니다
 
-다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/ 작성중 /)
+다음 포스팅: [Segmentation for MEDIA (4) Graph model-based segmentation]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-4-graph-model/)

@@ -35,6 +35,7 @@ Classification, Segmentation, Enhancement, Registration을 세부 주제로 구�
 10. [Segmentation for MEDIA (1) Otsu threshold]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-1-otsu-threshold/)
 11. [Segmentation for MEDIA (2) Morphological processing]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-2-morphological-processing/)
 12. [Segmentation for MEDIA (3) Region growing & Wathershed algorithm]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-3-region-growing/)
+13. [Segmentation for MEDIA (4) Graph model-based segmentation]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-4-graph-model/)
 
 ## MEDIA Overview
 
