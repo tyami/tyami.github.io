@@ -118,6 +118,6 @@ Source로부터 Sink까지 낮은 Capacity를 채워가며 가상의 물이 흐�
 
 Graph model이 익숙하지 않아서 이번 차시 강의의 내용은 전부 이해하지 못했습니다. 추후 시간이 허락하면 좀 더 공부해서 보완하고자 합니다.
 
-> 다음 포스팅에서는 ** 내용 **을 정리해보고자 합니다
+> 다음 포스팅에서는 **Active contour model**을 정리해보고자 합니다
 
-다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/ 작성중 /)
+다음 포스팅: [Segmentation for MEDIA (5) Active contour model]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-5-active-contour-model/)
