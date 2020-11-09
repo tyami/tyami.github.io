@@ -3,10 +3,10 @@ title: "K-means clustering"
 excerpt: "Clustering의 대표적인 예시인 K-means clustering을 정리해봅니다"
 
 categories:
-- Machine learninig
+- Machine learning
 
 tags:
-- Machine learninig
+- Machine learning
 - Algorithm
 - Clustering
 - Unsupervised learning
@@ -19,7 +19,7 @@ toc_label: "K-means clustering"
 use_math: true
 ---
 
-이전 포스팅: [Clustering (군집화)]({{ site.url }}{{ site.baseurl }}/machine%20learninig/clustering/)
+이전 포스팅: [Clustering (군집화)]({{ site.url }}{{ site.baseurl }}/machine%20learning/clustering/)
 
 > 이전 포스팅에서는 군집화 (Clustering)의 기본 개념에 대해 정리했습니다.
 > 이번 포스팅에서는 **Hard, Partitional 특징을 갖는 K-means clustering**을 정리해보고자 합니다.
@@ -56,7 +56,7 @@ K-means 알고리즘은 EM 알고리즘입니다. EM은 Expectation-Maximization
 
 ![2020-10-31-k-means-clustering-3-k.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-31-k-means-clustering/2020-10-31-k-means-clustering-3-k.png)
 
-k-means 알고리즘은 k를 사전에 지정해줍니다. k에 따라 위와 같이 결과가 바뀌게 됩니다. 적절한 k는 [이전 포스팅]({{ site.url }}{{ site.baseurl }}/Machine%20learninig/clustering/)에서 살펴본 Dunn index나 Silhouettes 등을 이용하여 결정합니다.
+k-means 알고리즘은 k를 사전에 지정해줍니다. k에 따라 위와 같이 결과가 바뀌게 됩니다. 적절한 k는 [이전 포스팅]({{ site.url }}{{ site.baseurl }}/Machine%20learning/clustering/)에서 살펴본 Dunn index나 Silhouettes 등을 이용하여 결정합니다.
 
 ## Cons of K-means clustering
 
@@ -82,4 +82,4 @@ K-means clustering은 몇 가지 단점이 있습니다.
 
 > 다음 포스팅에서는 **Hierarchical clustering**을 정리해보고자 합니다
 
-다음 포스팅: [Hierarchical clustering (계층적 군집화)]({{ site.url }}{{ site.baseurl }}/machine%20learninig/hierarchical-clustering/)
+다음 포스팅: [Hierarchical clustering (계층적 군집화)]({{ site.url }}{{ site.baseurl }}/machine%20learning/hierarchical-clustering/)

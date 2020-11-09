@@ -3,10 +3,10 @@ title: "Hierarchical clustering (계층적 군집화)"
 excerpt: "Hierarchical clustering (계층적 군집화) 방법을 정리해봅니다"
 
 categories:
-- Machine learninig
+- Machine learning
 
 tags:
-- Machine learninig
+- Machine learning
 - Algorithm
 - Clustering
 - Unsupervised learning
@@ -19,7 +19,7 @@ toc_label: "Hierarchical clustering"
 use_math: true
 ---
 
-이전 포스팅: [K-means clustering]({{ site.url }}{{ site.baseurl }}/machine%20learninig/k-means-clustering/)
+이전 포스팅: [K-means clustering]({{ site.url }}{{ site.baseurl }}/machine%20learning/k-means-clustering/)
 
 > 이전 포스팅에서는 **Hard, Partitional 특징을 갖는 K-means clustering**을 정리했습니다.  
 > 이번 포스팅에서는 **Hierarchical clustering**을 정리해보고자 합니다.
@@ -133,7 +133,7 @@ AB-C의 거리가 가장 가깝습니다. 이를 한 군집으로 묶어줍니�
 
 ![2020-11-01-hierarchical-clustering-21-procedure-5.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-11-01-hierarchical-clustering/2020-11-01-hierarchical-clustering-17-cutting.png)
 
-Hierarchical clustering에서는 K-means와 달리 군집의 개수를 사전에 설정하지 않습니다. 그 대신 최종 dendrogram에 가상의 선을 그어 몇 개의 군집으로 나눕니다. 그리고 이렇게 Clustering을 했을 때의 Dunn index, silhouette index 등의 metric [(참고)]({{ site.url }}{{ site.baseurl }}/machine%20learninig/clustering/#evaluation-metrics)을 통해 군집의 개수를 결정합니다.
+Hierarchical clustering에서는 K-means와 달리 군집의 개수를 사전에 설정하지 않습니다. 그 대신 최종 dendrogram에 가상의 선을 그어 몇 개의 군집으로 나눕니다. 그리고 이렇게 Clustering을 했을 때의 Dunn index, silhouette index 등의 metric [(참고)]({{ site.url }}{{ site.baseurl }}/machine%20learning/clustering/#evaluation-metrics)을 통해 군집의 개수를 결정합니다.
 
 ---
 
@@ -141,4 +141,4 @@ Hierarchical clustering에서는 K-means와 달리 군집의 개수를 사전에
 
 > 다음 포스팅에서는 **Self-organizing map (SOM)** 또는 **뇌 데이터에서의 HC기반 Connectivity 분석방법**을 정리해보고자 합니다
 
-다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/machine%20learninig/ 작성중 /)
+다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/machine%20learning/ 작성중 /)

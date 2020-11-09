@@ -3,10 +3,10 @@ title: "Clustering (군집화)"
 excerpt: "Unsupervised learning(비지도 학습) 중 하나인 Clustering (군집화)를 정리해봅니다"
 
 categories:
-- Machine learninig
+- Machine learning
 
 tags:
-- Machine learninig
+- Machine learning
 - Algorithm
 - Clustering
 - Unsupervised learning
@@ -115,4 +115,4 @@ Partitional clustering의 예로는 K-means clustering이 있으며, Hiearchical
 
 > 다음 포스팅에서는 대표적인 Clustering 방법이자 Hard clustering, Partitional clustering의 예시인 **K-means clustering**을 정리해보고자 합니다
 
-다음 포스팅: [K-means clustering]({{ site.url }}{{ site.baseurl }}/machine%20learninig/k-means-clustering/)
+다음 포스팅: [K-means clustering]({{ site.url }}{{ site.baseurl }}/machine%20learning/k-means-clustering/)
