@@ -117,6 +117,6 @@ Elastic energy term에서의 1차 미분값 \\(V_s\\)를 다시 한번 더 미�
 
 ---
 
-> 다음 포스팅에서는 **Atlas-based method인 label fusion 알고리즘**을 정리해보고자 합니다
+> 다음 포스팅에서는 **Atlas-based 알고리즘**을 정리해보고자 합니다
 
-다음 포스팅: [ 작성중 ]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/ 작성중 /)
+다음 포스팅: [Segmentation for MEDIA (6) Atlas-based methods and label fusion]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-6-atlas-based-methods/)

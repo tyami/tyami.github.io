@@ -21,22 +21,30 @@ Medical Image Analysis (MEDIA) 에 대해 공부하면서, 관련 내용을 정�
 
 정리된 자료는 edwith에서 제공하는 DGIST 박상현교수님의 [컴퓨터비전, 머신러닝, 딥러닝을 이용한 의료영상분석](https://www.edwith.org/medical-20200327/home) 강의를 토대로 작성하였습니다.
 
+## Contents of lectures
+
 Classification, Segmentation, Enhancement, Registration을 세부 주제로 구성됩니다.
 
+### [PART 1] Introduction to MEDIA
 1. Introduction to MEDIA (본 글)
 2. [Medical Image acquisition methods]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
-3. [Classification for MEDIA (1)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
-4. [Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-DNN/)
-5. [Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)
-6. [Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/2020-10-26-MEDIA-6-classification-for-medical-image-4-advanced-CNN/)
-7. [Classification for MEDIA (5) Overcome small dataset]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-7-classification-for-medical-image-5-small-dataset/)
-8. [Classification for MEDIA (6) Evaluation metrics for classification (분류모델 평가 지표)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-8-classification-for-medical-image-6-evaluation-metrics/)
-9. [Classification for MEDIA (7) Feature selection and extraction]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/classification-for-medical-image-7-feature-selection-extraction/)
-10. [Segmentation for MEDIA (1) Otsu threshold]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-1-otsu-threshold/)
-11. [Segmentation for MEDIA (2) Morphological processing]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-2-morphological-processing/)
-12. [Segmentation for MEDIA (3) Region growing & Wathershed algorithm]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-3-region-growing/)
-13. [Segmentation for MEDIA (4) Graph model-based segmentation]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-4-graph-model/)
-14. [Segmentation for MEDIA (5) Active contour model]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-5-active-contour-model/)
+
+### [PART 2] Classification for MEDIA
+1. [Classification for MEDIA (1)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
+2. [Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-DNN/)
+3. [Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)
+4. [Classification for MEDIA (4) Advanced CNN models]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/2020-10-26-MEDIA-6-classification-for-medical-image-4-advanced-CNN/)
+5. [Classification for MEDIA (5) Overcome small dataset]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-7-classification-for-medical-image-5-small-dataset/)
+6. [Classification for MEDIA (6) Evaluation metrics for classification (분류모델 평가 지표)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-8-classification-for-medical-image-6-evaluation-metrics/)
+7. [Classification for MEDIA (7) Feature selection and extraction]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/classification-for-medical-image-7-feature-selection-extraction/)
+
+### [PART 3] Segmentation for MEDIA
+1. [Segmentation for MEDIA (1) Otsu threshold]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-1-otsu-threshold/)
+2. [Segmentation for MEDIA (2) Morphological processing]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-2-morphological-processing/)
+3. [Segmentation for MEDIA (3) Region growing & Wathershed algorithm]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-3-region-growing/)
+4. [Segmentation for MEDIA (4) Graph model-based segmentation]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-4-graph-model/)
+5. [Segmentation for MEDIA (5) Active contour model]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-5-active-contour-model/)
+6. [Segmentation for MEDIA (6) Atlas-based methods and label fusion]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-6-atlas-based-methods/)
 
 ## MEDIA Overview
 
