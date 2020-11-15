@@ -26,8 +26,8 @@
     </h2>
     {% include page__meta.html type=include.type %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
-    <h4> 
+    <span style=" font-size:0.5em; color: silver;">
       {% include posts__taxonomy.html %}
-    </h4>
+    </span>
   </article>
 </div>
