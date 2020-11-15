@@ -12,6 +12,9 @@
         {% endcase %}
 
       <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }}
+
+      {% assign keyValue = post.categories[0] | split: '|' %}
+      {% capture category_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
       <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" rel="tag">{{ category_word }}</a>
     {% endif %}
 
