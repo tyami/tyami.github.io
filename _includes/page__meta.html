@@ -12,7 +12,7 @@
     {% endif %}
 
     {% if document.show_category and post.categories[0] %}
-      {% assign category = document.categories[0]
+      {% assign category = document.categories[0] %}
 
       {% case site.category_archive.type %}
         {% when "liquid" %}
