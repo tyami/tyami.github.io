@@ -1,11 +1,12 @@
 {% assign document = post | default: page %}
 
 {% if document.show_category or document.read_time or document.show_date %}
-  <p class="page__meta">
+
     {% if document.show_category %}
       {% include posts__taxonomy.html %}
     {% endif %}
 
+  <p class="page__meta">
     {% if document.show_date and document.date %}
       {% assign date = document.date %}
       <span class="page__meta-date">
