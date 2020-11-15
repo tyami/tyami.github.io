@@ -1,16 +1,24 @@
 {% assign document = post | default: page %}
 
 {% if document.show_category or document.read_time or document.show_date %}
+  <p class="page__meta">
 
     {% if document.show_category %}
-      {% include posts__taxonomy.html %}
+      {% case site.category_archive.type %}
+        {% when "liquid" %}
+          {% assign path_type = "#" %}
+        {% when "jekyll-archives" %}
+          {% assign path_type = nil %}
+        {% endcase %}
+
+      <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }}
+      <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" rel="tag">{{ category_word }}</a>
     {% endif %}
 
-  <p class="page__meta">
     {% if document.show_date and document.date %}
       {% assign date = document.date %}
       <span class="page__meta-date">
-        <i class="far {% if include.type == 'grid' and document.read_time and document.show_date %}fa-fw {% endif %}fa-calendar-alt" aria-hidden="true"></i>
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         <time datetime="{{ date | date_to_xmlschema }}">{{ date | date: "%B %-d, %Y" }}</time>
       </span>
     {% endif %}
