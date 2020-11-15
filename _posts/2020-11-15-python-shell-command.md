@@ -32,10 +32,10 @@ def print_subject_id(subject_id):
 
 Shell (실행 > cmd) 에서 Python 코드를 실행하고자 할 때, 함수의 입력 변수들은 명령어 뒤에 쭉 이어서 작성합니다. Github 등 사람들이 작성해둔 코드를 보면, 아래와 같이 `--`를 이용해 변수의 값을 넣어주는 것을 많이 보셨을 겁니다.
 
-예를 들어 키 `height`와 몸무게 `weight`를 받아 BMI 지수를 계산하는 `BMI.py`는 아래와 같습니다.
+예를 들어 키 `height`와 몸무게 `weight`를 받아 BMI 지수를 계산하는 `BMI.py`는 아래와 같이 호출합니다.
 
 ```python
-python BMI.py --height 185 --weight 85
+!python BMI.py --height 185 --weight 85
 ```
 
 height, weight와 같이 변수 역할을 하는 것을 **인자 (argument)**라고 부르고, 185, 85와 같이 데이터의 역할을 하는 것을 **값**이라고 부릅니다. 
@@ -91,6 +91,7 @@ Python (Jupyter notebook)에서 Shell command 실행은 아래와 같이 명령�
 ```
 
 **📌 NOTE**
+
 ![2020-11-15-python-shell-command-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/Python/2020-11-15-python-shell-command/2020-11-15-python-shell-command-1.PNG)
 
  `-h` 인자는 각 `argument`에 대한 설명을 보여줍니다.
