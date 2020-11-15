@@ -3,7 +3,7 @@
 {% if document.show_category or document.read_time or document.show_date %}
   <p class="page__meta">
 
-    {% if document.show_category %}
+    {% if document.show_category and post.categories[0] %}
       {% case site.category_archive.type %}
         {% when "liquid" %}
           {% assign path_type = "#" %}
@@ -12,9 +12,10 @@
         {% endcase %}
 
       <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }}
-
-      {% assign keyValue = post.categories[0] | split: '|' %}
+      {{ document.categories[0] }}
+      {% assign keyValue = document.categories[0] | split: '|' %}
       {% capture category_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
+
       <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" rel="tag">{{ category_word }}</a>
     {% endif %}
 
