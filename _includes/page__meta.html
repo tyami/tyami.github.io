@@ -3,9 +3,9 @@
 {% if document.show_category or document.read_time or document.show_date %}
   <p class="page__meta">
     {% if document.show_category %}
-      <span class="page__meta-date">
+      <span class="page__meta-category">
         <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }}
-        # {% include posts__taxonomy.html %}
+# {% include posts__taxonomy.html %}
       </span>
     {% endif %}
 
