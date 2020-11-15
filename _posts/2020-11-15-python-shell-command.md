@@ -1,6 +1,6 @@
 ---
-title: "Python Jupyter notebook에서 Shell command (cmd) 명령어 사용하기 (! 명령어, argparse 함수)"
-excerpt: "!blahblah 명령어와 argparse 함수를 이용해서 Shell commnad 명령어를 쓰는 법을 정리해봅니다"
+title: "Python Jupyter notebook에서 Shell command (cmd) 사용하기"
+excerpt: "! 명령어와 argparse 함수를 이용해서 Python에서 shell commnad를 쓰는 법을 정리해봅니다"
 
 categories:
 - Python
@@ -51,7 +51,7 @@ argparse는 Python 내장 라이브러리로, 인자에 대한 값을 정해진 
 import argparse
 ```
 
-## Basic format
+## argparse basic
 
 일반적으로 아래와 같이 `*.py` 파일을 작성합니다.
 
@@ -102,3 +102,60 @@ Python (Jupyter notebook)에서 Shell command 실행은 아래와 같이 명령�
 인자와 키 사이에 공백을 넣어 입력합니다.
 
 ![2020-11-15-python-shell-command-2]({{ site.url }}{{ site.baseurl }}/assets/images/post/Python/2020-11-15-python-shell-command/2020-11-15-python-shell-command-2.PNG)
+
+## argparse application
+
+맨 처음 예시에서 예로 든 BMI 지수를 내뱉는 함수를 작성해봅시다.
+
+```python
+import argparse
+
+parser = argparse.ArgumentParser(description='argparse 응용 파일입니다.')
+
+parser.add_argument('--subject_id', required=True, type=int, help='Subject ID를 입력하세요 (int)')
+parser.add_argument('--height', required=True, type=float, help='Subject의 height (cm)를 입력하세요 (float)')
+parser.add_argument('--weight', required=True, type=float, help='Subject의 weight (kg)를 입력하세요 (float)')
+
+args = parser.parse_args()
+
+subject_id = args.subject_id
+height = args.height
+weight = args.weight
+
+def BMI(height, weight):
+    height = height / 100 # cm to m
+    
+    return weight / height**2
+
+print('Subject ID: ', subject_id)
+print('Height (cm): ', height)
+print('Weight (kg): ', weight)
+
+bmi = BMI(height, weight)
+print('BMI: ', bmi)
+
+if bmi < 20:
+    print('저체중입니다')
+elif bmi < 24:
+    print('정상 체중입니다')
+elif bmi < 29:
+    print('과체중입니다')    
+else:
+    print('비만입니다')   
+```
+
+```python
+!python argparse_application_BMI.py -h
+```
+
+![2020-11-15-python-shell-command-3]({{ site.url }}{{ site.baseurl }}/assets/images/post/Python/2020-11-15-python-shell-command/2020-11-15-python-shell-command-3.PNG)
+
+이 함수는 shell command로 `subject_id`, `height` 그리고 `weight`를 입력으로 받습니다. 이후 parsing된 변수를 이용해 BMI 지수를 계산해서 출력합니다.
+
+```python
+!python argparse_application_BMI.py --subject_id 1 --height 185 --weight 87
+```
+
+![2020-11-15-python-shell-command-4]({{ site.url }}{{ site.baseurl }}/assets/images/post/Python/2020-11-15-python-shell-command/2020-11-15-python-shell-command-4.PNG)
+
+잘 되긴 하는데, 좀 열받네요.
