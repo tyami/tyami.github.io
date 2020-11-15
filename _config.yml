@@ -284,6 +284,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: false # read time 보여주지 않기
+      show_category: true # post list에 category 보여주기 (tyami 추가)
       show_date: true # show date 보여주기
       comments: true # comments 보여주기
       share: true
