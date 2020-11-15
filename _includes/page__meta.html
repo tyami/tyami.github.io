@@ -4,7 +4,8 @@
   <p class="page__meta">
     {% if document.show_category %}
       <span class="page__meta-date">
-        {% include posts__taxonomy.html %}
+        <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }}
+        # {% include posts__taxonomy.html %}
       </span>
 
     {% if document.show_date and document.date %}
