@@ -4,7 +4,6 @@
   <label for="ac-toc-tag"> Hottest tags </label>
 
   <ul class="nav__items" id="category_tag_menu">
-    <li>
     <span class="nav__sub-title">☁ Hottest tags </span>
     <div>
       {% assign first = site.tags.first %}
@@ -19,7 +18,7 @@
         {% endif %}
       {% endfor %}
 
-      {% assign threshold = max | minus: 10 %}
+      {% assign threshold = max | minus: 15 %}
 
       {% if max == min %}
         {% assign diff = 1 %}
@@ -29,7 +28,6 @@
 
       {% for tag in site.tags %}
         {% if tag[1].size > threshold %}
-          {{ tag[1].size }}
           {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
           {% assign base = temp | divided_by: 4 %}
           {% assign remain = temp | modulo: 4 %}
@@ -53,6 +51,5 @@
       {% endfor %}
 
     </div>
-    </li>
   </ul>
 </nav>
