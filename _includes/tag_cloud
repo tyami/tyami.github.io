@@ -19,13 +19,14 @@
         {% endif %}
       {% endfor %}
 
+      {% assign threshold = max | minus: 10 %}
+
       {% if max == min %}
         {% assign diff = 1 %}
       {% else %}
         {% assign diff = max | minus: min %}
       {% endif %}
 
-      {{ assign threshold = max | minus: 10 }}
       {% for tag in site.tags %}
         {% if tag[1].size > threshold %}
           {{ tag[1].size }}
