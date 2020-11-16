@@ -5,9 +5,7 @@ layout: single
 author_profile: true
 sidebar_main: true
 
-toc: true
-toc_label: "About me"
-toc_sticky: true
+classes: wide
 
 use_math: true
 ---
