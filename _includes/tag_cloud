@@ -25,9 +25,9 @@
         {% assign diff = max | minus: min %}
       {% endif %}
 
-      {{ max }}
+      {{ assign threshold = max | minus: 10 }}
       {% for tag in site.tags %}
-        {% if tag[1].size > max | minus: 10 %}
+        {% if tag[1].size > threshold %}
           {{ tag[1].size }}
           {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
           {% assign base = temp | divided_by: 4 %}
