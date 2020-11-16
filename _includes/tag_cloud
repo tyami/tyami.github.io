@@ -4,6 +4,7 @@
   <label for="ac-toc-tag"> Hottest tags </label>
 
   <ul class="nav__items" id="category_tag_menu">
+    <li>
     <span class="nav__sub-title">☁ Hottest tags </span>
     <div>
       {% assign first = site.tags.first %}
@@ -51,5 +52,6 @@
       {% endfor %}
 
     </div>
+    </li>
   </ul>
 </nav>
