@@ -2,8 +2,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Category"
-    url: /categories/
+ # - title: "Category"
+ #   url: /categories/
   - title: "Tag"
     url: /tags/
   - title: "Year"
