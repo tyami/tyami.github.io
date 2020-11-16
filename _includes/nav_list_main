@@ -1,5 +1,3 @@
-0
-
 {% assign sum = 0 %}
 {% for category in site.categories %} 
   {% assign sum = sum | plus: category[1].size %}
