@@ -5,7 +5,7 @@
 
 <nav class="nav__list">
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <label for="ac-toc"> Categories </label>
   <ul class="nav__items" id="category_tag_menu">
       <li>
             📚 Total <u>{{sum}}</u> posts 
