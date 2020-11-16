@@ -1,6 +1,6 @@
 
 <div>
-  <span class="nav__sub-title">☁ Hottest tags </u> posts </span>
+  <span class="nav__sub-title">☁ Hottest tags </span>
   <div class="tags-cloud">
     <div>
       {% assign first = site.tags.first %}
