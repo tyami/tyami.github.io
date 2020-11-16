@@ -16,7 +16,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Machine learning" %}
-                        <li><a href="/categories/#machine-learning" class="">Machine learning ({{category[1].size}})</a></li>
+                        <li><a href="/categories/machine-learning" class="">Machine learning ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -24,7 +24,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Deep learning" %}
-                        <li><a href="/categories/#deep-learning" class="">Machine learning ({{category[1].size}})</a></li>
+                        <li><a href="/categories/deep-learning" class="">Deep learning ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -32,15 +32,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Medical image analysis" %}
-                        <li><a href="/categories/#medical-image-analysis" class="">Machine learning ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Data science" %}
-                        <li><a href="/categories/#data-science" class="">Machine learning ({{category[1].size}})</a></li>
+                        <li><a href="/categories/medical-image-analysis" class="">Medical image analysis ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -48,7 +40,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Python" %}
-                        <li><a href="/categories/#python" class="">Machine learning ({{category[1].size}})</a></li>
+                        <li><a href="/categories/python" class="">Python ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
