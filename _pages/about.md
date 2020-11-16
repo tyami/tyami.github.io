@@ -3,6 +3,7 @@ title: "About me"
 permalink: /about/
 layout: single
 author_profile: true
+sidebar_post_list: true
 
 toc: true
 toc_label: "About me"

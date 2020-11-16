@@ -16,7 +16,8 @@
     {% endif %}
   {% endif %}
 
-  {% include sidebar_post_list %}
-
+  {% if page.sidebar_post_list %}
+    {% include sidebar_post_list %}
+  {% endif %}
   </div>
 {% endif %}
