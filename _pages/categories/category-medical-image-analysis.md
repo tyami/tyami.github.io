@@ -10,5 +10,5 @@ sidebar_main: true
 
 ***
 
-{% assign posts = site.categories.['Medical image analysis'] | sort:"date" | reverse %}
+{% assign posts = site.categories['Medical image analysis'] | sort:"date" | reverse %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
