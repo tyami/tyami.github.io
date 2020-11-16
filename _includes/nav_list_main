@@ -5,10 +5,7 @@
   {% assign sum = sum | plus: category[1].size %}
 {% endfor %}
 
-{{sum}}
-1
 <nav class="nav__list">
-  2
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc"> Categories </label>
   <ul class="nav__items" id="category_tag_menu">
