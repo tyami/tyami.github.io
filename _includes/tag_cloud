@@ -1,5 +1,8 @@
 
 <div>
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc"> Hottest tags </label>
+
   <span class="nav__sub-title">☁ Hottest tags </span>
   <div class="tags-cloud">
     <div>
@@ -21,9 +24,10 @@
         {% assign diff = max | minus: min %}
       {% endif %}
 
+      {{ max }}
       {% for tag in site.tags %}
-        {{ tag[1].size }}
         {% if tag[1].size > max-10 %}
+          {{ tag[1].size }}
           {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
           {% assign base = temp | divided_by: 4 %}
           {% assign remain = temp | modulo: 4 %}
