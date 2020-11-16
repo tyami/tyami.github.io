@@ -13,13 +13,13 @@
                 {% for category in site.categories %}
                     {% if category[0] == "Machine learning" %}
                         <li><a href="/categories/machine-learning" class="">Machine learning ({{category[1].size}})</a></li>
-                    {% elseif category[0] == "Deep learning" %}
+                    {% elsif category[0] == "Deep learning" %}
                         <li><a href="/categories/deep-learning" class="">Deep learning ({{category[1].size}})</a></li>
-                    {% elseif category[0] == "Medical image analysis" %}
+                    {% elsif category[0] == "Medical image analysis" %}
                         <li><a href="/categories/medical-image-analysis" class="">Medical image analysis ({{category[1].size}})</a></li>
-                    {% elseif category[0] == "Python" %}
+                    {% elsif category[0] == "Python" %}
                         <li><a href="/categories/python" class="">Python ({{category[1].size}})</a></li>
-                    {% elseif category[0] == "Blog" %}
+                    {% elsif category[0] == "Blog" %}
                         <li><a href="/categories/blog" class="">Blog ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
