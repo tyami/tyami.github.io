@@ -66,6 +66,6 @@ for sub in range(5):
 
 간단히 변수에 `{ }` 괄호를 씌워주면 됩니다.
 
-![2020-11-15-python-shell-command-3]({{ site.url }}{{ site.baseurl }}/assets/images/post/Python/2020-11-15-python-shell-command/2020-11-15-python-shell-command-3.PNG)
+![2020-11-16-python-argparse-for-loop-3]({{ site.url }}{{ site.baseurl }}/assets/images/post/Python/2020-11-16-python-argparse-for-loop/2020-11-16-python-argparse-for-loop-3.PNG)
 
 네 잘 됩니다.
