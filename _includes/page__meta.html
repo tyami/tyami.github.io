@@ -14,8 +14,10 @@
 
     {% if document.show_category and document.categories[0] %}
       {% assign category = document.categories[0] %}
-      <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i>
-      {{ category }}
+      <span class="page__meta-date">
+        <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 
+         {{ category }}
+      </span>
     {% endif %}
 
     {% if document.read_time and document.show_date %}<span class="page__meta-sep"></span>{% endif %}
