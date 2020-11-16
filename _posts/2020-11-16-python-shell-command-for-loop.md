@@ -1,6 +1,6 @@
 ---
 title: "Python Jupyter notebook에서 shell command에 반복문 (for loop) 사용하는 법"
-excerpt: "python shell commnad 명령어와 for loop를 함께 사용하는 법을 정리해봅니다"
+excerpt: "python shell command 명령어와 for loop를 함께 사용하는 법을 정리해봅니다"
 
 categories:
 - Python

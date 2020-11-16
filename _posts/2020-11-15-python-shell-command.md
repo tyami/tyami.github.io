@@ -1,6 +1,6 @@
 ---
 title: "Python Jupyter notebook에서 Shell command (cmd) 사용하기"
-excerpt: "! 명령어와 argparse 함수를 이용해서 Python에서 shell commnad를 쓰는 법을 정리해봅니다"
+excerpt: "! 명령어와 argparse 함수를 이용해서 Python에서 shell command를 쓰는 법을 정리해봅니다"
 
 categories:
 - Python
