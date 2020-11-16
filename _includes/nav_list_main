@@ -11,8 +11,7 @@
             📚 Total <u>{{sum}}</u> posts 
       </li>
       <li>
-        <span class="nav__sub-title">Post lists</span>
-
+<!--    <span class="nav__sub-title">Post lists</span>    -->
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Machine learning" %}
