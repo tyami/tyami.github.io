@@ -1,0 +1,23 @@
+/* ==========================================================================
+   tyami skin
+   ========================================================================== */
+
+/* Colors */
+$background-color: #fff !default;
+$text-color: #000 !default;
+$muted-text-color: #595959 !default;
+$primary-color:#459CC2 !default;
+$border-color: #F2F2F2 !default;
+$footer-background-color: $border-color !default;
+$link-color: $primary-color!default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $primary-color !default;
+$navicon-link-color-hover: $primary-color !default;
+
+.page__footer {
+  color: $muted-text-color !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
