@@ -4,6 +4,10 @@ layout: archive
 
 {{ content }}
 
+<div>
+  {% include tag_cloud.html %}
+</div>  
+
 {% assign tags_max = 0 %}
 {% for tag in site.tags %}
   {% if tag[1].size > tags_max %}

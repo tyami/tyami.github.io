@@ -1,5 +1,5 @@
 ---
-title: "Posts by Tag"
+title: "Tag cloud"
 permalink: /tags/
 layout: tags
 author_profile: true
