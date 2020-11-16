@@ -1,13 +1,14 @@
 # main links
 main:
-  - title: "About"
+  - title: "☀️"
     url: /about/
+  - title: "☁️"
+    url: /tags/
+  - title: "📅"
+    url: /year-archive/ 
+
  # - title: "Category"
  #   url: /categories/
-  - title: "Tag"
-    url: /tags/
-  - title: "Year"
-    url: /year-archive/ 
 
   # - title: "Sample Collections"
   #   url: /collection-archive/
