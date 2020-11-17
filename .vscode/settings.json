@@ -1,0 +1,15 @@
+{
+    "markdown-preview-enhanced.mathInlineDelimiters": [
+        [
+            "\\(",
+            "\\)"
+        ]
+    ],    
+    "markdown-preview-enhanced.mathBlockDelimiters": [
+        [
+            "\\[",
+            "\\]"
+        ]
+    ],
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax"
+}

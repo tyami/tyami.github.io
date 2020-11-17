@@ -3,13 +3,13 @@ title: "부스팅 앙상블 (Boosting Ensemble) 1: AdaBoost"
 excerpt: "부스팅 앙상블의 예시인 AdaBoost를 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Ensemble
-- Algorithm
-- Boosting
+  - Machine learning
+  - Ensemble
+  - Algorithm
+  - Boosting
 
 toc: true
 toc_sticky: true
@@ -30,18 +30,21 @@ use_math: true
 반면 AdaBoost (Adaptive Boosting)는 **다양한 크기**의 **stump**로 이루어진 숲으로 볼 수 있습니다.
 
 ## 3 Concepts of AdaBoost
+
 1. Forest of stumps
-2. Different weights for each stump 
+2. Different weights for each stump
 3. Sequential
 
 ### 1. Forest of stumps
+
 Random forest에서는 개별 모델로 **decision tree**를 사용합니다.
 
 ![Stumps 정의]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-08-AdaBoost/2020-10-08-stump.png)
 
-반면, AdaBoost에서는 개별 모델로 **stump**를 사용합니다. Stump란 **한 노드와 두 개의 가지를 갖는 decision tree**로 정의할 수 있습니다. 
+반면, AdaBoost에서는 개별 모델로 **stump**를 사용합니다. Stump란 **한 노드와 두 개의 가지를 갖는 decision tree**로 정의할 수 있습니다.
 
-### 2. Different weights for each stump 
+### 2. Different weights for each stump
+
 Random forest에서 모든 tree는 **동일한 weight**를 갖습니다.
 
 ![AdaBoost = Forest of stumps]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-08-AdaBoost/2020-10-08-AdaBoost.png)
@@ -59,16 +62,18 @@ Random forest에서 tree들은 **parallel**하게 만들어집니다. 즉, decis
 반면, AdaBoost에서 stump들은 **sequential**하게 만들어진다는 특징을 갖습니다. 즉, 기존에 만들어진 stump가 이후 만들어질 stump 생성에 영향을 줍니다.
 
 ## AdaBoost 학습 순서
+
 AdaBoost의 학습순서는 위와 같이 나타낼 수 있습니다. 예시를 보며 차근차근 따라해봅시다.
 
 > 예시 그림 출처: [AdaBoost, Clearly Explained](https://www.youtube.com/watch?v=LsK-xG1cLYA) by StatQuest
 
 ### 1. Initial sample weight
+
 ![AdaBoost Step 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-08-AdaBoost/2020-10-08-AdaBoost-step1.png)
 
 Initial sample weight는 모두 동일하게 해줍니다.
 
-\\[ 
+\\[
 Initial\; sample\; weight=w_{i,1}=\frac{1}{total\; number\; of\; samples}
 \\]
 
@@ -93,8 +98,8 @@ Amount\; of\; say=\alpha_t=\frac{1}{2}log(\frac{1-\epsilon_t}{\epsilon_t})
 \\[
 \epsilon_t=\sum_{
 \begin{matrix}
-  i=1 \\\\\\
-  h_t(x_i)\neq y_i
+i=1 \\\\\\
+h_t(x_i)\neq y_i
 \end{matrix}
 }^n w_{i,t}
 \\]
@@ -108,10 +113,12 @@ Amount\; of\; say=\alpha_t=\frac{1}{2}log(\frac{1-\epsilon_t}{\epsilon_t})
 위의 예시에서 계산한 amount of say \\(\alpha_t\\)는 0.97입니다.
 
 ### 4. Updated sample weight
-각 sample weight \\(w_{i,t}\\)을 \\(w_{i,t+1}\\)로 업데이트할 차례입니다.  
+
+각 sample weight \\(w*{i,t}\\)을 \\(w*{i,t+1}\\)로 업데이트할 차례입니다.  
 여기서 핵심은 오분류된 샘플의 sample weight는 늘리고, 잘 분류된 샘플의 sample weight는 낮춰주는 것입니다.
 
 #### 4.1. 오분류된 샘플
+
 > 참고: 샘플마다 업데이트되는 가중치 양에는 차이가 없습니다.
 
 \\[
@@ -119,6 +126,7 @@ New\; sample\; weight=w_{i,t+1}=w_{i,t} \times e^{\alpha_t}
 \\]
 
 #### 4.2. 정분류된 샘플
+
 > 마찬가지로 샘플마다 업데이트되는 가중치 양에는 차이가 없습니다.
 
 \\[
@@ -126,22 +134,25 @@ New\; sample\; weight=w_{i,t+1}=w_{i,t} \times e^{-\alpha_t}
 \\]
 
 #### 4.3 총합=1로 정규화
+
 Sample weight의 총합이 1이 되도록 normalize해줍니다.
 
 \\[
 Normalized\; sample\; weight=\frac{New\; sample\; weight}{\sum New\; sample\; weight}
 \\]
 
-따라서 아래와 같이 새로운 \\(w_{i,t+1}\\)를 얻습니다.
+따라서 아래와 같이 새로운 \\(w\_{i,t+1}\\)를 얻습니다.
 
 ![AdaBoost Step 4]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-08-AdaBoost/2020-10-08-AdaBoost-step4.png)
 
 오분류된 네 번째 샘플은 가중치가 높아진 반면, 나머지 샘플들은 가중치가 낮아진 것을 확인할 수 있습니다.
 
 ### 5. Next stump
+
 업데이트된 Sample weight를 적용한 새로운 Stump를 만듭니다. 분기 시, Impurity를 계산할 때 두 가지 방법으로 sample weight를 적용할 수 있습니다.
 
 #### 5.1. Weighted Gini index
+
 Sample weight를 각 샘플에 적용하여 Gini index를 계산합니다.
 
 > 아래 수식이 맞는지는 확인이 필요합니다.
@@ -151,6 +162,7 @@ Weighted\; Gini\; index= \sum_{i=1}^C w_{i,t}p_i(1-p_i)
 \\]
 
 #### 5.2. Resampling
+
 중복을 허용하여 Dataset을 resampling 후 Gini index를 계산합니다.
 
 ![AdaBoost Step 5-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-08-AdaBoost/2020-10-08-AdaBoost-step5-1.png)

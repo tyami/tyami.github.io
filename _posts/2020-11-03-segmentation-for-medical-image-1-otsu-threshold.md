@@ -3,13 +3,13 @@ title: "Segmentation for MEDIA (1) Otsu threshold"
 excerpt: "가장 기본적인 Segmentation 기법인 Otsu threshold를 정리해봅니다"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Segmentation
-- Otsu threshold
+  - Medical image analysis
+  - Lecture
+  - Segmentation
+  - Otsu threshold
 
 toc: true
 toc_sticky: true

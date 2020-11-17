@@ -3,18 +3,18 @@ title: "Python Jupyter notebook에서 Shell command (cmd) 사용하기"
 excerpt: "! 명령어와 argparse 함수를 이용해서 Python에서 shell command를 쓰는 법을 정리해봅니다"
 
 categories:
-- Python
+  - Python
 
 tags:
-- Python
-- Jupyter notebook
-- Shell command
-- cmd
-- argparse
+  - Python
+  - Jupyter notebook
+  - Shell command
+  - cmd
+  - argparse
 
 toc: true
 toc_sticky: true
-toc_label:  "Python Shell command (cmd) 명령어 사용"
+toc_label: "Python Shell command (cmd) 명령어 사용"
 
 use_math: true
 ---
@@ -38,9 +38,10 @@ Shell (실행 > cmd) 에서 Python 코드를 실행하고자 할 때, 함수의 
 !python BMI.py --height 185 --weight 85
 ```
 
-height, weight와 같이 변수 역할을 하는 것을 **인자 (argument)**라고 부르고, 185, 85와 같이 데이터의 역할을 하는 것을 **값**이라고 부릅니다. 
+height, weight와 같이 변수 역할을 하는 것을 **인자 (argument)**라고 부르고, 185, 85와 같이 데이터의 역할을 하는 것을 **값**이라고 부릅니다.
 
 # argparse
+
 argparse는 Python 내장 라이브러리로, 인자에 대한 값을 정해진 형태에 맞추어 편하게 넣도록 만들어졌습니다.
 
 ## Import
@@ -55,7 +56,8 @@ import argparse
 
 일반적으로 아래와 같이 `*.py` 파일을 작성합니다.
 
- `argparse_test.py`:
+`argparse_test.py`:
+
 ```python
 import argparse
 
@@ -77,8 +79,8 @@ print('Subject ID: ', subject_id )
 
 1. `argparse.ArgumentParser` 함수를 이용해 argument parser class를 생성해줍니다.
 2. `add_argument` 함수를 이용해 각 arguement의 이름, 조건 (`requried`, `type`, `default`), 도움말 (`help`)을 정의합니다.
-3  `parse_args` 함수를 이용해 인자들의 값을 불러옵니다 (parsing).
-4. 값을 사용해 `*.py` 파일 내 코드를 실행합니다.
+   3 `parse_args` 함수를 이용해 인자들의 값을 불러옵니다 (parsing).
+3. 값을 사용해 `*.py` 파일 내 코드를 실행합니다.
 
 ## Shell command in Python
 
@@ -94,12 +96,14 @@ Python (Jupyter notebook)에서 Shell command 실행은 아래와 같이 명령�
 
 ![2020-11-15-python-shell-command-1]({{ site.url }}{{ site.baseurl }}/assets/images/post/Python/2020-11-15-python-shell-command/2020-11-15-python-shell-command-1.PNG)
 
- `-h` 인자는 각 `argument`에 대한 설명을 보여줍니다.
+`-h` 인자는 각 `argument`에 대한 설명을 보여줍니다.
 
 ### Usage
+
 ```python
 !python argparse_test.py --subject_id 1
 ```
+
 인자와 키 사이에 공백을 넣어 입력합니다.
 
 ![2020-11-15-python-shell-command-2]({{ site.url }}{{ site.baseurl }}/assets/images/post/Python/2020-11-15-python-shell-command/2020-11-15-python-shell-command-2.PNG)
@@ -125,7 +129,7 @@ weight = args.weight
 
 def BMI(height, weight):
     height = height / 100 # cm to m
-    
+
     return weight / height**2
 
 print('Subject ID: ', subject_id)
@@ -140,9 +144,9 @@ if bmi < 20:
 elif bmi < 24:
     print('정상 체중입니다')
 elif bmi < 29:
-    print('과체중입니다')    
+    print('과체중입니다')
 else:
-    print('비만입니다')   
+    print('비만입니다')
 ```
 
 ```python

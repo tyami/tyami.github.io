@@ -3,12 +3,12 @@ title: "의사결정 나무 (Decision Tree) ID3 알고리즘 설명"
 excerpt: "의사결정 나무의 기본 알고리즘 중 하나인 ID3 를 공부해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Decision tree
-- Algorithm
+  - Machine learning
+  - Decision tree
+  - Algorithm
 
 toc: true
 toc_sticky: true
@@ -23,34 +23,40 @@ use_math: true
 > 본 포스팅에서 다룰 알고리즘은 의사결정 나무의 기본 알고리즘이라고 할 수 있는 ID3 알고리즘입니다.
 
 ## ID3 알고리즘
+
 ID3 알고리즘은 Iterative Dichotomiser 3의 약자입니다. Dichotomiser는 "이분하다"라는 뜻의 프랑스어로, **반복적으로 이분하는** 알고리즘이라고 말할 수 있겠네요.
 
-이전 포스팅에서 의사결정 나무의 분기는 불순도 (Impurity) 값이 작은 방향으로 이루어진다고 했습니다.  ID3 알고리즘은 Impurity 값으로 엔트로피 (Entropy)를 사용합니다.
+이전 포스팅에서 의사결정 나무의 분기는 불순도 (Impurity) 값이 작은 방향으로 이루어진다고 했습니다. ID3 알고리즘은 Impurity 값으로 엔트로피 (Entropy)를 사용합니다.
 
 ---
 
 ### ID3의 Impurity: 엔트로피 (Entropy)
+
 흔히 **무질서도**라고도 불리우는 엔트로피는 사건의 집합 \\( S \\)에 대한 불확실성의 양을 나타냅니다.
 
 #### 확률 (Probability)
+
 사건 \\( X_i \\) 가 발생할 확률을 \\( p(X_i) \\) 로 정의합니다.
-\\[ probability=p(x) \\]  
+\\[ probability=p(x) \\]
 
 #### 정보량 (Information)
-이 때 이 사건  \\( X_i \\) 가 갖는 정보량 (Information)은 아래와 같이 계산됩니다. 
-\\[ information=I(x)=\log_2 \frac{1}{p(x)} \\]  
+
+이 때 이 사건 \\( X_i \\) 가 갖는 정보량 (Information)은 아래와 같이 계산됩니다.
+\\[ information=I(x)=\log_2 \frac{1}{p(x)} \\]
 
 ![Probability 와 Information의 관계]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-probability-information.png)
 정보량은 **놀람의 정도**라고 이해하면 쉬운데, 드물게 발생할 수록 더 많이 놀라는 경우 (예: 로또)를 생각하면 됩니다. 확률에 따른 정보량의 관계는 위 그림을 통해 확인할 수 있습니다.
 
 #### 엔트로피 (Entropy)
+
 이어서 엔트로피는 아래 수식을 통해 계산할 수 있습니다.
 \\[ Entropy=H(S)=\sum_{i=1}^c p_i\log_2 \frac{1}{p_i}=-\sum_{i=1}^c p_i\log_2 p_i \\]
 
 ![Probability 와 Entropy의 관계]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-probability-entropy.png)
-이진 분류 (Binary classification) 문제에서 한 사건의 확률이 p(x)라고 할 때, 엔트로피는 위 그림과 같습니다. 
+이진 분류 (Binary classification) 문제에서 한 사건의 확률이 p(x)라고 할 때, 엔트로피는 위 그림과 같습니다.
 
 #### Information Gain
+
 ID3 알고리즘에서는 Entropy 값의 변화량을 나타내기 위해 Information Gain 이라는 개념을 사용했습니다.
 
 ![Information Gain의 개념]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-information-gain-example.png)
@@ -74,45 +80,47 @@ Information\; Gain&=IG(S,A)=H(S)-H(S,A) \\\\\\
 ---
 
 ### ID3 알고리즘 예시로 이해하기
+
 이전 포스팅에서 사용했던 예시로 ID3 알고리즘의 분기과정을 살펴봅시다.
 
 | Outlook  | Temperature | Humidity | Windy | Play |
-|:--------:|:-----------:|:--------:|:-----:|:----:|
-| sunny    | hot         | high     | FALSE | No   |
-| sunny    | hot         | high     | TRUE  | No   |
-| overcast | hot         | high     | FALSE | Yes  |
-| rain     | mild        | high     | FALSE | Yes  |
-| rain     | cool        | normal   | FALSE | Yes  |
-| rain     | cool        | normal   | TRUE  | No   |
-| overcast | cool        | normal   | TRUE  | Yes  |
-| sunny    | mild        | high     | FALSE | No   |
-| sunny    | cool        | normal   | FALSE | Yes  |
-| rain     | mild        | normal   | FALSE | Yes  |
-| sunny    | mild        | normal   | TRUE  | Yes  |
-| overcast | mild        | high     | TRUE  | Yes  |
-| overcast | hot         | normal   | FALSE | Yes  |
-| rain     | mild        | high     | TRUE  | No   |
+| :------: | :---------: | :------: | :---: | :--: |
+|  sunny   |     hot     |   high   | FALSE |  No  |
+|  sunny   |     hot     |   high   | TRUE  |  No  |
+| overcast |     hot     |   high   | FALSE | Yes  |
+|   rain   |    mild     |   high   | FALSE | Yes  |
+|   rain   |    cool     |  normal  | FALSE | Yes  |
+|   rain   |    cool     |  normal  | TRUE  |  No  |
+| overcast |    cool     |  normal  | TRUE  | Yes  |
+|  sunny   |    mild     |   high   | FALSE |  No  |
+|  sunny   |    cool     |  normal  | FALSE | Yes  |
+|   rain   |    mild     |  normal  | FALSE | Yes  |
+|  sunny   |    mild     |  normal  | TRUE  | Yes  |
+| overcast |    mild     |   high   | TRUE  | Yes  |
+| overcast |     hot     |  normal  | FALSE | Yes  |
+|   rain   |    mild     |   high   | TRUE  |  No  |
 
 Play를 예측하기 위한 변수로 Outlook, Temperature, Humidity, Windy 가 있습니다.
 
 아무 분기가 일어나지 않은 상태의 엔트로피는 아래와 같이 계산됩니다.
 \begin{aligned}
-H(Play) &= -\sum_{i=1}^c p_i\log_2 p_i \\\\\\
+H(Play) &= -\sum\_{i=1}^c p_i\log_2 p_i \\\\\\
 &=-(\frac{5}{14}log_2\frac{5}{14}+\frac{9}{14}log_2\frac{9}{14}) \\\\\\
 &=0.94
 \end{aligned}
 
 이제 각 지표별로 분기를 진행해봅시다.
+
 - Outlook
-![H(Play,Outlook)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-entropy-play-outlook.png)
-\begin{aligned}
-H(Play,Outlook) &= p(sunny) \times H(3,2)+p(overcast) \times H(4,0)+p(rain) \times H(3,2) \\\\\\
-&=\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5})+\frac{4}{14}(-\frac{4}{4}log_2\frac{4}{4}-\frac{0}{4}log_2\frac{0}{4})+\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5}) \\\\\\
-&=0.6935
-\end{aligned}
+  ![H(Play,Outlook)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-entropy-play-outlook.png)
+  \begin{aligned}
+  H(Play,Outlook) &= p(sunny) \times H(3,2)+p(overcast) \times H(4,0)+p(rain) \times H(3,2) \\\\\\
+  &=\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5})+\frac{4}{14}(-\frac{4}{4}log_2\frac{4}{4}-\frac{0}{4}log_2\frac{0}{4})+\frac{5}{14}(-\frac{3}{5}log_2\frac{3}{5}-\frac{2}{5}log_2\frac{2}{5}) \\\\\\
+  &=0.6935
+  \end{aligned}
 
 - Temperature
-![H(Play,Temperature)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-entropy-play-temperature.png)
+  ![H(Play,Temperature)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-entropy-play-temperature.png)
 
 \begin{aligned}
 H(Play,Temperature) &= p(hot) \times H(2,2)+p(mild) \times H(4,2)+p(cool) \times H(3,1) \\\\\\
@@ -122,7 +130,7 @@ H(Play,Temperature) &= p(hot) \times H(2,2)+p(mild) \times H(4,2)+p(cool) \times
 \end{aligned}
 
 - Humidity
-![H(Play,Humidity)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-entropy-play-humidity.png)
+  ![H(Play,Humidity)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-entropy-play-humidity.png)
 
 \begin{aligned}
 H(Play,Humidity) &= p(High) \times H(3,4)+p(Normal) \times H(6,1) \\\\\\
@@ -131,7 +139,7 @@ H(Play,Humidity) &= p(High) \times H(3,4)+p(Normal) \times H(6,1) \\\\\\
 \end{aligned}
 
 - Windy
-![H(Play,Windy)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-entropy-play-windy.png)
+  ![H(Play,Windy)]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-entropy-play-windy.png)
 
 \begin{aligned}
 H(Play,Windy) &= p(True) \times H(3,3)+p(False) \times H(6,2) \\\\\\
@@ -146,26 +154,26 @@ H(Play,Windy) &= p(True) \times H(3,3)+p(False) \times H(6,2) \\\\\\
 - \\( H(Play) – H(Play, Humidity) = 0.1514 \\)
 - \\( H(Play) – H(Play, Windy) = 0.047 \\)
 
-Outlook으로 분기했을 때 Information Gain이 가장 크니 아래와 같이 첫 번째 level에서는 Outlook으로 분기합니다. 
+Outlook으로 분기했을 때 Information Gain이 가장 크니 아래와 같이 첫 번째 level에서는 Outlook으로 분기합니다.
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-choose-first-attribute.png)
 
 다음으로, 왼쪽의 **Sunny** 노드에 대해서 분기를 진행합니다. Sunny 노드의 데이터는 아래와 같습니다.
 
-| Outlook  | Temperature | Humidity | Windy | Play |
-|:-:|:-:|:-:|:-:|:-:|
-| sunny    | hot         | high     | FALSE | No   |
-| sunny    | hot         | high     | TRUE  | No   |
-| sunny    | mild        | high     | FALSE | No   |
-| sunny    | cool        | normal   | FALSE | Yes  |
-| sunny    | mild        | normal   | TRUE  | Yes  |
+| Outlook | Temperature | Humidity | Windy | Play |
+| :-----: | :---------: | :------: | :---: | :--: |
+|  sunny  |     hot     |   high   | FALSE |  No  |
+|  sunny  |     hot     |   high   | TRUE  |  No  |
+|  sunny  |    mild     |   high   | FALSE |  No  |
+|  sunny  |    cool     |  normal  | FALSE | Yes  |
+|  sunny  |    mild     |  normal  | TRUE  | Yes  |
 
 위 과정과 동일하게 Information Gain을 계산하면 다음 분기는 Humidity로 진행하면 된다는 것을 알 수 있습니다.
+
 - \\( H(Play) – H(Play, Temperature) = 0.571 \\)
-- \\(  H(Play) – H(Play, Humidity) = 0.971 \\)
-- \\(  H(Play) – H(Play, Windy) = 0.02 \\)
+- \\( H(Play) – H(Play, Humidity) = 0.971 \\)
+- \\( H(Play) – H(Play, Windy) = 0.02 \\)
 
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-choose-second-attribute.png)
-
 
 아래 표와 같이 Humidity에 따라 Play 데이터가 잘 나뉘는 것을 확인했으니 더 이상의 분기는 하지 않습니다.
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-choose-second-attribute-table.png)
@@ -174,7 +182,6 @@ Outlook으로 분기했을 때 Information Gain이 가장 크니 아래와 같�
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-choose-second-attribute-result.png)
 
 이 과정을 반복해서 수행해주면 아래와 같은 의사결정 나무가 완성됩니다.
-
 
 ![ID3 first level]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-09-30-id3/2020-09-30-id3-result.png)
 

@@ -3,12 +3,12 @@ title: "Introduction to MEDIA"
 excerpt: "Medical Image Analysis 1: Introduction to MEDIA"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Classification
+  - Medical image analysis
+  - Lecture
+  - Classification
 
 toc: true
 toc_sticky: true
@@ -26,10 +26,12 @@ Medical Image Analysis (MEDIA) 에 대해 공부하면서, 관련 내용을 정�
 Classification, Segmentation, Enhancement, Registration을 세부 주제로 구성됩니다.
 
 ### [PART 1] Introduction to MEDIA
+
 1. Introduction to MEDIA (본 글)
 2. [Medical Image acquisition methods]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-2-medical-image-acquisition/)
 
 ### [PART 2] Classification for MEDIA
+
 1. [Classification for MEDIA (1)]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-3-classification-for-medical-image-1/)
 2. [Classification for MEDIA (2) Deep neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-4-classification-for-medical-image-2-DNN/)
 3. [Classification for MEDIA (3) Convolutional neural network]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/MEDIA-5-classification-for-medical-image-3-CNN/)
@@ -39,6 +41,7 @@ Classification, Segmentation, Enhancement, Registration을 세부 주제로 구�
 7. [Classification for MEDIA (7) Feature selection and extraction]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/classification-for-medical-image-7-feature-selection-extraction/)
 
 ### [PART 3] Segmentation for MEDIA
+
 1. [Segmentation for MEDIA (1) Otsu threshold]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-1-otsu-threshold/)
 2. [Segmentation for MEDIA (2) Morphological processing]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-2-morphological-processing/)
 3. [Segmentation for MEDIA (3) Region growing & Wathershed algorithm]({{ site.url }}{{ site.baseurl }}/medical%20image%20analysis/segmentation-for-medical-image-3-region-growing/)
@@ -64,7 +67,6 @@ MEDIA에서 Artificial intelligence (AI)는 다양한 부분에서 활용될 수
 2. Image labelling에 사용될 수 있습니다.
 3. 수집 및 라벨링된 데이터의 분석에 사용될 수 있습니다.
 4. 설명을 위한 자료로 사용될 수 있습니다.
-
 
 ### Research examples
 

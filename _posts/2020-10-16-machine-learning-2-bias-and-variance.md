@@ -3,13 +3,13 @@ title: "Machine learning: Bias(편향)과 Variance(분산)"
 excerpt: "Machine learning의 기본적인 개념 중 하나인 Bias(편향)과 Variance(분산)에 대해 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Algorithm
-- Bias
-- Variance
+  - Machine learning
+  - Algorithm
+  - Bias
+  - Variance
 
 toc: true
 toc_sticky: true
@@ -23,7 +23,7 @@ use_math: true
 ![Bias and Variance overview]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-16-bias-and-variance/2020-10-16-bias-and-variance-1-overview-bias-variance-tradeoff.png)
 
 오늘 포스팅에서 정리할 최종 요약본입니다.
- 
+
 ## Bias(편향)과 Variance(분산)
 
 Bias (편향)와 Variance (분산)은 기계학습에서 아주 중요한 개념들입니다. 그런데 막상 Bias와 Variance를 정의하려고 하면 조금 애매하게 느껴집니다.
@@ -32,7 +32,7 @@ Bias (편향)와 Variance (분산)은 기계학습에서 아주 중요한 개념
 
 ![Bias and Variance example data]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-16-bias-and-variance/2020-10-16-bias-and-variance-2-example-data.png)
 
-오늘 다룰 예시 데이터입니다. 쥐의 무게로 사이즈를 추정하는 모델을 만들고자 합니다. 
+오늘 다룰 예시 데이터입니다. 쥐의 무게로 사이즈를 추정하는 모델을 만들고자 합니다.
 
 ![Bias and Variance true relationship]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-16-bias-and-variance/2020-10-16-bias-and-variance-3-true-relationship.png)
 

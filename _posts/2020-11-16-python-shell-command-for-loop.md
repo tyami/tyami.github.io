@@ -3,18 +3,18 @@ title: "Python Jupyter notebook에서 shell command에 반복문 (for loop) 사�
 excerpt: "python shell command 명령어와 for loop를 함께 사용하는 법을 정리해봅니다"
 
 categories:
-- Python
+  - Python
 
 tags:
-- Python
-- Jupyter notebook
-- Shell command
-- cmd
-- argparse
+  - Python
+  - Jupyter notebook
+  - Shell command
+  - cmd
+  - argparse
 
 toc: true
 toc_sticky: true
-toc_label:  "Python Shell command + for loop"
+toc_label: "Python Shell command + for loop"
 
 use_math: true
 ---

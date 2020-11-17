@@ -3,13 +3,13 @@ title: "Segmentation for MEDIA (5) Active contour model"
 excerpt: "Shape update 기반의 active contour model을 정리해봅니다"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Segmentation
-- Active contour model
+  - Medical image analysis
+  - Lecture
+  - Segmentation
+  - Active contour model
 
 toc: true
 toc_sticky: true
@@ -25,7 +25,7 @@ use_math: true
 
 ## Thresholding, Region growing, Graph model
 
-앞의 포스팅에서 정리한 Thresholding (+Morphological processing), Region growing, Graph model 등 알고리즘들은 주어진 영상이미지의 pixel 정보 또는 인접 픽셀들의 label 정보를 바탕으로 segmentation을 진행했습니다. 즉, 이 방법들은 **사용자의 Domain knowledge를 활용하지 않는 순수한 영상처리 기법들**입니다. 
+앞의 포스팅에서 정리한 Thresholding (+Morphological processing), Region growing, Graph model 등 알고리즘들은 주어진 영상이미지의 pixel 정보 또는 인접 픽셀들의 label 정보를 바탕으로 segmentation을 진행했습니다. 즉, 이 방법들은 **사용자의 Domain knowledge를 활용하지 않는 순수한 영상처리 기법들**입니다.
 
 ![2020-11-08-segmentation-for-medical-image-5-active-contour-model-01-comparison.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-11-08-segmentation-for-medical-image-5-active-contour-model/2020-11-08-segmentation-for-medical-image-5-active-contour-model-01-comparison.png)
 
@@ -63,11 +63,11 @@ Snake energy function을 구성하는 여러 energy term 들을 정리해봅시�
 
 Line energy term은 **Foreground의 boundary의 line에서 구분되는 값이 있을 것이다**라는 것을 가정하여 energy function을 정의합니다.
 
-예를 들어 Line energy term 을 \\(E_{line}=I(x)\\)로 정의하면, contour가 black line (\\(I(x)=0\\))을 따라 위치해 있을 때 \\(E_{line}\\)이 가장 작은 값을 나타낼 것입니다.
+예를 들어 Line energy term 을 \\(E*{line}=I(x)\\)로 정의하면, contour가 black line (\\(I(x)=0\\))을 따라 위치해 있을 때 \\(E*{line}\\)이 가장 작은 값을 나타낼 것입니다.
 
 ![2020-11-08-segmentation-for-medical-image-5-active-contour-model-06.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-11-08-segmentation-for-medical-image-5-active-contour-model/2020-11-08-segmentation-for-medical-image-5-active-contour-model-06.png)
 
-반면, Line energy term을 \\(E_{line}=-I(x)\\)로 정의하면, 위와 반대로 contour가 white line (\\(I(x)=255\\))를 따라 위치해 있을 때 \\(E_{line}\\)이 가장 작은 값을 나타낼 것입니다.
+반면, Line energy term을 \\(E*{line}=-I(x)\\)로 정의하면, 위와 반대로 contour가 white line (\\(I(x)=255\\))를 따라 위치해 있을 때 \\(E*{line}\\)이 가장 작은 값을 나타낼 것입니다.
 
 #### Edge energy
 
@@ -103,7 +103,7 @@ Bending energy term은 타겟 ORI의 shape에 뾰족한 부분이 별로 없다�
 
 ![2020-11-08-segmentation-for-medical-image-5-active-contour-model-09.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-11-08-segmentation-for-medical-image-5-active-contour-model/2020-11-08-segmentation-for-medical-image-5-active-contour-model-09.png)
 
-Elastic energy term에서의 1차 미분값 \\(V_s\\)를 다시 한번 더 미분한 2차 미분값 \\(V_{ss}\\)에 가중치를 곱한 값의 합으로 정의합니다.
+Elastic energy term에서의 1차 미분값 \\(V*s\\)를 다시 한번 더 미분한 2차 미분값 \\(V*{ss}\\)에 가중치를 곱한 값의 합으로 정의합니다.
 
 이번에는 뾰족한 부분이 뭉툭해지도록 업데이트되는 효과를 확인할 수 있습니다.
 

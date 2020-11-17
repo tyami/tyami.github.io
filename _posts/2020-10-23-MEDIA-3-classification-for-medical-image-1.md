@@ -3,21 +3,21 @@ title: "Classification for MEDIA (1)"
 excerpt: "의료영상을 위한 Classification 방법을 정리해봅시다 (1)"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Classification
-- Machine learning
-- Deep learning
-- Logistic regression
-- Gradient descent algorithm
-- Support vector machine
-- Random forest
-- Neural network
-- Deep neural network
-- Demographic score
+  - Medical image analysis
+  - Lecture
+  - Classification
+  - Machine learning
+  - Deep learning
+  - Logistic regression
+  - Gradient descent algorithm
+  - Support vector machine
+  - Random forest
+  - Neural network
+  - Deep neural network
+  - Demographic score
 
 toc: true
 toc_sticky: true
@@ -93,7 +93,7 @@ Learning rate \\(\alpha\\)가 너무 작다면 학습이 너무 뎌디게 진행
 
 ![2020-10-23-medical-image-classification-1-8-logistic-function]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classification-1/2020-10-23-medical-image-classification-1-8-logistic-function.png)
 
-네, 있습니다. Logistic function이라고 불리우는 이 함수는 [0, 1]의 값을 갖습니다. 
+네, 있습니다. Logistic function이라고 불리우는 이 함수는 [0, 1]의 값을 갖습니다.
 
 ![2020-10-23-medical-image-classification-1-9-logistic-regression]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classification-1/2020-10-23-medical-image-classification-1-9-logistic-regression.png)
 
@@ -123,13 +123,13 @@ Random Forest는 이전 포스팅을 참고해주세요.
 
 ![2020-10-23-medical-image-classification-1-10-neural-network]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classification-1/2020-10-23-medical-image-classification-1-10-neural-network.png)
 
-신경망 (Neural network) 구조는 Input, hidden, output layer로 구성되어있습니다. 이전 레이어의 모든 값에 가중치 \\(w\\)를 곱하고 bias \\(b\\)를 더한 뒤, activation function \\(\sigma\\)를 거쳐 다음 레이어로 넘깁니다 (수식 참고) 
+신경망 (Neural network) 구조는 Input, hidden, output layer로 구성되어있습니다. 이전 레이어의 모든 값에 가중치 \\(w\\)를 곱하고 bias \\(b\\)를 더한 뒤, activation function \\(\sigma\\)를 거쳐 다음 레이어로 넘깁니다 (수식 참고)
 
 ### Deep neural network
 
 ![2020-10-23-medical-image-classification-1-11-deep-neural-network]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classification-1/2020-10-23-medical-image-classification-1-11-deep-neural-network.png)
 
-심층신경망 (Deep neural network)은 깊어진 형태의 신경망 구조를 띕니다. 
+심층신경망 (Deep neural network)은 깊어진 형태의 신경망 구조를 띕니다.
 
 다음 포스팅에서 정리합니다.
 
@@ -139,7 +139,7 @@ Random Forest는 이전 포스팅을 참고해주세요.
 
 ![2020-10-23-medical-image-classification-1-12-activation-functions]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classification-1/2020-10-23-medical-image-classification-1-12-activation-functions.png)
 
-활성화 함수 (Activation function)은 위 Figure에 보이듯, 여러 종류가 있습니다. 뉴럴네트워크에 비선형성을 부여하는 핵심 함수입니다. 
+활성화 함수 (Activation function)은 위 Figure에 보이듯, 여러 종류가 있습니다. 뉴럴네트워크에 비선형성을 부여하는 핵심 함수입니다.
 
 ## Procedure
 
@@ -212,6 +212,7 @@ Normal 그룹에 적합된 linear model이기 때문에, 상대적으로 AD (환
 ![2020-10-23-medical-image-classification-1-19-example1-test]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classification-1/2020-10-23-medical-image-classification-1-19-example1-test.png)
 
 Training 시,
+
 1. Raw 이미지로부터 **Feature extractor를 학습**시키고, training data에 대한 feature를 추출합니다.
 2. Demographic score를 활용하여 **Feature noramlizer를 학습**시키고, training data에 대한 normalized feature를 추출합니다.
 3. Normalized feature와 label을 이용하여 **classifier를 학습**시킵니다.
@@ -219,6 +220,7 @@ Training 시,
 ![2020-10-23-medical-image-classification-1-19-example1-training]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-23-medical-image-classification-1/2020-10-23-medical-image-classification-1-19-example1-training.png)
 
 Test 시,
+
 1. 학습된 Feature extractor로부터 test data에 대한 feature를 추출합니다.
 2. 학습된 Feature normalizer로부터 test data에 대한 feature를 normalize합니다.
 3. 학습된 classifier로부터 test data의 normalized feature에 대한 label을 얻습니다.

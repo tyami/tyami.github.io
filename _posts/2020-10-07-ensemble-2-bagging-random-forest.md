@@ -3,14 +3,14 @@ title: "배깅 앙상블 (Bagging Ensemble): Random Forest"
 excerpt: "배깅 앙상블의 예시인 Random Forest를 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Ensemble
-- Algorithm
-- Bagging
-- Random forest
+  - Machine learning
+  - Ensemble
+  - Algorithm
+  - Bagging
+  - Random forest
 
 toc: true
 toc_sticky: true
@@ -23,7 +23,7 @@ use_math: true
 
 > 이전 포스팅에서는 앙상블 (Ensemble)의 기본적인 개념과 그 종류들에 대해 정리했습니다.  
 > 이번 포스팅에서는 그 중 배깅 (Bagging) 앙상블의 대표적인 예시인 Random Forest 알고리즘에 대해 정리하겠습니다. 정말 간단합니다.
- 
+
 ## Random Forest
 
 ![숲](https://upload.wikimedia.org/wikipedia/commons/7/77/Latvian_Forest_Tomes_pagasts%2C_%C4%B6eguma_novads%2C_Latvia.jpg)
@@ -66,10 +66,11 @@ Bootstrap을 통해 생성된 각각의 데이터셋에 대한 Decision tree들�
 
 ![Random Forest Decision tree]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-07-random-forest/2020-10-07-random-forest-ensemble.png)
 
-각 Decision tree의 예측 결과를 voting하여 최종 예측값을 얻습니다. 
+각 Decision tree의 예측 결과를 voting하여 최종 예측값을 얻습니다.
 
 ## Python code
-python `scikit-learn` 라이브러리의 `sklearn.ensemble.RandomForestClassifier` 또는 `sklearn.ensemble.RandomForestRegressor`를 이용해 Random Forest를 사용할 수 있습니다. 
+
+python `scikit-learn` 라이브러리의 `sklearn.ensemble.RandomForestClassifier` 또는 `sklearn.ensemble.RandomForestRegressor`를 이용해 Random Forest를 사용할 수 있습니다.
 
 - [sklearn.ensemble.RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier)
 - [sklearn.ensemble.RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor)

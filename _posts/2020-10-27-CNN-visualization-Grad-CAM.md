@@ -3,13 +3,13 @@ title: "CNN visualization: CAM and Grad-CAM 설명"
 excerpt: "CNN 모델의 학습결과를 시각화하는 Weakly-supervised learning의 예시로 CAM과 Grad-CAM을 정리해봅니다"
 
 categories:
-- Deep learning
+  - Deep learning
 
 tags:
-- Deep learning
-- Convolutional neural network
-- Visualization
-- Class activation map
+  - Deep learning
+  - Convolutional neural network
+  - Visualization
+  - Class activation map
 
 toc: true
 toc_sticky: true
@@ -195,6 +195,7 @@ Grad-CAM의 결과입니다. 사진 속 (b)는 Guided backpropagation이라는 �
 ---
 
 ## Reference
+
 - [Grad-CAM: 대선주자 얼굴 위치 추적기](https://jsideas.net/grad_cam/): 설명뿐 아니라 Grad-CAM과 CAM이 수식적으로 동일하다는 증명을 적어둔 포스트입니다. 추가로 Keras 구현도 되어있습니다.
 
 - [고려대학교 DMQA 랩 세미나, 백인성 님 발표 자료](http://dmqm.korea.ac.kr/activity/seminar/274): 설명 이미지 만들 때 참고자료로 사용했습니다.

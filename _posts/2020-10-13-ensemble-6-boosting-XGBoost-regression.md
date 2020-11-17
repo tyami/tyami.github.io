@@ -3,13 +3,13 @@ title: "부스팅 앙상블 (Boosting Ensemble) 3-1: XGBoost for Regression"
 excerpt: "Boosting 모델 중 하나인 XGBoost의 Regression 알고리즘을 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Ensemble
-- Algorithm
-- Boosting
+  - Machine learning
+  - Ensemble
+  - Algorithm
+  - Boosting
 
 toc: true
 toc_sticky: true
@@ -22,8 +22,9 @@ use_math: true
 
 > 이전 두 개의 포스팅에서 부스팅 앙상블의 초기 모델인 Gradient Boosting의 두 알고리즘 (Regression, Classification)에 대해 정리했습니다.  
 > 이번 포스팅에서는 최근 Kaggle에서 높은 점수를 기록하고 있는 XGBoost 알고리즘에 대해 정리해보겠습니다. Regression과 Classification 중 Regression 알고리즘을 먼저 다뤄봅니다.
- 
-## XGBoost 
+
+## XGBoost
+
 XGBoost (eXtreme Gradient Boost)는 2016년 Tianqi Chen과 Carlos Guestrin 가 [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754) 라는 논문으로 발표했으며, 그 전부터 Kaggle에서 놀라운 성능을 보이며 사람들에게 알려졌습니다.
 
 ![XGBoost 자랑]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-13-XGBoost-regression/2020-10-13-xgboost-introduction-kaggle-winners.PNG)
@@ -152,13 +153,13 @@ Decision tree를 계속해서 만듭니다.
 
 ## Properties of parameter \\(\lambda, \gamma\\)
 
-### Higher \\(\lambda\\)  makes lower similarity score
+### Higher \\(\lambda\\) makes lower similarity score
 
 ![lambda 특성 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-13-XGBoost-regression/2020-10-13-xgboost-regression-lambda-properties-1.png)
 
 위 예시에서 \\(\lambda\\)의 값이 커짐에 따라 similarity가 작아지는 것을 확인할 수 있습니다. Similarity score의 분모에 \\(\lambda\\)가 있기 때문에, 반비례하는 특성을 갖습니다.
 
-### Higher \\(\lambda\\)  makes more pruning
+### Higher \\(\lambda\\) makes more pruning
 
 ![lambda 특성 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-13-XGBoost-regression/2020-10-13-xgboost-regression-lambda-properties-2.png)
 
@@ -166,13 +167,14 @@ Similarity score의 감소는 Gain를 감소시킵니다. 따라서 더 낮은 \
 
 결과적으로 \\(\lambda\\) 의 증가는 더 많은 가지치기를 수행하게 만듭니다.
 
-### \\(\gamma=0\\)  does not mean turning off pruning
+### \\(\gamma=0\\) does not mean turning off pruning
 
 ![lambda 특성 2]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-13-XGBoost-regression/2020-10-13-xgboost-regression-gamma-property.png)
 
 위 예시에서는 Gain 자체가 음수값을 갖습니다. 따라서, \\(\gamma=0\\)인 조건임에도 가지치기가 진행됩니다. 즉, \\(\gamma=0\\) 은 **가지치기가 일어나지 않는다.** 를 의미하는 것이 아닙니다.
 
 ## Python code
+
 Python 에서는 `xgboost` library로 사용 가능합니다.
 
 - [XGBoost Docs](https://xgboost.readthedocs.io/en/latest/)

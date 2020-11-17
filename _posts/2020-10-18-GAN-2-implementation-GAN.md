@@ -3,12 +3,12 @@ title: "Generative Adversarial Nets (GAN) 2: GAN을 PyTorch로 구현해보기"
 excerpt: "PyTorch로 GAN을 구현해봅시다"
 
 categories:
-- Deep learning
+  - Deep learning
 
 tags:
-- Deep learning
-- Generative adversarial network
-- Implementation
+  - Deep learning
+  - Generative adversarial network
+  - Implementation
 
 toc: true
 toc_sticky: true
@@ -43,9 +43,11 @@ use_math: true
 전체 코드는 [Github](https://github.com/tyami/implementation-deep-learning/blob/master/code/1-GAN-PyTorch.ipynb)에서 볼 수 있습니다.
 
 ## 구현
+
 ### 1. Load libraries
 
 GAN 구현에 사용될 라이브러리들을 불러옵니다.
+
 ```python
 import numpy as np
 import pandas as pd
@@ -65,6 +67,7 @@ import torchvision.transforms as transforms
 ```
 
 본 구현에 사용된 라이브러리 환경은 아래와 같습니다 (python=3.5)
+
 ```python
 print('numpy: ' + np.__version__)
 print('pandas: ' + pd.__version__)
@@ -72,6 +75,7 @@ print('matlotlib: ' + matplotlib.__version__)
 print('torch: ' + torch.__version__)
 print('torchvision: ' + torchvision.__version__)
 ```
+
 > numpy: 1.16.0  
 > pandas: 0.25.3  
 > matlotlib: 3.0.3  
@@ -79,6 +83,7 @@ print('torchvision: ' + torchvision.__version__)
 > torchvision: 0.6.1
 
 결과 재현을 위해 random seed를 설정합니다.
+
 ```python
 import random
 
@@ -91,23 +96,27 @@ torch.manual_seed(manualSeed);
 ```
 
 GPU를 사용할지 선택합니다. 사용 가능한 GPU가 있다면 `device` 변수에 *cuda*가, 없다면 *cpu*가 표시됩니다.
+
 ```python
 is_cuda = torch.cuda.is_available()
 device = torch.device('cuda' if is_cuda else 'cpu')
 
 print(device)
 ```
+
 > cuda
 
 ### 2. MNIST dataset download
 
 하이퍼파라미터 `batch_size` 를 설정합니다.
+
 ```python
 # hyper-parameter
 batch_size = 64
 ```
 
 MNIST 전처리를 위한 `standardize`를 설정합니다.
+
 ```python
 # standardizer
 standardizer = transforms.Compose([
@@ -117,17 +126,20 @@ standardizer = transforms.Compose([
 ```
 
 MNIST 데이터를 다운로드받습니다.
+
 ```python
 # MNIST dataset
 train_data = dsets.MNIST(root='../data/', train=True, transform=standardizer, download=True)
 ```
 
 `batch_size` 단위로 이미지를 로드하기 위한 dataloader를 정의합니다.
+
 ```python
 train_data_loader = torch.utils.data.DataLoader(train_data, batch_size, shuffle=True)
 ```
 
 제대로 로드가 되는지 확인하기 위해, 몇 개의 이미지를 시각화해봅니다.
+
 ```python
 # function for visualization
 def tc_imshow(img, lbl=""):
@@ -135,7 +147,7 @@ def tc_imshow(img, lbl=""):
         plt.imshow(img.squeeze(), cmap='gray')
     else:
         plt.imshow(np.transpose(img, (1, 2, 0)))
-        
+
     plt.title(lbl)
     plt.axis('off')
 ```
@@ -150,20 +162,23 @@ for i in range(16):
     tc_imshow(img=mini_batch_img[i],
               lbl=train_data.classes[mini_batch_lbl[i].numpy()])
     plt.axis('off')
-    
+
 plt.savefig('../result/GAN/1-GAN/1-dataloader-example.png', dpi=300)
 ```
+
 > ![GAN dataloader test]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-1-dataloader-example.png)
 
 ### 3. Random sample \\(z\\) from normal distribution
 
 하이퍼파라미터 `dim_noise`를 정의합니다. `dim_noise`는 latent space \\(z\\)의 차원을 의미합니다.
+
 ```python
 # hyper-parameter
 dim_noise = 100
 ```
 
-latent space \\(z\\)를 생성합니다. \\(z\\)는 normal distribution으로부터 random sampling됩니다. 
+latent space \\(z\\)를 생성합니다. \\(z\\)는 normal distribution으로부터 random sampling됩니다.
+
 ```python
 # Random sampling from normal distribution
 def random_sample_z_space(batch_size=1, dim_noise=100):
@@ -173,6 +188,7 @@ def random_sample_z_space(batch_size=1, dim_noise=100):
 ### 4. Generative model \\(G\\)
 
 하이퍼파라미터 `dim_hidden`, `sz_output`, `num_channels`를 정의합니다.
+
 - `dim_hidden`: 네트워크의 hidden layer 채널 수
 - `sz_output`: 최종 출력 이미지의 width, height 길이 (pixels)
 - `num_channels`: 인풋 이미지의 채널 수
@@ -194,6 +210,7 @@ img_shape = (num_channels, sz_output, sz_output)
 Generator 구현체를 class로 정의합니다. 구현체로 정해주게 되면, 처음 선언될 때 `__init__(self)`이 실행되며, `z`를 인풋으로 받을 때, `forward(self, z)`가 실행됩니다.
 
 일반적으로 `__init__(self)` 함수에서 네트워크 구조를 정의합니다. 네트워크 구조는 fully-connected layer로 구성합니다.
+
 ```python
 class Generator(nn.Module):
     def __init__(self):
@@ -216,20 +233,23 @@ class Generator(nn.Module):
 ```
 
 \\(G(z)\\)의 이미지를 그려봅니다. 아직 generator \\(G\\)가 학습되지 않은 상태이기 때문에, nosiy한 이미지만 출력됩니다.
+
 ```python
 # visualize
 utils.save_image(G(z)[:25].cpu().detach(), "../result/GAN/1-GAN/2-G(z).png", nrow=5, normalize=True)
 ```
+
 > ![GAN G(z) test]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-2-G(z).png)
 
 ### 5. Disciminative model \\(D\\)
 
 Discriminative model \\(D\\)의 형태는 \\(G\\)를 거꾸로 뒤집은 형태입니다. \\(G\\)의 MLP 구조를 거꾸로 구성해줍니다. \\(D\\)의 출력 레이어는 입력으로 받은 이미지가 진짜인지 가짜인지 판단하는 sigmoid function을 이용합니다.
+
 ```python
 class Discriminator(nn.Module):
     def __init__(self):
         super(Discriminator, self).__init__()
-        
+
         self.model = nn.Sequential(
             nn.Linear(dim_output, dim_hidden),
             nn.LeakyReLU(0.2),
@@ -238,20 +258,22 @@ class Discriminator(nn.Module):
             nn.LeakyReLU(0.2),
             nn.Dropout(0.1),
             nn.Linear(dim_hidden, 1),
-            nn.Sigmoid()    
+            nn.Sigmoid()
         )
-    
+
     def forward(self, img):
         flat_img = img.view(img.size(0), -1)
         check_validity = self.model(flat_img)
-        
+
         return check_validity
 ```
 
 ### 6. Train model \\(G\\) and \\(D\\)
+
 #### 6.1 Initialize model \\(G\\) and \\(D\\)
 
 Generative model과 Discriminative model을 선언합니다.
+
 ```python
 generator = Generator().to(device)
 discriminator = Discriminator().to(device)
@@ -260,6 +282,7 @@ discriminator = Discriminator().to(device)
 #### 6.2 Loss functions & Optimizers
 
 하이퍼파라미터 `learning_rate`를 정의합니다.
+
 - `learning_rate`: optimizer에 사용되는 learning rate입니다.
 - `beta1`: Adam optimizer에 사용되는 momentum parameter입니다.
 
@@ -270,11 +293,13 @@ beta1 = 0.9
 ```
 
 Loss function은 Binary Cross Entropy (BCE)를 사용합니다. PyTorch 내장함수인 ``torch.nn.BCELoss()`를 이용합니다.
+
 ```python
 adversarial_loss = nn.BCELoss()
 ```
 
 optimizer는 각 모델별로 정의합니다. Adam optimizer를 사용합니다.
+
 ```python
 optimizer_G = optim.Adam(generator.parameters(), lr=learning_rate, betas=(beta1, 0.999))
 optimizer_D = optim.Adam(discriminator.parameters(), lr=learning_rate, betas=(beta1, 0.999))
@@ -283,6 +308,7 @@ optimizer_D = optim.Adam(discriminator.parameters(), lr=learning_rate, betas=(be
 #### 6.3 Train models
 
 하이퍼파라미터 `num_epochs`와 `interval_save_img`를 정의합니다.
+
 - `num_epochs`: 최대 Epoch 수를 의미합니다.
 - `interval_save_img`: 이미지 생성 결과를 저장할 인터벌을 정의합니다. 일정 batch size마다 이미지가 저장되어 생성모델의 학습과정을 확인할 수 있습니다.
 
@@ -293,6 +319,7 @@ interval_save_img = 1000
 ```
 
 FloatTensor모델을 정의합니다. 연산 시 변수들의 데이터 타입을 맞춰주기 위함입니다.
+
 ```python
 Tensor = torch.cuda.FloatTensor if is_cuda else torch.FloatTensor
 ```
@@ -319,52 +346,52 @@ for idx_epoch in range(num_epochs):
     for idx_batch, (imgs, _) in enumerate(train_data_loader):
         # Ground truth variables indicating real/fake
         real_ground_truth = Variable(Tensor(imgs.size(0), 1).fill_(1.0), requires_grad=False)
-        fake_ground_truth = Variable(Tensor(imgs.size(0), 1).fill_(0.0), requires_grad=False) 
-        
+        fake_ground_truth = Variable(Tensor(imgs.size(0), 1).fill_(0.0), requires_grad=False)
+
         # Real image
         real_imgs = Variable(imgs.type(Tensor))
-                
+
         #####################
         # Train Generator
-        
+
         optimizer_G.zero_grad()
-        
+
         # Random sample noise
         z = random_sample_z_space(imgs.size(0))
-                
+
         # Generate image
         gen_imgs = generator(z)
-        
+
         # Generator's loss: loss between D(G(z)) and real ground truth
         loss_G = adversarial_loss(discriminator(gen_imgs), real_ground_truth)
-        
+
         loss_G.backward()
         optimizer_G.step()
-        
-        
+
+
         #####################
         # Train Discriminator
-        
+
         optimizer_D.zero_grad()
-        
+
         loss_real = adversarial_loss(discriminator(real_imgs), real_ground_truth)
         loss_fake = adversarial_loss(discriminator(gen_imgs.detach()), fake_ground_truth)
         loss_D = (loss_real+loss_fake)/2
-        
+
         loss_D.backward()
         optimizer_D.step()
-        
-        
+
+
         #####################
         # archieve loss
         losses.append([loss_G.item(), loss_D.item()])
-        
+
         # Print progress
         if idx_batch % 10 == 0:
             print("[Epoch {}/{}] [Batch {}/{}] loss_G: {:.6f}, loss_D: {:.6f}".format(idx_epoch, num_epochs,
                                                                                       idx_batch, len(train_data_loader),
                                                                                       loss_G, loss_D))
-                    
+
         batches_done = idx_epoch * len(train_data_loader) + idx_batch
         if batches_done % interval_save_img == 0:
             utils.save_image(gen_imgs.data[:25], "../result/GAN/1-GAN/3-{}.png".format(batches_done), nrow=5, normalize=True)
@@ -374,9 +401,10 @@ for idx_epoch in range(num_epochs):
 > ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-3-0.png)  
 > ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-3-1000.png)  
 > ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-3-10000.png)  
-> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-3-100000.png)  
+> ![GAN G(z) result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-3-100000.png)
 
 200 epoch에 대한 이미지 생성 결과를 시각화해봅니다.
+
 ```python
 # Random sample noise
 z = random_sample_z_space(batch_size)
@@ -387,11 +415,13 @@ gen_imgs = generator(z)
 # visualize
 utils.save_image(gen_imgs.data[:25].cpu().detach(), "../result/GAN/1-GAN/4-fake-images.png", nrow=5, normalize=True)
 ```
-> ![GAN G(z) final result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-fake-images.png)  
+
+> ![GAN G(z) final result]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-4-fake-images.png)
 
 #### 6.4 Save model weights
 
 학습된 가중치를 저장해둡니다.
+
 ```python
 torch.save({
     'epoch': num_epochs,
@@ -407,6 +437,7 @@ torch.save({
 Interpolation 그림을 그려봅시다.
 
 학습이 완전하지는 않기 때문에, 사이드 그림이 깔끔한 것을 먼저 골라냅시다.
+
 ```python
 z_opposites = random_sample_z_space(2)
 fake_img = generator(z_opposites)
@@ -416,10 +447,12 @@ plt.subplot(122); plt.imshow(fake_img[1].squeeze().cpu().detach(), cmap='gray')
 
 plt.savefig('../result/GAN/1-GAN/5-side-images.png', dpi=300)
 ```
+
 > 7과 3이 생성된 것을 확인할 수 있습니다.  
-> ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-5-side-images.png)  
+> ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-5-side-images.png)
 
 두 이미지를 사이드 이미지로 두고, 그 사이의 latent space를 interpolation해봅니다.
+
 ```python
 num_interpolation = 10
 
@@ -431,11 +464,12 @@ for i in range(num_interpolation):
     plt.subplot(1,num_interpolation,i+1)
     plt.imshow(fake_img[i].squeeze().cpu().detach(), cmap='gray')
     plt.axis('off')
-    
+
 plt.savefig('../result/GAN/1-GAN/6-interpolation.png', dpi=300)
 ```
+
 > interpolation이 잘 되는 것을 확인했습니다. 숫자가 부드럽게 (?) 변하네요.  
-> ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-6-interpolation.png)  
+> ![GAN G(z) side images]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-18-GAN-implementation/2020-10-18-GAN-implementation-6-interpolation.png)
 
 ---
 

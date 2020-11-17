@@ -3,16 +3,16 @@ title: "Classification for MEDIA (7) Feature selection and extraction"
 excerpt: "Feature selection and extraction methods "
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Classification
-- Deep learning
-- Feature selection
-- Feature extraction
-- Class activation map
+  - Medical image analysis
+  - Lecture
+  - Classification
+  - Deep learning
+  - Feature selection
+  - Feature extraction
+  - Class activation map
 
 toc: true
 toc_sticky: true
@@ -76,7 +76,7 @@ H(X,Y)=H(X) + H(Y)
 
 \begin{aligned}
 I(X;Y)&=H(X)+H(Y)-H(X, Y) \\\\\\
-&=\sum_{i=1}^N \sum_{j=1}^M p(x_i, y_i) log \frac{p(x_i, y_i)}{p(x_i)p(y_i)}
+&=\sum*{i=1}^N \sum*{j=1}^M p(x_i, y_i) log \frac{p(x_i, y_i)}{p(x_i)p(y_i)}
 \end{aligned}
 
 - Mutual information은 두 사건이 관련성이 없을 때 0의 값을 가지며, 관련 있을 때는 점차 커집니다.
@@ -110,7 +110,7 @@ R(S)=\frac{1}{S^2} \sum_{f_i, f_j \in S} I(f_1, f_2)
 \\(D(S,c\\)를 최대화하는 동시에, \\(R(S)\\)를 최소화하는 feature set \\(S\\)를 찾는다.
 
 \\[
-mRMR = \max_S [\frac{1}{|S|} \sum_{f_i \in S} I(f_i; c)-\frac{1}{S^2} \sum_{f_i, f_j \in S} I(f_1, f_2)]
+mRMR = \max*S [\frac{1}{|S|} \sum*{f*i \in S} I(f_i; c)-\frac{1}{S^2} \sum*{f_i, f_j \in S} I(f_1, f_2)]
 \\]
 
 ## Auto-encoder
@@ -119,7 +119,7 @@ Autoencoder도 feature selection에 사용될 수 있습니다.
 
 ![2020-11-02-classification-for-medical-image-7-feature-selection-extraction-3-autoencoder.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-11-02-classification-for-medical-image-7-feature-selection-extraction/2020-11-02-classification-for-medical-image-7-feature-selection-extraction-3-autoencoder.png)
 
-위와 같이 Input 데이터를 낮은 차원으로 압축한 뒤 (Encoder), 다시 원래 차원으로 변환시키는 (Decoder) 모델을 Auto-encoder라고 합니다. 
+위와 같이 Input 데이터를 낮은 차원으로 압축한 뒤 (Encoder), 다시 원래 차원으로 변환시키는 (Decoder) 모델을 Auto-encoder라고 합니다.
 
 이 때 낮은 차원의 데이터를 feature로 사용하는 개념입니다.
 

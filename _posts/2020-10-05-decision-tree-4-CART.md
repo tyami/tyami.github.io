@@ -3,12 +3,12 @@ title: "의사결정 나무 (Decision Tree) CART 알고리즘 설명"
 excerpt: "의사결정 나무의 기본 알고리즘 중 하나인 CART 를 공부해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Decision tree
-- Algorithm
+  - Machine learning
+  - Decision tree
+  - Algorithm
 
 toc: true
 toc_sticky: true
@@ -20,9 +20,10 @@ use_math: true
 이전 글 보기: [의사결정 나무 (Decision Tree) C4.5 알고리즘 설명]({{ site.url }}{{ site.baseurl }}/machine%20learning/decision-tree-3-c4_5/)
 
 > 이전 포스팅에서는 의사결정 나무에서 엔트로피를 불순도로 사용하는 ID3와 C4.5 알고리즘을 정리해보았습니다.
-> 이번 포스팅에서는 엔트로피 외에 다른 불순도 지표를 사용하는 CART 알고리즘에 대해 정리해보도록 하겠습니다. 
+> 이번 포스팅에서는 엔트로피 외에 다른 불순도 지표를 사용하는 CART 알고리즘에 대해 정리해보도록 하겠습니다.
 
 ## CART 알고리즘
+
 CART는 ID3알고리즘과 비슷한 시기에, 별도로 개발된 알고리즘으로 Classification And Regression Tree의 약자입니다.  
 이름 그대로 Classification뿐 아니라 Regression도 가능한 알고리즘인데, 이 외에도 앞서 소개한 알고리즘들과 몇 가지 차이점이 존재합니다.
 
@@ -39,9 +40,9 @@ CART는 ID3알고리즘과 비슷한 시기에, 별도로 개발된 알고리즘
 Gini index는 엔트로피와 같은 불순도 (Impurity) 지표입니다. \\(C\\)개 사건의 집합 \\(S\\)에 대한 Gini index \\(G(S)\\)는 아래 수식으로 표현됩니다.
 
 \begin{aligned}
-G(S) &= \sum_{i=1}^C p_i(1-p_i) \\\\\\
-&= \sum_{i=1}^C p_i - \sum_{i=1}^C p_i^2 \\\\\\
-&= 1 - \sum_{i=1}^Cp_i^2 \\\\\\
+G(S) &= \sum*{i=1}^C p_i(1-p_i) \\\\\\
+&= \sum*{i=1}^C p*i - \sum*{i=1}^C p*i^2 \\\\\\
+&= 1 - \sum*{i=1}^Cp_i^2 \\\\\\
 \end{aligned}
 
 ![Binary 문제에서 Probability에 따른 Gini index와 Entropy 변화]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-05-CART/2020-10-05-probability-entropy-gini.png)
@@ -87,7 +88,7 @@ IG(Play,Windy=FALSE) \\\\\\
 
 Classification And **Regression Tree** 라는 이름답게, CART 알고리즘은 Regression(회귀)를 지원합니다. 회귀는 쉽게 말해, 결과값이 성별, 등급과 같은 몇 개의 클래스값이 아니라, 온도, 가격 등 다양한 값이 존재하는 문제를 말합니다.
 
-회귀 트리 (Regression Tree)의 방법은 간단합니다. **분기 지표를 선택할 때 사용하는 index를 불순도 (Entropy, Gini index)가 아닌, 실제값과 예측값의 오차를 사용합니다.** 
+회귀 트리 (Regression Tree)의 방법은 간단합니다. **분기 지표를 선택할 때 사용하는 index를 불순도 (Entropy, Gini index)가 아닌, 실제값과 예측값의 오차를 사용합니다.**
 
 수식을 보기 전, 간단한 예시를 먼저 살펴봅시다. [tomaszgolan's blog](https://tomaszgolan.github.io/introduction_to_machine_learning/markdown/introduction_to_machine_learning_02_dt/introduction_to_machine_learning_02_dt/#regression)의 설명을 참고했습니다.
 
@@ -111,9 +112,9 @@ Classification And **Regression Tree** 라는 이름답게, CART 알고리즘은
 Residual\; Sum\; of\; Squares\; (RSS)=\sum_{j=1}^J \sum_{i \in R_j} (y_i - \hat{y}_{R_j})^2
 \\]
 
-, where \\(\hat{y}_{R_j}\\) is the mean response for training observartions within \\(j\\)th box
+, where \\(\hat{y}\_{R_j}\\) is the mean response for training observartions within \\(j\\)th box
 
-아래 수식과 같이 Binary tree의 좌우가지에 대한 오차값 \\(MSE_{left}, MSE_{right}\\)을 계산하고, 좌우 가지에 해당하는 샘플 수의 비율 \\(\frac{m_{left}}{m}, \frac{m_{right}}{m}\(\\)을 가중치로 곱해 전체 오차값 \\(J(k, t_k)\\)을 계산하여 지표간 비교를 통해 최적의 분기를 결정합니다.
+아래 수식과 같이 Binary tree의 좌우가지에 대한 오차값 \\(MSE*{left}, MSE*{right}\\)을 계산하고, 좌우 가지에 해당하는 샘플 수의 비율 \\(\frac{m*{left}}{m}, \frac{m*{right}}{m}\(\\)을 가중치로 곱해 전체 오차값 \\(J(k, t_k)\\)을 계산하여 지표간 비교를 통해 최적의 분기를 결정합니다.
 
 \\[
 J(k, t_k)=\frac{m_{left}}{m}MSE_{left}+\frac{m_{right}}{m}MSE_{right}
@@ -127,14 +128,14 @@ ID3, C4.5, CART에 걸쳐 의사결정 나무 생성을 위한 알고리즘을 �
 
 만약 Regression의 예시에서 모든 Training data가 개별 구간을 갖도록 의사결정 나무가 생성된다면 이 모델은 과적합된 모델이라고 할 수 있습니다. 즉, Training data에 너무 과도하게 학습된 모델입니다. 따라서 이러한 과적합을 막기 위해, 가지치기 (pruning) 과정을 수행합니다.
 
-알고리즘에 따라 아래 예시와 같이 다양한 방법으로 사전 가지치기 (pre-pruning) 또는 사후 가지치기 (post-pruning)를 하기도 하지만, 단일 모델의 한계점은 여전히 존재합니다. 
+알고리즘에 따라 아래 예시와 같이 다양한 방법으로 사전 가지치기 (pre-pruning) 또는 사후 가지치기 (post-pruning)를 하기도 하지만, 단일 모델의 한계점은 여전히 존재합니다.
 
 - 나무의 최대 깊이 (depth)를 제한
 - 자식 노드의 최소 샘플 수를 설정
 - impurity/error 의 최소값을 설정
 - impurity/error 변화값의 최소값을 설정
 
-이 문제를 해결하기 위해 사람들은 의사결정 나무를 여러개 만들어, 예측 결과를 종합하는 앙상블 (Ensemble) 알고리즘을 고안하였습니다.  
+이 문제를 해결하기 위해 사람들은 의사결정 나무를 여러개 만들어, 예측 결과를 종합하는 앙상블 (Ensemble) 알고리즘을 고안하였습니다.
 
 > 다음 포스팅부터는 배깅 (Bagging), 부스팅 (Boosting), 스태킹 (Stacking) 등 다양한 앙상블 모델을 정리해고자 합니다.
 

@@ -3,12 +3,12 @@ title: "Medical Image acquisition methods"
 excerpt: "X-ray, CT, PET, MRI와 같은 의료영상 측정방법의 원리를 정리해봅시다"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Classification
+  - Medical image analysis
+  - Lecture
+  - Classification
 
 toc: true
 toc_sticky: true
@@ -26,7 +26,7 @@ use_math: true
 
 의료영상 측정 장비 설명에 앞서, 먼저 PACS를 소개해봅시다.
 
-Picture Archiving and Communication System (PACS)는 병원에서 사용하는 의료 정보를 위한 데이터 공유 시스템입니다. 
+Picture Archiving and Communication System (PACS)는 병원에서 사용하는 의료 정보를 위한 데이터 공유 시스템입니다.
 
 ![2020-10-22-medical-image-acquisition-1-pacs]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-22-medical-image-acquisition/2020-10-22-medical-image-acquisition-1-pacs.png)
 
@@ -121,7 +121,7 @@ X-ray와 CT는 방사선을 인체에 투과시켜 뒤에 있는 detector로 센
 
 ![2020-10-22-medical-image-acquisition-11-PET]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-22-medical-image-acquisition/2020-10-22-medical-image-acquisition-11-PET.png)
 
-주로 반감기가 짧은, 포도당과 유사한 방사선 물질을 투여하는데, 이 물질의 특징은 **포도당 대사 (metabolic function)**가 활발한 곳에서 양전자 (positron)를 방출**합니다. 양전자들은 신체 내 전자와 만나 소멸하면서 \\(\gamma\\)-ray를 발생시키고, \\(\gamma\\)-ray는 체외로 양방향으로 방출됩니다. 이를 모든 외부 방향에서 detect 한 뒤, CT처럼 이미지를 쌓아 3D화시킵니다.
+주로 반감기가 짧은, 포도당과 유사한 방사선 물질을 투여하는데, 이 물질의 특징은 **포도당 대사 (metabolic function)**가 활발한 곳에서 양전자 (positron)를 방출\*\*합니다. 양전자들은 신체 내 전자와 만나 소멸하면서 \\(\gamma\\)-ray를 발생시키고, \\(\gamma\\)-ray는 체외로 양방향으로 방출됩니다. 이를 모든 외부 방향에서 detect 한 뒤, CT처럼 이미지를 쌓아 3D화시킵니다.
 
 > 📌  
 > 암세포가 있는 곳에서 포도당 대사가 비정상적으로 많이 발생하는 경향이 있기 때문에, 주로 암 조기 진단에 활용됩니다.
@@ -158,7 +158,7 @@ MRI는 또한 coil의 신호가 변화하는 속도가 다르기 때문에, tiss
 
 ![2020-10-22-medical-image-acquisition-17-MRI-mechanism]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-22-medical-image-acquisition/2020-10-22-medical-image-acquisition-17-MRI-mechanism.png)
 
-MRI의 작동 원리입니다. RF pulse를 쏘는 Radio Frequency coils과 자기장을 만드는 Magnet을 확인할 수 있습니다. 추가적으로 Gradient coils 라는 게 있습니다. Gradient coils이 없다면 몸의 모든 부분이 같은 값을 나타낼 것입니다. 이렇게되면 원하는 부위의 MRI 영상을 얻을 수 없습니다. 
+MRI의 작동 원리입니다. RF pulse를 쏘는 Radio Frequency coils과 자기장을 만드는 Magnet을 확인할 수 있습니다. 추가적으로 Gradient coils 라는 게 있습니다. Gradient coils이 없다면 몸의 모든 부분이 같은 값을 나타낼 것입니다. 이렇게되면 원하는 부위의 MRI 영상을 얻을 수 없습니다.
 
 이는 몸의 각 부분 (머리/가슴/배/다리 등...)마다 다른 자기장을 가해주는 코일입니다.
 

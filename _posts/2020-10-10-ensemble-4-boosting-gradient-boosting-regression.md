@@ -3,13 +3,13 @@ title: "부스팅 앙상블 (Boosting Ensemble) 2-1: Gradient Boosting for Regre
 excerpt: "Boosting 알고리즘 중 하나인 Gradient Boosting for Regression을 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Ensemble
-- Algorithm
-- Boosting
+  - Machine learning
+  - Ensemble
+  - Algorithm
+  - Boosting
 
 toc: true
 toc_sticky: true
@@ -24,12 +24,13 @@ use_math: true
 > 이번 포스팅에서는 AdaBoost보다 조금 더 진보된 부스팅 앙상블 모델인 Gradient Boosting 중 Regression 알고리즘을 정리했습니다.
 
 전체적인 내용은 StatQuest라는 유투버의 [Gradient Boost Part 1: Regression Main Ideas](https://www.youtube.com/watch?v=3CC4N4z3GJc)과 [Gradient Boost Part 2: Regression Details](https://www.youtube.com/watch?v=2xudPOBz-vs)를 참고했습니다. Gradient Boosting에 대해 가장 정리가 잘 된 설명자료입니다 (영어이지만 시각자료도 많고, 화면에 자막도 있어서 알아듣기 쉽습니다)
- 
+
 ## Gradient Boosting
 
 Gradient Boosting은 앞서 정리한 AdaBoost보다 조금 복잡합니다. 따라서 이해와 관계없이 일단 포스팅을 처음부터 끝까지 쭉 읽어서 전체적인 흐름을 이해하고, 그 다음 세부내용을 공부하는게 좋을 것 같습니다. 가능하다면 위에 링크해둔 유투브 영상도 보시는 것을 추천드립니다.
 
 ## AdaBoost VS Gradient Boosting
+
 AdaBoost와 Gradient Boosting 두 모델의 공통점은 부스팅 앙상블 기반의 알고리즘이라는 것입니다. 부스팅 앙상블의 대표적인 특징은 모델 학습이 **sequential**합니다. 즉, 먼저 생성된 모델의 예측값이 다음 모델 생성에 영향을 줍니다.  
 하지만 이 외에 두 모델은 상당한 차이점이 있습니다.
 
@@ -91,9 +92,9 @@ F_{t}(x)=F_0(x) + \eta \sum_{t=1}^M h_t(x)
 
 Gradient Boosting은 회귀 (Regression)와 분류 (Classification) 문제에 모두 사용 모두 가능합니다. 두 알고리즘은 전체적으로는 비슷하지만, 디테일 면에서 다릅니다. 알고리즘의 공통점을 요약하면 아래와 같습니다.
 
-> Create decision trees to predict residual (observed value – predicted value) of **______**, with limitation of maximum number of leaves.
+> Create decision trees to predict residual (observed value – predicted value) of ****\_\_****, with limitation of maximum number of leaves.
 
-두 알고리즘은 진한 부분의 블랭크 (_____)에 무엇이 들어가느냐가 다릅니다.
+두 알고리즘은 진한 부분의 블랭크 (**\_**)에 무엇이 들어가느냐가 다릅니다.
 
 본 포스팅에서는 상대적으로 쉬운 Gradient Boosting for Regression 알고리즘을 먼저 정리해보도록 하겠습니다.
 
@@ -105,7 +106,7 @@ Gradient Boosting은 회귀 (Regression)와 분류 (Classification) 문제에 �
 
 1. Create a first leaf
 2. Calculate pseudo-residuals
-3. Create a next tree to predict pseudo-residuals 
+3. Create a next tree to predict pseudo-residuals
 4. Repeat 2-3
 
 - (Test) Scale and add up the results of each tree
@@ -127,9 +128,9 @@ F_0 (x) = \underset{\gamma}{argmin} \sum_{i=1}^n L(y_i, \gamma)
 
 ![GB step 2:calculate psuedo-residual]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression/2020-10-10-gradient-boosting-regression-step2.png)
 
-Pseudo-residual (실제값 - 예측값)을 계산합니다. 
+Pseudo-residual (실제값 - 예측값)을 계산합니다.
 
-> Compute \\(r_{im}=-\frac{\partial L(y_i, F(X_i))}{\partial F(X_i)}\\), where \\(F(x)=F_{m-1}(x)\\) for \\(i=1,...,n\\)
+> Compute \\(r*{im}=-\frac{\partial L(y_i, F(X_i))}{\partial F(X_i)}\\), where \\(F(x)=F*{m-1}(x)\\) for \\(i=1,...,n\\)
 
 ### 3. Create a next tree to predict pseudo-residual
 
@@ -141,9 +142,9 @@ Pseudo-residual (실제값 - 예측값)을 계산합니다.
 
 ![GB step 3-1 result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression/2020-10-10-gradient-boosting-regression-step3-1-result.png)
 
-> Fit a regression tree to the \\(r_{im}\\) values and create terminal regions \\(R_{jm}\\), for \\(j=1,...J_m\\)
+> Fit a regression tree to the \\(r*{im}\\) values and create terminal regions \\(R*{jm}\\), for \\(j=1,...J_m\\)
 
-\\(R_{jm}\\)은 decision tree의 \\(j\\)번째 terminal node 내 values로 이루어진 집합을 의미합니다 (Step 3-2를 위해 생성). 위 예시에서 \\(R_{1m}\\)는 {-14.2, -15.2}가 되겠죠.
+\\(R*{jm}\\)은 decision tree의 \\(j\\)번째 terminal node 내 values로 이루어진 집합을 의미합니다 (Step 3-2를 위해 생성). 위 예시에서 \\(R*{1m}\\)는 {-14.2, -15.2}가 되겠죠.
 
 #### 3-2. Calculate representative value by leaves
 
@@ -151,7 +152,7 @@ Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 �
 
 ![GB step 3-2 result]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression/2020-10-10-gradient-boosting-regression-step3-2-result.png)
 
-> For \\(j=1...J_m\\) compute \\(\gamma_{jm}=\underset{\gamma}{argmin} \sum_{x_ \in R_{ij}} L(y_i, F_{m-1}(x_i) + \gamma)\\)  
+> For \\(j=1...J*m\\) compute \\(\gamma*{jm}=\underset{\gamma}{argmin} \sum*{x* \in R*{ij}} L(y_i, F*{m-1}(x_i) + \gamma)\\)
 
 이 부분 수식 푸는게 좀 복잡합니다만, 결과적으로 평균값으로 대치해주면 됩니다.
 
@@ -159,7 +160,7 @@ Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 �
 
 ![GB step 4: repeat 2-3]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-10-gradient-boosting-regression/2020-10-10-gradient-boosting-regression-step4.png)
 
-다시 각 샘플에 대해 pesudo-residual을 계산하고, 이를 바탕으로 decision tree를 만드는 과정을 반복합니다.  이 때 주목할 점으로, 첫 번째 모델의 pseudo-residual보다 두 번째 모델의 pseudo-residual이 감소한 것을 확인할 수 있습니다 !
+다시 각 샘플에 대해 pesudo-residual을 계산하고, 이를 바탕으로 decision tree를 만드는 과정을 반복합니다. 이 때 주목할 점으로, 첫 번째 모델의 pseudo-residual보다 두 번째 모델의 pseudo-residual이 감소한 것을 확인할 수 있습니다 !
 
 ### (Test) Scale and add up the results of each tree.
 
@@ -167,7 +168,7 @@ Terminal node (leaf)마다 예측결과를 평균내줍니다. 결과적으로 �
 
 입력값 \\(x\\)에 대한 각 모델의 residual 예측값 \\(h_t(x)\\)에 동일한 Learning rate \\(\eta\\) (\\(\nu\\))를 가중치로 곱한 뒤 합계를 구합니다.
 
-> Update \\(F_m (x)=F_{m-1} (x) + \nu \sum_{j=1}^{J_m} \gamma_{jm} I(x \in R_{jm})\\)
+> Update \\(F*m (x)=F*{m-1} (x) + \nu \sum*{j=1}^{J_m} \gamma*{jm} I(x \in R\_{jm})\\)
 
 \\(\nu\\)는 \\(\eta\\) 대신 쓰인 learning rate 입니다.
 

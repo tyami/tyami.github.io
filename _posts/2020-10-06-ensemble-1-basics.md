@@ -3,16 +3,16 @@ title: "앙상블 (Ensemble)의 기본 개념"
 excerpt: "앙상블 모델의 개념과 종류를 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Ensemble
-- Algorithm
-- Voting
-- Bagging
-- Boosting
-- Stacking
+  - Machine learning
+  - Ensemble
+  - Algorithm
+  - Voting
+  - Bagging
+  - Boosting
+  - Stacking
 
 toc: true
 toc_sticky: true
@@ -34,7 +34,7 @@ use_math: true
 
 기계학습에서의 앙상블도 이와 비슷합니다. 여러 개의 weak learner들이 모여 투표 (voting)를 통해 더욱 더 강력한 strong learner를 구성합니다. 많은 모델이 있기 때문에, 한 모델에서 예측을 엇나가게 하더라도, 어느 정도 보정이 됩니다. 즉, 보다 일반화된 (generalized) 모델이 완성되는 것입니다.
 
-단일 모델로는 Decision tree, SVM, Deep learning 등 모든 종류의 학습 모델이 사용될 수 있습니다. 
+단일 모델로는 Decision tree, SVM, Deep learning 등 모든 종류의 학습 모델이 사용될 수 있습니다.
 
 ---
 
@@ -44,7 +44,7 @@ use_math: true
 
 #### 하드 보팅 (Hard voting)
 
-하드 보팅은 **각 weak learner들의 예측 결과값을 바탕으로 다수결 투표**하는 방식입니다. 
+하드 보팅은 **각 weak learner들의 예측 결과값을 바탕으로 다수결 투표**하는 방식입니다.
 
 ![Hard voting]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble/2020-10-06-ensemble-hard-voting.png)
 
@@ -87,11 +87,11 @@ weak learner 개별의 예측값은 중요하지 않습니다. 예측 확률값�
 
 배깅 (Bagging)은 **B**ootstrap **Agg**regat**ing**의 약자입니다. 이름에서 알 수 있다시피 **부트스트랩 (Boostrap)**을 이용합니다.
 
-![Bootstrap]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble/2020-10-06-bootstrap.png) 
+![Bootstrap]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-06-ensemble/2020-10-06-bootstrap.png)
 
 부트스트랩이란 주어진 데이터셋에서 random sampling 하여 새로운 데이터셋을 만들어내는 것을 의미합니다. 부트스트랩을 통해 만들어진 여러 데이터셋을 바탕으로 weak learner를 훈련시킨 뒤, 결과를 voting 합니다.
 
-대표적인 예시로 Random Forest가 있습니다. 
+대표적인 예시로 Random Forest가 있습니다.
 
 - [배깅 앙상블 (Bagging Ensemble): Random Forest]({{ site.url }}{{ site.baseurl }}/machine%20learning/ensemble-2-bagging-random-forest/)
 
@@ -123,6 +123,7 @@ Boosting은 다시 **Adaptive Boosting (AdaBoost)**와 **Gradient Boosting Model
 - 부스팅 앙상블 (Boosting Ensemble) 6: NGBoost
 
 #### 스태킹 (Stacking)
+
 > 개인적으로 스태킹은 이 곳보다는 보팅의 종류에 언급하는 게 더 어울리는 것 같긴 하지만, 대부분 배깅, 부스팅과 함께 비교하기에 넣었습니다.
 
 스태킹은 weak learner들의 예측 결과를 바탕으로 meta learner로 학습시켜 최종 예측값을 결정하는 것을 말합니다. meta learner 또한 학습이 필요하며, 이 때 사용되는 데이터는 training data에 대한 각 weak learner들의 예측 확률값의 모음입니다. 과적합 방지를 위해 주로 k-fold cross validation을 이용합니다.

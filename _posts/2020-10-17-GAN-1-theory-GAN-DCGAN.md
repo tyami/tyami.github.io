@@ -3,12 +3,12 @@ title: "Generative Adversarial Nets (GAN) 1: GAN과 DCGAN 설명"
 excerpt: "Generative Adversaraial Nets의 기본 개념을 정리해봅시다"
 
 categories:
-- Deep learning
+  - Deep learning
 
 tags:
-- Deep learning
-- Generative adversarial network
-- Theory
+  - Deep learning
+  - Generative adversarial network
+  - Theory
 
 toc: true
 toc_sticky: true
@@ -45,6 +45,7 @@ GAN은 2014년, Yoshua Bengio의 제자 Ian Goodfellow가 제안한 이미지 �
 - 이 상태에서 만들어진 가짜 지폐는 진짜 지폐처럼 보일 것입니다.
 
 즉, GAN이라는 것은 이름 그대로 세 단계로 구분됩니다.
+
 - Generative: 가짜 이미지를 생성하는 Generative model \\(G\\)가 있습니다.
 - Adversarial: \\(G\\)는 진짜와 가짜 이미지를 구별하는 Discriminative model \\(D\\)와 적대적으로 대립하며 각자 학습해나갑니다.
 - Network: \\(G\\)와 \\(D\\)는 Neural network입니다.
@@ -61,7 +62,7 @@ GAN은 2014년, Yoshua Bengio의 제자 Ian Goodfellow가 제안한 이미지 �
 
 따라서 오늘 포스팅에서는 GAN과 DCGAN을 함께 정리해보도록 하겠습니다.
 
-## GAN 
+## GAN
 
 ### Paper (2014)
 
@@ -73,7 +74,7 @@ GAN의 시작인 **Generative Adversarial Nets**라는 논문은 2014년, Ian Go
 
 당연한 말이겠지만, 이 논문 자체는 위에서 살펴본 아이디어와 동일합니다.
 
-그런데 latent space \\(z\\) 라는 개념이 등장합니다. 지폐 위조범이 지폐를 만들 때, 종이가 필요하겠죠. 이 종이는 그냥 임의의 종이를 이용할 겁니다. 
+그런데 latent space \\(z\\) 라는 개념이 등장합니다. 지폐 위조범이 지폐를 만들 때, 종이가 필요하겠죠. 이 종이는 그냥 임의의 종이를 이용할 겁니다.
 
 실제 GAN의 구현에서도 종이의 역할을 하는 noise가 필요합니다. 즉, Generative model \\(G\\)가 하는 일 \\(G(z)\\)은 noise (\\z\\)로부터 가짜 이미지로 맵핑하는 것이라고 볼 수 있습니다.
 
@@ -105,11 +106,11 @@ GAN이 갖는 불안한 안정성의 대표적인 예시로 **Mode collapse**가
 
 ## DCGAN
 
-DCGAN은 Alec Radford (OpenAI), Luke Metz (Google Brain), Soumith Chintala (FAIR) 이 2015년 제안한 GAN 구조입니다. 
+DCGAN은 Alec Radford (OpenAI), Luke Metz (Google Brain), Soumith Chintala (FAIR) 이 2015년 제안한 GAN 구조입니다.
 
 > 저자들의 커리어가 화려하네요 .. 부럽다.
 
-가장 큰 특징은 Deep convolutional GAN 이라는 이름에서 느껴지듯, GAN에서는 Fully-connected layer 구조였던 네트워크들을 Convolutional layer 구조로 전부 치환해버렸다는 점입니다. 
+가장 큰 특징은 Deep convolutional GAN 이라는 이름에서 느껴지듯, GAN에서는 Fully-connected layer 구조였던 네트워크들을 Convolutional layer 구조로 전부 치환해버렸다는 점입니다.
 
 성능뿐 아니라, 평가를 위한 시각화 방법들을 제시해서 이후 GAN 모델들의 베이스라인으로 사용되고 있습니다.
 
@@ -126,9 +127,11 @@ DCGAN은 2015년에 Unsupervised Representative Learning With Deep Convolutional
 핵심 아이디어는 Generative model \\(G\\)와 Discriminative model \\(D\\)의 네트워크 구조에 있습니다. 수많은 실험을 통해 최적의 구조를 가이드라인으로 제시했다고 하는데, 내용은 위와 같습니다.
 
 1. 모든 Pooling layer를 convolutional layer로 교체 (\\(G\\): Fractional-strided convolutions, \\(D\\): Strided convolutions
-  - 일반적인 Convolutional layer의 stride 값은 1
-  - Fractional-strided convolutions: stride를 1보다 작은 분수로 두어, 결과적으로 출력의 크기가 커지는 효과
-  - Strided convolutions: stdied를 1보다 큰 값으로 두어, 결과적으로 pooling layer처럼 출력의 크기가 작아지는 효과
+
+- 일반적인 Convolutional layer의 stride 값은 1
+- Fractional-strided convolutions: stride를 1보다 작은 분수로 두어, 결과적으로 출력의 크기가 커지는 효과
+- Strided convolutions: stdied를 1보다 큰 값으로 두어, 결과적으로 pooling layer처럼 출력의 크기가 작아지는 효과
+
 2. \\(G\\)와 \\(D\\) 모두에 Batchnorm을 사용
 3. 모든 Fully-connected layer를 제거
 4. \\(G\\)는 출력을 제외한 레이어에 ReLU activation function 사용
@@ -162,12 +165,13 @@ DCGAN은 2015년에 Unsupervised Representative Learning With Deep Convolutional
 
 DCGAN은 안정적인 학습이 가능한 GAN 구조를 제안한 것 이외에도, 몇 가지 기여점이 있습니다.
 
-- 
-#### Interpolation: Walking 
+-
+
+#### Interpolation: Walking
 
 ![DCGAN interpolation]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-17-GAN-DCGAN-theory/2020-10-17-GAN-DCGAN-theory-15-interpolation.png)
 
-latent space \\(z\\)에서 interpolation을 하면 결과 이미지가 자연스럽게 변하는 것을 확인할 수 있습니다. 논문에서는 이 과정을 **Walking in the latent space**라고 표현하였습니다. 특히 마지막 행을 보면 TV였던 곳이 창문으로 변하는 것을 확인할 수 있습니다. 
+latent space \\(z\\)에서 interpolation을 하면 결과 이미지가 자연스럽게 변하는 것을 확인할 수 있습니다. 논문에서는 이 과정을 **Walking in the latent space**라고 표현하였습니다. 특히 마지막 행을 보면 TV였던 곳이 창문으로 변하는 것을 확인할 수 있습니다.
 
 #### Discriminative feature
 

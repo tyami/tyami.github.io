@@ -3,14 +3,14 @@ title: "Classification for MEDIA (4) Advanced CNN models"
 excerpt: "주요 CNN 모델 (LeNet-5, AlexNet, Inception (GoogLeNet), VGGNet, ResNet, DenseNet)들에 대해 정리해봅니다"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Classification
-- Deep learning
-- Convolutional neural network
+  - Medical image analysis
+  - Lecture
+  - Classification
+  - Deep learning
+  - Convolutional neural network
 
 toc: true
 toc_sticky: true
@@ -157,7 +157,7 @@ ResNet의 저자들은 네트워크가 깊어짐에 따라 성능이 어떻게 �
 
 ![2020-10-26-medical-image-classification-4-advanced-cnn-9-skip-connection]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-26-medical-image-classification-4-advanced-CNN/2020-10-26-medical-image-classification-4-advanced-cnn-9-skip-connection.png)
 
-Skip connection이라는 것은 앞단의 입력값을 뒤의 레이어의 입력값으로 넣는 것인데, 그림으로 보면 더 이해가 잘 될겁니다. 
+Skip connection이라는 것은 앞단의 입력값을 뒤의 레이어의 입력값으로 넣는 것인데, 그림으로 보면 더 이해가 잘 될겁니다.
 
 단순히 입력과 출력이 연결되기 때문에, 파라미터 수가 증가하지 않고, 단순 덧셈 몇 번 외에는 연산량의 증가도 없습니다.
 

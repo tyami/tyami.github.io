@@ -3,13 +3,13 @@ title: "부스팅 앙상블 (Boosting Ensemble) 2-2: Gradient Boosting for Class
 excerpt: "Boosting 알고리즘 중 하나인 Gradient Boosting for Classification을 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Ensemble
-- Algorithm
-- Boosting
+  - Machine learning
+  - Ensemble
+  - Algorithm
+  - Boosting  
 
 toc: true
 toc_sticky: true
@@ -24,7 +24,7 @@ use_math: true
 > 이번 포스팅에서는 Gradient Boosting for Classfication 알고리즘을 정리해보고자 합니다.
 
 Gradient Boosting for Regression과 마찬가지로, StatQuest라는 유투버의 [Gradient Boost Part 3: Classification](https://www.youtube.com/watch?v=jxuNLH5dXCs)과 [Gradient Boost Part 4: Classification Details](https://www.youtube.com/watch?v=StWY5QWMXCw)를 참고했습니다.
- 
+
 ## Gradient Boosting for Classification
 
 Gradient Boosting for Classification은 Gradient Boosting for Regression과 전체적인 흐름 (pseudo-residual을 계산하고 이를 예측하는 decision tree를 만들어나가는 과정)은 비슷하지만, 확률-log(Odds) 변환 같이 세부적인 내용에서 차이가 있습니다.
@@ -73,7 +73,7 @@ P(Loves\; Troll\; 2=Yes)=\frac{e^{log(odds)}}{1+e^{log(odds)}}=\frac{0.7}{1+0.7}
 
 ![실제값]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-12-gradient-boosting-classification/2020-10-12-gradient-boosting-classification-pseudo-residual-observed.png)
 
-여기서 **실제값 Observed probability는 Output의 Yes/No 값에 따라 1 또는 0의 값**을 갖습니다. 
+여기서 **실제값 Observed probability는 Output의 Yes/No 값에 따라 1 또는 0의 값**을 갖습니다.
 
 #### 2.2 Predicted probability
 
@@ -150,7 +150,7 @@ Pseudo-residual 계산에 사용될 **샘플별** 예측값을 계산해봅시�
 
 이전 포스팅에서 Gradient Boosting의 Regression과 Classification 알고리즘의 공통되는 부분은 아래 내용으로 요약된다고 정리했습니다.
 
-> Create decision trees to predict residual (observed value – predicted value) of **______**, with limitation of maximum number of leaves.
+> Create decision trees to predict residual (observed value – predicted value) of ****\_\_****, with limitation of maximum number of leaves.
 
 빈 칸에, Regression에서는 Output value 그 자체, Classification은 Output class의 probability가 들어가면 말이 되겠네요.
 

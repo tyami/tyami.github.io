@@ -3,12 +3,12 @@ title: "Regularization: Ridge (L2), Lasso (L1), and Elastic Net regression"
 excerpt: "Regularization의 Ridge, Lasso, 그리고 Elastic Net regression 모델을 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Regularization
-- Algorithm
+  - Machine learning
+  - Regularization
+  - Algorithm
 
 toc: true
 toc_sticky: true
@@ -65,9 +65,9 @@ Regularization의 종류에는 오늘 정리할 Ridge (L2) regression, Lasso (L1
 
 ![ridge]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-15-ridge-and-lasso/2020-10-15-ridge-and-lasso-9-ridge.png)
 
-Ridge는 penalty의 종류로 weight의 제곱합을 사용합니다. 여기에 penalty의 가중치인 \\(\lambda\\)를 곱해줍니다. 
+Ridge는 penalty의 종류로 weight의 제곱합을 사용합니다. 여기에 penalty의 가중치인 \\(\lambda\\)를 곱해줍니다.
 
-\\(\lambda=0\\)이라고 할 때, 위 예시에서 빨간색 실선 (Linear regression의 해)은 training data 에 대한 residual이 0임에도 penalty만으로 1.69라는 error가 나온 반면, 초록색 실선 (Ridge regression의 해)은 0.74의 error가 나온 것을 확인할 수 있습니다. 
+\\(\lambda=0\\)이라고 할 때, 위 예시에서 빨간색 실선 (Linear regression의 해)은 training data 에 대한 residual이 0임에도 penalty만으로 1.69라는 error가 나온 반면, 초록색 실선 (Ridge regression의 해)은 0.74의 error가 나온 것을 확인할 수 있습니다.
 
 즉, penalty term의 추가로 인해 최적해가 바뀌는 것을 확인할 수 있습니다.
 

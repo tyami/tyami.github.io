@@ -3,15 +3,15 @@ title: "Segmentation for MEDIA (6) Atlas-based methods and label fusion"
 excerpt: " Atlas-based segmentation methods와 label fusion 기법을 정리해봅니다"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Atlas-based segmentation
-- Label fusion
-- Voting
-- Registration
+  - Medical image analysis
+  - Lecture
+  - Atlas-based segmentation
+  - Label fusion
+  - Voting
+  - Registration
 
 toc: true
 toc_sticky: true

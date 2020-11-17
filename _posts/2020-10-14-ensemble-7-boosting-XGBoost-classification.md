@@ -3,13 +3,13 @@ title: "부스팅 앙상블 (Boosting Ensemble) 3-2: XGBoost for Classification"
 excerpt: "Boosting 모델 중 하나인 XGBoost의 Classification 알고리즘을 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Ensemble
-- Algorithm
-- Boosting
+  - Machine learning
+  - Ensemble
+  - Algorithm
+  - Boosting
 
 toc: true
 toc_sticky: true
@@ -72,7 +72,7 @@ XGBoost for Classification에서도 여느 Gradient Boosting처럼 leaf로 시�
 
 ![Step 3-1: Similarity 정의는 분모가 다릅니다]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-14-XGBoost-Classification/2020-10-14-XGBoost-Classification-step3-1-similarity.png)
 
-Similarity score가 다르게 정의됩니다. 복잡하게 생겼지만 XGBoost for Regression의 similarity score에서 분모부분만 바뀐 것을 확인할 수 있습니다. 바뀐 부분 또한 Gradient Boosting for Classification에서 본 log(odds) -> 확률 변환 수식과 비슷하게 생겼습니다. 
+Similarity score가 다르게 정의됩니다. 복잡하게 생겼지만 XGBoost for Regression의 similarity score에서 분모부분만 바뀐 것을 확인할 수 있습니다. 바뀐 부분 또한 Gradient Boosting for Classification에서 본 log(odds) -> 확률 변환 수식과 비슷하게 생겼습니다.
 
 \\[
 Similarity\; score=\frac{(\sum Residual_i)^2}{\sum[Previous\; probability_i \times (1-Previous\; probability_i)]+\lambda}
@@ -141,6 +141,7 @@ maximum number of tree에 도달하거나, Residual이 지정한 threshold 이�
 first leaf와 모든 tree의 log(odds)를 합친 후, probability로 변환하여 최종 예측값을 얻어냅니다.
 
 ## Python code
+
 Python 에서는 `xgboost` library로 사용 가능합니다.
 
 - [XGBoost Docs](https://xgboost.readthedocs.io/en/latest/)

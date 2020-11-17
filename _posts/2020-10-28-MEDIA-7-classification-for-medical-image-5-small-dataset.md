@@ -3,18 +3,18 @@ title: "Classification for MEDIA (5) Overcome small dataset"
 excerpt: "적은 데이터셋을 극복하기 위한 여러 방법들을 정리해봅니다"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Classification
-- Deep learning
-- Convolutional neural network
-- Validaiton
-- Regularization
-- Transfer learning
-- Data augmentation
+  - Medical image analysis
+  - Lecture
+  - Classification
+  - Deep learning
+  - Convolutional neural network
+  - Validaiton
+  - Regularization
+  - Transfer learning
+  - Data augmentation
 
 toc: true
 toc_sticky: true
@@ -131,7 +131,7 @@ Transfer learning 한 가지 가정이 있습니다.
 
 ![2020-10-28-medical-image-classification-5-small-dataset-9-transfer-learning-1-pretraining]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-28-medical-image-classification-5-small-dataset/2020-10-28-medical-image-classification-5-small-dataset-9-transfer-learning-1-pretraining.png)
 
-예를 들어, Imagenet을 통해 학습한 모델 (pre-trained model)의 초반 레이어는 edge를, 후반 레이어는 object shgpe을 인식하게 된다고 합시다. 
+예를 들어, Imagenet을 통해 학습한 모델 (pre-trained model)의 초반 레이어는 edge를, 후반 레이어는 object shgpe을 인식하게 된다고 합시다.
 
 ![2020-10-28-medical-image-classification-5-small-dataset-10-transfer-learning-2-finetuning]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-28-medical-image-classification-5-small-dataset/2020-10-28-medical-image-classification-5-small-dataset-10-transfer-learning-2-finetuning.png)
 
@@ -140,7 +140,7 @@ Transfer learning 한 가지 가정이 있습니다.
 따라서, pre-trained model의 구조와 weight를 이용해서 의료영상 분류에 사용할 수 있습니다. 이 때 몇 가지 수정이 필요합니다.
 
 - Input size: Pre-trained model에 적합하도록 입력 사이즈를 정해줄 필요가 있습니다.
-- Output class 개수: Pre-trained model들과 출력 class의 개수가 다를 수 있습니다. 이를 수정해주어야 합니다. 
+- Output class 개수: Pre-trained model들과 출력 class의 개수가 다를 수 있습니다. 이를 수정해주어야 합니다.
 - Fine tuning: 학습 이미지와 타겟 이미지가 동일하지 않다보니 추가적인 모델 학습이 필요합니다. Feature를 추출하는 모델의 앞단 weight는 고정시키고 (freeze), 뒷단의 classifier 역할을 하는 레이어들만 추가로 학습시킵니다.
 
 #### Four types of fine-tuning

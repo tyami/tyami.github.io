@@ -3,17 +3,17 @@ title: "Segmentation for MEDIA (2) Morphological processing"
 excerpt: "Thresholding의 후처리 방법인 Morphological processing를 정리해봅니다"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Segmentation
-- Morphological processing
-- Dilation
-- Erosion
-- Opening
-- Closing
+  - Medical image analysis
+  - Lecture
+  - Segmentation
+  - Morphological processing
+  - Dilation
+  - Erosion
+  - Opening
+  - Closing
 
 toc: true
 toc_sticky: true
@@ -26,7 +26,6 @@ use_math: true
 
 > 이전 포스팅에서는 **Segmentation 기법 중 가장 기본적인 기법인 Thresholding 알고리즘**을 정리했습니다  
 > 이번 포스팅에서는 Threshold 이후 후처리에 사용되는 **Morphological processing**을 정리해보고자 합니다.
-
 
 ## Drawback of Otsu thresholding
 

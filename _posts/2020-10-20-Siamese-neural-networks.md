@@ -3,11 +3,11 @@ title: "Siamese Neural Networks (샴 네트워크) 개념 이해하기"
 excerpt: "Siamese Neural Networks (샴 네트워크)를 이해해봅시다."
 
 categories:
-- Deep learning
+  - Deep learning
 
 tags:
-- Deep learning
-- Siamese neural network
+  - Deep learning
+  - Siamese neural network
 
 toc: true
 toc_sticky: true
@@ -17,7 +17,7 @@ use_math: true
 ---
 
 > 이번 포스팅에서는 Siamese neural network에 대해 정리해보고자 합니다.  
-> 최근 SMC 2020 학회에서 발표된 연구 중 Siamese neural network를 사용한 연구가 있어서, 관련 내용을 공부하는 김에 정리하게 되었습니다. 
+> 최근 SMC 2020 학회에서 발표된 연구 중 Siamese neural network를 사용한 연구가 있어서, 관련 내용을 공부하는 김에 정리하게 되었습니다.
 
 ## Siamese Neural Networks
 
@@ -40,7 +40,7 @@ Siamese Neural Networks (샴 네트워크)는 샴 쌍둥이에서 착안된 네�
 샴 뉴럴 네트워크의 **샴 네트워크** 구조 자체는 2005년 [Learning a Similarity Metric Discriminatively, with Application to Face
 Verification](http://yann.lecun.com/exdb/publis/pdf/chopra-05.pdf)라는 논문으로 Yann LeCun 교수 연구팀에 의해 발표되었습니다. 그러다 2015년, [Siamese Neural Networks for One-shot Image Recognition](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)라는 이름으로 Neural network를 접목시킨 **샴 뉴럴 네트워크**가 발표되었습니다. 논문 제목에서 느껴지듯 One-shot learning 분야의 논문입니다.
 
-하지만 오늘 포스팅에서는 Siamese neural network의 이해에 집중하기 위해, 논문 내용과 One-shot learning에 대해서는 나중에 별로 포스팅으로 따로 정리하겠습니다. 
+하지만 오늘 포스팅에서는 Siamese neural network의 이해에 집중하기 위해, 논문 내용과 One-shot learning에 대해서는 나중에 별로 포스팅으로 따로 정리하겠습니다.
 
 #### One-shot learning
 
@@ -68,7 +68,7 @@ Verification](http://yann.lecun.com/exdb/publis/pdf/chopra-05.pdf)라는 논문�
 
 ![siamese neural network]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-20-siamese-neural-networks/2020-10-20-siamese-neural-networks-8-siamese-neural-network.png)
 
-앞서 잠깐 본 것 처럼, 샴네트워크는 weight를 공유하는 두 네트워크로 이루어집니다. 
+앞서 잠깐 본 것 처럼, 샴네트워크는 weight를 공유하는 두 네트워크로 이루어집니다.
 
 ![siamese neural network]({{ site.url }}{{ site.baseurl }}/assets/images/post/DL/2020-10-20-siamese-neural-networks/2020-10-20-siamese-neural-networks-9-siamese-neural-network-another-figure.png)
 

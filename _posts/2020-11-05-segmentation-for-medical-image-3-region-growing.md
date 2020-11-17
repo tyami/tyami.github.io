@@ -3,14 +3,14 @@ title: "Segmentation for MEDIA (3) Region growing & Wathershed algorithm"
 excerpt: "Region growing과 Wathershed algorithm을 정리해봅니다"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Segmentation
-- Region growing
-- Wathershed
+  - Medical image analysis
+  - Lecture
+  - Segmentation
+  - Region growing
+  - Wathershed
 
 toc: true
 toc_sticky: true

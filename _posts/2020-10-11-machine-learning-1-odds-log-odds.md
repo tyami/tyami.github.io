@@ -3,11 +3,11 @@ title: "Machine learning: Odds와 Log(Odds)"
 excerpt: "Machine learning의 기본적인 개념 중 하나인 Odds와 Log(Odds)에 대해 정리해봅시다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Algorithm
+  - Machine learning
+  - Algorithm
 
 toc: true
 toc_sticky: true
@@ -18,7 +18,7 @@ use_math: true
 
 > Odds와 Log(odds)의 개념을 정리해봅시다.
 
-StatQuest의 [StatQuest: Odds and Log(Odds), Clearly Explained!!!](https://www.youtube.com/watch?app=desktop&v=ARfXDSkQf1Y) 강의를 참고했습니다. 
+StatQuest의 [StatQuest: Odds and Log(Odds), Clearly Explained!!!](https://www.youtube.com/watch?app=desktop&v=ARfXDSkQf1Y) 강의를 참고했습니다.
 
 ## Odds
 
@@ -29,6 +29,7 @@ odds=\frac{P(A)}{P(A^c)}=\frac{P(A)}{1-P(A)}
 \\]
 
 ### Odds example 1
+
 ![Odds 예시 1]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-11-odds-log-odds/2020-10-11-odds-example1.png)
 
 5번의 경기 중, 우리 팀이 1번을 이겼다고 할 때 Odds는 아래와 같이 0.25로 계산됩니다.
@@ -47,7 +48,6 @@ odds=\frac{P(A)}{1-P(A)}=\frac{1}{4}
 odds=\frac{P(A)}{1-P(A)}=\frac{1}{4}
 \\]
 
-
 ### Odds VS Probability
 
 주의할 점은 위에서 언급한 것과 같이 Odds와 확률 (probability)는 다르다는 것입니다.  
@@ -58,6 +58,7 @@ odds는 **사건 A가 일어날 확률 / 일어나지 않을 확률**인 반면,
 동일한 예시 2에서 odds는 1.7, probability는 0.625의 값을 갖는 것을 확인할 수 있습니다.
 
 ## Log(Odds)
+
 Odds는 그대로 사용하기보다 오즈비 \\(Odds\; ratio\\) 또는 로짓 \\(Log(odds)\\)으로 사용하는 경우가 많습니다.
 
 ### Asymmetric odds
@@ -85,7 +86,7 @@ Odds의 단점은 **Asymmetric**하다는 점입니다.
 
 ![Odds 분포]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-11-odds-log-odds/2020-10-11-odds-distribution.png)
 
-확률에 따른 Odds의 분포를 그려보았습니다. Odds는 P(A)가 0에 가까울수록 0 값을 가지며, 1에 가까울수록 커지면서 무한대로 발산합니다.  
+확률에 따른 Odds의 분포를 그려보았습니다. Odds는 P(A)가 0에 가까울수록 0 값을 가지며, 1에 가까울수록 커지면서 무한대로 발산합니다.
 
 ![Odds 분포: asymmetric]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-11-odds-log-odds/2020-10-11-odds-distribution-asymmetric.png)
 

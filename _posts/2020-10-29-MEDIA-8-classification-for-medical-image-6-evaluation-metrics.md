@@ -3,14 +3,14 @@ title: "Classification for MEDIA (6) Evaluation metrics for classification (분�
 excerpt: "의료영상 분류모델을 평가하는 지표를 정리해봅니다"
 
 categories:
-- Medical image analysis
+  - Medical image analysis
 
 tags:
-- Medical image analysis
-- Lecture
-- Classification
-- Deep learning
-- Evaluation metrics
+  - Medical image analysis
+  - Lecture
+  - Classification
+  - Deep learning
+  - Evaluation metrics
 
 toc: true
 toc_sticky: true
@@ -95,7 +95,7 @@ ROC curve의 우하단 면적을 계산한 것을 AUC 또는 AUROC (Area Under R
 
 ![2020-10-29-medical-image-classification-6-evaluation-metrics-7-f1-score.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/MEDIA/2020-10-29-medical-image-classification-6-evaluation-metrics/2020-10-29-medical-image-classification-6-evaluation-metrics-7-f1-score.png)
 
-마지막 지표는 F1 score입니다. F1 score는 Precision과 Recall의 조화평균입니다. 따라서, Precision과 Recall이 모두 높아야만 높은 F1 score를 얻을 수 있습니다. 
+마지막 지표는 F1 score입니다. F1 score는 Precision과 Recall의 조화평균입니다. 따라서, Precision과 Recall이 모두 높아야만 높은 F1 score를 얻을 수 있습니다.
 
 F1 score는 주로 Imbalanced dataset을 평가하는데 사용되는 지표입니다.
 

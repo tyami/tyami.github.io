@@ -3,17 +3,17 @@ title: "Clustering (군집화)"
 excerpt: "Unsupervised learning(비지도 학습) 중 하나인 Clustering (군집화)를 정리해봅니다"
 
 categories:
-- Machine learning
+  - Machine learning
 
 tags:
-- Machine learning
-- Algorithm
-- Clustering
-- Unsupervised learning
+  - Machine learning
+  - Algorithm
+  - Clustering
+  - Unsupervised learning
 
 toc: true
 toc_sticky: true
-toc_label:  "Clustering (군집화)"
+toc_label: "Clustering (군집화)"
 
 use_math: true
 ---
@@ -72,7 +72,7 @@ Silhouette은 Dunn index보다 살짝 복잡합니다.
 
 ![2020-10-30-clustering-8-silhouette-1-example-data.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-30-clustering/2020-10-30-clustering-8-silhouette-1-example-data.png)
 
-위와 같이 데이터를 군집화했다고 가정해봅시다. 
+위와 같이 데이터를 군집화했다고 가정해봅시다.
 
 ![2020-10-30-clustering-9-silhouette-2-equation.png]({{ site.url }}{{ site.baseurl }}/assets/images/post/ML/2020-10-30-clustering/2020-10-30-clustering-9-silhouette-2-equation.png)
 
