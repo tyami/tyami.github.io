@@ -19,7 +19,7 @@ use_math: true
 - Data science
 - Machine learning and Deep learning
 - Human brain data (EEG, fMRI) analysis
-- Medical image analysis
+- Medical artificial intelligence
 
 ### 🎓 Education
 - **M.S.-Ph.D. course, Biomedical Engineering** \\(_{2015-}\\)
