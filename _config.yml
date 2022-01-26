@@ -96,7 +96,7 @@ author:
   name             : "Taeyang Yang"
   avatar           : "/assets/images/profile/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Ph'D, Data scientist"
-  location         : "Ulsan, South Korea"
+  location         : "Seoul, South Korea"
   email            : 
   links:
     - label: "Email"
